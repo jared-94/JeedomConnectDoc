@@ -1,6 +1,14 @@
 # Changelog JeedomConnect
+## Version 0.17.0 (04/03/2021)
+- Ajout d'un bouton Dupliquer pour les widgets
+- Ré-écriture du sélectionneur d'icônes / images
+- Possibilité de choisir image ou icône sur les widgets
+- Possibilité d'ajouter des commandes infos à tous les widgets
+- Images sous conditions dans tous les widgets
+- Possibilité de personaliser les champs Nom et Sous-titre à l'aide de commandes infos
+- Améliorations diverses et corrections de bugs dans l'appli
 
-## Version 0.16.0 Beta (22/02/2021)
+## Version 0.16.0 (22/02/2021)
 - Notifications : Possibilité d'envoyer des images
 - Geolocalisation : mode Tracking pour le suivi constant de l'appareil (nouvelle commande `Position` dans les équipements)
 - Fix widgets non supprimés
