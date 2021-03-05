@@ -1,5 +1,13 @@
 # Changelog JeedomConnect
-## Version 0.17.0 (04/03/2021)
+## Version 0.17.1 Beta (05/03/2021)
+- Possibilité d'envoyer plusieurs images dans les notifications
+- Images dans les notifications accessibles en cliquant dessus (plein écran, zoom et scroll)
+- Widget clim : fanSpeed non limité
+- Nouveau slider pour la température de blanc dans les widgets de lumière
+- Nouveau widget Web View qui permet d'afficher un design, le dashboard ou n'importe quelle page web
+- Bug fix
+
+## Version 0.17.0 Beta (04/03/2021)
 - Ajout d'un bouton Dupliquer pour les widgets
 - Ré-écriture du sélectionneur d'icônes / images
 - Possibilité de choisir image ou icône sur les widgets
