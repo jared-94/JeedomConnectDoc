@@ -1,4 +1,16 @@
-# Changelog JeedomConnect
+# Changelog JeedomConnect  
+
+## Version 0.18.0 Beta (XX/03/2021)  
+- Refonte complète de la gestion des widgets :
+  * création des widgets depuis la page principale du plugin
+  * l'assistant disponible sur chaque équipement ne permet plus que de rattacher un widget existant à l'équipement
+  * fonction de migration permettant de créer automatiquement tous les widgets d'une version précédente dans la version courante
+
+- Bug fix : 
+  * les commandes de chaque équipements sont déplaçables
+
+
+
 ## Version 0.17.1 Beta (05/03/2021)
 - Possibilité d'envoyer plusieurs images dans les notifications
 - Images dans les notifications accessibles en cliquant dessus (plein écran, zoom et scroll)

@@ -1,6 +1,6 @@
 # Documentation du plugin Jeedom Connect
 
-![Jeedom Connect](../images/JeedomConnect_icon.png)
+<img src="../images/JeedomConnect_icon.png"  width="10%" />
 
 Télécharger l'application au format APK : https://github.com/jared-94/JeedomConnect/releases/latest
 
@@ -10,9 +10,10 @@ Télécharger l'application au format APK : https://github.com/jared-94/JeedomCo
 3. [Screenshots](#screenshots)
 4. [Installation du plugin](#install)
 5. [Configuration du plugin](#configurePlugin)
-6. [Ajouter des équipements](#addEq)
-7. [Configuration d'un équipement](#configureEq)
-8. [Géolocalisation](#geoloc)
+6. [Geston des Widgets](#gestionWidget)
+7. [Ajouter des équipements](#addEq)
+8. [Configuration d'un équipement](#configureEq)
+9. [Géolocalisation](#geoloc)
 
 ## Présentation du projet <a name="presentation"></a>
 Le projet **Jeedom Connect** se compose de 2 parties : un plugin pour Jeedom, et une application Android. Une version pour iOS pourra être envisagée plus tard.
@@ -23,6 +24,8 @@ La brique de base est la notion de *widget*, qui va représenter un "équipement
 
 Le plugin, ainsi que l'application sont complètement **gratuit** et le resteront. Je ne suis pas développeur et fais ça sur mon temps libre, relativement limité. Si vous souhaitez **soutenir le projet**, vous pouvez suggérer des améliorations, signaler des bugs et contribuer au code du plugin si vous avez des notions de PHP/JS/HTML, ou de l'application si vous maîtriser le React Native.
 
+<br/><br/>
+
 ## Fonctionnalités <a name="fonctionalites"></a>
 - Affichage et gestion de vos équipements domotiques et des scénarios
 - Historiques sous forme de graphique ou tableau
@@ -32,6 +35,8 @@ Le plugin, ainsi que l'application sont complètement **gratuit** et le resteron
 - [Géolocalisation](#geoloc) avec gestion avancée de la batterie (modes Geofencing et Tracking)
 - Communication via le protocole WebSocket à faible latence, ou bien en HTTP
 - Thème personalisable (couleur, mode sombre)
+
+<br/><br/>  
 
 ## Screenshots <a name="screenshots"></a>
 <img src='../images/JeedomConnect_screenshot1.png' width='200px' />
@@ -44,9 +49,13 @@ Le plugin, ainsi que l'application sont complètement **gratuit** et le resteron
 <img src='../images/JeedomConnect_screenshot8.png' width='200px' />
 <img src='../images/JeedomConnect_screenshot9.png' width='200px' />
 
+<br/><br/>  
+
 ## Installation du plugin <a name="install"></a>
 Il s'installe depuis le market comme les autres. La version beta contient les nouveautés les plus récentes.
 
+
+<br/><br/>  
 
 ## Configuration du plugin <a name="configurePlugin"></a>
 Il y a plusieurs champs  pré-remplis que vous pouvez modifier. Des placeholder sont indiqués sur chacun d'entre eux. S'ils vous semblent corrects, inutile de les modifier.
@@ -59,6 +68,92 @@ Il y a plusieurs champs  pré-remplis que vous pouvez modifier. Des placeholder 
 
 Si vous modifiez un de ces champs, il faudra bien sûr sauvegarder, puis re-générer les QR Code des équipements. En cas d'utilisation du HTTP, il faudra aussi redémarrer l'appli.
 
+<br/><br/>  
+
+## Page principale du plugin JeedomConnect <a name="gestionWidget"></a>  
+
+La page principale du plugin se décompose en deux parties :     
+1. Sur la partie haute, vous pourrez voir et gérer [vos équipements](#addEq) (appareil muni de l'application JeedomConnect)
+2. Sur la seconde partie : vous aurez accès à l'ensemble de [vos widgets](#gestionWidget) et pourrez les modifier à souhait. 
+
+<img src="../images/plugin-home.png"  width="50%" />
+
+
+<br/><br/>  
+
+## Gestion des widgets <a name="gestionWidget"></a>
+
+Il est nécessaire de commencer par créer un widget pour ensuite pouvoir le rattacher à un (ou plusieurs) équipement(s).  
+Sur la page principale vous avez accès à l'ensemble des widgets que vous avez créé. Il est possible de les filtrer par type et de les classer (par Pièces, Nom, ou Type).  
+
+Pour créer un widget, cliquez sur "Ajouter un widget", sélectionnez ensuite le type de widget que vous souhaitez créer dans la liste déroulante de gauche puis renseignez les différents champs affichés à l'écran avant de finaliser la création en appuyant sur le bouton "Sauvegarder".  
+
+Quelques éléments sont standard et seront demandés pour l'ensemble des widgets :  
+   * **Actif** : Le widget sera (ou pas) affiché dans l'application. Pratique si vous voulez par exemple gérer un groupe de lumières, mais ne pas afficher certaines d'entre elles.
+   * **Pièce** : Sélection de la pièce associée (identique aux objets gérés dans Jeedom)
+   * **Nom** : Nom du widget
+   * **Sous-titre** Information complémentaire affichée dans l'application. Le mode personalisé permet de mettre une phrase quelconque, avec certains "mots-clé", généralement `room`, `value`, `formatedValue`, `elapsedTime`, `power`.   
+   Par exemple :  
+   `Mon ampoule est formatedValue depuis elapsedTime et consomme power W`  
+   donnera :  
+   `Mon ampoule est allumée depuis 1h12min et consomme 15W`  
+   * **Affichage forcé** : De façon standard, chaque widget (sauf exception) possède 3 types d'affichage : carte, vignette et détail. Les affichages carte et vignettes peuvent être choisis via l'icône en haut à droite dans l'application. L'affichage détail est une page entière affichée quand on click sur le widget. Vous pouvez ici forcer un widget à s'afficher d'une de ces 3 façons.  
+   Attention pour le mode détail, le widget doit être seul sur sa page.
+   * **Sécuriser les actions** : Toutes les commandes de type action peuvent être sécurisées à l'aide de ces deux boutons :  
+     ![](../images/screen-secureBtn.png)   
+   Le premier permet de faire une simple demande de confirmation de l'action.  
+   Le second demande l'empreinte digitale pour exécuter l'action (sur appareils disposant d'un capteur)
+   * **Images** : Les images de l'application sont stockée dans le dossier `plugins/JeedomConnect/data/img/`. Si vous souhaitez ajoutez des images persos, utilisez l'assistant, ou bien copiez vos images dans `plugins/JeedomConnect/data/img/user_files/`. Il est conseillé d'utiliser des images PNG en 128x128. Vous pouvez aussi mettre des GIF animés.
+   * **Images sous conditions** : Vous pouvez dans certains widgets définir une image en fonction des valeurs d'une commande. L'ordre des ces condition sera prise en compte par l'appli (les plus hautes sont prioritaires).  
+   * **Ajouter des infos** : vous permet d'ajouter des commandes de type `info` de votre Jeedom et de vous en servir pour les autres champs du formulaire 'Images sous conditions', 'Nom', 'Sous-titre'.
+
+La duplication d'un widget est réalisable dès que celui-ci a été sauvegardé une première fois. Cliquez simplement sur le bouton "Dupliquer", réaliser vos modifications (ou pas), et enregistrer (impérativement) en validant avec le bouton "Sauvegarder".  
+
+La suppression est également possible. Attention toutefois, si un widget est supprimé, alors il disparaitra de l'ensemble des équipements auxquels il avait été ajouté !  
+
+
+* ### Widgets disponibles
+  * Lumière On/Off
+  * Lumière à variation
+  * Lumière de couleurs
+  * Groupe de lumières
+  * Prise
+  * Groupe de prises
+  * Scénario
+  * Résumé
+  * Résumé de pièce
+  * Favoris
+  * Luminosité
+  * Humidité
+  * Température
+  * Puissance
+  * Thermostat
+  * Climatiseur
+  * Porte
+  * Groupe de portes
+  * Fenêtre
+  * Groupe de fenêtres
+  * Portail coulissant
+  * Volet
+  * Groupe de volets
+  * PIR
+  * Groupe de PIR
+  * Alarme
+  * Groupe d'alarmes
+  * Générique binaire
+  * Groupe de génériques binaires
+  * Générique numérique
+  * Générique texte
+  * Générique switch
+  * Générique slider
+  * Générique actions
+  * Mode
+  * Web View
+
+<br/><br/>  
+
+<br/><br/>  
+
 ## Ajouter des équipements <a name="addEq"></a>
 Vous pouvez ajouter des équipements dans le plugin de façon standard.
 
@@ -68,7 +163,11 @@ Vous pouvez ajouter des équipements dans le plugin de façon standard.
 
 A la création d'un équipement, une clé API, ainsi qu'un QR Code est automatiquement généré avec les informations de configuration du plugin. Lors du démarrage de l'application, vous pourrez alors entrer manuellement vos identifiants jeedom, ou bien scanner le QR Code. Une fois connecté, l'équipement et l'appareil sont liés. Pour vous connecter avec un autre appareil, il vous faut le *détacher*  en cliquant sur le bouton associé.
 
-La configuration d'un équipement consiste en un fichier JSON configurable avec l'assistant, et que vous pouvez exporter / importer. Si vous voulez par exemple cloner un équipement, ajoutez en un nouveau et utiliser l'exportation / importation.
+La configuration d'un équipement consiste en un fichier JSON configurable avec l'assistant, et que vous pouvez exporter / importer. Si vous voulez par exemple cloner un équipement, ajoutez en un nouveau et utiliser l'exportation / importation.  
+
+Le dernier bouton permet lui de transmettre votre fichier de configuration complet, en cas de problème, au développeur. Ce fichier ne DOIT PAS être importer sur un autre équipement JeedomConnect.  
+
+<br/><br/>  
 
 ## Configuration d'un équipement <a name="configureEq"></a>
 La configuration du contenu de l'application se passe dans l'assistant.
@@ -76,82 +175,50 @@ La configuration du contenu de l'application se passe dans l'assistant.
  ![](../images/screen-assistantBottom.png)
 
 Le changement de configuration a lieu à chaque click sur le bouton *Sauvegarder*. Si l'application est démarrée, elle est automatiquement transférée (websocket uniquement). Vous pouvez recharger la configuration dans l'appli en appuyant sur le logo du 'menu hamburger'.  
-Si vous pensé avoir une erreur avant d'avoir sauvegarder (par exemple supprimé un élément par erreur), actualisez simplement la page. Le bouton *Réinitialiser* (suivi de *Sauvegarder*) remet toute la configuration à zéro, attention donc !
+Si vous pensez avoir une erreur avant d'avoir sauvegarder (par exemple supprimé un élément par erreur), actualisez simplement la page. Le bouton *Réinitialiser* (suivi de *Sauvegarder*) remet toute la configuration à zéro, attention donc !
+
+<br/><br/>  
 
 * ### Menu du bas
-Cette partie est assez explicite, elle permet de configurer les onglets qui apparaissent en bas de l'écran. Le coix des icône se fait sur https://materialdesignicons.com/ (un moteur de recherche est intégré).  
-Vous pouvez choisir de ne configurer cette partie si vous ne voulez pas de navigation par ces onglets.
+Cette partie est assez explicite, elle permet de configurer les onglets qui apparaissent en bas de l'écran. Vous avez la possibilité de choisir vos icônes parmis tout un panel : celles de Jeedom, celles proposées par Material Design, ou encore sur Font Awesome(un moteur de recherche est intégré).  
+La configuration de cette partie est optionnelle, et n'est à réaliser que si vous souhaitez utiliser ces onglets.
+
+<br/><br/>  
 
 * ### Menu du haut
  ![](../images/screen-assistantTop.png)
 
  Cette partie est également explicite. Un menu sous forme d'onglets en haut de l'écran que vous pouvez 'slider'. Egalement facultatif.
 
+<br/><br/>  
+
 * ### Pièces
- Chaque widget peut être associé à une pièce à ajouter dans cette partie.
+ Chaque widget peut être associé à une pièce à ajouter dans cette partie.  Chaque pièce correspond à un objet Jeedom.  
+
+<br/><br/>  
 
 * ### Widgets
  ![](../images/screen-assistantWidgets.png)
- C'est ici qu'on configure les widgets affichés dans l'application. Placez-vous tout d'abord sur le menu / sous-menu que vous voulez configurer. Les différents éléments être peuvent bougés avec les boutons 'flèches' et 'supprimer'.
- * **Ajouter un groupe** : Vous pouvez ranger vos widgets dans un menu dépliable (type "acordéon").
- ![](../images/screen-groupConfig.png)
+ Définissez d'abord l'emplacement où placer le widget : sur quel menu / sous-menu que vous voulez le configurer.   
+ Vous pouvez ensuite filtrer sur le type de widget que vous allez ajouter (ne sont proposés que les types de widget déjà créés).  
+ Sélectionnez le widget que vous souhaitez ajouter, puis enfin cliquez sur le **Ajouter ce widget** pour l'ajouter à votre configuration.  
+ * **Ajouter un groupe** : Vous pouvez ranger vos widgets dans un menu dépliable (type "acordéon").  
    * **Actif** : Le groupe sera (ne sera pas) affiché dans l'application.
-   * **Développé par défaut** : Le comportement par défaut (plié / déplié) du menu.
- * **Ajouter un widget** : Ajoutez autant de widgets de que vous souhaitez ! Certains champs sont commun à (presque) tous les widgets :
-   * **Actif** : Le widget sera (ou pas) affiché dans l'application. Pratique si vous voulez par exemple gérer un groupe de lumières, mais ne pas afficher certaines d'entre elles.
-   * **Pièce** : Sélection de la pièce associée (du menu Pièces)
-   * **Nom** : Nom du widget
-   * **Sous-titre** Information complémentaire affichée dans l'application. Le mode personalisé permet de mettre une phrase quelconque, avec certains "mots-clé", généralement `room`, `value`, `formatedValue`, `elapsedTime`, `power`. Par exemple :
+   * **Développé par défaut** : Le comportement par défaut (plié / déplié) du menu.  
+  <img src="../images/screen-groupConfig.png" width="25%" />
+ 
+ Différentes actions sur possible sur chaque élément :  
+ <img src="../images/btn-action-widget.png" width="20%" />  
+ * les flèches bleues permettent de changer la place du widget par rapport aux autre widgets sur la même page : le monter ou le descendre  
+ * le moins rouge permet d'enlever le widget de la page (ça ne supprime pas le widget dans Jeedom)
+ * la flèche verte (vers la droite) permet de déplacer le widget sur une autre page  
 
-   ```Mon ampoule est formatedValue depuis elapsedTime et consomme power W```
-
-   pourra donner :
-
-   ```Mon ampoule est allumée depuis 1h12min et consomme 15W```
-   * **Affichage forcé** : De façon standard, chaque widget (sauf exception) possède 3 types d'affichage : carte, vignette et détail. Les affichages carte et vignettes peuvent être choisis via l'icône en haut à droite dans l'application. L'affichage détail est une page entière affichée quand on click sur le widget. Vous pouvez ici forcer un widget à s'afficher d'une de ces 3 façons.  
-   Attention pour le mode détail, le widget doit être seul sur sa page.
-   * **Sécuriser les actions** : Toutes les commandes de type action peuvent être sécurisées à l'aide de ces deux boutons :
-
-     ![](../images/screen-secureBtn.png)   
-   Le premier permet de faire une simple demande de confirmation de l'action, le second demande l'empreinte digitale pour exécuter l'action (sur appareils disposant d'un capteur)
-   * **Images** : Les images de l'application sont stockée dans le dossier `plugins/JeedomConnect/data/img/`. Si vous souhaitez ajoutez des images persos, utilisez l'assistant, ou bien copiez vos images dans `plugins/JeedomConnect/data/img/user_files/`. Il est conseillé d'utiliser des images PNG en 128x128. Vous pouvez aussi mettre des GIF animés.
-   * **Images sous conditions** : Vous pouvez dans certains widgets définir une image en fonction des valeurs d'une commande. L'ordre des ces condition sera prise en compte par l'appli (les plus hautes sont prioritaires).
-
-* ### Widgets disponibles
- * Lumière On/Off
- * Lumière à variation
- * Lumière de couleurs
- * Groupe de lumières
- * Prise
- * Scénario
- * Résumé
- * Favoris
- * Luminosité
- * Humidité
- * Température
- * Puissance
- * Climatiseur
- * Porte
- * Groupe de portes
- * Fenêtre
- * Groupe de fenêtres
- * Portail coulissant
- * Volet
- * Groupe de volets
- * PIR
- * Alarme
- * Groupe d'alarmes
- * Générique binaire
- * Générique numérique
- * Générique texte
- * Générique switch
- * Générique actions
- * Mode
+<br/><br/>  
 
 ## Géolocalisation <a name="geoloc"></a>
 Jeedom Connect dispose d'une fonction de Geofencing : définissez des lieux géographiques sur une carte et des commandes binaires seront créées dans votre équipement vous indiquant si l'appareil est dans ce lieu ou pas.
 
-Commencez par ouvrir l'application et rendez-vous dans les Préférences puis activez la géolocalisation.
+Commencez par ouvrir l'application et rendez-vous dans les Préférences puis activez la géolocalisation.  
 <img src='../images/screen-geo1.png' width='200px' />
 <img src='../images/screen-geo2.png' width='200px' />
 <img src='../images/screen-geo3.png' width='200px' />
