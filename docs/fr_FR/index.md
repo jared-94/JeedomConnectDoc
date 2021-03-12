@@ -14,6 +14,8 @@ Télécharger l'application au format APK : https://github.com/jared-94/JeedomCo
 7. [Ajouter des équipements](#addEq)
 8. [Configuration d'un équipement](#configureEq)
 9. [Géolocalisation](#geoloc)
+10. [Matching entre les versions APK <=> Plugin](#version)
+11. [FAQ](#faq)
 
 ## Présentation du projet <a name="presentation"></a>
 Le projet **Jeedom Connect** se compose de 2 parties : un plugin pour Jeedom, et une application Android. Une version pour iOS pourra être envisagée plus tard.
@@ -112,45 +114,24 @@ La duplication d'un widget est réalisable dès que celui-ci a été sauvegardé
 La suppression est également possible. Attention toutefois, si un widget est supprimé, alors il disparaitra de l'ensemble des équipements auxquels il avait été ajouté !  
 
 
-* ### Widgets disponibles
-  * Lumière On/Off
-  * Lumière à variation
-  * Lumière de couleurs
-  * Groupe de lumières
-  * Prise
-  * Groupe de prises
-  * Scénario
-  * Résumé
-  * Résumé de pièce
-  * Favoris
-  * Luminosité
-  * Humidité
-  * Température
-  * Puissance
-  * Thermostat
-  * Climatiseur
-  * Porte
-  * Groupe de portes
-  * Fenêtre
-  * Groupe de fenêtres
-  * Portail coulissant
-  * Volet
-  * Groupe de volets
-  * PIR
-  * Groupe de PIR
-  * Alarme
-  * Groupe d'alarmes
-  * Générique binaire
-  * Groupe de génériques binaires
-  * Générique numérique
-  * Générique texte
-  * Générique switch
-  * Générique slider
-  * Générique actions
-  * Mode
-  * Web View
+* ### Widgets disponibles  
 
-<br/><br/>  
+
+|  |  |  |
+|------|-----|-----|
+|Lumière On/Off|Lumière à variation|Lumière de couleurs|
+|Groupe de lumières|Prise|Groupe de prises|
+|Scénario|Résumé|Résumé de pièce|
+|Favoris|Luminosité|Humidité|
+|Température|Puissance|Thermostat|
+|Climatiseur|Porte|Groupe de portes|
+|Fenêtre|Groupe de fenêtres|Portail coulissant|
+|Volet|Groupe de volets|PIR|
+|Groupe de PIR|Alarme|Groupe d'alarmes|
+|Générique binaire|Groupe de génériques binaires|Générique numérique|
+|Générique texte|Générique switch|Générique slider|
+|Générique actions|Mode|Web View|
+ 
 
 <br/><br/>  
 
@@ -230,3 +211,75 @@ Vous pouvez ensuite aller sur `Gestion des lieux`.
 - Pour **supprimer ou éditer une zone**, appuyez sur le marqueur puis sur le nom qui apparait.
 - Pour **déplacer une zone**, faites un appuie long sur le marqueur puis glisser.
 Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connaitre à tout moment la position de votre appareil. Les coordonnées GPS (latitude,longitude) sont accessibles dans la commande `Position` de votre équipement.
+
+<br/><br/>  
+
+# Matching version APK <=> version Plugin <a name="version"></a> 
+
+L'apk est téléchargeable en cliquant sur le numéro de version.
+
+## Version Stable 
+
+|Version plugin |Version Application  |
+|------|-----|
+|0.16.0 (22/02/2021)|[0.16.0](https://github.com/jared-94/JeedomConnect/releases/download/0.16.0/JeedomConnect-0.16.0.apk) |
+
+<br/>  
+
+## Version Beta 
+
+|Version plugin |Version Application  |
+|------|-----|
+|0.17.1 (05/03/2021) | [0.17.1](https://github.com/jared-94/JeedomConnect/releases/download/0.17.1/JeedomConnect-0.17.1-beta.apk)  |
+|0.17.0 (04/03/2021) | [0.17.0](https://github.com/jared-94/JeedomConnect/releases/download/0.17.0/JeedomConnect-0.17.0.apk)  |
+
+
+<br/><br/>  
+
+# FAQ <a name="faq"></a> 
+  
+  1. [L'application m'indique "Merci de migrer votre configuration"](#q1) 
+  2. [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#q2) 
+
+
+---
+  
+## L'application m'indique "Merci de migrer votre configuration" <a name="q1"></a>  
+
+La mise à jour que vous venez de réaliser nécessite une mise à jour au niveau du fichier de configuration utilisé pour définir vos widgets.  
+Que va faire cette opération ? Elle va lire votre(vos) fichier(s) de configuration et créér automatiquement tous les widgets correspondant.
+/!\ si vous avez plusieurs équipements (téléphone/tablette/...) de configurer, il y a de forte chance que l'opération créé des widgets en doublon (ou plus).  
+Deux choix s'offrent à vous :  
+  1. migrer 1 seul de vos appareils, exporter sa configuration puis l'importer sur tous vos autres équipement :  
+      * le + : pas de widgets créés en doublons  
+      * le - : si certains de vos appareils ont des widgets bien à eux, il faudra alors les refaire manuellement  
+  2. migrer l'ensemble de vos appareils :  
+      * le + : tous les widget seront créés automatiquement
+      * le - : chaque appareil étant migré comme s'il était seul, certains widgets seront créés en doublon. Vous aurez donc besoin de faire un peu de ménage en modifiant les configurations de certains appareils puis en supprimant les widgets en doublon.   
+
+Nous préconisons la solution #1 ! Voici comment nous vous proposons de faire : 
+* désactiver l'ensemble de vos équipement sous le plugin JeedomConnect, et n'en laisser qu'<b>UN SEUL actif</b> (le + utilisé, ou celui qui contient le + de widget)
+<img src='../images/JC_disableEq.gif' width='50%' />  
+* rendez-vous sur la page `configuration` de votre plugin (Menu `Plugins/Gestion des plugins/Jeedom Connect`)  
+<img src='../images/JeedomConnect_configuration.png' width='600px' />  
+L'option `Migration des configurations` va vous aider à réaliser cette mise à jour.  
+* sélectionnez le choix `uniquement les équipements actifs`
+* cliquez sur le bouton `Migrer`  
+Un message de confirmation vous indique que tout s'est bien passé !  
+Vous pouvez retourner sur votre page principale du plugin JeedomConnect et vous devriez voir quelques changements : l'ensemble de vos widgets sont maintenant disponible directement sur cette page.  
+* vous pouvez maintenant ouvrir la configuration de votre appareil, faire un `export` de la configuration, puis sur chacun de vos autres équipements `importer` cette configuration, puis réactiver vos équipements.
+
+<br/><br/>
+
+## J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin" <a name="q2"></a>   
+
+Pour fonctionner, il faut que le plugin installé sur Jeedom et l'application (APK) que vous avez téléchargé et utilisé soit alignés.  
+Notez vos différentes versions et rendez-vous sur le [tableau de versions](#version) pour vérifier votre installation, et connaitre l'élément à mettre à jour.  
+
+La version du plugin est disponible sur la page de `configuration` du plugin :  
+<img src='../images/JC_pluginVersion.gif' width='30%' />  
+<br/>
+La version de l'application est disponible sur la page de connexion :  
+<!-- <img src='../images/JC_getAplVersion.gif' width='30%' />   -->
+ainsi qu'en bas de la page `Préférences` (dans la menu de l'application) :  
+<img src='../images/JC_getAplVersion.gif' width='30%' />  
