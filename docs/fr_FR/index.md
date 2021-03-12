@@ -41,20 +41,14 @@ Le plugin, ainsi que l'application sont complètement **gratuit** et le resteron
 <br/><br/>  
 
 ## Screenshots <a name="screenshots"></a>
-<img src='../images/JeedomConnect_screenshot1.png' width='200px' />
-<img src='../images/JeedomConnect_screenshot2.png' width='200px' />
-<img src='../images/JeedomConnect_screenshot3.png' width='200px' />
-<img src='../images/JeedomConnect_screenshot4.png' width='200px' />
-<img src='../images/JeedomConnect_screenshot5.png' width='200px' />
-<img src='../images/JeedomConnect_screenshot6.png' width='200px' />
-<img src='../images/JeedomConnect_screenshot7.png' width='200px' />
-<img src='../images/JeedomConnect_screenshot8.png' width='200px' />
-<img src='../images/JeedomConnect_screenshot9.png' width='200px' />
+<img src='../images/JeedomConnect_screenshot1.png' width='200px' /><img src='../images/JeedomConnect_screenshot2.png' width='200px' /><img src='../images/JeedomConnect_screenshot3.png' width='200px' /><img src='../images/JeedomConnect_screenshot4.png' width='200px' /><img src='../images/JeedomConnect_screenshot5.png' width='200px' /><img src='../images/JeedomConnect_screenshot6.png' width='200px' /><img src='../images/JeedomConnect_screenshot7.png' width='200px' /><img src='../images/JeedomConnect_screenshot8.png' width='200px' /><img src='../images/JeedomConnect_screenshot9.png' width='200px' />
 
 <br/><br/>  
 
 ## Installation du plugin <a name="install"></a>
-Il s'installe depuis le market comme les autres. La version beta contient les nouveautés les plus récentes.
+Il s'installe depuis le market comme les autres.  
+
+La version beta contient les nouveautés les plus récentes. (A noter que cette version peut contenir des bugs et reste à privilégier pour des utilisateurs expérimentés).
 
 
 <br/><br/>  
@@ -153,14 +147,15 @@ Le dernier bouton permet lui de transmettre votre fichier de configuration compl
 ## Configuration d'un équipement <a name="configureEq"></a>
 La configuration du contenu de l'application se passe dans l'assistant.
 
- ![](../images/screen-assistantBottom.png)
-
 Le changement de configuration a lieu à chaque click sur le bouton *Sauvegarder*. Si l'application est démarrée, elle est automatiquement transférée (websocket uniquement). Vous pouvez recharger la configuration dans l'appli en appuyant sur le logo du 'menu hamburger'.  
 Si vous pensez avoir une erreur avant d'avoir sauvegarder (par exemple supprimé un élément par erreur), actualisez simplement la page. Le bouton *Réinitialiser* (suivi de *Sauvegarder*) remet toute la configuration à zéro, attention donc !
 
-<br/><br/>  
+<br/>  
 
 * ### Menu du bas
+
+![](../images/screen-assistantBottom.png)
+
 Cette partie est assez explicite, elle permet de configurer les onglets qui apparaissent en bas de l'écran. Vous avez la possibilité de choisir vos icônes parmis tout un panel : celles de Jeedom, celles proposées par Material Design, ou encore sur Font Awesome(un moteur de recherche est intégré).  
 La configuration de cette partie est optionnelle, et n'est à réaliser que si vous souhaitez utiliser ces onglets.
 
@@ -262,7 +257,7 @@ Sa publication sur le Store est encore en cours de validation, en attendant il e
 ## J'ai un Iphone, comment utiliser l'application ? <a name="qIphone"></a>  
 
 Pour l'instant il n'est pas possible d'utiliser l'application JeedomConnect sur Iphone.  
-Le développement de l'application est bien prévue, mais pas réalisée pour le moment.  
+Le développement de l'application est bien prévu, mais non réalisé pour le moment.  
 Aucune date n'est annoncée sur la sortie de celle-ci, mais dès que ce sera possible une communication sera faite sur le forum !
 
 <br/>
@@ -270,23 +265,25 @@ Aucune date n'est annoncée sur la sortie de celle-ci, mais dès que ce sera pos
 ## L'application m'indique "Merci de migrer votre configuration" <a name="qMigration"></a>  
 
 La mise à jour que vous venez de réaliser nécessite une mise à jour au niveau du fichier de configuration utilisé pour définir vos widgets.  
-Que va faire cette opération ? Elle va lire votre(vos) fichier(s) de configuration et créér automatiquement tous les widgets correspondant.
-/!\ si vous avez plusieurs équipements (téléphone/tablette/...) de configurer, il y a de forte chance que l'opération créé des widgets en doublon (ou plus).  
+Que va faire cette opération ? Elle va lire votre(vos) fichier(s) de configuration et créér automatiquement tous les widgets correspondant.  
+:warning: si vous avez plusieurs équipements (téléphone/tablette/...) de configurer, il y a de forte chance que l'opération créé des widgets en doublon (ou plus).  
 Deux choix s'offrent à vous :  
-  1. migrer 1 seul de vos appareils, exporter sa configuration puis l'importer sur tous vos autres équipement :  
-      * le + : pas de widgets créés en doublons  
-      * le - : si certains de vos appareils ont des widgets bien à eux, il faudra alors les refaire manuellement  
-  2. migrer l'ensemble de vos appareils :  
+  1. migrer UN seul de vos équipement (appareil), exporter sa configuration puis l'importer sur tous vos autres équipements :  
+      * le + : pas de widgets créés en doublons, pas de longue suppression manuelle à réaliser    
+      * le - : si certains de vos appareils ont des widgets bien à eux, il faudra alors les recréer manuellement  
+  2. migrer l'ensemble de vos équipements :  
       * le + : tous les widget seront créés automatiquement
-      * le - : chaque appareil étant migré comme s'il était seul, certains widgets seront créés en doublon. Vous aurez donc besoin de faire un peu de ménage en modifiant les configurations de certains appareils puis en supprimant les widgets en doublon.   
+      * le - : chaque équipement étant migré comme s'il était seul, certains widgets seront créés en doublon. Vous aurez donc besoin de faire un peu de ménage en modifiant les configurations de certains équipements puis en supprimant les widgets inutiles en doublon.   
 
 Nous préconisons la solution #1 ! Voici comment nous vous proposons de faire : 
-* désactiver l'ensemble de vos équipement sous le plugin JeedomConnect, et n'en laisser qu'<b>UN SEUL actif</b> (le + utilisé, ou celui qui contient le + de widget)
+* désactiver l'ensemble de vos équipement sous le plugin JeedomConnect, et n'en laisser qu'<b>UN SEUL actif</b> (le plus utilisé, ou celui qui contient le plus de widgets)
 <img src='../images/JC_disableEq.gif' width='50%' />  
+
 * rendez-vous sur la page `configuration` de votre plugin (Menu `Plugins/Gestion des plugins/Jeedom Connect`)  
 <img src='../images/JeedomConnect_configuration.png' width='600px' />  
+
 L'option `Migration des configurations` va vous aider à réaliser cette mise à jour.  
-* sélectionnez le choix `uniquement les équipements actifs`
+* sélectionnez le choix `uniquement les équipements actifs`  
 * cliquez sur le bouton `Migrer`  
 Un message de confirmation vous indique que tout s'est bien passé !  
 Vous pouvez retourner sur votre page principale du plugin JeedomConnect et vous devriez voir quelques changements : l'ensemble de vos widgets sont maintenant disponible directement sur cette page.  
