@@ -2,7 +2,7 @@
 
 <img src="../images/JeedomConnect_icon.png"  width="10%" />
 
-Télécharger l'application au format APK : https://github.com/jared-94/JeedomConnect/releases/latest
+Télécharger l'application (au format APK) en fonction de la version du plugin installé sur Jeedom [voir ici](#version)  
 
 
 1. [Présentation du projet](#presentation)
@@ -14,7 +14,7 @@ Télécharger l'application au format APK : https://github.com/jared-94/JeedomCo
 7. [Ajouter des équipements](#addEq)
 8. [Configuration d'un équipement](#configureEq)
 9. [Géolocalisation](#geoloc)
-10. [Matching entre les versions APK <=> Plugin](#version)
+10. [Matching entre les versions Application (APK) <=> Plugin](#version)
 11. [FAQ](#faq)
 
 ## Présentation du projet <a name="presentation"></a>
@@ -214,7 +214,7 @@ Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connai
 
 <br/><br/>  
 
-# Matching version APK <=> version Plugin <a name="version"></a> 
+# Matching version Application (APK) <=> version Plugin sur Jeedom <a name="version"></a> 
 
 L'apk est téléchargeable en cliquant sur le numéro de version.
 
@@ -233,18 +233,41 @@ L'apk est téléchargeable en cliquant sur le numéro de version.
 |0.17.1 (05/03/2021) | [0.17.1](https://github.com/jared-94/JeedomConnect/releases/download/0.17.1/JeedomConnect-0.17.1-beta.apk)  |
 |0.17.0 (04/03/2021) | [0.17.0](https://github.com/jared-94/JeedomConnect/releases/download/0.17.0/JeedomConnect-0.17.0.apk)  |
 
+<br/>  
+
+## Lien github générique 
+
+https://github.com/jared-94/JeedomConnect/releases/latest
 
 <br/><br/>  
 
 # FAQ <a name="faq"></a> 
   
-  1. [L'application m'indique "Merci de migrer votre configuration"](#q1) 
-  2. [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#q2) 
+  * [Comment télécharger l'application ?](#qOU) 
+  * [J'ai un Iphone, comment utiliser l'application ?](#qIphone) 
+  * [L'application m'indique "Merci de migrer votre configuration"](#qMigration) 
+  * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion) 
+  
 
 
 ---
   
-## L'application m'indique "Merci de migrer votre configuration" <a name="q1"></a>  
+## Comment télécharger l'application ? <a name="qOU"></a>   
+
+L'application est pour le moment uniquement disponible sur Android.  
+Sa publication sur le Store est encore en cours de validation, en attendant il est nécessaire de passer par un téléchargement et une installation manuelle.  
+
+<br/>
+
+## J'ai un Iphone, comment utiliser l'application ? <a name="qIphone"></a>  
+
+Pour l'instant il n'est pas possible d'utiliser l'application JeedomConnect sur Iphone.  
+Le développement de l'application est bien prévue, mais pas réalisée pour le moment.  
+Aucune date n'est annoncée sur la sortie de celle-ci, mais dès que ce sera possible une communication sera faite sur le forum !
+
+<br/>
+
+## L'application m'indique "Merci de migrer votre configuration" <a name="qMigration"></a>  
 
 La mise à jour que vous venez de réaliser nécessite une mise à jour au niveau du fichier de configuration utilisé pour définir vos widgets.  
 Que va faire cette opération ? Elle va lire votre(vos) fichier(s) de configuration et créér automatiquement tous les widgets correspondant.
@@ -269,9 +292,9 @@ Un message de confirmation vous indique que tout s'est bien passé !
 Vous pouvez retourner sur votre page principale du plugin JeedomConnect et vous devriez voir quelques changements : l'ensemble de vos widgets sont maintenant disponible directement sur cette page.  
 * vous pouvez maintenant ouvrir la configuration de votre appareil, faire un `export` de la configuration, puis sur chacun de vos autres équipements `importer` cette configuration, puis réactiver vos équipements.
 
-<br/><br/>
+<br/>
 
-## J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin" <a name="q2"></a>   
+## J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin" <a name="qVersion"></a>   
 
 Pour fonctionner, il faut que le plugin installé sur Jeedom et l'application (APK) que vous avez téléchargé et utilisé soit alignés.  
 Notez vos différentes versions et rendez-vous sur le [tableau de versions](#version) pour vérifier votre installation, et connaitre l'élément à mettre à jour.  
@@ -280,6 +303,6 @@ La version du plugin est disponible sur la page de `configuration` du plugin :
 <img src='../images/JC_pluginVersion.gif' width='30%' />  
 <br/>
 La version de l'application est disponible sur la page de connexion :  
-<!-- <img src='../images/JC_getAplVersion.gif' width='30%' />   -->
+<img src='../images/JeedomConnect_VersionApk.jpeg' width='30%' />  
 ainsi qu'en bas de la page `Préférences` (dans la menu de l'application) :  
 <img src='../images/JC_getAplVersion.gif' width='30%' />  

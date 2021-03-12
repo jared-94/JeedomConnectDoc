@@ -1,9 +1,9 @@
 # Changelog JeedomConnect  
 
 ## Version 0.18.0 Beta (XX/03/2021)  
-:information_source: Pré-requis (facultatif mais également préférable !) : <b>AVANT</b> de mettre à jour le plugin, ouvrez l'assistant sur chacun de vos équipements, allez sur l'onglet `Pièces` et assurez vous que chacune des pièces créée est bien attachée à un objet Jeedom ! 
+:information_source: Pré-requis (facultatif mais préférable !) : <b>AVANT</b> de mettre à jour le plugin, ouvrez l'assistant sur chacun de vos équipements, allez sur l'onglet `Pièces` et assurez vous que chacune des pièces créée est bien attachée à un objet Jeedom ! 
 
-:warning: Une migration manuelle est nécessaire pour faire fonctionner cette nouvelle version. Merci de lire la [documentation](index.md#q1) pour voir comment faire ! :warning:
+:warning: Une fois la mise à jour effectuée, une migration manuelle est nécessaire pour faire fonctionner cette nouvelle version. Merci de lire la [documentation](index.md#qMigration) pour voir comment faire ! :warning:
 
 - Refonte complète de la gestion des widgets :
   * création des widgets depuis la page principale du plugin
