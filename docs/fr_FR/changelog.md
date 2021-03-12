@@ -1,4 +1,25 @@
-# Changelog JeedomConnect
+# Changelog JeedomConnect  
+
+## Version 0.18.0 Beta (XX/03/2021)  
+:information_source: Pré-requis (facultatif mais préférable !) : <b>AVANT</b> de mettre à jour le plugin, ouvrez l'assistant sur chacun de vos équipements, allez sur l'onglet `Pièces` et assurez vous que chacune des pièces créée est bien attachée à un objet Jeedom ! 
+
+:warning: Une fois la mise à jour effectuée, une migration manuelle est nécessaire pour faire fonctionner cette nouvelle version. <b>Merci de lire la [documentation](index.md#qMigration)</b> pour voir comment faire ! :warning:
+
+- Refonte complète de la gestion des widgets :
+  * création des widgets depuis la page principale du plugin
+  * l'assistant disponible sur chaque équipement permet dorénavant de rattacher un widget existant à l'équipement
+  * fonction de migration permettant de créer automatiquement tous les widgets d'une version précédente dans la version courante (sur la page de configuration)
+  * ajout fonction de recherche sur les widgets : fonctionne sur le nom et sur l'id du widget (visible en info-bulles)
+
+- Ajout du widget `Géolocalisation`
+
+- Bug fix : 
+  * les commandes de chaque équipements sont déplaçables
+  * amélioration de la performance sur la recherche des icônes (merci olivvv59)
+
+
+
+
 ## Version 0.17.1 Beta (05/03/2021)
 - Possibilité d'envoyer plusieurs images dans les notifications
 - Images dans les notifications accessibles en cliquant dessus (plein écran, zoom et scroll)
