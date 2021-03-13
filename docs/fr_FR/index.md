@@ -240,7 +240,7 @@ https://github.com/jared-94/JeedomConnect/releases/latest
   
   * [Comment télécharger l'application ?](#qOU) 
   * [J'ai un Iphone, comment utiliser l'application ?](#qIphone) 
-  * [L'application m'indique "Merci de migrer votre configuration"](#qMigration) 
+  * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration) 
   * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion) 
   
 
@@ -262,7 +262,9 @@ Aucune date n'est annoncée sur la sortie de celle-ci, mais dès que ce sera pos
 
 <br/>
 
-## L'application m'indique "Merci de migrer votre configuration" <a name="qMigration"></a>  
+## L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration" <a name="qMigration"></a>  
+
+<img src='../images/JC_changement_format.jpg' width='20%' />  
 
 La mise à jour que vous venez de réaliser nécessite une mise à jour au niveau du fichier de configuration utilisé pour définir vos widgets.  
 Que va faire cette opération ? Elle va lire votre(vos) fichier(s) de configuration et créér automatiquement tous les widgets correspondant.  
@@ -276,6 +278,7 @@ Deux choix s'offrent à vous :
       * le - : chaque équipement étant migré comme s'il était seul, certains widgets seront créés en doublon. Vous aurez donc besoin de faire un peu de ménage en modifiant les configurations de certains équipements puis en supprimant les widgets inutiles en doublon.   
 
 Nous préconisons la solution #1 ! Voici comment nous vous proposons de faire : 
+* commencer par mettre le niveau de log en `DEBUG` sur l'application (page `configuration` du plugin, pensez à sauvegarder !)
 * désactiver l'ensemble de vos équipement sous le plugin JeedomConnect, et n'en laisser qu'<b>UN SEUL actif</b> (le plus utilisé, ou celui qui contient le plus de widgets)
 <img src='../images/JC_disableEq.gif' width='50%' />  
 
