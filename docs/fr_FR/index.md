@@ -10,7 +10,7 @@ Télécharger l'application (au format APK) en fonction de la version du plugin 
 3. [Screenshots](#screenshots)
 4. [Installation du plugin](#install)
 5. [Configuration du plugin](#configurePlugin)
-6. [Geston des Widgets](#gestionWidget)
+6. [Gestion des Widgets](#gestionWidget)
 7. [Ajouter des équipements](#addEq)
 8. [Configuration d'un équipement](#configureEq)
 9. [Géolocalisation](#geoloc)
