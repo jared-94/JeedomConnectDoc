@@ -21,7 +21,7 @@ Pensez également à mettre le plugin JeedomConnect en `DEBUG` !
 
 
 
-## Version 0.17.1 Beta (05/03/2021)
+## Version 0.17.1 Beta (05/03/2021)  -- Version Stable (15/03/2021)
 - Possibilité d'envoyer plusieurs images dans les notifications
 - Images dans les notifications accessibles en cliquant dessus (plein écran, zoom et scroll)
 - Widget clim : fanSpeed non limité
