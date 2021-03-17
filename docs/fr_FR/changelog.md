@@ -1,5 +1,11 @@
 # Changelog JeedomConnect  
 
+## Version 0.18.1 Beta (17/03/2021)  
+- Bug Fix : 
+  * lors d'une modification d'un widget, l'application est mise à jour automatiquement
+  * erreur sur le déplacement des widgets sans parent
+
+
 ## Version 0.18.0 Beta (15/03/2021)  
 :information_source: Pré-requis (facultatif mais préférable !) : <b>AVANT</b> de mettre à jour le plugin, ouvrez l'assistant sur chacun de vos équipements, allez sur l'onglet `Pièces` et assurez vous que chacune des pièces créée est bien attachée à un objet Jeedom !  
 Pensez également à mettre le plugin JeedomConnect en `DEBUG` !
@@ -18,7 +24,9 @@ Pensez également à mettre le plugin JeedomConnect en `DEBUG` !
   * les commandes de chaque équipements sont déplaçables
   * amélioration de la performance sur la recherche des icônes (merci olivvv59)
 
-
+- côté APK : 
+  * affichage d'un message plus précis sur la différence entre la version de plugin et celle de l'application
+  * mise en place d'un pop-up pour télécharger la bonne dernière version de l'application directement
 
 
 ## Version 0.17.1 Beta (05/03/2021)  -- Version Stable (15/03/2021)
