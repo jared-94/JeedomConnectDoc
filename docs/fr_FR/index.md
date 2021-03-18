@@ -2,7 +2,9 @@
 
 <img src="../images/JeedomConnect_icon.png"  width="10%" />
 
-Télécharger l'application (au format APK) en fonction de la version du plugin installé sur Jeedom [voir ici](#version)  
+
+<a href="https://play.google.com/store/apps/details?id=com.jeedomconnect.app" target="_blank">Télécharger l'application directement depuis le Store !</a>   
+si vous êtes bêta-testeur et utilisez la version bêta du plugin, [regardez-ici](#qBeta)  
 
 
 1. [Présentation du projet](#presentation)
@@ -211,31 +213,40 @@ Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connai
 
 # Matching version Application (APK) <=> version Plugin sur Jeedom <a name="version"></a> 
 
-L'apk est téléchargeable en cliquant sur le numéro de version.
+:warning: Ces informations sont obsolètes depuis la version 0.18.2.  
+Dorénavant, les applications sont disponibles au téléchargement directement et uniquement depuis le Store.  
 
-## Version Stable 
+<details>
+  <summary>Ancienne version/méthode</summary>
+  
+  L'apk est téléchargeable en cliquant sur le numéro de version.
 
-|Version plugin |Version Application  |
-|------|-----|
-|0.17.1 (15/03/2021 11:14:23)|[0.17.1](https://github.com/jared-94/JeedomConnectDoc/raw/master/resources/apk/stable/JeedomConnect-0.17.1.apk) |
-|0.16.0 (22/02/2021)|[0.16.0](https://github.com/jared-94/JeedomConnect/releases/download/0.16.0/JeedomConnect-0.16.0.apk) |
+  ## Version Stable 
 
-<br/>  
+  |Version plugin |Version Application  |
+  |------|-----|
+  |0.17.1 (15/03/2021 11:14:23)|[0.17.1](https://github.com/jared-94/JeedomConnectDoc/raw/master/resources/apk/stable/JeedomConnect-0.17.1.apk) |
+  |0.16.0 (22/02/2021)|[0.16.0](https://github.com/jared-94/JeedomConnect/releases/download/0.16.0/JeedomConnect-0.16.0.apk) |
 
-## Version Beta 
+  <br/>  
 
-|Version plugin |Version Application  |
-|------|-----|
-|0.18.1 (2021-03-17 10:23:20) | [0.18.0-beta](https://github.com/jared-94/JeedomConnectDoc/raw/master/resources/apk/beta/JeedomConnect-0.18.0-beta.apk)  |
-|0.18.0 (15/03/2021 11:27:31) | [0.18.0-beta](https://github.com/jared-94/JeedomConnectDoc/raw/master/resources/apk/beta/JeedomConnect-0.18.0-beta.apk)  |
-|0.17.1 (05/03/2021) | [0.17.1-beta](https://github.com/jared-94/JeedomConnect/releases/download/0.17.1/JeedomConnect-0.17.1-beta.apk)  |
-|0.17.0 (04/03/2021) | [0.17.0-beta](https://github.com/jared-94/JeedomConnect/releases/download/0.17.0/JeedomConnect-0.17.0.apk)  |
+  ## Version Beta 
 
-<br/>  
+  |Version plugin |Version Application  |
+  |------|-----|
+  |0.18.1 (2021-03-17 10:23:20) | [0.18.0-beta](https://github.com/jared-94/JeedomConnectDoc/raw/master/resources/apk/beta/JeedomConnect-0.18.0-beta.apk)  |
+  |0.18.0 (15/03/2021 11:27:31) | [0.18.0-beta](https://github.com/jared-94/JeedomConnectDoc/raw/master/resources/apk/beta/JeedomConnect-0.18.0-beta.apk)  |
+  |0.17.1 (05/03/2021) | [0.17.1-beta](https://github.com/jared-94/JeedomConnect/releases/download/0.17.1/JeedomConnect-0.17.1-beta.apk)  |
+  |0.17.0 (04/03/2021) | [0.17.0-beta](https://github.com/jared-94/JeedomConnect/releases/download/0.17.0/JeedomConnect-0.17.0.apk)  |
 
-## Lien github générique 
+  <br/>  
 
-https://github.com/jared-94/JeedomConnect/releases/latest
+  ## Lien github générique 
+
+  https://github.com/jared-94/JeedomConnect/releases/latest
+
+</details>
+
 
 <br/><br/>  
 
@@ -245,6 +256,7 @@ https://github.com/jared-94/JeedomConnect/releases/latest
   * [J'ai un Iphone, comment utiliser l'application ?](#qIphone) 
   * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration) 
   * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion) 
+  * [Je suis bêta-testeur, que dois-je faire ?"](#qBeta) 
   
 
 
@@ -296,7 +308,7 @@ Vous pouvez retourner sur votre page principale du plugin JeedomConnect et vous 
 * vous pouvez maintenant ouvrir la configuration de votre appareil, faire un `export` de la configuration, puis sur chacun de vos autres équipements `importer` cette configuration, puis réactiver vos équipements.
 
 <br/>
-
+  
 ## J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin" <a name="qVersion"></a>   
 
 Pour fonctionner, il faut que le plugin installé sur Jeedom et l'application (APK) que vous avez téléchargé et utilisé soit alignés.  
@@ -309,3 +321,12 @@ La version de l'application est disponible sur la page de connexion :
 <img src='../images/JeedomConnect_VersionApk.jpeg' width='30%' />  
 ainsi qu'en bas de la page `Préférences` (dans la menu de l'application) :  
 <img src='../images/JC_getAplVersion.gif' width='30%' />  
+
+
+<br/>
+
+## Je suis bêta-testeur, que dois-je faire ?<a name="qBeta"></a>   
+  
+Comme son nom l'indique, la version bêta n'est pas une version stable. En utilisant, vous savez et acceptez que celle-ci puisse comporter des anomalies, remonter des états incohérents, réaliser (ou pas) des actions, etc ...   
+  
+Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'application correspondante. Celle-ci est également disponible sur le Store, mais pour y accéder vous devez au préalable être enregistré en tant que bêta-testeur auprès du Store. Cette inscription est à <a href="https://play.google.com/apps/testing/com.jeedomconnect.app" target="_blank">faire ici</a>. 

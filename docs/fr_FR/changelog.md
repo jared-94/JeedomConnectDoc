@@ -1,5 +1,19 @@
 # Changelog JeedomConnect  
 
+## Version 0.18.2 Beta ET Stable (18/03/2021)  
+Dorénavant l'application (apk) sera disponible au téléchargement directement et uniquement sur le Store, aussi bien pour la version stable que pour la version bêta (dans ce dernier cas, un enregistrement est nécessaire -- [lire la doc](index.md#qBeta))  
+- Changement du logo et du splash-screen
+- Possibilité de passer en mode Vignette/Cartes sur la page des Pièces
+- Accès aux notifications depuis l'icône 'Sonnerie' en haut à droite de l'écran
+- Bug Fix :  
+  * prise en compte de l'inversion des états pour les volets roulant
+
+Côté plugin : 
+- Possibilité d'exporter & d'importer l'ensemble des widgets (sur page configuration du plugin)
+- Ajout du lien d'inscription au programme bêta-testeur
+- Bug Fix :  
+  * importer plusieurs fois des fichiers à la suite
+
 ## Version 0.18.1 Beta (17/03/2021)  
 - Bug Fix : 
   * lors d'une modification d'un widget, l'application est mise à jour automatiquement
