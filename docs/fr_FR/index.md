@@ -7,6 +7,9 @@
 si vous êtes bêta-testeur et utilisez la version bêta du plugin, [regardez-ici](#qBeta)  
 
 
+Pour accéder à la TODO list [c'est par là!](todo.md)  
+
+
 1. [Présentation du projet](#presentation)
 2. [Fonctionnalités](#fonctionalites)
 3. [Screenshots](#screenshots)
