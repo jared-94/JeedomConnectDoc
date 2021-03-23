@@ -246,16 +246,17 @@ Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connai
 
 # Notification <a name="notification"></a> 
 
-Vous avez la possibilité de gérer différents notifications sur l'application Jeedom Connect. Ces notifications peuvent être utilisées comme vous le feriez déjà avec l'envoie par Jeedom d'un SMS, Telegram, et autres sortes de messagerie.  
+Vous avez la possibilité de gérer différents types de notifications sur l'application Jeedom Connect. Ces notifications peuvent être utilisées comme vous le feriez déjà avec l'envoie par Jeedom d'un SMS, Telegram, et autres sortes de messagerie.  
 Vous pouvez donc vous envoyer des notifications (via des scénarios par exemple) : lorsque votre porte d'entrée s'ouvre alors que vous êtes absents, pour vous prévenir de sortir la poubelle, indiquer que le facteur est passé, ... vers votre application JeedomConnect.
 
 ## Les Canaux  
 
 Dans le paramétrage des notifications, vous avez la possibilité de créer plusieurs canaux.  
-Ces canaux permettent de définir différentes façon de réagir qu'aura votre smartphone  à la réception d'une notification JeedomConnect.  
+Ces canaux permettent de définir différentes façon de réagir qu'aura votre smartphone à la réception d'une notification JeedomConnect.  
 
 <u>Par exemple</u> depuis le plugin, vous pourriez créer un canal `Défaut`, un `Silence` et enfin un `Urgent` (propre à chaque équipement).
 Ces canaux sont ensuite disponibles sur votre application mobile JeedomConnect. Faites un clic long sur l'icone JeedomConnect, puis 'informations', ensuite allez dans le menu 'notification' : vous devez alors voir les 3 canaux précédemment créés `Défaut`, `Silence` et `Urgent`.  
+
 Vous pouvez alors les personnaliser : (toujours <u>en exemple</u>)
   - le canal `Silence` recevra toutes les notifications pour lesquels je ne souhaite pas être dérangé : donc je choisis de ne pas avoir de son
   - la canal `Urgent` par contre il faut absolument que je lise les notifications au plus vite, du coup je choisis une sonnerie bien particulière (je peux augmenter également le son), et je choisis l'option 'Ignorer ne pas déranger'
@@ -265,8 +266,8 @@ Vous pouvez alors les personnaliser : (toujours <u>en exemple</u>)
 ## Les notifications
 
 Il faut ensuite créer les commandes notifications qui auront un lien avec nos canaux. 
-Dans l'onglet `notification`, (toujours en partant de <u>l'exemple</u> donnée au dessus), je crée donc 3 notifications : `notification` (créé automatiquement) en lien avec le canal `Défaut`, `notif silencieuse` que je lie au canal `Silence`, et `notif urgente` que je rattache au canal `Urgent`
-Vous pouvez également : 
+Dans l'onglet `notification`, (toujours en partant de <u>l'exemple</u> donnée au dessus), je crée donc 3 notifications : `notification` (créé automatiquement) en lien avec le canal `Défaut`, `notif silencieuse` que je lie au canal `Silence`, et `notif urgente` que je rattache au canal `Urgent`.  
+Vous pouvez également :  
 - mettre à jour l'existante : si cochée, alors vous ne verrez qu'une seule notification du même type dans votre barre de notification sur votre smartphone. (si décochée, chaque notification sera affichée)
 - couleur : définit la couleur du titre de la notification sur votre smarphone, ainsi que celle de la notification
 - image : permet d'ajouter une image sur le coin en haut à droite de la notification
@@ -287,9 +288,8 @@ Voici par exemple la réception d'une notification : (avec les configurations pr
 <img src='../images/JeedomConnect_notif_example.gif' width='20%' />  
  
 C'est une `notif Urgente` qui a été envoyée, donc puisque la notification est paramétré sur le canal `Urgent`, mon téléphone sonne donc avec un fort volume même si je suis en mode 'ne pas déranger'.  
-La notification est affichée en rouge dans la barre de notification Android, ainsi que lorsque je la visualise en entière dans l'application JeedomConnect.  
+La notification est affichée en rouge dans la barre de notification Android, ainsi que lorsque je la visualise en entière dans l'application JeedomConnect, et on voit la présence d'une icône 'sirène rouge' dans le coin supérieur droit.    
 Et j'ai également la possibilité de cliquer sur le bouton `Alarme maison` pour exécuter le scénario que j'ai paramétré et qui déclenchera l'alarme de ma maison.
-
 
 
 
