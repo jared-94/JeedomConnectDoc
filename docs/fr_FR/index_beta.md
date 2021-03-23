@@ -19,8 +19,9 @@ Pour accéder à la TODO list [c'est par là!](todo.md)
 7. [Ajouter des équipements](#addEq)
 8. [Configuration d'un équipement](#configureEq)
 9. [Géolocalisation](#geoloc)
-10. [Matching entre les versions Application (APK) <=> Plugin](#version)
-11. [FAQ](#faq)
+10. [Notification](#notification)
+11. [Matching entre les versions Application (APK) <=> Plugin](#version)
+12. [FAQ](#faq)
 
 ## Présentation du projet <a name="presentation"></a>
 Le projet **Jeedom Connect** se compose de 2 parties : un plugin pour Jeedom, et une application Android. Une version pour iOS pourra être envisagée plus tard.
@@ -58,7 +59,10 @@ La version beta contient les nouveautés les plus récentes. (A noter que cette 
 
 <br/><br/>  
 
-## Configuration du plugin <a name="configurePlugin"></a>
+## Configuration du plugin <a name="configurePlugin"></a>  
+
+### Configurer l'accès à votre jeedom :  
+
 Il y a plusieurs champs  pré-remplis que vous pouvez modifier. Des placeholder sont indiqués sur chacun d'entre eux. S'ils vous semblent corrects, inutile de les modifier.
 * **Adresse http externe** : Indiquez ici votre adresse d'accès à Jeedom depuis l'extérieur de votre domicile.
 * **Adresse http interne** : Adresse de Jeedom sur votre réseau local.
@@ -211,6 +215,57 @@ Vous pouvez ensuite aller sur `Gestion des lieux`.
 - Pour **supprimer ou éditer une zone**, appuyez sur le marqueur puis sur le nom qui apparait.
 - Pour **déplacer une zone**, faites un appuie long sur le marqueur puis glisser.
 Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connaitre à tout moment la position de votre appareil. Les coordonnées GPS (latitude,longitude) sont accessibles dans la commande `Position` de votre équipement.
+
+<br/><br/>  
+
+# Notification <a name="notification"></a> 
+
+Vous avez la possibilité de gérer différents notifications sur l'application Jeedom Connect. Ces notifications peuvent être utilisées comme vous le feriez déjà avec l'envoie par Jeedom d'un SMS, Telegram, et autres sortes de messagerie.  
+Vous pouvez donc vous envoyer des notifications (via des scénarios par exemple) : lorsque votre porte d'entrée s'ouvre alors que vous êtes absents, pour vous prévenir de sortir la poubelle, indiquer que le facteur est passé, ... vers votre application JeedomConnect.
+
+## Les Canaux  
+
+Dans le paramétrage des notifications, vous avez la possibilité de créer plusieurs canaux.  
+Ces canaux permettent de définir différentes façon de réagir qu'aura votre smartphone  à la réception d'une notification JeedomConnect.  
+
+<u>Par exemple</u> depuis le plugin, vous pourriez créer un canal `Défaut`, un `Silence` et enfin un `Urgent` (propre à chaque équipement).
+Ces canaux sont ensuite disponibles sur votre application mobile JeedomConnect. Faites un clic long sur l'icone JeedomConnect, puis 'informations', ensuite allez dans le menu 'notification' : vous devez alors voir les 3 canaux précédemment créés `Défaut`, `Silence` et `Urgent`.  
+Vous pouvez alors les personnaliser : (toujours <u>en exemple</u>)
+  - le canal `Silence` recevra toutes les notifications pour lesquels je ne souhaite pas être dérangé : donc je choisis de ne pas avoir de son
+  - la canal `Urgent` par contre il faut absolument que je lise les notifications au plus vite, du coup je choisis une sonnerie bien particulière (je peux augmenter également le son), et je choisis l'option 'Ignorer ne pas déranger'
+
+<img src='../images/JeedomConnect_notif_canaux.gif' width='20%' />  
+
+## Les notifications
+
+Il faut ensuite créer les commandes notifications qui auront un lien avec nos canaux. 
+Dans l'onglet `notification`, (toujours en partant de <u>l'exemple</u> donnée au dessus), je crée donc 3 notifications : `notification` (créé automatiquement) en lien avec le canal `Défaut`, `notif silencieuse` que je lie au canal `Silence`, et `notif urgente` que je rattache au canal `Urgent`
+Vous pouvez également : 
+- mettre à jour l'existante : si cochée, alors vous ne verrez qu'une seule notification du même type dans votre barre de notification sur votre smartphone. (si décochée, chaque notification sera affichée)
+- couleur : définit la couleur du titre de la notification sur votre smarphone, ainsi que celle de la notification
+- image : permet d'ajouter une image sur le coin en haut à droite de la notification
+- actions : permet de réaliser commandes et/ou scénario à chaque fois qu'une notification est envoyée. (<u>par exemple</u> : si envoie d'une notification urgente, je veux avoir la possibilité d'executer le scénario qui permet de déclencher l'alarme de la maison)
+
+<img src='../images/JeedomConnect_notif_edit.png' width='50%' />  
+
+### Comment envoyer une notification ?
+
+Une fois que vous avez paramétré vos différentes notifications, les commandes associées sont automatiquement créées sur votre équipement (après `sauvegarde`), dans l'onglet dédié comme sur tout équipement Jeedom :  
+<img src='../images/JeedomConnect_notif_cmd.png' width='40%' />  
+
+vous pouvez donc vous en servir dans un scénario ou n'importe quelle autre type (interraction, bloc code, ...) :   
+<img src='../images/JeedomConnect_notif_sc.png' width='60%' />  
+
+Voici par exemple la réception d'une notification : (avec les configurations présentées précédemment, ça reste donc toujours qu'un exemple possibe ! )   
+
+<img src='../images/JeedomConnect_notif_example.gif' width='20%' />  
+
+C'est une `notif Urgente` qui a été envoyée, donc puisque la notification est paramétré sur le canal `Urgent`, mon téléphone sonne donc avec un fort volume même si je suis en mode 'ne pas déranger'.  
+La notification est affichée en rouge dans la barre de notification Android, ainsi que lorsque je la visualise en entière dans l'application JeedomConnect.  
+Et j'ai également la possibilité de cliquer sur le bouton `Alarme maison` pour exécuter le scénario que j'ai paramétré et qui déclenchera l'alarme de ma maison.
+
+
+
 
 <br/><br/>  
 

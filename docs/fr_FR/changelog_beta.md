@@ -1,6 +1,6 @@
 # Changelog JeedomConnect  
 
-## Version 0.18.3 (xx/03/2021)
+## Version 0.18.3 Beta (xx/03/2021)
 - Nouveautés :  
   * SplashScreen qui pique pas les yeux  
   * Possibilité de sécuriser les action avec un code numérique ou alphanumérique  

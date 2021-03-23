@@ -57,4 +57,3 @@ La dernière partie liste les points qui n'ont pas été retenus.
 # Documentation
     - faire un paragraphe sur "http VS websocket"
     - éclaircir le paramétrage et l'utilisation des notifications
-	- ajouter quelques informations sur des options de la "danger zone"
