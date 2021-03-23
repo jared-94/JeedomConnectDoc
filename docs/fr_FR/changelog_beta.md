@@ -1,16 +1,26 @@
 # Changelog JeedomConnect  
 
 ## Version 0.18.3 (xx/03/2021)
-- Fix heures mal affichées ou avec retard d'une heure
-- Nouveau SplashScreen qui pique pas les yeux
-- Meilleures performances sur l'Historique
-- Possibilité de sécuriser les action avec un code numérique ou alphanumérique
-- Possibilité de personnaliser le chemin des images persos (par défaut `plugins/JeedomConnect/data/img/user_files/`)
-- Nouveau widget : liste de choix (générique pour les commandes `action` sous-type `select`)
-- Nouveau widget :générique action message
-- Mode RTL (Right To Left) dans l'appli (on se refait le film à l'envers)
-- Widget WebView : accélération matérielle activée. Login automatique sur les pages de Jeedom
-- Fix : alignement dans les les widget Favoris, Résumé, et dans les vignettes sans statut
+- Nouveautés :  
+  * SplashScreen qui pique pas les yeux  
+  * Possibilité de sécuriser les action avec un code numérique ou alphanumérique  
+  * Possibilité de personnaliser le chemin des images persos (par défaut `plugins/JeedomConnect/data/img/user_files/`)  
+  * Widget `liste de choix` (générique pour les commandes `action` sous-type `select`)  
+  * Widget `générique message`  
+  * Mode RTL (Right To Left) dans l'appli (on se refait le film à l'envers)  
+
+- Améliorations :  
+  * Widget WebView : 
+    + accélération matérielle activée. 
+    + Login automatique sur les pages de Jeedom  
+  * Meilleures performances sur l'Historique  
+
+- Bug Fix :  
+  * Heures mal affichées ou avec retard d'une heure  
+  * Alignement dans les les widget Favoris, Résumé, et dans les vignettes sans statut  
+  * Ne permet plus de sélectionner plusieurs fois la même pièce dans l'onglet du même nom  
+
+
 
 ## Version 0.18.2 Beta ET Stable (18/03/2021)  
 Dorénavant l'application (apk) sera disponible au téléchargement directement et uniquement sur le Store, aussi bien pour la version stable que pour la version bêta (dans ce dernier cas, un enregistrement est nécessaire -- [lire la doc](index.md#qBeta))  
