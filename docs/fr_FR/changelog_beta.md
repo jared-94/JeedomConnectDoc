@@ -19,7 +19,7 @@
   * Heures mal affichées ou avec retard d'une heure  
   * Alignement dans les les widget Favoris, Résumé, et dans les vignettes sans statut  
   * Ne permet plus de sélectionner plusieurs fois la même pièce dans l'onglet du même nom  
-
+  * Récupération des scénarios sur l'appli (via le menu)  
 
 
 ## Version 0.18.2 Beta ET Stable (18/03/2021)  
