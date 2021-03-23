@@ -72,6 +72,32 @@ Il y a plusieurs champs  pré-remplis que vous pouvez modifier. Des placeholder 
 * **Adresse interne websocket** : Adresse websocket sur votre réseau local
 
 Si vous modifiez un de ces champs, il faudra bien sûr sauvegarder, puis re-générer les QR Code des équipements. En cas d'utilisation du HTTP, il faudra aussi redémarrer l'appli.
+<br/>
+
+### Personnaliser le plugin
+
+Vous avez la possibilité de personnaliser le chemin d'accès à vos images/icônes.  
+Par défaut, les images personnalisées du plugin sont stockées sous `plugins/JeedomConnect/data/img/user_files/`.  
+  
+Vous pouvez choisir d'utiliser un autre emplacement en renseignant le champ `Chemin pour les images perso` le chemin d'accès au répertoire qui contient vos images et icônes personnels.  
+:warning: Le chemin ne dois PAS contenir la racine 
+
+> par exemple, si vous souhaitez utiliser le répertoire `/var/www/html/data/img/` alors indiquez : `data/img/` dans le champ  (attention au derni `/`!)
+
+<br/>
+
+### la Zone des Dangers
+
+Les actions disponibles dans cette partie sont à utiliser avec précaution. Vous pouvez en effet perdre l'intégalité de vos configurations si vous ne faites pas attention à ce que vous faites.  
+
+* **Réinitialiser** : efface les configurations de l'ensemble de vos équipements. Vous devrez donc redéfinir quels sont les widgets que vous souhaitez avoir sur chacun de vos équipements  
+* **Supprimer** : remet à 0 l'intégralité du plugin. Vous perdrez TOUTES vos configurations et l'ensemble de vos widgets seront supprimés. (comme si vous installiez le plugin pour la première fois)  
+* **Lister** : permet d'obtenir la liste des widgets (id) :
+  + non-utilisés : existant mais rattaché à aucun équipement
+  + non-existants : présent dans le fichie de configuration d'un équipement, mais non créé sur le plugin (mauvaise migration par exemple)
+  + tous : liste le nombre de fois où un wigdet est utilisé (format => "widget ID" : "nombre d'utilisation")  
+* **Exporter**/**Importer** : permet d'extraire l'ensemble de la configuration des widgets, et les réimporter sur une autre instance jeedom  
+* **Migrer** : transforme les fichiers de configuration dans le nouveau format attendu du plugin
 
 <br/><br/>  
 
@@ -259,7 +285,7 @@ vous pouvez donc vous en servir dans un scénario ou n'importe quelle autre type
 Voici par exemple la réception d'une notification : (avec les configurations présentées précédemment, ça reste donc toujours qu'un exemple possibe ! )   
 
 <img src='../images/JeedomConnect_notif_example.gif' width='20%' />  
-
+ 
 C'est une `notif Urgente` qui a été envoyée, donc puisque la notification est paramétré sur le canal `Urgent`, mon téléphone sonne donc avec un fort volume même si je suis en mode 'ne pas déranger'.  
 La notification est affichée en rouge dans la barre de notification Android, ainsi que lorsque je la visualise en entière dans l'application JeedomConnect.  
 Et j'ai également la possibilité de cliquer sur le bouton `Alarme maison` pour exécuter le scénario que j'ai paramétré et qui déclenchera l'alarme de ma maison.
