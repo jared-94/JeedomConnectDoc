@@ -1,5 +1,17 @@
 # Changelog JeedomConnect  
 
+## Version 0.18.3 (xx/03/2021)
+- Fix heures mal affichées ou avec retard d'une heure
+- Nouveau SplashScreen qui pique pas les yeux
+- Meilleures performances sur l'Historique
+- Possibilité de sécuriser les action avec un code numérique ou alphanumérique
+- Possibilité de personnaliser le chemin des images persos (par défaut `plugins/JeedomConnect/data/img/user_files/`)
+- Nouveau widget : liste de choix (générique pour les commandes `action` sous-type `select`)
+- Nouveau widget :générique action message
+- Mode RTL (Right To Left) dans l'appli (on se refait le film à l'envers)
+- Widget WebView : accélération matérielle activée. Login automatique sur les pages de Jeedom
+- Fix : alignement dans les les widget Favoris, Résumé, et dans les vignettes sans statut
+
 ## Version 0.18.2 Beta ET Stable (18/03/2021)  
 Dorénavant l'application (apk) sera disponible au téléchargement directement et uniquement sur le Store, aussi bien pour la version stable que pour la version bêta (dans ce dernier cas, un enregistrement est nécessaire -- [lire la doc](index.md#qBeta))  
 - Changement du logo et du splash-screen
@@ -8,14 +20,14 @@ Dorénavant l'application (apk) sera disponible au téléchargement directement 
 - Bug Fix :  
   * prise en compte de l'inversion des états pour les volets roulant
 
-Côté plugin : 
+Côté plugin :
 - Possibilité d'exporter & d'importer l'ensemble des widgets (sur page configuration du plugin)
 - Ajout du lien d'inscription au programme bêta-testeur
 - Bug Fix :  
   * importer plusieurs fois des fichiers à la suite
 
 ## Version 0.18.1 Beta (17/03/2021)  
-- Bug Fix : 
+- Bug Fix :
   * lors d'une modification d'un widget, l'application est mise à jour automatiquement
   * erreur sur le déplacement des widgets sans parent
 
@@ -34,11 +46,11 @@ Pensez également à mettre le plugin JeedomConnect en `DEBUG` !
 
 - Ajout du widget `Géolocalisation`
 
-- Bug fix : 
+- Bug fix :
   * les commandes de chaque équipements sont déplaçables
   * amélioration de la performance sur la recherche des icônes (merci olivvv59)
 
-- côté APK : 
+- côté APK :
   * affichage d'un message plus précis sur la différence entre la version de plugin et celle de l'application
   * mise en place d'un pop-up pour télécharger la bonne dernière version de l'application directement
 
