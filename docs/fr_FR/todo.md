@@ -4,31 +4,26 @@ Les items présents ici correspondent à l'ensemble des points pris en compte en
 La dernière partie liste les points qui n'ont pas été retenus.  
 
 # Plateforme
-    - mettre les apk disponible sur le store ==> FAIT depuis le 17 mars!
     - créer une version pour IOS  --> date inconnue
 
 # Widgets à créer  
 	- caméra
 	- multimédia
-	- liste de choix
-	- générique message
 	- porte de garage (https://community.jeedom.com/t/widgets-porte-de-garage/52963)
 	- lancer une application
-  - VMC
-  - Serrure
-  - Vanne thermostatique
-  - Velux
+	- VMC
+	- Serrure
+	- Vanne thermostatique
+	- Velux
 
 
 # Widgets à améliorer  
-    - fenêtre - Status numéric (en + de binaire)  (https://community.jeedom.com/t/widget-fenetre-status-numeric-plutot-que-binaire/54549)
-	- alarme avec plusieurs mode (https://community.jeedom.com/t/alarme-jeedom-connect/53849)
-  - Ajouter des tags au lancement d'un scénario
-  - Mode sombre sur les map
+    - alarme avec plusieurs mode (https://community.jeedom.com/t/alarme-jeedom-connect/53849)
+	- ajouter des tags au lancement d'un scénario
+	- mode sombre sur les map
 
 
 # Options supplémentaires
-	- ajouter une option "code", en plus de l'action de confirmation ou de l'empreinte
 	- permettre le clic sur une vignette pour réaliser l'action (allumer/éteindre une lumière, ..)
 	- avoir la possibilité de customiser les icônes 'Résumé'
 	- remplir automatiquement les zones en fonction d'une premiere sélection lors de la création d'un widget (Statut -> ON + OFF)
@@ -38,20 +33,53 @@ La dernière partie liste les points qui n'ont pas été retenus.
 	- choisir comment ouvrir l'historique par défaut : table ou graph (https://community.jeedom.com/t/historique-ouvrant-en-table-par-defaut/55629)
 	- ajouter bouton + et - aux extrémités d'un slider (https://community.jeedom.com/t/widget-thermostat-jeedom-connect/54694)
 	- définir la taille d'une vignette (https://community.jeedom.com/t/ergonomie-appli/55798)
-	- Retour d'informations de l'appareil (batterie, statut écran, connexion...) vers Jeedom
-  - Envoyer des actions vers l'appareil (allumer écran, couper bluetooth...)
-  - Commandes pour aller à une page donnée de l'application
-  - Widgets Android sur launcher
-  - Programmer une action sur un widget (ex: baisse de 2°C dans une heure)
-  - Préviens moi sur un widget (ex: envoie une notification si temperature > 24°C)
+	- retour d'informations de l'appareil (batterie, statut écran, connexion...) vers Jeedom
+	- envoyer des actions vers l'appareil (allumer écran, couper bluetooth...)
+	- commandes pour aller à une page donnée de l'application
+	- widgets Android sur launcher
+	- programmer une action sur un widget (ex: baisse de 2°C dans une heure)
+	- préviens moi sur un widget (ex: envoie une notification si temperature > 24°C)
+	
 
 # Bugs connus
-  - le menu haut ne s'affiche pas en entier
-  - L'application crash lors de l'édition des widgets
-  - les apostrophes dans les notifictions sont perdues
-
+	- le menu haut ne s'affiche pas en entier  
+	- l'application crash lors de l'édition des widgets  
+	- les apostrophes dans les notifications sont perdues  
+	- problème de rafraichissement des conf (liste) avec le daemon !?  
 
 
 # Documentation
     - faire un paragraphe sur "http VS websocket"
-    - éclaircir le paramétrage et l'utilisation des notifications
+    
+<br/><br/>
+---
+---
+<br/><br/>
+
+# Déjà mis en place
+
+Plateforme :  
+
+	- mettre les apk disponible sur le Play Store (17/03/21)
+
+Nouveaux widgets :  
+
+	- liste de choix (23/03/21)
+	- générique message (23/03/21)
+
+Petis plus :  
+
+	- ajouter une option "code", en plus de l'action de confirmation ou de l'empreinte (23/03/21)
+	- ajouter une option "pour gaucher" sur l'apk, permettant d'inverser l'affichage des actions (à gauche plutôt qu'à droite) (23/03/21)
+	- trop plein d'actions : ajouter un retour chariot pour ne pas avoir d'ascenceur (23/03/21)	
+	- widget fenêtre - Status accepte les valeurs numériques maitenant (en + de binaire) (23/03/21)
+	- toutes les actions d'un `générique action` sont affichées en mode carte (23/03/21)
+
+Documentation :  
+
+	- faire un paragraphe sur les notifications (23/03/21)
+	- éclaircir le paramétrage et l'utilisation des notifications (23/03/21)
+
+<br/><br/>
+
+# Abandonnés
