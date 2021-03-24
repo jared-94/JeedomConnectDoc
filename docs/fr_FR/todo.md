@@ -14,16 +14,17 @@ La dernière partie liste les points qui n'ont pas été retenus.
 	- générique message
 	- porte de garage (https://community.jeedom.com/t/widgets-porte-de-garage/52963)
 	- lancer une application
-	- VMC
-	- Serrure
-	- Vanne thermostatique
-	- Velux
+  - VMC
+  - Serrure
+  - Vanne thermostatique
+  - Velux
 
 
 # Widgets à améliorer  
     - fenêtre - Status numéric (en + de binaire)  (https://community.jeedom.com/t/widget-fenetre-status-numeric-plutot-que-binaire/54549)
 	- alarme avec plusieurs mode (https://community.jeedom.com/t/alarme-jeedom-connect/53849)
-	- ajouter des tags au lancement d'un scénario
+  - Ajouter des tags au lancement d'un scénario
+  - Mode sombre sur les map
 
 
 # Options supplémentaires
@@ -37,21 +38,18 @@ La dernière partie liste les points qui n'ont pas été retenus.
 	- choisir comment ouvrir l'historique par défaut : table ou graph (https://community.jeedom.com/t/historique-ouvrant-en-table-par-defaut/55629)
 	- ajouter bouton + et - aux extrémités d'un slider (https://community.jeedom.com/t/widget-thermostat-jeedom-connect/54694)
 	- définir la taille d'une vignette (https://community.jeedom.com/t/ergonomie-appli/55798)
-	- retour d'informations de l'appareil (batterie, statut écran, connexion...) vers Jeedom
-	- envoyer des actions vers l'appareil (allumer écran, couper bluetooth...)
-	- commandes pour aller à une page donnée de l'application
-	- widgets Android sur launcher
-	- programmer une action sur un widget (ex: baisse de 2°C dans une heure)
-	- préviens moi sur un widget (ex: envoie une notification si temperature > 24°C)
-	- ajouter une option "pour gaucher" sur l'apk, permettant d'inverser l'affichage des actions (à gauche plutôt qu'à droite)
-	- trop plein d'actions : ajouter un retour chariot pour ne pas avoir d'ascenceur
-	
+	- Retour d'informations de l'appareil (batterie, statut écran, connexion...) vers Jeedom
+  - Envoyer des actions vers l'appareil (allumer écran, couper bluetooth...)
+  - Commandes pour aller à une page donnée de l'application
+  - Widgets Android sur launcher
+  - Programmer une action sur un widget (ex: baisse de 2°C dans une heure)
+  - Préviens moi sur un widget (ex: envoie une notification si temperature > 24°C)
 
 # Bugs connus
-	- le menu haut ne s'affiche pas en entier  
-	- l'application crash lors de l'édition des widgets  
-	- les apostrophes dans les notifictions sont perdues  
-	- problème de rafraichissement des conf (liste) avec le daemon !?  
+  - le menu haut ne s'affiche pas en entier
+  - L'application crash lors de l'édition des widgets
+  - les apostrophes dans les notifictions sont perdues
+
 
 
 # Documentation

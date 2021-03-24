@@ -1,17 +1,18 @@
 # Changelog JeedomConnect  
 
-## Version 0.18.3 Beta (23/03/2021)
+## Version 0.18.3 Beta (24/03/2021)
 - Nouveautés :  
   * SplashScreen qui pique pas les yeux  
   * Possibilité de sécuriser les action avec un code numérique ou alphanumérique  
   * Possibilité de personnaliser le chemin des images persos (par défaut `plugins/JeedomConnect/data/img/user_files/`)  
   * Widget `liste de choix` (générique pour les commandes `action` sous-type `select`)  
   * Widget `générique message`  
-  * Mode RTL (Right To Left) dans l'appli (on se refait le film à l'envers)  
+  * Mode RTL (Right To Left) dans l'appli (on se refait le film à l'envers)
+  * La barre de navigation Android (Retour, Accueil, Récent) s'adapte au théme sombre (si présent à l'écran)  
 
 - Améliorations :  
-  * Widget WebView : 
-    + accélération matérielle activée. 
+  * Widget WebView :
+    + accélération matérielle activée.
     + Login automatique sur les pages de Jeedom  
   * Meilleures performances sur l'Historique  
 
