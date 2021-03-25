@@ -1,5 +1,14 @@
 # Changelog JeedomConnect  
 
+## Version 0.18.4 Beta (25/03/2021) [Application uniquement]
+- Corrige la récupération de l'historique en http
+- Thème sombre pour les cartes
+- Fixe l'historique sur le widget Géolocalisation
+- Correction automatique des URL jeedom dans la webview
+- Fix icône thermostat
+- Fix crash possible au démarrage
+- Fix crash sur retour du webview
+
 ## Version 0.18.3 Beta (24/03/2021)
 - Nouveautés :  
   * SplashScreen qui pique pas les yeux  
