@@ -12,7 +12,7 @@
 ## Version 0.18.3 Beta (24/03/2021)
 - Nouveautés :  
   * SplashScreen qui pique pas les yeux  
-  * Possibilité de sécuriser les action avec un code numérique ou alphanumérique  
+  * Possibilité de sécuriser les action avec un code alphanumérique  
   * Possibilité de personnaliser le chemin des images persos (par défaut `plugins/JeedomConnect/data/img/user_files/`)  
   * Widget `liste de choix` (générique pour les commandes `action` sous-type `select`)  
   * Widget `générique message`  
@@ -24,11 +24,15 @@
     + accélération matérielle activée.
     + Login automatique sur les pages de Jeedom  
   * Meilleures performances sur l'Historique  
+  * Lors de la suppression d'un widget, affichage du nom des équipements auxquels il est attaché
+  * Widget fenêtre : Statut accepte les valeurs numériques maitenant (en + de binaire)
+  * Toutes les actions d'un `générique action` sont affichées en mode carte
 
 - Bug Fix :  
-  * Heures mal affichées ou avec retard d'une heure  
-  * Alignement dans les les widget Favoris, Résumé, et dans les vignettes sans statut  
-  * Ne permet plus de sélectionner plusieurs fois la même pièce dans l'onglet du même nom  
+  * Correction des heures mal affichées ou avec retard d'une heure  
+  * Correction des informations 'NaN' sur les titres/sous-titres
+  * Alignement dans les widgets Favoris, Résumé, et dans les vignettes sans statut  
+  * Interdictoin de sélectionner plusieurs fois la même pièce dans l'onglet du même nom  
   * Récupération des scénarios sur l'appli (via le menu)  
 
 
