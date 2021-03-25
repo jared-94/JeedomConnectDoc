@@ -19,8 +19,9 @@ Pour accéder à la TODO list [c'est par là!](todo.md)
 7. [Ajouter des équipements](#addEq)
 8. [Configuration d'un équipement](#configureEq)
 9. [Géolocalisation](#geoloc)
-10. [Matching entre les versions Application (APK) <=> Plugin](#version)
-11. [FAQ](#faq)
+10. [Notification](#notification)
+11. [Matching entre les versions Application (APK) <=> Plugin](#version)
+12. [FAQ](#faq)
 
 ## Présentation du projet <a name="presentation"></a>
 Le projet **Jeedom Connect** se compose de 2 parties : un plugin pour Jeedom, et une application Android. Une version pour iOS pourra être envisagée plus tard.
@@ -75,7 +76,7 @@ Si vous modifiez un de ces champs, il faudra bien sûr sauvegarder, puis re-gén
 
 La page principale du plugin se décompose en deux parties :     
 1. Sur la partie haute, vous pourrez voir et gérer [vos équipements](#addEq) (appareil muni de l'application JeedomConnect)
-2. Sur la seconde partie : vous aurez accès à l'ensemble de [vos widgets](#gestionWidget) et pourrez les modifier à souhait. 
+2. Sur la seconde partie : vous aurez accès à l'ensemble de [vos widgets](#gestionWidget) et pourrez les modifier à souhait.
 
 <img src="../images/plugin-home.png"  width="50%" />
 
@@ -130,7 +131,7 @@ La suppression est également possible. Attention toutefois, si un widget est su
 |Générique binaire|Groupe de génériques binaires|Générique numérique|
 |Générique texte|Générique switch|Générique slider|
 |Générique actions|Mode|Web View|
- 
+
 
 <br/><br/>  
 
@@ -187,10 +188,10 @@ La configuration de cette partie est optionnelle, et n'est à réaliser que si v
    * **Actif** : Le groupe sera (ne sera pas) affiché dans l'application.
    * **Développé par défaut** : Le comportement par défaut (plié / déplié) du menu.  
   <img src="../images/screen-groupConfig.png" width="25%" />
- 
+
  Différentes actions sur possible sur chaque élément :  
  <img src="../images/btn-action-widget.png" width="20%" />  
- * les flèches bleues permettent de changer la place du widget par rapport aux autre widgets sur la même page : le monter ou le descendre  
+ * les flèches bleues permettent de monter ou descendre le widget par rapport aux autre widgets sur la même page. Elles permettent aussi de faire entrer ou sortir un widget dans un groupe  
  * le moins rouge permet d'enlever le widget de la page (ça ne supprime pas le widget dans Jeedom)
  * la flèche verte (vers la droite) permet de déplacer le widget sur une autre page  
 
@@ -214,17 +215,74 @@ Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connai
 
 <br/><br/>  
 
-# Matching version Application (APK) <=> version Plugin sur Jeedom <a name="version"></a> 
+# Notification <a name="notification"></a>
+
+Vous avez la possibilité de gérer différents types de notifications sur l'application Jeedom Connect. Ces notifications peuvent être utilisées comme vous le feriez déjà avec l'envoie par Jeedom d'un SMS, Telegram, et autres sortes de messagerie.  
+Vous pouvez donc vous envoyer des notifications (via des scénarios par exemple) : lorsque votre porte d'entrée s'ouvre alors que vous êtes absents, pour vous prévenir de sortir la poubelle, indiquer que le facteur est passé, ... vers votre application JeedomConnect.
+
+## Les Canaux  
+
+Dans le paramétrage des notifications, vous avez la possibilité de créer plusieurs canaux.  
+Ces canaux permettent de définir différentes façon de réagir qu'aura votre smartphone à la réception d'une notification JeedomConnect.  
+
+<u>Par exemple</u> depuis le plugin, vous pourriez créer un canal `Défaut`, un `Silence` et enfin un `Urgent` (propre à chaque équipement).
+Ces canaux sont ensuite disponibles sur votre application mobile JeedomConnect. Faites un clic long sur l'icone JeedomConnect, puis 'informations', ensuite allez dans le menu 'notification' : vous devez alors voir les 3 canaux précédemment créés `Défaut`, `Silence` et `Urgent`.  
+
+Vous pouvez alors les personnaliser : (toujours <u>en exemple</u>)
+  - le canal `Silence` recevra toutes les notifications pour lesquels je ne souhaite pas être dérangé : donc je choisis de ne pas avoir de son
+  - la canal `Urgent` par contre il faut absolument que je lise les notifications au plus vite, du coup je choisis une sonnerie bien particulière (je peux augmenter également le son), et je choisis l'option 'Ignorer ne pas déranger'
+
+<img src='../images/JeedomConnect_notif_canaux.gif' width='20%' />  
+
+## Les notifications
+
+Il faut ensuite créer les commandes notifications qui auront un lien avec nos canaux.
+Dans l'onglet `notification`, (toujours en partant de <u>l'exemple</u> donnée au dessus), je crée donc 3 notifications : `notification` (créé automatiquement) en lien avec le canal `Défaut`, `notif silencieuse` que je lie au canal `Silence`, et `notif urgente` que je rattache au canal `Urgent`.  
+Vous pouvez également :  
+- mettre à jour l'existante : si cochée, alors vous ne verrez qu'une seule notification du même type dans votre barre de notification sur votre smartphone. (si décochée, chaque notification sera affichée)
+- couleur : définit la couleur du titre de la notification sur votre smarphone, ainsi que celle de la notification
+- image : permet d'ajouter une image sur le coin en haut à droite de la notification
+- actions : permet de réaliser commandes et/ou scénario à chaque fois qu'une notification est envoyée. (<u>par exemple</u> : si envoie d'une notification urgente, je veux avoir la possibilité d'executer le scénario qui permet de déclencher l'alarme de la maison)
+
+<img src='../images/JeedomConnect_notif_edit.png' width='50%' />  
+
+### Comment envoyer une notification ?
+
+Une fois que vous avez paramétré vos différentes notifications, les commandes associées sont automatiquement créées sur votre équipement (après `sauvegarde`), dans l'onglet dédié comme sur tout équipement Jeedom :  
+<img src='../images/JeedomConnect_notif_cmd.png' width='40%' />  
+
+vous pouvez donc vous en servir dans un scénario ou n'importe quelle autre type (interraction, bloc code, ...) :   
+<img src='../images/JeedomConnect_notif_sc.png' width='60%' />  
+
+Voici par exemple la réception d'une notification : (avec les configurations présentées précédemment, ça reste donc toujours qu'un exemple possibe ! )   
+
+<img src='../images/JeedomConnect_notif_example.gif' width='20%' />  
+
+C'est une `notif Urgente` qui a été envoyée, donc puisque la notification est paramétré sur le canal `Urgent`, mon téléphone sonne donc avec un fort volume même si je suis en mode 'ne pas déranger'.  
+La notification est affichée en rouge dans la barre de notification Android, ainsi que lorsque je la visualise en entière dans l'application JeedomConnect, et on voit la présence d'une icône 'sirène rouge' dans le coin supérieur droit.    
+Et j'ai également la possibilité de cliquer sur le bouton `Alarme maison` pour exécuter le scénario que j'ai paramétré et qui déclenchera l'alarme de ma maison.
+
+### Utilisation avec Ask
+
+Les notifications Jeedom Connect sont compatibles avec la fonction Ask de Jeedom. Vous pouvez indiquer autant de réponses souhaitées, ou bien attendre une réponse tapée en texte libre directement dans la notification. Il est également possible de définir un timeout au delà duquel il n'est plus possible de répondre.
+
+## Envoyer des images
+
+Il est possible d'envoyer des images aux notifications (par exemple des shot de caméras). La première images sera visible dans la notification Android directement. Pour accéder aux autres il faut se rendre dans la page de notification de l'application.
+
+<br/><br/>  
+
+# Matching version Application (APK) <=> version Plugin sur Jeedom <a name="version"></a>
 
 :warning: Ces informations sont obsolètes depuis la version 0.18.2.  
 Dorénavant, les applications sont disponibles au téléchargement directement et uniquement depuis le Store.  
 
 <details>
   <summary>Ancienne version/méthode</summary>
-  
+
   L'apk est téléchargeable en cliquant sur le numéro de version.
 
-  ## Version Stable 
+  ## Version Stable
 
   |Version plugin |Version Application  |
   |------|-----|
@@ -233,7 +291,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 
   <br/>  
 
-  ## Version Beta 
+  ## Version Beta
 
   |Version plugin |Version Application  |
   |------|-----|
@@ -244,7 +302,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 
   <br/>  
 
-  ## Lien github générique 
+  ## Lien github générique
 
   https://github.com/jared-94/JeedomConnect/releases/latest
 
@@ -253,22 +311,22 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 
 <br/><br/>  
 
-# FAQ <a name="faq"></a> 
-  
-  * [Comment télécharger l'application ?](#qOU) 
-  * [J'ai un Iphone, comment utiliser l'application ?](#qIphone) 
-  * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration) 
-  * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion) 
-  * [Je suis bêta-testeur, que dois-je faire ?"](#qBeta) 
-  
+# FAQ <a name="faq"></a>
+
+  * [Comment télécharger l'application ?](#qOU)
+  * [J'ai un Iphone, comment utiliser l'application ?](#qIphone)
+  * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration)
+  * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion)
+  * [Je suis bêta-testeur, que dois-je faire ?"](#qBeta)
+
 
 
 ---
-  
+
 ## Comment télécharger l'application ? <a name="qOU"></a>   
 
-L'application est pour le moment uniquement disponible sur Android.  
-Sa publication sur le Store est encore en cours de validation, en attendant il est nécessaire de passer par un téléchargement et une installation manuelle.  
+L'application est pour le moment uniquement disponible pour Android.  
+Elle est disponible sur le Play Store de Google ainsi que sur la page de Release du Github de Jeedom Connect.
 
 <br/>
 
@@ -277,6 +335,16 @@ Sa publication sur le Store est encore en cours de validation, en attendant il e
 Pour l'instant il n'est pas possible d'utiliser l'application JeedomConnect sur Iphone.  
 Le développement de l'application est bien prévu, mais non réalisé pour le moment.  
 Aucune date n'est annoncée sur la sortie de celle-ci, mais dès que ce sera possible une communication sera faite sur le forum !
+
+<br/>
+
+## Quelle est la différence entre connexion HTTP et Websocket ?
+Avec Jeedom Connect, il est possible d'établir la connexion entre votre appareil et le plugin de deux façon différentes :
+- **Http** : Au lancement de l'application, une connexion Http de type Source Event Server est établie avec le plugin. Cette connexion est persistente mais uni-directionnele : de Jeedom **vers** votre appareil. Les actions de votre appareils vers Jeedom sont des requêtes Http uniques utilisant le protocole JSON RPC.
+Ce mode de connexion ne nessécite aucune configuration particulière et ai compatible avec les DNS Jeedom.
+- **Websocket** : La connexion websocket est quand à elle bi-directionnelle. Elle nécessite néanmoins une configuration de votre réseau pour être utilisée en dehors de votre réseau local. Il est possible de faire une redirection de port sur votre routeur (méthode simple) ou bien de configurer votre serveur proxy ou le serveur Apache de votre Jeedom (utilisateurs avancés).
+
+Le Websocket offre une connexion **plus stable et plus performante** que la connexion Http.
 
 <br/>
 
@@ -295,7 +363,7 @@ Deux choix s'offrent à vous :
       * le + : tous les widget seront créés automatiquement
       * le - : chaque équipement étant migré comme s'il était seul, certains widgets seront créés en doublon. Vous aurez donc besoin de faire un peu de ménage en modifiant les configurations de certains équipements puis en supprimant les widgets inutiles en doublon.   
 
-Nous préconisons la solution #1 ! Voici comment nous vous proposons de faire : 
+Nous préconisons la solution #1 ! Voici comment nous vous proposons de faire :
 * commencer par mettre le niveau de log en `DEBUG` sur l'application (page `configuration` du plugin, pensez à sauvegarder !)
 * désactiver l'ensemble de vos équipement sous le plugin JeedomConnect, et n'en laisser qu'<b>UN SEUL actif</b> (le plus utilisé, ou celui qui contient le plus de widgets)
 <img src='../images/JC_disableEq.gif' width='50%' />  
@@ -311,7 +379,7 @@ Vous pouvez retourner sur votre page principale du plugin JeedomConnect et vous 
 * vous pouvez maintenant ouvrir la configuration de votre appareil, faire un `export` de la configuration, puis sur chacun de vos autres équipements `importer` cette configuration, puis réactiver vos équipements.
 
 <br/>
-  
+
 ## J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin" <a name="qVersion"></a>   
 
 Pour fonctionner, il faut que le plugin installé sur Jeedom et l'application (APK) que vous avez téléchargé et utilisé soit alignés.  
@@ -329,7 +397,7 @@ ainsi qu'en bas de la page `Préférences` (dans la menu de l'application) :
 <br/>
 
 ## Je suis bêta-testeur, que dois-je faire ?<a name="qBeta"></a>   
-  
+
 Comme son nom l'indique, la version bêta n'est pas une version stable. En utilisant, vous savez et acceptez que celle-ci puisse comporter des anomalies, remonter des états incohérents, réaliser (ou pas) des actions, etc ...   
-  
-Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'application correspondante. Celle-ci est également disponible sur le Store, mais pour y accéder vous devez au préalable être enregistré en tant que bêta-testeur auprès du Store. Cette inscription est à <a href="https://play.google.com/apps/testing/com.jeedomconnect.app" target="_blank">faire ici</a>. 
+
+Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'application correspondante. Celle-ci est également disponible sur le Play Store, mais pour y accéder vous devez au préalable être enregistré en tant que bêta-testeur auprès du Store. Cette inscription est à <a href="https://play.google.com/apps/testing/com.jeedomconnect.app" target="_blank">faire ici</a>.
