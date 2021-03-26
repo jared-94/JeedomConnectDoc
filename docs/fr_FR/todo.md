@@ -24,22 +24,25 @@ La dernière partie liste les points qui n'ont pas été retenus.
 
 
 # Options supplémentaires
-	- permettre le clic sur une vignette pour réaliser l'action (allumer/éteindre une lumière, ..)
 	- avoir la possibilité de customiser les icônes 'Résumé'
 	- remplir automatiquement les zones en fonction d'une premiere sélection lors de la création d'un widget (Statut -> ON + OFF)
-	- effacer les notifications android lorsque l'on supprime les notifs dans l'application (https://community.jeedom.com/t/effacement-des-notifications/53269)
 	- pouvoir gérer la température de blanc (https://community.jeedom.com/t/widget-lampe-rgbw/49901)
-	- pouvoir inverser l'icône et le texte (info) sur les vignettes
-	- choisir comment ouvrir l'historique par défaut : table ou graph (https://community.jeedom.com/t/historique-ouvrant-en-table-par-defaut/55629)
-	- ajouter bouton + et - aux extrémités d'un slider (https://community.jeedom.com/t/widget-thermostat-jeedom-connect/54694)
-	- définir la taille d'une vignette (https://community.jeedom.com/t/ergonomie-appli/55798)
 	- retour d'informations de l'appareil (batterie, statut écran, connexion...) vers Jeedom
 	- envoyer des actions vers l'appareil (allumer écran, couper bluetooth...)
 	- commandes pour aller à une page donnée de l'application
 	- widgets Android sur launcher
 	- programmer une action sur un widget (ex: baisse de 2°C dans une heure)
 	- préviens moi sur un widget (ex: envoie une notification si temperature > 24°C)
-	
+
+# Options sur APK
+	- ajouter bouton + et - aux extrémités d'un slider (https://community.jeedom.com/t/widget-thermostat-jeedom-connect/54694)
+	- pouvoir inverser l'icône et le texte (info) sur les vignettes
+	- choisir comment ouvrir l'historique par défaut : table ou graph (https://community.jeedom.com/t/historique-ouvrant-en-table-par-defaut/55629)
+	- définir la taille d'une vignette (https://community.jeedom.com/t/ergonomie-appli/55798)
+	- permettre le clic sur une vignette pour réaliser l'action (allumer/éteindre une lumière, ..)
+	- effacer les notifications android lorsque l'on supprime les notifs dans l'application (https://community.jeedom.com/t/effacement-des-notifications/53269)
+	- sur l'apk, accès à une pièce via un widget : pas de possibilité d'afficher carte/vignette
+	- définir le pas d'un slider  
 
 # Bugs connus
 	- le menu haut ne s'affiche pas en entier  
