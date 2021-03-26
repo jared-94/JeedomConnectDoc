@@ -20,7 +20,7 @@ La dernière partie liste les points qui n'ont pas été retenus.
 # Widgets à améliorer  
     - alarme avec plusieurs mode (https://community.jeedom.com/t/alarme-jeedom-connect/53849)
 	- ajouter des tags au lancement d'un scénario
-	- mode sombre sur les map
+	- option mode sombre sur les map
 
 
 # Options supplémentaires
@@ -33,6 +33,7 @@ La dernière partie liste les points qui n'ont pas été retenus.
 	- widgets Android sur launcher
 	- programmer une action sur un widget (ex: baisse de 2°C dans une heure)
 	- préviens moi sur un widget (ex: envoie une notification si temperature > 24°C)
+  - Unité sur les infos supplémentaires
 
 # Options sur APK
 	- ajouter bouton + et - aux extrémités d'un slider (https://community.jeedom.com/t/widget-thermostat-jeedom-connect/54694)
@@ -54,7 +55,7 @@ La dernière partie liste les points qui n'ont pas été retenus.
 
 # Documentation
     - faire un paragraphe sur "http VS websocket"
-    
+
 <br/><br/>
 ---
 ---
@@ -75,7 +76,7 @@ Petis plus :
 
 	- ajouter une option "code", en plus de l'action de confirmation ou de l'empreinte (23/03/21)
 	- ajouter une option "pour gaucher" sur l'apk, permettant d'inverser l'affichage des actions (à gauche plutôt qu'à droite) (23/03/21)
-	- trop plein d'actions : ajouter un retour chariot pour ne pas avoir d'ascenceur (23/03/21)	
+	- trop plein d'actions : ajouter un retour chariot pour ne pas avoir d'ascenceur (23/03/21)
 	- widget fenêtre - Status accepte les valeurs numériques maitenant (en + de binaire) (23/03/21)
 	- toutes les actions d'un `générique action` sont affichées en mode carte (23/03/21)
 
