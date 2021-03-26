@@ -43,6 +43,7 @@ La dernière partie liste les points qui n'ont pas été retenus.
 	- effacer les notifications android lorsque l'on supprime les notifs dans l'application (https://community.jeedom.com/t/effacement-des-notifications/53269)
 	- sur l'apk, accès à une pièce via un widget : pas de possibilité d'afficher carte/vignette
 	- définir le pas d'un slider  
+	- permettre de réaliser une action lorsqu'on affiche un menu bas
 
 # Bugs connus
 	- le menu haut ne s'affiche pas en entier  
