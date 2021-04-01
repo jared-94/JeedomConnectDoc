@@ -1,5 +1,18 @@
 # Changelog JeedomConnect  
 
+## Version 0.19.1 Beta (01/04/2021)
+- Nouveautés: 
+  * Personnalisation des icones sur les résumés : nouveau menu "Résumé" à configurer dans l'assistant widget
+  * Prise en compte des résumés "non-standard" (ie: ajoutés par l'utilisateur)
+  * Ajout du widget ... caméra ! 
+  * Prise en compte de tous les types `action message` dans le widget `Générique Action`
+  * Prise en compte des tags dans le **widget** `Scenario`
+  * Ajout de l'option "désactiver l'accélération matérielle" sur le widget Webview
+
+- Bug fixes : 
+  * recherche des icônes non sensible à la casse
+  * liste des widgets triées par ordre alphabétique
+
 ## Version 0.18.4 Beta (25/03/2021) [Application uniquement]
 - Corrige la récupération de l'historique en http
 - Thème sombre pour les cartes
@@ -8,6 +21,8 @@
 - Fix icône thermostat
 - Fix crash possible au démarrage
 - Fix crash sur retour du webview
+- Ajout d'une option pour masquer les historiques
+- Ajout d'une option pour définir le zoom par défaut sur les historiques
 
 ## Version 0.18.3 Beta (24/03/2021)
 - Nouveautés :  

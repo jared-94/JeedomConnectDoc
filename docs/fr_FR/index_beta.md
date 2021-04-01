@@ -148,18 +148,20 @@ La suppression est également possible. Attention toutefois, si un widget est su
 
 |  |  |  |
 |------|-----|-----|
-|Lumière On/Off|Lumière à variation|Lumière de couleurs|
-|Groupe de lumières|Prise|Groupe de prises|
-|Scénario|Résumé|Résumé de pièce|
-|Favoris|Luminosité|Humidité|
-|Température|Puissance|Thermostat|
-|Climatiseur|Porte|Groupe de portes|
-|Fenêtre|Groupe de fenêtres|Portail coulissant|
-|Volet|Groupe de volets|PIR|
-|Groupe de PIR|Alarme|Groupe d'alarmes|
-|Générique binaire|Groupe de génériques binaires|Générique numérique|
-|Générique texte|Générique switch|Générique slider|
-|Générique actions|Mode|Web View|
+|Alarme|Caméra|Climatiseur|
+|Favoris|Fenêtre|Générique actions|
+|Générique binaire|Générique message|Générique numérique|
+|Générique slider|Générique switch|Générique texte|
+|Géolocalisation|Groupe d'alarmes|Groupe de fenêtres|
+|Groupe de génériques binaires|Groupe de lumières|Groupe de PIR|
+|Groupe de portes|Groupe de prises|Groupe de volets|
+|Humidité|Liste de choix|Lumière à variation|
+|Lumière de couleurs|Lumière On/Off|Luminosité|
+|Mode|PIR|Portail coulissant|
+|Porte|Prise|Puissance|
+|Résumé|Résumé de pièce|Scénario|
+|Température|Thermostat|Volet|
+|Web View|||
  
 
 <br/><br/>  
@@ -208,6 +210,24 @@ La configuration de cette partie est optionnelle, et n'est à réaliser que si v
 
 <br/><br/>  
 
+* ### Résumés
+ Vous avez la possibilité de choisir les résumés Jeedom que vous souhaitez rappatrier sur l'application JeedomConnect.  
+ Depuis l'onglet 'Résumé', vous pourrez : 
+ * Ajouter un résumé, après l'avoir sélectionné dans la liste déroulante  
+ * Importer l'ensemble des résumés existants (le bouton est caché si vous avez déjà tous les résumés dans l'application)
+ 
+<img src="../images/JC_assistant_summary.png" width="50%" />  
+
+Il vous est ensuite possible de cliquer sur chaque résumé pour personnaliser les icônes et leurs conditions d'affichage.  
+<img src="../images/JC_summary_conditions.png" width="50%" />  
+
+Deux variables sont disponibles : `#value#` et `#total#` :  
+- `#value#` correspond à la donnée du résumé remontée par Jeedom (nombre de volets ouvertes par exemple)
+- `#total#` correspond au nombre total de commandes rattachées à ce résumé (nombre de volets total sur le résumé par exemple)
+
+<br/><br/>  
+
+
 * ### Widgets
  ![](../images/screen-assistantWidgets.png)
  Définissez d'abord l'emplacement où placer le widget : sur quel menu / sous-menu que vous voulez le configurer.   
@@ -216,7 +236,7 @@ La configuration de cette partie est optionnelle, et n'est à réaliser que si v
  * **Ajouter un groupe** : Vous pouvez ranger vos widgets dans un menu dépliable (type "acordéon").  
    * **Actif** : Le groupe sera (ne sera pas) affiché dans l'application.
    * **Développé par défaut** : Le comportement par défaut (plié / déplié) du menu.  
-  <img src="../images/screen-groupConfig.png" width="25%" />
+  
  
  Différentes actions sur possible sur chaque élément :  
  <img src="../images/btn-action-widget.png" width="20%" />  

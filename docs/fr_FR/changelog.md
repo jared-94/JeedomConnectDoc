@@ -10,6 +10,9 @@
   * Mode RTL (Right To Left) dans l'appli (on se refait le film à l'envers)
   * La barre de navigation Android (Retour, Accueil, Récent) s'adapte au théme sombre (si présent à l'écran)  
   * Thème sombre pour les cartes
+  * Ajout d'une option pour masquer les historiques
+  * Ajout d'une option pour définir le zoom par défaut sur les historiques
+
 
 - Améliorations :  
   * Widget WebView :
