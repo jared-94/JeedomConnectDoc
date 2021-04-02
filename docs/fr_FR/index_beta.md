@@ -30,7 +30,12 @@ L'application utilise la plupart des éléments de navigation d'une application 
 
 La brique de base est la notion de *widget*, qui va représenter un "équipement domotique" (une alarme, une lumière, une info température...). Contrairement à l'application mobile officielle, Jeedom Connect n'ira pas chercher vos équipements / commandes pour vous les afficher directement. C'est à vous de définir un à un vos widgets. Ceci permet une flexibilité au niveau du rendu final.
 
-Le plugin, ainsi que l'application sont complètement **gratuit** et le resteront. Je ne suis pas développeur et fais ça sur mon temps libre, relativement limité. Si vous souhaitez **soutenir le projet**, vous pouvez suggérer des améliorations, signaler des bugs et contribuer au code du plugin si vous avez des notions de PHP/JS/HTML, ou de l'application si vous maîtriser le React Native.
+Le plugin, ainsi que l'application sont complètement **gratuit** et le resteront. Je ne suis pas développeur et fais ça sur mon temps libre, relativement limité.  
+Si vous souhaitez **soutenir le projet**, vous pouvez suggérer des améliorations, signaler des bugs et contribuer au code du plugin si vous avez des notions de PHP/JS/HTML, ou de l'application si vous maîtriser le React Native.  
+Pour celles et ceux qui tienent vraiment à soutenir financièrement parlant le projet :  
+<a href="https://www.paypal.com/pools/c/8xfIqfBFGe" target="_blank"><img src="../images/bmc.png" width='10%'/></a>  
+
+[plus d'infos](#qDon)
 
 <br/><br/>
 
@@ -360,7 +365,8 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
   * [J'ai un Iphone, comment utiliser l'application ?](#qIphone) 
   * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration) 
   * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion) 
-  * [Je suis bêta-testeur, que dois-je faire ?"](#qBeta) 
+  * [Je suis bêta-testeur, que dois-je faire ?"](#qBeta)   
+  * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
   
 
 
@@ -433,4 +439,12 @@ ainsi qu'en bas de la page `Préférences` (dans la menu de l'application) :
   
 Comme son nom l'indique, la version bêta n'est pas une version stable. En utilisant, vous savez et acceptez que celle-ci puisse comporter des anomalies, remonter des états incohérents, réaliser (ou pas) des actions, etc ...   
   
-Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'application correspondante. Celle-ci est également disponible sur le Store, mais pour y accéder vous devez au préalable être enregistré en tant que bêta-testeur auprès du Store. Cette inscription est à <a href="https://play.google.com/apps/testing/com.jeedomconnect.app" target="_blank">faire ici</a>. 
+Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'application correspondante. Celle-ci est également disponible sur le Store, mais pour y accéder vous devez au préalable être enregistré en tant que bêta-testeur auprès du Store. Cette inscription est à <a href="https://play.google.com/apps/testing/com.jeedomconnect.app" target="_blank">faire ici</a>.  
+
+<br/>
+
+## Je trouve l'application géniale ! Comment vous aider ? <a name="qDon"></a>  
+
+En partageant vos idées d'améliorations, vos suggestions et vos retours sur des bugs !    
+Puisque ça a été demandé plusieurs fois, si vous souhaitez soutenir "financièrement" parlant, nous vous proposons de payer un café (ou deux, ou mille ! :) ) :  
+<a href="https://www.paypal.com/pools/c/8xfIqfBFGe" target="_blank"><img src="../images/bmc.png" width='30%'/></a> 
