@@ -1,15 +1,26 @@
 # Changelog JeedomConnect  
 
+## Version 0.19.2 Beta (02/04/2021)
+- Nouveautés:
+  * Ajout des vidéos dans les notifications
+  * Ajout d'un slider dans le player vidéo
+
+- Bug fixes:
+  * Ordre des résumés de pièces
+  * Le lecteur vidéo ne plante plus lorsque le dossier d'enregistrement n'est plus spécifié
+  * Correction de la commande LAN seulement (basculement auto sur snapshot)
+  * Sous-titres persos sur widget camera
+
 ## Version 0.19.1 Beta (01/04/2021)
-- Nouveautés: 
+- Nouveautés:
   * Personnalisation des icones sur les résumés : nouveau menu "Résumé" à configurer dans l'assistant widget
   * Prise en compte des résumés "non-standard" (ie: ajoutés par l'utilisateur)
-  * Ajout du widget ... caméra ! 
+  * Ajout du widget ... caméra !
   * Prise en compte de tous les types `action message` dans le widget `Générique Action`
   * Prise en compte des tags dans le **widget** `Scenario`
   * Ajout de l'option "désactiver l'accélération matérielle" sur le widget Webview
 
-- Bug fixes : 
+- Bug fixes :
   * recherche des icônes non sensible à la casse
   * liste des widgets triées par ordre alphabétique
 
