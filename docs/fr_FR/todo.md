@@ -33,7 +33,8 @@ La dernière partie liste les points qui n'ont pas été retenus.
 	- widgets Android sur launcher
 	- programmer une action sur un widget (ex: baisse de 2°C dans une heure)
 	- préviens moi sur un widget (ex: envoie une notification si temperature > 24°C)
-  - Unité sur les infos supplémentaires
+  	- Unité sur les infos supplémentaires
+	- ajout de l’altitude, type d’activité, SSID et pcBatterie dans les info dispo du tracking Geoloc.
 
 # Options sur APK
 	- ajouter bouton + et - aux extrémités d'un slider (https://community.jeedom.com/t/widget-thermostat-jeedom-connect/54694)
