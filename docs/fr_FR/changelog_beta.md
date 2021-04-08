@@ -1,5 +1,9 @@
 # Changelog JeedomConnect  
 
+## Version 0.19.2b Beta (08/04/2021)
+- Bug Fixes :
+  * corriger l'erreur sur la création d'un nouvel équipement 
+
 ## Version 0.19.2 Beta (02/04/2021)
 - Nouveautés:
   * Ajout des vidéos dans les notifications
