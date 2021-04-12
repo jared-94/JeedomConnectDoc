@@ -319,9 +319,10 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 
   * [Comment télécharger l'application ?](#qOU)
   * [J'ai un Iphone, comment utiliser l'application ?](#qIphone)
+  * [Quelle est la différence entre connexion HTTP et Websocket ?](#qConnexion)  
   * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration)
   * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion)
-  * [Je suis bêta-testeur, que dois-je faire ?"](#qBeta)   
+  * [Je suis bêta-testeur, que dois-je faire ?](#qBeta)   
   * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
 
 
@@ -343,7 +344,7 @@ Aucune date n'est annoncée sur la sortie de celle-ci, mais dès que ce sera pos
 
 <br/>
 
-## Quelle est la différence entre connexion HTTP et Websocket ?
+## Quelle est la différence entre connexion HTTP et Websocket ? <a name="qConnexion"></a>  
 Avec Jeedom Connect, il est possible d'établir la connexion entre votre appareil et le plugin de deux façon différentes :
 - **Http** : Au lancement de l'application, une connexion Http de type Source Event Server est établie avec le plugin. Cette connexion est persistente mais uni-directionnele : de Jeedom **vers** votre appareil. Les actions de votre appareils vers Jeedom sont des requêtes Http uniques utilisant le protocole JSON RPC.
 Ce mode de connexion ne nessécite aucune configuration particulière et ai compatible avec les DNS Jeedom.
@@ -401,14 +402,6 @@ ainsi qu'en bas de la page `Préférences` (dans la menu de l'application) :
 
 <br/>
 
-## Je suis bêta-testeur, que dois-je faire ?<a name="qBeta"></a>   
-
-Comme son nom l'indique, la version bêta n'est pas une version stable. En utilisant, vous savez et acceptez que celle-ci puisse comporter des anomalies, remonter des états incohérents, réaliser (ou pas) des actions, etc ...   
-
-Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'application correspondante. Celle-ci est également disponible sur le Play Store, mais pour y accéder vous devez au préalable être enregistré en tant que bêta-testeur auprès du Store. Cette inscription est à <a href="https://play.google.com/apps/testing/com.jeedomconnect.app" target="_blank">faire ici</a>.
-
-
-<br/>
 
 ## Je suis bêta-testeur, que dois-je faire ?<a name="qBeta"></a>   
   
