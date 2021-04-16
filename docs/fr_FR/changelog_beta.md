@@ -10,7 +10,7 @@
   * Ajout de l'`unité` sur les informations supplémentaires
   * Permet de définir le `pas` d'un slider (1 par défaut)
   * Permet de `cacher le titre` du widget à l'affichage sur l'application (mode carte)
-  * Ajout d'une action automatique lorsqu'une page est affichée (similaire au swipe Up ou Down, mais là systématiquement et automatiquement)
+  * Ajout d'une action automatique lorsqu'une page du menu bas est affichée (similaire au swipe Up ou Down, mais là systématiquement et automatiquement)
   * Prise en compte des `tags` pour les `scenario` sur les actions `SwipeUp`, `SwipeDown` et `Action` des menus bas
 
 
@@ -20,12 +20,14 @@
   * Affichage d'un widget en erreur, si ça configuration n'est pas bonne (il ne devrait plus y avoir d'écran blanc !)
   * Modification de l'affichage d'un slider : ajout des icônes + et - de chaque côté, et informations au-dessus du slider
   * Support du nouveau system de DNS Jeedom (automatique)
+  * Boîte de dialogue `A propos`
 
 - Bug fixes :
   * Affichage de l'option carte/vignette sur une pièce (arrivé depuis un widget)
   * Effacement des notifications android lorsque l'on supprime les notifs dans l'application
   * Les titres ne sont plus tronqués sur certains appareil (!?)
   * Effacement du texte d'un message générique après envoie (en vue détail)
+  * Correction d'un bug d'affichage lors d'une rotation de l'écran quand une vidéo est en plein écran
 
 ## Version 0.19.2b Beta (08/04/2021)
 - Bug Fixes :
