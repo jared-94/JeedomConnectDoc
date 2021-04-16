@@ -1,5 +1,32 @@
 # Changelog JeedomConnect  
 
+## Version 0.19.3 Beta (16/04/2021)  
+- Nouveautés Plugin : 
+  * `Drag & drop` l'ensemble des objets sur les assistants & widgets
+  * Création automatique d'une sauvegarde de la définition des widgets à chaque backup de Jeedom
+  * Affichage du nom de l'équipement en cours de modification (sur la modale assistant)
+  * Ajout des `directions` sur le widget Caméra
+  * Ajout la possibilité d'intégrer d'autres widgets à l'intérieur d'un widget (sur la vue détail)
+  * Ajout de l'`unité` sur les informations supplémentaires
+  * Permet de définir le `pas` d'un slider (1 par défaut)
+  * Permet de `cacher le titre` du widget à l'affichage sur l'application (mode carte)
+  * Ajout d'une action automatique lorsqu'une page est affichée (similaire au swipe Up ou Down, mais là systématiquement et automatiquement)
+  * Prise en compte des `tags` pour les `scenario` sur les actions `SwipeUp`, `SwipeDown` et `Action` des menus bas
+
+
+- Nouveautés Application : 
+  * Clic sur l'icône de la vignette réalise une action : changement d'état d'une lumière/switch, générique action : déclenche la 1ère action paramétrée, ...
+  * Modification de l'affichage des widgets
+  * Affichage d'un widget en erreur, si ça configuration n'est pas bonne (il ne devrait plus y avoir d'écran blanc !)
+  * Modification de l'affichage d'un slider : ajout des icônes + et - de chaque côté, et informations au-dessus du slider
+  * Support du nouveau system de DNS Jeedom (automatique)
+
+- Bug fixes :
+  * Affichage de l'option carte/vignette sur une pièce (arrivé depuis un widget)
+  * Effacement des notifications android lorsque l'on supprime les notifs dans l'application
+  * Les titres ne sont plus tronqués sur certains appareil (!?)
+  * Effacement du texte d'un message générique après envoie (en vue détail)
+
 ## Version 0.19.2b Beta (08/04/2021)
 - Bug Fixes :
   * corriger l'erreur sur la création d'un nouvel équipement 
