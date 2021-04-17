@@ -1,5 +1,17 @@
 # Changelog JeedomConnect  
 
+## Version 0.19.4 Beta (17/04/2021)
+- Nouveautés :
+  * Commande Position : ajout de l'altitude (nouveau format :`latitude,longitude,altitude`)
+  * Nouvelle commande info `Activité` (valeurs possibles : still, on_foot, running, on_bicycle and in_vehicle)
+  * Possibilité de définir le type de connexion pour chaque équipement (http ou websocket). Pensez à re-générer vos QR-code
+
+- Bug fixes :
+  * Modale choix de couleur
+  * Titres coupés dans menu haut sur One Plus (?) 
+  * Affichage et sélection des images perso
+  * Drag and drop fix
+
 ## Version 0.19.3 Beta (16/04/2021)  
 - Nouveautés Plugin : 
   * `Drag & drop` l'ensemble des objets sur les assistants & widgets
