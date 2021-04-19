@@ -1,4 +1,14 @@
-# Changelog JeedomConnect  
+# Changelog JeedomConnect
+
+## Version 0.19.5 (19/04/2021)
+- Nouveauté :
+  * Dans la vue vignnete possibilité de cacher les différents éléments
+
+- Bug fixes :
+  * Modales des widgets Thermostats et msessage liste
+  * Affichage des statuts de plusieurs widgets (mode vignettes)
+  * Affichage des (sous) widgets dans la vue détails
+  * Bug de maj des infos lors de la suppression d'un widget 
 
 ## Version 0.19.4 Beta (17/04/2021)
 - Nouveautés :
