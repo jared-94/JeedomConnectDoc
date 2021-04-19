@@ -8,7 +8,6 @@
   * Modales des widgets Thermostats et message liste
   * Affichage des statuts de plusieurs widgets (mode vignettes)
   * Affichage des (sous) widgets dans la vue détails
-  * Bug de maj des infos lors de la suppression d'un widget 
   * Suppression d'un widget met à jour immédiatement la configuration des équipements
   * Drag & drop : ajout d'un élément dans un groupe (déjà rempli)
 
