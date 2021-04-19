@@ -2,13 +2,15 @@
 
 ## Version 0.19.5 (19/04/2021)
 - Nouveauté :
-  * Dans la vue vignnete possibilité de cacher les différents éléments
+  * Dans la vue vignette possibilité de cacher différents éléments : nom, sous-titre, status et/ou image
 
 - Bug fixes :
-  * Modales des widgets Thermostats et msessage liste
+  * Modales des widgets Thermostats et message liste
   * Affichage des statuts de plusieurs widgets (mode vignettes)
   * Affichage des (sous) widgets dans la vue détails
   * Bug de maj des infos lors de la suppression d'un widget 
+  * Suppression d'un widget met à jour immédiatement la configuration des équipements
+  * Drag & drop : ajout d'un élément dans un groupe (déjà rempli)
 
 ## Version 0.19.4 Beta (17/04/2021)
 - Nouveautés :
