@@ -1,5 +1,41 @@
 # Changelog JeedomConnect  
 
+## Version 0.20.0 (20/04/2021)
+- Nouveautés :
+  * Ajout du widget caméra !
+  * Personnalisation des icones sur les résumés : nouveau menu "Résumé" à configurer dans l'assistant widget
+  * Prise en compte des résumés "non-standard" (ie: ajoutés par l'utilisateur)
+  * Prise en compte de tous les types `action message` dans le widget `Générique Action`
+  * Prise en compte des tags dans le **widget** `Scenario`
+  * Ajout de l'option "désactiver l'accélération matérielle" sur le widget Webview
+  * Dans la vue vignette possibilité de cacher différents éléments : nom, sous-titre, status et/ou image
+  * Ajout des vidéos dans les notifications
+  * Clic sur l'icône de la vignette réalise une action : changement d'état d'une lumière/switch, générique action : déclenche la 1ère action paramétrée, ...
+  * Modification de l'affichage des widgets
+  * Affichage d'un widget en erreur, si sa configuration n'est pas bonne (il ne devrait plus y avoir d'écran blanc !)
+  * Modification de l'affichage d'un slider : ajout des icônes + et - de chaque côté, et informations au-dessus du slider
+  * Support du nouveau system de DNS Jeedom (automatique)
+  * Boîte de dialogue `A propos`
+  * `Drag & drop` l'ensemble des objets sur les assistants & widgets
+  * Création automatique d'une sauvegarde de la définition des widgets à chaque backup de Jeedom
+  * Affichage du nom de l'équipement en cours de modification (sur la modale assistant)
+  * Ajout la possibilité d'intégrer d'autres widgets à l'intérieur d'un widget (sur la vue détail)
+  * Ajout de l'`unité` sur les informations supplémentaires
+  * Permet de définir le `pas` d'un slider (1 par défaut)
+  * Permet de `cacher le titre` du widget à l'affichage sur l'application (mode carte)
+  * Ajout d'une action automatique lorsqu'une page du menu bas est affichée (similaire au swipe Up ou Down, mais là systématiquement et automatiquement)
+  * Prise en compte des `tags` pour les `scenario` sur les actions `SwipeUp`, `SwipeDown` et `Action` des menus bas
+  * Commande Position : ajout de l'altitude (nouveau format :`latitude,longitude,altitude`)
+  * Nouvelle commande info `Activité` (valeurs possibles : still, on_foot, running, on_bicycle and in_vehicle)
+  * Possibilité de définir le type de connexion pour chaque équipement (http ou websocket). Pensez à re-générer vos QR-code
+
+- Bug fixes :
+  * Titres coupés dans menu haut sur One Plus
+  * Effacement des notifications android lorsque l'on supprime les notifs dans l'application
+  * Ordre des résumés de pièces
+  * recherche des icônes non sensible à la casse
+  * liste des widgets triées par ordre alphabétique
+
 ## Version 0.19.0 (01/04/2021)
 - Nouveautés :  
   * SplashScreen qui pique pas les yeux  
