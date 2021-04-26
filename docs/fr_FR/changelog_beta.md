@@ -1,6 +1,9 @@
 # Changelog JeedomConnect
 
-## Version 0.19.5 Beta (19/04/2021)
+## Version 0.20.0 (21/04/2021)
+- passage en version stable (identique à 0.19.5)
+
+## Version 0.19.5 (19/04/2021)
 - Nouveauté :
   * Dans la vue vignette possibilité de cacher différents éléments : nom, sous-titre, status et/ou image
 
