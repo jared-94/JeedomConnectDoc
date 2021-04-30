@@ -20,6 +20,7 @@ Bug fixes :
   * Correction du timestamp pour les données de géolocalisation
   * Bug des sous-widget de la vue détail corrigé
   * Bug des widgets supprimés alors qu'ils existent dans un "widget parent"
+  * Disparition des informations sur l'onglet équipement (après ouverture de la modale choix d'icone)
 
 ## Version 0.20.0 (21/04/2021)
 - passage en version stable (identique à 0.19.5)
