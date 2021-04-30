@@ -1,5 +1,24 @@
 # Changelog JeedomConnect
 
+## Version 0.20.1 (30/04/2021)
+- Nouveautés appli :
+  * Mode immersif (permet de masquer les barres de statut et de navigation d'Android)
+  * Fond d'écran : possibilité de le définir avec des conditions sur la page courante ou de commandes.
+  * Barre du haut : possibilité d'ajouter et trier des boutons de racourcis
+  * Barre du haut : possibilité d'afficher horloge + météo
+  * Menu haut : mode flotant
+  * Menu du bas : possibilité de le positionner à gauche
+  * Menu du bas : possibilité de mettre des images à la place d'icônes
+
+Nouveautés plugin :
+  * Vue d'ensemble qui permet de faire de l'édition de masse sur les widgets
+  * Conditions des images plus flexible : possibilité d'enchaîner les conditions
+  * Option pour ajouter l'altitude à la commande position
+
+Bug fixes :
+  * Correction du timestamp pour les données de géolocalisation
+  * Bug des sous-widget de la vue détail corrigé
+
 ## Version 0.20.0 (21/04/2021)
 - passage en version stable (identique à 0.19.5)
 
