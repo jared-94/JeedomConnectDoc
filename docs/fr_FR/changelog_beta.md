@@ -11,13 +11,15 @@
   * Menu du bas : possibilité de mettre des images à la place d'icônes
 
 Nouveautés plugin :
-  * Vue d'ensemble qui permet de faire de l'édition de masse sur les widgets
+  * Vue d'ensemble qui permet de faire de l'édition de masse sur les widgets (uniquement sur les données communes)
   * Conditions des images plus flexible : possibilité d'enchaîner les conditions
   * Option pour ajouter l'altitude à la commande position
+  * Conserve les filtres et ordres défini sur la page principale du plugin 
 
 Bug fixes :
   * Correction du timestamp pour les données de géolocalisation
   * Bug des sous-widget de la vue détail corrigé
+  * Bug des widgets supprimés alors qu'ils existent dans un "widget parent"
 
 ## Version 0.20.0 (21/04/2021)
 - passage en version stable (identique à 0.19.5)
