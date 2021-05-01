@@ -2,10 +2,10 @@
 
 ## Version 0.20.2 (01/05/2021)
 - Nouveauté:
-  * Possibilité de choisir le mode d'acion sur icône
+  * Possibilité de choisir le mode d'action sur icône
   * Affichage modifié dans la page des préférences
 
-Bug fixes:
+- Bug fixes:
   * Conditions sur images
   * Altitude dans la commande position
 
@@ -19,13 +19,13 @@ Bug fixes:
   * Menu du bas : possibilité de le positionner à gauche
   * Menu du bas : possibilité de mettre des images à la place d'icônes
 
-Nouveautés plugin :
+- Nouveautés plugin :
   * Vue d'ensemble qui permet de faire de l'édition de masse sur les widgets (uniquement sur les données communes)
   * Conditions des images plus flexible : possibilité d'enchaîner les conditions
   * Option pour ajouter l'altitude à la commande position
   * Conserve les filtres et ordres défini sur la page principale du plugin 
 
-Bug fixes :
+- Bug fixes :
   * Correction du timestamp pour les données de géolocalisation
   * Bug des sous-widget de la vue détail corrigé
   * Bug des widgets supprimés alors qu'ils existent dans un "widget parent"
