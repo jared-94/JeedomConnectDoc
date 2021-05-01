@@ -1,5 +1,14 @@
 # Changelog JeedomConnect
 
+## Version 0.20.2 (01/05/2021)
+- Nouveauté:
+  * Possibilité de choisir le mode d'acion sur icône
+  * Affichage modifié dans la page des préférences
+
+Bug fixes:
+  * Conditions sur images
+  * Altitude dans la commande position
+
 ## Version 0.20.1 (30/04/2021)
 - Nouveautés appli :
   * Mode immersif (permet de masquer les barres de statut et de navigation d'Android)
