@@ -12,6 +12,7 @@
   * Images sous conditions
   * Notifications qui n'arrivent pas
   * Point de géolocalisation correctement situé
+  * Résumé avec un widget en double
 
 ## Version 0.20.2 (01/05/2021)
 - Nouveauté:
