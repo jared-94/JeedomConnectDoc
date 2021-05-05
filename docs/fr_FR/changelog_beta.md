@@ -1,5 +1,18 @@
 # Changelog JeedomConnect
 
+## Version 0.20.3 (05/05/2021)
+
+- Nouveautés
+  * Possibilité de sécuriser le démarrage de l'application par mot de passe ou empreinte biométrique
+  * Possibilité de cacher les titres des menus bas
+  * Changement d'organisation de la grille des widgets sur écran large
+  * Second style pour l'horloge
+
+- Bug fixes :
+  * Images sous conditions
+  * Notifications qui n'arrivent pas
+  * Point de géolocalisation correctement situé
+
 ## Version 0.20.2 (01/05/2021)
 - Nouveauté:
   * Possibilité de choisir le mode d'action sur icône
