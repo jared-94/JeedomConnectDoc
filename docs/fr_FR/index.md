@@ -18,10 +18,11 @@ Pour accéder à la TODO list [c'est par là!](todo.md)
 6. [Gestion des Widgets](#gestionWidget)
 7. [Ajouter des équipements](#addEq)
 8. [Configuration d'un équipement](#configureEq)
-9. [Géolocalisation](#geoloc)
-10. [Notification](#notification)
-11. [Matching entre les versions Application (APK) <=> Plugin](#version)
-12. [FAQ](#faq)
+9. [Commandes disponibles sur un équipement](#eqCmd)
+10. [Géolocalisation](#geoloc)
+11. [Notification](#notification)
+12. [Matching entre les versions Application (APK) <=> Plugin](#version)
+13. [FAQ](#faq)
 
 ## Présentation du projet <a name="presentation"></a>
 Le projet **Jeedom Connect** se compose de 2 parties : un plugin pour Jeedom, et une application Android. Une version pour iOS pourra être envisagée plus tard.
@@ -204,6 +205,18 @@ La configuration de cette partie est optionnelle, et n'est à réaliser que si v
  * la flèche verte (vers la droite) permet de déplacer le widget sur une autre page  
 
 <br/><br/>  
+
+## Commandes disponibles sur un équipement <a name="eqCmd"></a>
+Par défaut les commandes suivantes sont disponibles dans chaque équipement :
+- `Position` : Lorsque la géolocation est activée, donne les coordonnées GPS de l'appareil sous la forme `latitude,longitude`. Il est aussi possible d'ajouter l'altitude en cochant la case correspondante dans les paramètres de l'équipement.
+- `Activité` : Lorsque la géolocalisation est activée, donne l'activité en cours sur l'appareil. LValeurs possibles : ``still``, ``on_foot``, ``running``, ``on_bicycle`` et ``in_vehicle``
+- `Notification` : Commande de notification par défaut
+- `Afficher page` : Lorsque l'application est en premier plan, permet de basculer sur une page donnée. Il s'agit d'une commande action message. Pour l'utiliser, commencer par repérer l'`id` de la page. Cell-ci est disponible en survolant votre souris sur les menus de l'assistant de configuration. Indiquez alors cet `id` dans le champs `titre` ou `message` de la commande.
+- `Lancer App` : Lorsque l'application est en premier plan, permet de lancer sur votre appareil une application. Il s'agit d'une commande action message qui accepte dans son champs `titre` ou `message` le nom du package de l'application.
+- `Détacher` : Permet de détacher l'appareil de l'équipement.
+
+
+<br/><br/>
 
 ## Géolocalisation <a name="geoloc"></a>
 Jeedom Connect dispose d'une fonction de Geofencing : définissez des lieux géographiques sur une carte et des commandes binaires seront créées dans votre équipement vous indiquant si l'appareil est dans ce lieu ou pas.
