@@ -1,5 +1,26 @@
 # Changelog JeedomConnect
 
+## Version 0.20.4 (10/05/2021)
+
+- Nouveautés :
+  * Nouvelle commande `Afficher page` : permet de naviguer vers une page de l'appli lorsque celle-ci est en premier plan
+  * Nouvelle commande `Lancer app` qui permet de lancer une application lorsque l'appli est en premier plan (Android uniquement)
+  * Nouveau widget `Lanceur d'application` qui permet de lancer une application (Android uniquement)
+  * Option pour centrer les widgets
+  * Authentification pour le flux caméra
+  * Nouvelle commande pour détacher l'appareil lié à un équipement
+  * Bouton `Copier vers` qui permet de copier la conf d'un équipement vers un autre
+
+- Bug fixes :
+  * Recentrage widgets
+  * Arrondis widgets humidité et luminosité
+  * Modale du widget Mode scrollable
+  * Cacher les éléments s'applique au mode carte
+  * Crash de l'appli au démarrage
+  * Réception des notifications
+  * Textes de la météo qui s'intercallent
+  * Rafraichissement de l'historique
+
 ## Version 0.20.3 (05/05/2021)
 
 - Nouveautés
