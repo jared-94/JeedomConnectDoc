@@ -18,11 +18,10 @@ Pour accéder à la TODO list [c'est par là!](todo.md)
 6. [Gestion des Widgets](#gestionWidget)
 7. [Ajouter des équipements](#addEq)
 8. [Configuration d'un équipement](#configureEq)
-9. [Commandes disponibles sur un équipement](#eqCmd)
-10. [Géolocalisation](#geoloc)
-11. [Notification](#notification)
-12. [Matching entre les versions Application (APK) <=> Plugin](#version)
-13. [FAQ](#faq)
+9. [Géolocalisation](#geoloc)
+10. [Notification](#notification)
+11. [Matching entre les versions Application (APK) <=> Plugin](#version)
+12. [FAQ](#faq)
 
 ## Présentation du projet <a name="presentation"></a>
 Le projet **Jeedom Connect** se compose de 2 parties : un plugin pour Jeedom, et une application Android. Une version pour iOS pourra être envisagée plus tard.
@@ -31,7 +30,8 @@ L'application utilise la plupart des éléments de navigation d'une application 
 
 La brique de base est la notion de *widget*, qui va représenter un "équipement domotique" (une alarme, une lumière, une info température...). Contrairement à l'application mobile officielle, Jeedom Connect n'ira pas chercher vos équipements / commandes pour vous les afficher directement. C'est à vous de définir un à un vos widgets. Ceci permet une flexibilité au niveau du rendu final.
 
-Le plugin, ainsi que l'application sont complètement **gratuit** et le resteront. Je ne suis pas développeur et fais ça sur mon temps libre, relativement limité. Si vous souhaitez **soutenir le projet**, vous pouvez suggérer des améliorations, signaler des bugs et contribuer au code du plugin si vous avez des notions de PHP/JS/HTML, ou de l'application si vous maîtriser le React Native.  
+Le plugin, ainsi que l'application sont complètement **gratuit** et le resteront. Je ne suis pas développeur et fais ça sur mon temps libre, relativement limité.  
+Si vous souhaitez **soutenir le projet**, vous pouvez suggérer des améliorations, signaler des bugs et contribuer au code du plugin si vous avez des notions de PHP/JS/HTML, ou de l'application si vous maîtriser le React Native.  
 Pour celles et ceux qui tienent vraiment à soutenir financièrement parlant le projet :  
 <a href="https://www.paypal.com/pools/c/8xfIqfBFGe" target="_blank"><img src="../images/bmc.png" width='10%'/></a>  
 
@@ -41,9 +41,8 @@ Pour celles et ceux qui tienent vraiment à soutenir financièrement parlant le 
 
 ## Fonctionnalités <a name="fonctionalites"></a>
 - Affichage et gestion de vos équipements domotiques et des scénarios
-- Affichage et gestion des caméras
 - Historiques sous forme de graphique ou tableau
-- Possibilité de sécuriser toutes les actions avec données biométriques
+- Possibilité de sécuriser toutes les action avec données biométriques
 - Personalisation poussée de l'interface
 - Notifications Push enrichies compatibles avec Ask
 - [Géolocalisation](#geoloc) avec gestion avancée de la batterie (modes Geofencing et Tracking)
@@ -65,15 +64,45 @@ La version beta contient les nouveautés les plus récentes. (A noter que cette 
 
 <br/><br/>  
 
-## Configuration du plugin <a name="configurePlugin"></a>
+## Configuration du plugin <a name="configurePlugin"></a>  
+
+### Configurer l'accès à votre jeedom :  
+
 Il y a plusieurs champs  pré-remplis que vous pouvez modifier. Des placeholder sont indiqués sur chacun d'entre eux. S'ils vous semblent corrects, inutile de les modifier.
 * **Adresse http externe** : Indiquez ici votre adresse d'accès à Jeedom depuis l'extérieur de votre domicile.
 * **Adresse http interne** : Adresse de Jeedom sur votre réseau local.
+* **Activer la connexion par Websocket** : Indiquera à l'application si vous préférez utiliser le protocole Websocket pour la communication avec vos appareils. Notez tout de même que l'adresse HTTP est nécessaire au bon fonctionement de certains services (images persos, géolocalisation, actions sur notifications)
 * **Port d'écoute du websocket** : Sauf si vous avez une application qui utilise ce port, vous n'avez pas besoin de le modifier. En cas de modification, n'oubliez pas de redémarrer le démon.
 * **Adresse externe websocket** : Adresse websocket accessible depuis l'extérieur (nécessite une configuration de votre réseau)
 * **Adresse interne websocket** : Adresse websocket sur votre réseau local
 
 Si vous modifiez un de ces champs, il faudra bien sûr sauvegarder, puis re-générer les QR Code des équipements. En cas d'utilisation du HTTP, il faudra aussi redémarrer l'appli.
+<br/>
+
+### Personnaliser le plugin
+
+Vous avez la possibilité de personnaliser le chemin d'accès à vos images/icônes.  
+Par défaut, les images personnalisées du plugin sont stockées sous `plugins/JeedomConnect/data/img/user_files/`.  
+  
+Vous pouvez choisir d'utiliser un autre emplacement en renseignant le champ `Chemin pour les images perso` le chemin d'accès au répertoire qui contient vos images et icônes personnels.  
+:warning: Le chemin ne dois PAS contenir la racine 
+
+> par exemple, si vous souhaitez utiliser le répertoire `/var/www/html/data/img/` alors indiquez : `data/img/` dans le champ  (attention au derni `/`!)
+
+<br/>
+
+### la Zone des Dangers
+
+Les actions disponibles dans cette partie sont à utiliser avec précaution. Vous pouvez en effet perdre l'intégalité de vos configurations si vous ne faites pas attention à ce que vous faites.  
+
+* **Réinitialiser** : efface les configurations de l'ensemble de vos équipements. Vous devrez donc redéfinir quels sont les widgets que vous souhaitez avoir sur chacun de vos équipements  
+* **Supprimer** : remet à 0 l'intégralité du plugin. Vous perdrez TOUTES vos configurations et l'ensemble de vos widgets seront supprimés. (comme si vous installiez le plugin pour la première fois)  
+* **Lister** : permet d'obtenir la liste des widgets (id) :
+  + non-utilisés : existant mais rattaché à aucun équipement
+  + non-existants : présent dans le fichie de configuration d'un équipement, mais non créé sur le plugin (mauvaise migration par exemple)
+  + tous : liste le nombre de fois où un wigdet est utilisé (format => "widget ID" : "nombre d'utilisation")  
+* **Exporter**/**Importer** : permet d'extraire l'ensemble de la configuration des widgets, et les réimporter sur une autre instance jeedom  
+* **Migrer** : transforme les fichiers de configuration dans le nouveau format attendu du plugin
 
 <br/><br/>  
 
@@ -81,7 +110,7 @@ Si vous modifiez un de ces champs, il faudra bien sûr sauvegarder, puis re-gén
 
 La page principale du plugin se décompose en deux parties :     
 1. Sur la partie haute, vous pourrez voir et gérer [vos équipements](#addEq) (appareil muni de l'application JeedomConnect)
-2. Sur la seconde partie : vous aurez accès à l'ensemble de [vos widgets](#gestionWidget) et pourrez les modifier à souhait.
+2. Sur la seconde partie : vous aurez accès à l'ensemble de [vos widgets](#gestionWidget) et pourrez les modifier à souhait. 
 
 <img src="../images/plugin-home.png"  width="50%" />
 
@@ -106,11 +135,10 @@ Quelques éléments sont standard et seront demandés pour l'ensemble des widget
    `Mon ampoule est allumée depuis 1h12min et consomme 15W`  
    * **Affichage forcé** : De façon standard, chaque widget (sauf exception) possède 3 types d'affichage : carte, vignette et détail. Les affichages carte et vignettes peuvent être choisis via l'icône en haut à droite dans l'application. L'affichage détail est une page entière affichée quand on click sur le widget. Vous pouvez ici forcer un widget à s'afficher d'une de ces 3 façons.  
    Attention pour le mode détail, le widget doit être seul sur sa page.
-   * **Sécuriser les actions** : Toutes les commandes de type action peuvent être sécurisées à l'aide de ces trois boutons :  
+   * **Sécuriser les actions** : Toutes les commandes de type action peuvent être sécurisées à l'aide de ces deux boutons :  
      ![](../images/screen-secureBtn.png)   
    Le premier permet de faire une simple demande de confirmation de l'action.  
-   Le second demande une donnée biométrique (empreinte digitale, reconaissance faciale) pour exécuter l'action (sur appareils disposant d'un capteur).
-   Le dernier demandera le mot de passe configuré dans les paramètres de l'équipement.
+   Le second demande l'empreinte digitale pour exécuter l'action (sur appareils disposant d'un capteur)
    * **Images** : Les images de l'application sont stockée dans le dossier `plugins/JeedomConnect/data/img/`. Si vous souhaitez ajoutez des images persos, utilisez l'assistant, ou bien copiez vos images dans `plugins/JeedomConnect/data/img/user_files/`. Il est conseillé d'utiliser des images PNG en 128x128. Vous pouvez aussi mettre des GIF animés.
    * **Images sous conditions** : Vous pouvez dans certains widgets définir une image en fonction des valeurs d'une commande. L'ordre des ces condition sera prise en compte par l'appli (les plus hautes sont prioritaires).  
    * **Ajouter des infos** : vous permet d'ajouter des commandes de type `info` de votre Jeedom et de vous en servir pour les autres champs du formulaire 'Images sous conditions', 'Nom', 'Sous-titre'.
@@ -125,20 +153,21 @@ La suppression est également possible. Attention toutefois, si un widget est su
 
 |  |  |  |
 |------|-----|-----|
-|Lumière On/Off|Lumière à variation|Lumière de couleurs|
-|Groupe de lumières|Prise|Groupe de prises|
-|Scénario|Résumé|Résumé de pièce|
-|Favoris|Luminosité|Humidité|
-|Température|Puissance|Thermostat|
-|Climatiseur|Porte|Groupe de portes|
-|Fenêtre|Groupe de fenêtres|Portail coulissant|
-|Volet|Groupe de volets|PIR|
-|Groupe de PIR|Alarme|Groupe d'alarmes|
-|Générique binaire|Groupe de génériques binaires|Générique numérique|
-|Générique texte|Générique switch|Générique slider|
-|Générique actions|Mode|Web View|
-|Caméra|
-
+|Alarme|Caméra|Climatiseur|
+|Favoris|Fenêtre|Générique actions|
+|Générique binaire|Générique message|Générique numérique|
+|Générique slider|Générique switch|Générique texte|
+|Géolocalisation|Groupe d'alarmes|Groupe de fenêtres|
+|Groupe de génériques binaires|Groupe de lumières|Groupe de PIR|
+|Groupe de portes|Groupe de prises|Groupe de volets|
+|Humidité|Liste de choix|Lumière à variation|
+|Lumière de couleurs|Lumière On/Off|Luminosité|
+|Mode|PIR|Portail coulissant|
+|Porte|Prise|Puissance|
+|Résumé|Résumé de pièce|Scénario|
+|Température|Thermostat|Volet|
+|Web View|||
+ 
 
 <br/><br/>  
 
@@ -150,8 +179,6 @@ Vous pouvez ajouter des équipements dans le plugin de façon standard.
 ![](../images/screen-eqConfig.png)
 
 A la création d'un équipement, une clé API, ainsi qu'un QR Code est automatiquement généré avec les informations de configuration du plugin. Lors du démarrage de l'application, vous pourrez alors entrer manuellement vos identifiants jeedom, ou bien scanner le QR Code. Une fois connecté, l'équipement et l'appareil sont liés. Pour vous connecter avec un autre appareil, il vous faut le *détacher*  en cliquant sur le bouton associé.
-
-**Activer la connexion par Websocket** : Indiquera à l'application si vous préférez utiliser le protocole Websocket pour la communication avec votre appareil. Notez tout de même que l'adresse HTTP est nécessaire au bon fonctionement de certains services (images persos, géolocalisation, actions sur notifications)
 
 La configuration d'un équipement consiste en un fichier JSON configurable avec l'assistant, et que vous pouvez exporter / importer. Si vous voulez par exemple cloner un équipement, ajoutez en un nouveau et utiliser l'exportation / importation.  
 
@@ -188,6 +215,24 @@ La configuration de cette partie est optionnelle, et n'est à réaliser que si v
 
 <br/><br/>  
 
+* ### Résumés
+ Vous avez la possibilité de choisir les résumés Jeedom que vous souhaitez rappatrier sur l'application JeedomConnect.  
+ Depuis l'onglet 'Résumé', vous pourrez : 
+ * Ajouter un résumé, après l'avoir sélectionné dans la liste déroulante  
+ * Importer l'ensemble des résumés existants (le bouton est caché si vous avez déjà tous les résumés dans l'application)
+ 
+<img src="../images/JC_assistant_summary.png" width="50%" />  
+
+Il vous est ensuite possible de cliquer sur chaque résumé pour personnaliser les icônes et leurs conditions d'affichage.  
+<img src="../images/JC_summary_conditions.png" width="50%" />  
+
+Deux variables sont disponibles : `#value#` et `#total#` :  
+- `#value#` correspond à la donnée du résumé remontée par Jeedom (nombre de volets ouvertes par exemple)
+- `#total#` correspond au nombre total de commandes rattachées à ce résumé (nombre de volets total sur le résumé par exemple)
+
+<br/><br/>  
+
+
 * ### Widgets
  ![](../images/screen-assistantWidgets.png)
  Définissez d'abord l'emplacement où placer le widget : sur quel menu / sous-menu que vous voulez le configurer.   
@@ -196,27 +241,15 @@ La configuration de cette partie est optionnelle, et n'est à réaliser que si v
  * **Ajouter un groupe** : Vous pouvez ranger vos widgets dans un menu dépliable (type "acordéon").  
    * **Actif** : Le groupe sera (ne sera pas) affiché dans l'application.
    * **Développé par défaut** : Le comportement par défaut (plié / déplié) du menu.  
-  <img src="../images/screen-groupConfig.png" width="25%" />
-
+  
+ 
  Différentes actions sur possible sur chaque élément :  
  <img src="../images/btn-action-widget.png" width="20%" />  
- * les flèches bleues permettent de monter ou descendre le widget par rapport aux autre widgets sur la même page. Elles permettent aussi de faire entrer ou sortir un widget dans un groupe  
+ * les flèches bleues permettent de changer la place du widget par rapport aux autre widgets sur la même page : le monter ou le descendre  
  * le moins rouge permet d'enlever le widget de la page (ça ne supprime pas le widget dans Jeedom)
  * la flèche verte (vers la droite) permet de déplacer le widget sur une autre page  
 
 <br/><br/>  
-
-## Commandes disponibles sur un équipement <a name="eqCmd"></a>
-Par défaut les commandes suivantes sont disponibles dans chaque équipement :
-- `Position` : Lorsque la géolocation est activée, donne les coordonnées GPS de l'appareil sous la forme `latitude,longitude`. Il est aussi possible d'ajouter l'altitude en cochant la case correspondante dans les paramètres de l'équipement.
-- `Activité` : Lorsque la géolocalisation est activée, donne l'activité en cours sur l'appareil. LValeurs possibles : ``still``, ``on_foot``, ``running``, ``on_bicycle`` et ``in_vehicle``
-- `Notification` : Commande de notification par défaut
-- `Afficher page` : Lorsque l'application est en premier plan, permet de basculer sur une page donnée. Il s'agit d'une commande action message. Pour l'utiliser, commencer par repérer l'`id` de la page. Cell-ci est disponible en survolant votre souris sur les menus de l'assistant de configuration. Indiquez alors cet `id` dans le champs `titre` ou `message` de la commande.
-- `Lancer App` : Lorsque l'application est en premier plan, permet de lancer sur votre appareil une application. Il s'agit d'une commande action message qui accepte dans son champs `titre` ou `message` le nom du package de l'application.
-- `Détacher` : Permet de détacher l'appareil de l'équipement.
-
-
-<br/><br/>
 
 ## Géolocalisation <a name="geoloc"></a>
 Jeedom Connect dispose d'une fonction de Geofencing : définissez des lieux géographiques sur une carte et des commandes binaires seront créées dans votre équipement vous indiquant si l'appareil est dans ce lieu ou pas.
@@ -236,7 +269,7 @@ Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connai
 
 <br/><br/>  
 
-# Notification <a name="notification"></a>
+# Notification <a name="notification"></a> 
 
 Vous avez la possibilité de gérer différents types de notifications sur l'application Jeedom Connect. Ces notifications peuvent être utilisées comme vous le feriez déjà avec l'envoie par Jeedom d'un SMS, Telegram, et autres sortes de messagerie.  
 Vous pouvez donc vous envoyer des notifications (via des scénarios par exemple) : lorsque votre porte d'entrée s'ouvre alors que vous êtes absents, pour vous prévenir de sortir la poubelle, indiquer que le facteur est passé, ... vers votre application JeedomConnect.
@@ -257,7 +290,7 @@ Vous pouvez alors les personnaliser : (toujours <u>en exemple</u>)
 
 ## Les notifications
 
-Il faut ensuite créer les commandes notifications qui auront un lien avec nos canaux.
+Il faut ensuite créer les commandes notifications qui auront un lien avec nos canaux. 
 Dans l'onglet `notification`, (toujours en partant de <u>l'exemple</u> donnée au dessus), je crée donc 3 notifications : `notification` (créé automatiquement) en lien avec le canal `Défaut`, `notif silencieuse` que je lie au canal `Silence`, et `notif urgente` que je rattache au canal `Urgent`.  
 Vous pouvez également :  
 - mettre à jour l'existante : si cochée, alors vous ne verrez qu'une seule notification du même type dans votre barre de notification sur votre smartphone. (si décochée, chaque notification sera affichée)
@@ -278,32 +311,26 @@ vous pouvez donc vous en servir dans un scénario ou n'importe quelle autre type
 Voici par exemple la réception d'une notification : (avec les configurations présentées précédemment, ça reste donc toujours qu'un exemple possibe ! )   
 
 <img src='../images/JeedomConnect_notif_example.gif' width='20%' />  
-
+ 
 C'est une `notif Urgente` qui a été envoyée, donc puisque la notification est paramétré sur le canal `Urgent`, mon téléphone sonne donc avec un fort volume même si je suis en mode 'ne pas déranger'.  
 La notification est affichée en rouge dans la barre de notification Android, ainsi que lorsque je la visualise en entière dans l'application JeedomConnect, et on voit la présence d'une icône 'sirène rouge' dans le coin supérieur droit.    
 Et j'ai également la possibilité de cliquer sur le bouton `Alarme maison` pour exécuter le scénario que j'ai paramétré et qui déclenchera l'alarme de ma maison.
 
-### Utilisation avec Ask
 
-Les notifications Jeedom Connect sont compatibles avec la fonction Ask de Jeedom. Vous pouvez indiquer autant de réponses souhaitées, ou bien attendre une réponse tapée en texte libre directement dans la notification. Il est également possible de définir un timeout au delà duquel il n'est plus possible de répondre.
-
-## Envoyer des images
-
-Il est possible d'envoyer des images aux notifications (par exemple des shot de caméras). La première images sera visible dans la notification Android directement. Pour accéder aux autres il faut se rendre dans la page de notification de l'application.
 
 <br/><br/>  
 
-# Matching version Application (APK) <=> version Plugin sur Jeedom <a name="version"></a>
+# Matching version Application (APK) <=> version Plugin sur Jeedom <a name="version"></a> 
 
 :warning: Ces informations sont obsolètes depuis la version 0.18.2.  
 Dorénavant, les applications sont disponibles au téléchargement directement et uniquement depuis le Store.  
 
 <details>
   <summary>Ancienne version/méthode</summary>
-
+  
   L'apk est téléchargeable en cliquant sur le numéro de version.
 
-  ## Version Stable
+  ## Version Stable 
 
   |Version plugin |Version Application  |
   |------|-----|
@@ -312,7 +339,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 
   <br/>  
 
-  ## Version Beta
+  ## Version Beta 
 
   |Version plugin |Version Application  |
   |------|-----|
@@ -323,7 +350,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 
   <br/>  
 
-  ## Lien github générique
+  ## Lien github générique 
 
   https://github.com/jared-94/JeedomConnect/releases/latest
 
@@ -332,24 +359,23 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 
 <br/><br/>  
 
-# FAQ <a name="faq"></a>
-
-  * [Comment télécharger l'application ?](#qOU)
-  * [J'ai un Iphone, comment utiliser l'application ?](#qIphone)
-  * [Quelle est la différence entre connexion HTTP et Websocket ?](#qConnexion)  
-  * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration)
-  * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion)
-  * [Je suis bêta-testeur, que dois-je faire ?](#qBeta)   
+# FAQ <a name="faq"></a> 
+  
+  * [Comment télécharger l'application ?](#qOU) 
+  * [J'ai un Iphone, comment utiliser l'application ?](#qIphone) 
+  * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration) 
+  * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion) 
+  * [Je suis bêta-testeur, que dois-je faire ?"](#qBeta)   
   * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
-
+  
 
 
 ---
-
+  
 ## Comment télécharger l'application ? <a name="qOU"></a>   
 
-L'application est pour le moment uniquement disponible pour Android.  
-Elle est disponible sur le Play Store de Google ainsi que sur la page de Release du Github de Jeedom Connect.
+L'application est pour le moment uniquement disponible sur Android.  
+Sa publication sur le Store est encore en cours de validation, en attendant il est nécessaire de passer par un téléchargement et une installation manuelle.  
 
 <br/>
 
@@ -358,16 +384,6 @@ Elle est disponible sur le Play Store de Google ainsi que sur la page de Release
 Pour l'instant il n'est pas possible d'utiliser l'application JeedomConnect sur Iphone.  
 Le développement de l'application est bien prévu, mais non réalisé pour le moment.  
 Aucune date n'est annoncée sur la sortie de celle-ci, mais dès que ce sera possible une communication sera faite sur le forum !
-
-<br/>
-
-## Quelle est la différence entre connexion HTTP et Websocket ? <a name="qConnexion"></a>  
-Avec Jeedom Connect, il est possible d'établir la connexion entre votre appareil et le plugin de deux façon différentes :
-- **Http** : Au lancement de l'application, une connexion Http de type Source Event Server est établie avec le plugin. Cette connexion est persistente mais uni-directionnele : de Jeedom **vers** votre appareil. Les actions de votre appareils vers Jeedom sont des requêtes Http uniques utilisant le protocole JSON RPC.
-Ce mode de connexion ne nessécite aucune configuration particulière et est compatible avec les DNS Jeedom.
-- **Websocket** : La connexion websocket est quant à elle bi-directionnelle. Elle nécessite néanmoins une configuration de votre réseau pour être utilisée en dehors de votre réseau local. Il est possible de faire une redirection de port sur votre routeur (méthode simple) ou bien de configurer votre serveur proxy ou le serveur Apache de votre Jeedom (utilisateurs avancés).
-
-Le Websocket offre une connexion **plus stable et plus performante** que la connexion Http.
 
 <br/>
 
@@ -386,7 +402,7 @@ Deux choix s'offrent à vous :
       * le + : tous les widget seront créés automatiquement
       * le - : chaque équipement étant migré comme s'il était seul, certains widgets seront créés en doublon. Vous aurez donc besoin de faire un peu de ménage en modifiant les configurations de certains équipements puis en supprimant les widgets inutiles en doublon.   
 
-Nous préconisons la solution #1 ! Voici comment nous vous proposons de faire :
+Nous préconisons la solution #1 ! Voici comment nous vous proposons de faire : 
 * commencer par mettre le niveau de log en `DEBUG` sur l'application (page `configuration` du plugin, pensez à sauvegarder !)
 * désactiver l'ensemble de vos équipement sous le plugin JeedomConnect, et n'en laisser qu'<b>UN SEUL actif</b> (le plus utilisé, ou celui qui contient le plus de widgets)
 <img src='../images/JC_disableEq.gif' width='50%' />  
@@ -402,7 +418,7 @@ Vous pouvez retourner sur votre page principale du plugin JeedomConnect et vous 
 * vous pouvez maintenant ouvrir la configuration de votre appareil, faire un `export` de la configuration, puis sur chacun de vos autres équipements `importer` cette configuration, puis réactiver vos équipements.
 
 <br/>
-
+  
 ## J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin" <a name="qVersion"></a>   
 
 Pour fonctionner, il faut que le plugin installé sur Jeedom et l'application (APK) que vous avez téléchargé et utilisé soit alignés.  
@@ -418,7 +434,6 @@ ainsi qu'en bas de la page `Préférences` (dans la menu de l'application) :
 
 
 <br/>
-
 
 ## Je suis bêta-testeur, que dois-je faire ?<a name="qBeta"></a>   
   
