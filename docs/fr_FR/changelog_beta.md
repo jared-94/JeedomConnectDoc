@@ -1,5 +1,19 @@
 # Changelog JeedomConnect
 
+## Version 0.20.5 (18/05/2021)
+
+- Nouveautés :
+  * Mode launcher : Jeedom Connect peut se substituer à votre launcher Android
+  * Page lanceur d'applications. Créez aussi des liens vers vos apps favorites
+  * Notifications : prise en charge dans l'appli du code HTML des message, ouverture des liens dans le navigateur. Boutons d'actions alignés verticalement
+  * Widgets en mode vignettes : choix d'utiliser l'ancien ou le nouveau design
+  * Assistant widget : ajout de filtres (pièces, présents) pour l'ajout de widgets
+
+- Bug fixes :
+  * Suppression du 2 dans la température de la météo
+  * Temps écoulé dans les groupes de widget : prise en compte du plus récent changement
+  * Alignement dans le widget résumé
+
 ## Version 0.20.4 (10/05/2021)
 
 - Nouveautés :
