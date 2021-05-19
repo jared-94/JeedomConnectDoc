@@ -11,6 +11,7 @@
   * Affichage des apps en favoris
   * Etat des scénarios en connexion http
   * Rotation écran après affichage d'une webview
+  * Utilisateur et mot de passe dans les headers pour snapshot camera
 
 
 ## Version 0.20.5 (18/05/2021)
