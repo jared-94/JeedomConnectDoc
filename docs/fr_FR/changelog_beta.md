@@ -17,14 +17,18 @@
 
 - Nouveautés :
   * Mode launcher : Jeedom Connect peut se substituer à votre launcher Android
-  * Page lanceur d'applications. Créez aussi des liens vers vos apps favorites
-  * Notifications : prise en charge dans l'appli du code HTML des message, ouverture des liens dans le navigateur. Boutons d'actions alignés verticalement
+  * Page lanceur d'applications à ajouter dans les boutons de la barre du haut. Créez aussi des liens vers vos apps favorites (appuie long sur l'application, puis `ajouter/supprimer en favoris`)
+  * Notifications : 
+    * Prise en charge dans l'application du code HTML des messages
+    * Ouverture des liens dans le navigateur. 
+    * Boutons d'actions alignés verticalement
   * Widgets en mode vignettes : choix d'utiliser l'ancien ou le nouveau design
   * Assistant widget : ajout de filtres (pièces, présents) pour l'ajout de widgets
+  * Configuration : définir le trie des widgets par défaut (appliqué sur la page principale du plugin, et dans la liste déroulante de sélection des widgets sur l'assistant)
 
 - Bug fixes :
-  * Suppression du 2 dans la température de la météo
-  * Temps écoulé dans les groupes de widget : prise en compte du plus récent changement
+  * Suppression du '2' dans la température de la météo
+  * Temps écoulé dans les groupes de widgets : prise en compte du plus récent changement
   * Alignement dans le widget résumé
 
 ## Version 0.20.4 (10/05/2021)
