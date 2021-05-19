@@ -1,5 +1,18 @@
 # Changelog JeedomConnect
 
+## Version 0.20.6 (19/05/2021)
+
+- Nouveautés :
+  * Niveau de batterie
+  * Ajout d'une commande info pour le snapshot caméra
+
+- Bug fixes :
+  * Affichage des notifications
+  * Affichage des apps en favoris
+  * Etat des scénarios en connexion http
+  * Rotation écran après affichage d'une webview
+
+
 ## Version 0.20.5 (18/05/2021)
 
 - Nouveautés :
