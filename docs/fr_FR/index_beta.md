@@ -340,6 +340,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
   * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration)
   * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion)
   * [Je suis bêta-testeur, que dois-je faire ?](#qBeta)   
+  * [Comment « vider le cache » ou « supprimer les données » ?](#qVideCache)
   * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
 
 
@@ -428,8 +429,20 @@ Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'applica
 
 <br/>
 
+## Comment « vider le cache » ou « supprimer les données » ? <a name="qVideCache"></a>  
+
+<img src='../images/JC_videt_cache.gif' width='20%' />  
+
+1. Appuie long sur l’icone 'JeedomConnect' (sur votre bureau ou dans la liste de toutes vos applications disponible)
+2. Clic sur le petit `i`
+3. Sélection 'Stockage'
+4. Au choix (en fonction de ce que vous avez à faire!) : 'Vider le cache' et/ou 'Supprimer les données'
+
+<br/>
+
 ## Je trouve l'application géniale ! Comment vous aider ? <a name="qDon"></a>  
 
 En partageant vos idées d'améliorations, vos suggestions et vos retours sur des bugs !    
 Puisque ça a été demandé plusieurs fois, si vous souhaitez soutenir "financièrement" parlant, nous vous proposons de payer un café (ou deux, ou mille ! :) ) :  
 <a href="https://www.paypal.com/pools/c/8xfIqfBFGe" target="_blank"><img src="../images/bmc.png" width='30%'/></a> 
+
