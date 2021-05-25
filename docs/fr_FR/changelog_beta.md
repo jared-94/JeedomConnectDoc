@@ -1,10 +1,15 @@
 # Changelog JeedomConnect
 
-## Version 0.20.7 (XX/05/2021)
+## Version 0.20.7 (25/05/2021)
 
 - Nouveautés : 
   * Bouton export (format csv) sur la "vue d'ensemble" des widgets
   * Sur l'assistant widget : ajout d'un icone sur les widgets désactivés
+  * Option pour n'afficher qu'une seule vignette par ligne
+
+- Bug fixes :
+  * Affichage des notifications
+  * Version du plugin dans `A propos`
 
 - Technique :
   * Ajout de nouvelles fonctionnalités pour traitement en masse, cf [post dédié](https://community.jeedom.com/t/jeedom-connect-bloc-code-pour-realiser-diverses-operations/61818)
