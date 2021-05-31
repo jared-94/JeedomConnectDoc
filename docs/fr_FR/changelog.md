@@ -1,5 +1,66 @@
 # Changelog JeedomConnect  
 
+## Version 0.21.0 (31/05/2021)
+- Nouveautés appli :
+  * Mode immersif (permet de masquer les barres de statut et de navigation d'Android)
+  * Fond d'écran : possibilité de le définir avec des conditions sur la page courante ou de commandes.
+  * Barre du haut : possibilité d'ajouter et trier des boutons de racourcis
+  * Barre du haut : possibilité d'afficher horloge + météo (2 styles)
+  * Menu haut : mode flotant
+  * Menu du bas : possibilité de le positionner à gauche
+  * Menu du bas : possibilité de mettre des images à la place d'icônes
+  * Possibilité de choisir le mode d'action sur icône
+  * Affichage modifié dans la page des préférences
+  * Possibilité de sécuriser le démarrage de l'application par mot de passe ou empreinte biométrique
+  * Possibilité de cacher les titres des menus bas
+  * Changement d'organisation de la grille des widgets sur écran large
+  * Nouvelle commande `Afficher page` : permet de naviguer vers une page de l'appli lorsque celle-ci est en premier plan
+  * Nouvelle commande `Lancer app` qui permet de lancer une application lorsque l'appli est en premier plan (Android uniquement)
+  * Nouveau widget `Lanceur d'application` qui permet de lancer une application (Android uniquement)
+  * Option pour centrer les widgets
+  * Authentification pour le flux caméra  
+  * Mode launcher : Jeedom Connect peut se substituer à votre launcher Android
+  * Page lanceur d'applications à ajouter dans les boutons de la barre du haut. Créez aussi des liens vers vos apps favorites (appuie long sur l'application, puis `ajouter/supprimer en favoris`)
+  * Notifications : 
+    * Prise en charge dans l'application du code HTML des messages
+    * Ouverture des liens dans le navigateur. 
+    * Boutons d'actions alignés verticalement
+  * Widgets en mode vignettes : choix d'utiliser l'ancien ou le nouveau design  
+  * Configuration : définir le trie des widgets par défaut (appliqué sur la page principale du plugin, et dans la liste déroulante de sélection des widgets sur l'assistant)
+  * Niveau de batterie   
+  * Option pour n'afficher qu'une seule vignette par ligne
+
+- Nouveautés plugin :
+  * Vue d'ensemble qui permet de faire de l'édition de masse sur les widgets (uniquement sur les données communes)
+  * Conditions des images plus flexible : possibilité d'enchaîner les conditions
+  * Option pour ajouter l'altitude à la commande position
+  * Conserve les filtres et ordres défini sur la page principale du plugin 
+  * Sur l'assistant widget : ajout d'un icone sur les widgets désactivés
+  * Bouton export (format csv) sur la "vue d'ensemble" des widgets
+  * Ajout d'une commande info pour le snapshot caméra 
+  * Assistant widget : ajout de filtres (pièces, présents) pour l'ajout de widgets
+  * Nouvelle commande pour détacher l'appareil lié à un équipement
+  * Bouton `Copier vers` qui permet de copier la conf d'un équipement vers un autre
+  * Ajout de nouvelles fonctionnalités pour traitement en masse, cf [post dédié](https://community.jeedom.com/t/jeedom-connect-bloc-code-pour-realiser-diverses-operations/61818)
+
+- Bug fixes :
+  * Correction du timestamp pour les données de géolocalisation
+  * Bug des sous-widget de la vue détail corrigé
+  * Bug des widgets supprimés alors qu'ils existent dans un "widget parent"
+  * Disparition des informations sur l'onglet équipement (après ouverture de la modale choix d'icone)
+  * Affichage du texte complet dans les notifications
+  * Point de géolocalisation correctement situé
+  * Résumé avec un widget en double
+  * Arrondis widgets humidité et luminosité
+  * Modale du widget Mode scrollable
+  * Cacher les éléments s'applique au mode carte
+  * Crash de l'appli au démarrage
+  * Rafraichissement de l'historique
+  * Temps écoulé dans les groupes de widgets : prise en compte du plus récent changement
+  * Alignement dans le widget résumé
+  * Etat des scénarios en connexion http
+  * Rotation écran après affichage d'une webview
+
 ## Version 0.20.0 (20/04/2021)
 - Nouveautés :
   * Ajout du widget caméra !
