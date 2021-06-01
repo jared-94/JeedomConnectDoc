@@ -31,7 +31,8 @@ L'application utilise la plupart des éléments de navigation d'une application 
 
 La brique de base est la notion de *widget*, qui va représenter un "équipement domotique" (une alarme, une lumière, une info température...). Contrairement à l'application mobile officielle, Jeedom Connect n'ira pas chercher vos équipements / commandes pour vous les afficher directement. C'est à vous de définir un à un vos widgets. Ceci permet une flexibilité au niveau du rendu final.
 
-Le plugin, ainsi que l'application sont complètement **gratuit** et le resteront. Je ne suis pas développeur et fais ça sur mon temps libre, relativement limité. Si vous souhaitez **soutenir le projet**, vous pouvez suggérer des améliorations, signaler des bugs et contribuer au code du plugin si vous avez des notions de PHP/JS/HTML, ou de l'application si vous maîtriser le React Native.  
+Le plugin, ainsi que l'application sont complètement **gratuit** et le resteront. Je ne suis pas développeur et fais ça sur mon temps libre, relativement limité. 
+Si vous souhaitez **soutenir le projet**, vous pouvez suggérer des améliorations, signaler des bugs et contribuer au code du plugin si vous avez des notions de PHP/JS/HTML, ou de l'application si vous maîtriser le React Native.  
 Pour celles et ceux qui tienent vraiment à soutenir financièrement parlant le projet :  
 <a href="https://www.paypal.com/pools/c/8xfIqfBFGe" target="_blank"><img src="../images/bmc.png" width='10%'/></a>  
 
@@ -66,14 +67,42 @@ La version beta contient les nouveautés les plus récentes. (A noter que cette 
 <br/><br/>  
 
 ## Configuration du plugin <a name="configurePlugin"></a>
+### Configurer l'accès à votre jeedom :  										   
 Il y a plusieurs champs  pré-remplis que vous pouvez modifier. Des placeholder sont indiqués sur chacun d'entre eux. S'ils vous semblent corrects, inutile de les modifier.
 * **Adresse http externe** : Indiquez ici votre adresse d'accès à Jeedom depuis l'extérieur de votre domicile.
 * **Adresse http interne** : Adresse de Jeedom sur votre réseau local.
+* **Activer la connexion par Websocket** : Indiquera à l'application si vous préférez utiliser le protocole Websocket pour la communication avec vos appareils. Notez tout de même que l'adresse HTTP est nécessaire au bon fonctionement de certains services (images persos, géolocalisation, actions sur notifications)  						
 * **Port d'écoute du websocket** : Sauf si vous avez une application qui utilise ce port, vous n'avez pas besoin de le modifier. En cas de modification, n'oubliez pas de redémarrer le démon.
 * **Adresse externe websocket** : Adresse websocket accessible depuis l'extérieur (nécessite une configuration de votre réseau)
 * **Adresse interne websocket** : Adresse websocket sur votre réseau local
 
 Si vous modifiez un de ces champs, il faudra bien sûr sauvegarder, puis re-générer les QR Code des équipements. En cas d'utilisation du HTTP, il faudra aussi redémarrer l'appli.
+<br/>
+
+### Personnaliser le plugin
+
+Vous avez la possibilité de personnaliser le chemin d'accès à vos images/icônes.  
+Par défaut, les images personnalisées du plugin sont stockées sous `plugins/JeedomConnect/data/img/user_files/`.  
+  
+Vous pouvez choisir d'utiliser un autre emplacement en renseignant le champ `Chemin pour les images perso` le chemin d'accès au répertoire qui contient vos images et icônes personnels.  
+:warning: Le chemin ne dois PAS contenir la racine 
+
+> par exemple, si vous souhaitez utiliser le répertoire `/var/www/html/data/img/` alors indiquez : `data/img/` dans le champ  (attention au derni `/`!)
+
+<br/>
+
+### la Zone des Dangers
+
+Les actions disponibles dans cette partie sont à utiliser avec précaution. Vous pouvez en effet perdre l'intégalité de vos configurations si vous ne faites pas attention à ce que vous faites.  
+
+* **Réinitialiser** : efface les configurations de l'ensemble de vos équipements. Vous devrez donc redéfinir quels sont les widgets que vous souhaitez avoir sur chacun de vos équipements  
+* **Supprimer** : remet à 0 l'intégralité du plugin. Vous perdrez TOUTES vos configurations et l'ensemble de vos widgets seront supprimés. (comme si vous installiez le plugin pour la première fois)  
+* **Lister** : permet d'obtenir la liste des widgets (id) :
+  + non-utilisés : existant mais rattaché à aucun équipement
+  + non-existants : présent dans le fichie de configuration d'un équipement, mais non créé sur le plugin (mauvaise migration par exemple)
+  + tous : liste le nombre de fois où un wigdet est utilisé (format => "widget ID" : "nombre d'utilisation")  
+* **Exporter**/**Importer** : permet d'extraire l'ensemble de la configuration des widgets, et les réimporter sur une autre instance jeedom  
+* **Migrer** : transforme les fichiers de configuration dans le nouveau format attendu du plugin		
 
 <br/><br/>  
 
@@ -125,19 +154,20 @@ La suppression est également possible. Attention toutefois, si un widget est su
 
 |  |  |  |
 |------|-----|-----|
-|Lumière On/Off|Lumière à variation|Lumière de couleurs|
-|Groupe de lumières|Prise|Groupe de prises|
-|Scénario|Résumé|Résumé de pièce|
-|Favoris|Luminosité|Humidité|
-|Température|Puissance|Thermostat|
-|Climatiseur|Porte|Groupe de portes|
-|Fenêtre|Groupe de fenêtres|Portail coulissant|
-|Volet|Groupe de volets|PIR|
-|Groupe de PIR|Alarme|Groupe d'alarmes|
-|Générique binaire|Groupe de génériques binaires|Générique numérique|
-|Générique texte|Générique switch|Générique slider|
-|Générique actions|Mode|Web View|
-|Caméra|
+|Alarme|Caméra|Climatiseur|
+|Favoris|Fenêtre|Générique actions|
+|Générique binaire|Générique message|Générique numérique|
+|Générique slider|Générique switch|Générique texte|
+|Géolocalisation|Groupe d'alarmes|Groupe de fenêtres|
+|Groupe de génériques binaires|Groupe de lumières|Groupe de PIR|
+|Groupe de portes|Groupe de prises|Groupe de volets|
+|Humidité|Liste de choix|Lumière à variation|
+|Lumière de couleurs|Lumière On/Off|Luminosité|
+|Mode|PIR|Portail coulissant|
+|Porte|Prise|Puissance|
+|Résumé|Résumé de pièce|Scénario|
+|Température|Thermostat|Volet|
+|Web View|||
 
 
 <br/><br/>  
@@ -150,8 +180,6 @@ Vous pouvez ajouter des équipements dans le plugin de façon standard.
 ![](../images/screen-eqConfig.png)
 
 A la création d'un équipement, une clé API, ainsi qu'un QR Code est automatiquement généré avec les informations de configuration du plugin. Lors du démarrage de l'application, vous pourrez alors entrer manuellement vos identifiants jeedom, ou bien scanner le QR Code. Une fois connecté, l'équipement et l'appareil sont liés. Pour vous connecter avec un autre appareil, il vous faut le *détacher*  en cliquant sur le bouton associé.
-
-**Activer la connexion par Websocket** : Indiquera à l'application si vous préférez utiliser le protocole Websocket pour la communication avec votre appareil. Notez tout de même que l'adresse HTTP est nécessaire au bon fonctionement de certains services (images persos, géolocalisation, actions sur notifications)
 
 La configuration d'un équipement consiste en un fichier JSON configurable avec l'assistant, et que vous pouvez exporter / importer. Si vous voulez par exemple cloner un équipement, ajoutez en un nouveau et utiliser l'exportation / importation.  
 
@@ -187,6 +215,24 @@ La configuration de cette partie est optionnelle, et n'est à réaliser que si v
  Chaque widget peut être associé à une pièce à ajouter dans cette partie.  Chaque pièce correspond à un objet Jeedom.  
 
 <br/><br/>  
+
+* ### Résumés
+ Vous avez la possibilité de choisir les résumés Jeedom que vous souhaitez rappatrier sur l'application JeedomConnect.  
+ Depuis l'onglet 'Résumé', vous pourrez : 
+ * Ajouter un résumé, après l'avoir sélectionné dans la liste déroulante  
+ * Importer l'ensemble des résumés existants (le bouton est caché si vous avez déjà tous les résumés dans l'application)
+ 
+<img src="../images/JC_assistant_summary.png" width="50%" />  
+
+Il vous est ensuite possible de cliquer sur chaque résumé pour personnaliser les icônes et leurs conditions d'affichage.  
+<img src="../images/JC_summary_conditions.png" width="50%" />  
+
+Deux variables sont disponibles : `#value#` et `#total#` :  
+- `#value#` correspond à la donnée du résumé remontée par Jeedom (nombre de volets ouvertes par exemple)
+- `#total#` correspond au nombre total de commandes rattachées à ce résumé (nombre de volets total sur le résumé par exemple)
+
+<br/><br/>  
+
 
 * ### Widgets
  ![](../images/screen-assistantWidgets.png)
