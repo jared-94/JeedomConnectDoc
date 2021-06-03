@@ -1,5 +1,14 @@
 # Changelog JeedomConnect
 
+## Version 0.21.1 (03/06/2021)
+- Nouveauté :
+  * Page batteries / piles
+  * Option pour activer le polling en http
+
+- Bug fixes :
+  * Enregistrement des notifications dans l'appli
+  * utilisation de l'adresse externe pour la géolocalisation
+
 ## Version 0.20.7 (25/05/2021)
 
 - Nouveautés : 
