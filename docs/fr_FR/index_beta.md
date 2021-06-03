@@ -478,9 +478,9 @@ Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'applica
 
 ## Je ne vois pas la batterie d'un de mes équipements sur JC, pourquoi ? <a name="qBattery"></a>  
 Seules les batteries disponibles sur la page `index.php?v=d&p=eqAnalyse` de votre jeedom sont remontées dans JeedomConnect.  
-Si votre batterie n'apparait pas sur cette page, alors quelle n'apparaitra pas sur JeedomConnect !  
+Si votre batterie n'apparait pas sur cette page, alors elle n'apparaitra pas sur JeedomConnect !  
 
-Comment l'ajouter ? Rapprochez-vous du développeur du plugin utilisé par votre équipement afin qu'il fasse en sorte que la batterie soit visible sur la page indiquée plus haut :)
+Comment l'ajouter ? Rapprochez-vous du développeur du plugin utilisé par votre équipement afin qu'il fasse en sorte que la batterie soit visible sur la page indiquée plus haut ;)
 
 
 <br/>
