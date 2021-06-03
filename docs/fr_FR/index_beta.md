@@ -387,6 +387,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
   * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion)
   * [Je suis bêta-testeur, que dois-je faire ?](#qBeta)   
   * [Comment « vider le cache » ou « supprimer les données » ?](#qVideCache)
+  * [Je ne vois pas la batterie d'un de mes équipements sur JC, pourquoi ?](#qBattery)
   * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
 
 
@@ -472,6 +473,15 @@ ainsi qu'en bas de la page `Préférences` (dans la menu de l'application) :
 Comme son nom l'indique, la version bêta n'est pas une version stable. En utilisant, vous savez et acceptez que celle-ci puisse comporter des anomalies, remonter des états incohérents, réaliser (ou pas) des actions, etc ...   
   
 Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'application correspondante. Celle-ci est également disponible sur le Store, mais pour y accéder vous devez au préalable être enregistré en tant que bêta-testeur auprès du Store. Cette inscription est à <a href="https://play.google.com/apps/testing/com.jeedomconnect.app" target="_blank">faire ici</a>.  
+
+<br/>
+
+## Je ne vois pas la batterie d'un de mes équipements sur JC, pourquoi ? <a name="qBattery"></a>  
+Seules les batteries disponibles sur la page `index.php?v=d&p=eqAnalyse` de votre jeedom sont remontées dans JeedomConnect.  
+Si votre batterie n'apparait pas sur cette page, alors quelle n'apparaitra pas sur JeedomConnect !  
+
+Comment l'ajouter ? Rapprochez-vous du développeur du plugin utilisé par votre équipement afin qu'il fasse en sorte que la batterie soit visible sur la page indiquée plus haut :)
+
 
 <br/>
 
