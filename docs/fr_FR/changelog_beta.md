@@ -2,9 +2,14 @@
 
 ## Version 0.21.2 (15/06/2021)
 - Nouveautés :
-  * Page Santé
-  * Page Mise à jour des plugins
-  * Paramètres avancés pour la géolocalisation
+  * Page Santé : permet de voir la page santé de votre jeedom, et gérer les démons de vos plugins : statut/start/stop (start/stop uniquement possible si l'utilisateur rattaché à l'équipement connecté appartient au groupe admin)
+  * Page Mise à jour des plugins : permet de voir le nombre de mise à jour disponible sur vos plugins et réaliser tout ou partie de ces maj (maj uniquement possible si l'utilisateur rattaché à l'équipement connecté appartient au groupe admin)
+  * Paramètres avancés pour la géolocalisation : 
+  * Sélection de l'affichage ou non du niveau de batterie de son équipement JC sur la page `Equipement` de votre Jeedom (et donc la page JC correspondante)
+
+- Bug fixes :
+  * Ajout de la configuraiton du widget `liste de choix` quand il n'existe qu'en sous-widget
+  * Correction des `#` manquants sur les champs dispo dans les listes `+`
 
 ## Version 0.21.1 (03/06/2021)
 - Nouveauté :
