@@ -10,6 +10,7 @@
 - Bug fixes :
   * Ajout de la configuraiton du widget `liste de choix` quand il n'existe qu'en sous-widget
   * Correction des `#` manquants sur les champs dispo dans les listes `+`
+  * Rafraichissement de la page `Batteries` toutes les 5 secondes et/ou lorsqu'on arrive sur la page.
 
 ## Version 0.21.1 (03/06/2021)
 - Nouveauté :
