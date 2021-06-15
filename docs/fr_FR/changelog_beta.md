@@ -1,5 +1,11 @@
 # Changelog JeedomConnect
 
+## Version 0.21.2 (15/06/2021)
+- Nouveautés :
+  * Page Santé
+  * Page Mise à jour des plugins
+  * Paramètres avancés pour la géolocalisation
+
 ## Version 0.21.1 (03/06/2021)
 - Nouveauté :
   * Page batteries / piles
