@@ -1,5 +1,20 @@
 # Changelog JeedomConnect
 
+## Version 0.21.3 (22/07/2021)
+- Nouveautés :
+  * Edition des widgets depuis l'application (appui long sur un widget)
+  * Paramètres personalisés pour les widgets pour chaque appareil
+  * Edition des menus depuis l'application (appui long)
+  * Sauvegarde / restauration des paramètres de l'appli
+  * Icônes / images : filtres et animations
+  * Historique : possibilité de régler individuellement l'affichage en mode détaillé
+  * Sécurisation des pages Préférences et Interface web
+  * Vérouillage de l'interface
+
+- Bug fixes :
+  * Bug de la sauvegarde des paramètres de géolocalisation
+
+
 ## Version 0.21.2 (15/06/2021)
 - Nouveautés :
   * Page Santé : permet de voir la page santé de votre jeedom, et gérer les démons de vos plugins : statut/start/stop (start/stop uniquement possible si l'utilisateur rattaché à l'équipement connecté appartient au groupe admin)
