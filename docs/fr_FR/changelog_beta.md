@@ -1,5 +1,17 @@
 # Changelog JeedomConnect
 
+## Version 0.21.5 (30/07/2021)
+- Nouveautés :
+  * Couleurs en fond d'écran (image, dégradés, gestion de la transparence)
+  * Couleurs ou image sur fond des widgets (avec ou sans conditions)
+  * Choix des couleurs titre/sous-titre pour chaque widget
+  * Gestion des pièces et des résumés depuis l'application (pensez à recharrger les données [menu préférences])
+  * Bouton de ré-initialisation des paramètres perso dans chaque widget
+
+- Bug fixes :
+  * Problème de perte de config au re-démarrage
+  * Bug dans la page scénarios
+  * Amélioration de la connexion
 ## Version 0.21.3 (22/07/2021)
 - Nouveautés :
   * Edition des widgets depuis l'application (appui long sur un widget)
@@ -10,6 +22,7 @@
   * Historique : possibilité de régler individuellement l'affichage en mode détaillé
   * Sécurisation des pages Préférences et Interface web
   * Vérouillage de l'interface
+  * Possibilité de mettre une URL locale dans les webview
 
 - Bug fixes :
   * Bug de la sauvegarde des paramètres de géolocalisation
