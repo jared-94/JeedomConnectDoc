@@ -5,15 +5,17 @@
   * Couleur de thème, plus de choix de couleurs, et mode auto noir/blanc
   * Groupe : choix de l'arrière plan (via l'appli)
   * Taille des titres et sous-titres pour chaque widget
+  * Déplacement d'un widget à la place d'un autre widget
 
 - Bug fixes :
   * Vue détails dans le widget lumières
   * Transparence et gestion des fonds d'écran
   * Bug au choix d'une commande info sur l'éditeur de widgets
-  * Actions des snackbar rétablies
+  * Actions des toaster rétablies
   * La perso des widgets ne se rajoute plus pour les groupes
   * Défilement dans l'onglet Général de la page de perso
   * L'app ne crash plus lorsque qu'un widget est défaillant
+  * Temps écoulé sur scénarios
 ## Version 0.21.5 (30/07/2021)
 - Nouveautés :
   * Couleurs en fond d'écran (image, dégradés, gestion de la transparence)
