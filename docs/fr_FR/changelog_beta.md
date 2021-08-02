@@ -1,5 +1,19 @@
 # Changelog JeedomConnect
 
+## Version 0.21.6 (02/08/2021)
+- Nouveautés :
+  * Couleur de thème, plus de choix de couleurs, et mode auto noir/blanc
+  * Groupe : choix de l'arrière plan (via l'appli)
+  * Taille des titres et sous-titres pour chaque widget
+
+- Bug fixes :
+  * Vue détails dans le widget lumières
+  * Transparence et gestion des fonds d'écran
+  * Bug au choix d'une commande info sur l'éditeur de widgets
+  * Actions des snackbar rétablies
+  * La perso des widgets ne se rajoute plus pour les groupes
+  * Défilement dans l'onglet Général de la page de perso
+  * L'app ne crash plus lorsque qu'un widget est défaillant
 ## Version 0.21.5 (30/07/2021)
 - Nouveautés :
   * Couleurs en fond d'écran (image, dégradés, gestion de la transparence)
@@ -12,6 +26,7 @@
   * Problème de perte de config au re-démarrage
   * Bug dans la page scénarios
   * Amélioration de la connexion
+  * Sous-dossiers de img pris en compte
 ## Version 0.21.3 (22/07/2021)
 - Nouveautés :
   * Edition des widgets depuis l'application (appui long sur un widget)
