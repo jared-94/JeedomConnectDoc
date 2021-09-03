@@ -1,11 +1,31 @@
 # Changelog JeedomConnect
 
+## Version 0.21.7 (dev en cours)
+- Nouveautés :
+  * Titres et sous-titres sous conditions : possibilité de mettre du code JavaScript (ex: `#[Réseau][PC bureau][Online]# == 1 ? "En ligne" : "Hors ligne"`)
+  * Personalisation du fond d'écran en vue Détails (id=10), pour l'instant commun à toutes les vues Détails
+  * Widget générique slider : mode Heure (format Jeedom, ex: 145 -> 01H45, 1805 -> 18H05)
+  * Widget générique slider : accès boîte de dialogue avec slider en vue vignette 
+  * Widget générique actions : 2 nouvelles options pour personnaliser l'affichage
+  * Option pour ajouter l'altitude, le type d'activité et le niveau de batterie à la commande de position
+
+- Bug fixes :
+  * Action sur vignette widget clim/chauffage
+  * Action sur vignette widget générique message
+  * Espace vide dans Résumé de widgets si widget désactivé
+  * Icône Jeedom de couleur pour les résumés et objets
+  * Centrage dans Favoris de widgets
+  * Widget Caméra : dimensions corrigées en plein écran
+  * Chargement des fichiers même protégés dans les notifications
+  * Suppression des espaces de début et fin dans l'URL de connexion
+  * Crash sur le bouton de suppression d'image
+
 ## Version 0.21.6 (02/08/2021)
 - Nouveautés :
   * Couleur de thème, plus de choix de couleurs, et mode auto noir/blanc
   * Groupe : choix de l'arrière plan (via l'appli)
   * Taille des titres et sous-titres pour chaque widget
-  * Déplacement d'un widget à la place d'un autre widget
+  * Déplacement d'un widget ou d'un groupe à la place d'un autre widget
 
 - Bug fixes :
   * Vue détails dans le widget lumières

@@ -254,7 +254,7 @@ Deux variables sont disponibles : `#value#` et `#total#` :
 
 ## Commandes disponibles sur un équipement <a name="eqCmd"></a>
 Par défaut les commandes suivantes sont disponibles dans chaque équipement :
-- `Position` : Lorsque la géolocation est activée, donne les coordonnées GPS de l'appareil sous la forme `latitude,longitude`. Il est aussi possible d'ajouter l'altitude en cochant la case correspondante dans les paramètres de l'équipement.
+- `Position` : Lorsque la géolocation est activée, donne les coordonnées GPS de l'appareil sous la forme `latitude,longitude`. Il est aussi possible d'ajouter l'altitude, l'activité et la batterie en cochant la case correspondante dans les paramètres de l'équipement.
 - `Activité` : Lorsque la géolocalisation est activée, donne l'activité en cours sur l'appareil. LValeurs possibles : ``still``, ``on_foot``, ``running``, ``on_bicycle`` et ``in_vehicle``
 - `Notification` : Commande de notification par défaut
 - `Afficher page` : Lorsque l'application est en premier plan, permet de basculer sur une page donnée. Il s'agit d'une commande action message. Pour l'utiliser, commencer par repérer l'`id` de la page. Cell-ci est disponible en survolant votre souris sur les menus de l'assistant de configuration. Indiquez alors cet `id` dans le champs `titre` ou `message` de la commande.
