@@ -7,7 +7,11 @@
   * Widget générique slider : mode Heure (format Jeedom, ex: 145 -> 01H45, 1805 -> 18H05)
   * Widget générique slider : accès boîte de dialogue avec slider en vue vignette 
   * Widget générique actions : 2 nouvelles options pour personnaliser l'affichage
+  * Widget Alarme : option pour les modes
   * Option pour ajouter l'altitude, le type d'activité et le niveau de batterie à la commande de position
+  * iOS : pastille de notifications non lues sur l'icône de l'appli
+  * iOS : image / vidéo dans la notification native
+  * iOS : actions rapides dans la notification native
 
 - Bug fixes :
   * Action sur vignette widget clim/chauffage
@@ -19,6 +23,9 @@
   * Chargement des fichiers même protégés dans les notifications
   * Suppression des espaces de début et fin dans l'URL de connexion
   * Crash sur le bouton de suppression d'image
+  * iOS : utilisation de FaceID
+  * iOS : bug du bouton `Retirer ce widget`
+  * iOS : bug de sélection d'une date  
 
 ## Version 0.21.6 (02/08/2021)
 - Nouveautés :
