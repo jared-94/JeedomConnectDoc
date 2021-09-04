@@ -8,6 +8,7 @@
   * Widget générique slider : accès boîte de dialogue avec slider en vue vignette 
   * Widget générique actions : 2 nouvelles options pour personnaliser l'affichage
   * Widget Alarme : option pour les modes
+  * Nouvelle option de personalisation : masquer contenu de la carte
   * Option pour ajouter l'altitude, le type d'activité et le niveau de batterie à la commande de position
   * iOS : pastille de notifications non lues sur l'icône de l'appli
   * iOS : image / vidéo dans la notification native
