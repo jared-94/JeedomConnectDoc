@@ -3,12 +3,12 @@
 ## Version 0.21.7 (dev en cours)
 - Nouveautés :
   * Titres et sous-titres sous conditions : possibilité de mettre du code JavaScript (ex: `#[Réseau][PC bureau][Online]# == 1 ? "En ligne" : "Hors ligne"`)
-  * Personalisation du fond d'écran en vue Détails (id=10), pour l'instant commun à toutes les vues Détails
+  * Personnalisation du fond d'écran en vue Détails (screenId=10), pour l'instant commun à toutes les vues Détails
   * Widget générique slider : mode Heure (format Jeedom, ex: 145 -> 01H45, 1805 -> 18H05)
   * Widget générique slider : accès boîte de dialogue avec slider en vue vignette 
   * Widget générique actions : 2 nouvelles options pour personnaliser l'affichage
   * Widget Alarme : option pour les modes
-  * Nouvelle option de personalisation : masquer contenu de la carte
+  * Nouvelle option de personnalisation : masquer contenu de la carte
   * Option pour ajouter l'altitude, le type d'activité et le niveau de batterie à la commande de position
   * iOS : pastille de notifications non lues sur l'icône de l'appli
   * iOS : image / vidéo dans la notification native
@@ -18,7 +18,7 @@
   * Action sur vignette widget clim/chauffage
   * Action sur vignette widget générique message
   * Espace vide dans Résumé de widgets si widget désactivé
-  * Icône Jeedom de couleur pour les résumés et objets
+  * Icône Jeedom de couleur pour les résumés et pièces
   * Centrage dans Favoris de widgets
   * Widget Caméra : dimensions corrigées en plein écran
   * Chargement des fichiers même protégés dans les notifications
