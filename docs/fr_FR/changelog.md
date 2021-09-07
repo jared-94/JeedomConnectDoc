@@ -1,5 +1,44 @@
 # Changelog JeedomConnect  
 
+## Version 0.22.0 (07/09/2021)
+- Nouveautés
+  * Page batteries / piles
+  * Option pour activer le polling en http
+  * Page Santé : permet de voir la page santé de votre jeedom, et gérer les démons de vos plugins : statut/start/stop (start/stop uniquement possible si l'utilisateur rattaché à l'équipement connecté appartient au groupe admin)
+  * Page Mise à jour des plugins : permet de voir le nombre de mise à jour disponible sur vos plugins et réaliser tout ou partie de ces maj (maj uniquement possible si l'utilisateur rattaché à l'équipement connecté appartient au groupe admin)
+  * Paramètres avancés pour la géolocalisation : 
+  * Sélection de l'affichage ou non du niveau de batterie de son équipement JC sur la page `Equipement` de votre Jeedom (et donc la page JC correspondante)
+  * Edition des widgets depuis l'application (appui long sur un widget)
+  * Paramètres personalisés pour les widgets pour chaque appareil
+  * Edition des menus depuis l'application (appui long)
+  * Sauvegarde / restauration des paramètres de l'appli
+  * Icônes / images : filtres et animations
+  * Historique : possibilité de régler individuellement l'affichage en mode détaillé
+  * Sécurisation des pages Préférences et Interface web
+  * Vérouillage de l'interface
+  * Possibilité de mettre une URL locale dans les webview
+  * Couleurs en fond d'écran (image, dégradés, gestion de la transparence)
+  * Couleurs ou image sur fond des widgets (avec ou sans conditions)
+  * Choix des couleurs titre/sous-titre pour chaque widget
+  * Gestion des pièces et des résumés depuis l'application (pensez à recharrger les données [menu préférences])
+  * Bouton de ré-initialisation des paramètres perso dans chaque widget
+  * Couleur de thème, plus de choix de couleurs, et mode auto noir/blanc
+  * Groupe : choix de l'arrière plan (via l'appli)
+  * Taille des titres et sous-titres pour chaque widget
+  * Déplacement d'un widget ou d'un groupe à la place d'un autre widget
+  * Titres et sous-titres sous conditions : possibilité de mettre du code JavaScript (ex: `#[Réseau][PC bureau][Online]# == 1 ? "En ligne" : "Hors ligne"`)
+  * Personnalisation du fond d'écran en vue Détails (screenId=10), pour l'instant commun à toutes les vues Détails
+  * Widget générique slider : mode Heure (format Jeedom, ex: 145 -> 01H45, 1805 -> 18H05)
+  * Widget générique slider : accès boîte de dialogue avec slider en vue vignette 
+  * Widget générique actions : 2 nouvelles options pour personnaliser l'affichage
+  * Widget Alarme : option pour les modes
+  * Nouvelle option de personnalisation : masquer contenu de la carte
+  * Option pour ajouter l'altitude, le type d'activité et le niveau de batterie à la commande de position
+  * iOS : pastille de notifications non lues sur l'icône de l'appli
+  * iOS : image / vidéo dans la notification native
+  * iOS : actions rapides dans la notification native
+  * Nombreuses corrections de bugs
+
 ## Version 0.21.0 (31/05/2021)
 - Nouveautés appli :
   * Mode immersif (permet de masquer les barres de statut et de navigation d'Android)

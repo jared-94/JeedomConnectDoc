@@ -1,6 +1,6 @@
 # Changelog JeedomConnect
 
-## Version 0.21.7 (dev en cours)
+## Version 0.21.7 (05/09/2021)
 - Nouveautés :
   * Titres et sous-titres sous conditions : possibilité de mettre du code JavaScript (ex: `#[Réseau][PC bureau][Online]# == 1 ? "En ligne" : "Hors ligne"`)
   * Personnalisation du fond d'écran en vue Détails (screenId=10), pour l'instant commun à toutes les vues Détails
