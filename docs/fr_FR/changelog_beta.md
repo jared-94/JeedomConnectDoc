@@ -4,7 +4,7 @@
 - Nouveautés
   * Nouveau widget Historique (graphique dans la grille)
   * Historiques : paramètres de personnalisation (couleurs, type de courbe, affichage par défaut...) 
-  * Nouvelle commande pour afficher un Pop-Up dans l'appli
+  * Nouvelle commande pour afficher un Pop-Up dans l'appli (si appli kill et sur Android, affichage à l'écran)
   * Widget geoloc : affichage de la carte dans le widget en mode carte
   * Ask dans les notifications natives sur iOS
   * Notifications : suppression manuelle ou auto de notifications
