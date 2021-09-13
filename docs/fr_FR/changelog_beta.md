@@ -2,14 +2,14 @@
 
 ## Version 0.22.1 (dev en cours)
 - Nouveautés
-  * Nouveau widget Historique (graphique dans la grille)
+  * Nouveau widget `Historique` (graphique dans la grille)
   * Historiques : paramètres de personnalisation (couleurs, type de courbe, affichage par défaut...) 
-  * Nouvelle commande pour afficher un Pop-Up dans l'appli (si appli kill et sur Android, affichage à l'écran)
-  * Widget geoloc : affichage de la carte dans le widget en mode carte
+  * Nouvelle commande pour afficher un `Pop-Up` dans l'application (si JC n'est pas en cours d'utilisation [Android uniquement], alors on l'affiche à l'écran)
+  * Widget `Géolocalisation` : affichage de la carte dans le widget en mode carte
   * Ask dans les notifications natives sur iOS
   * Notifications : suppression manuelle ou auto de notifications
   * Changements graphiques du centre de notifications
-  * Widget générique action : options d'affichage en personnalisation
+  * Widget `générique action` : options d'affichage disponible en personnalisation
   * Ajout de la variable `#value#` dans le widget Volet
 
 - Bug fixes :
@@ -19,6 +19,8 @@
   * Résumés de pièces : prise de compte de l'affichage sur valeur nulle configurée dans Jeedom
   * Historique : affichage en français pour l'axe de temps
   * Historique : intervalle de temps complet même si pas de valeur
+  * Correction du Mode Expert
+  * Ask dans les notifications natives d'Android
 
 ## Version 0.21.7 (05/09/2021)
 (passage en stable 08/09/2021)
