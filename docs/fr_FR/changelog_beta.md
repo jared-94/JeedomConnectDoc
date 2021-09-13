@@ -11,6 +11,7 @@
   * Changements graphiques du centre de notifications
   * Widget `générique action` : options d'affichage disponible en personnalisation
   * Ajout de la variable `#value#` dans le widget Volet
+  * Affichage de commande(s) orpheline(s) sur les widgets (page principale du plugin, pas sur la page Jeedom !)
 
 - Bug fixes :
   * Authentification biométrique au démarrage
