@@ -12,6 +12,7 @@
   * Widget `générique action` : options d'affichage disponible en personnalisation
   * Ajout de la variable `#value#` dans le widget Volet
   * Affichage de commande(s) orpheline(s) sur les widgets (page principale du plugin, pas sur la page Jeedom !)
+  * Ajout de la commande `Notifier tous les appareils JC` qui permet d'envoyer une notification commune sur les appareils éligible (case à cocher depuis l'assistant des notifications, sur les notifications à utiliser dans ce cas)
 
 - Bug fixes :
   * Authentification biométrique au démarrage
