@@ -312,7 +312,8 @@ Vous pouvez également :
 - actions : permet de réaliser commandes et/ou scénario à chaque fois qu'une notification est envoyée. (<u>par exemple</u> : si envoie d'une notification urgente, je veux avoir la possibilité d'executer le scénario qui permet de déclencher l'alarme de la maison)
 
 <img src='../images/JeedomConnect_notif_edit.png' width='50%' />  
-
+<br/>
+<br/>  
 ### Comment envoyer une notification ?
 
 Une fois que vous avez paramétré vos différentes notifications, les commandes associées sont automatiquement créées sur votre équipement (après `sauvegarde`), dans l'onglet dédié comme sur tout équipement Jeedom :  
@@ -328,6 +329,25 @@ Voici par exemple la réception d'une notification : (avec les configurations pr
 C'est une `notif Urgente` qui a été envoyée, donc puisque la notification est paramétré sur le canal `Urgent`, mon téléphone sonne donc avec un fort volume même si je suis en mode 'ne pas déranger'.  
 La notification est affichée en rouge dans la barre de notification Android, ainsi que lorsque je la visualise en entière dans l'application JeedomConnect, et on voit la présence d'une icône 'sirène rouge' dans le coin supérieur droit.    
 Et j'ai également la possibilité de cliquer sur le bouton `Alarme maison` pour exécuter le scénario que j'ai paramétré et qui déclenchera l'alarme de ma maison.
+
+<br/>
+<br/>   
+### Comment envoyer une notification à tous les appareils ? <a name="qNotifyAll"></a>
+
+Par défaut l'envoie d'envoyer à "tous" les appareils JC n'existe pas. En effet, il est possible de configurer plusieurs types de notification par appareil, il nous est donc impossible de deviner laquelle est à utiliser.  
+Avant d'utiliser la commande `Notifier les appareils JC`, il faut : 
+- aller sur les équipements que vous souhaitez notifier
+- entrer dans l'assistant des notifications, puis onglet `Notification`
+- choisir la notification qui devra être prise en compte par cette commande
+- cocher la case `Notifier tous les appareils JC` 
+- sauvegarder cette fenêtre `Configuration des notifications`
+- sauvegarder ensuite votre page principale de l'équipement concerné  
+
+<img src='../images/JeedomConnect_notifyAll.gif' width='50%' />  
+
+NB : la commande `Notifier les appareils JC` est disponible sur l'ensemble des vos équipements JC, y compris ceux pour lesquels vous n'auriez pas coché la case `Notifier tous les appareils JC` !   
+Vous pouvez donc utiliser cette commande depuis n'importe quel équipement.  
+
 
 ### Utilisation avec Ask
 
@@ -501,4 +521,3 @@ Comment l'ajouter ? Rapprochez-vous du développeur du plugin utilisé par votre
 En partageant vos idées d'améliorations, vos suggestions et vos retours sur des bugs !    
 Puisque ça a été demandé plusieurs fois, si vous souhaitez soutenir "financièrement" parlant, nous vous proposons de payer un café (ou deux, ou mille ! :) ) :  
 <a href="https://www.paypal.com/pools/c/8xfIqfBFGe" target="_blank"><img src="../images/bmc.png" width='30%'/></a> 
-
