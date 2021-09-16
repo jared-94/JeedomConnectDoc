@@ -1,6 +1,6 @@
 # Changelog JeedomConnect
 
-## Version 0.22.1 (dev en cours)
+## Version 0.22.1 (16/06/2021)
 - Nouveautés
   * Nouveau widget `Historique` (graphique dans la grille)
   * Historiques : paramètres de personnalisation (couleurs, type de courbe, affichage par défaut...) 
@@ -8,6 +8,7 @@
   * Widget `Géolocalisation` : affichage de la carte dans le widget en mode carte
   * Ask dans les notifications natives sur iOS
   * Notifications : suppression manuelle ou auto de notifications
+  * Notifications : possibilité de filter par type de notifications
   * Changements graphiques du centre de notifications
   * Widget `générique action` : options d'affichage disponible en personnalisation
   * Ajout de la variable `#value#` dans le widget Volet
