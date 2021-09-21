@@ -1,5 +1,14 @@
 # Changelog JeedomConnect
 
+## Version 0.22.2 (en cours de dev)
+- Nouveautés :
+  * Les commandes `Lancer App`, `Afficher page` et `Pop-Up` ne prennent plus en compte qu'un seul champ dans les scénarios (anciennement `message`). Si jamais vous utilisiez le champs `Titre` il convient de modifier légèrement votre scénario pour basculer les informations dans le champ `message`. (Si la modif a lieu après la maj du plugin, il convient de supprimer l'action et de la re-créer dans le scénario).
+
+- Bug fixes : 
+  * Levée du problème sur la taille disponible en bdd pour la personalisation des widgets  
+
+
+
 ## Version 0.22.1 (16/06/2021)
 - Nouveautés
   * Nouveau widget `Historique` (graphique dans la grille)
