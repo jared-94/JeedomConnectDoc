@@ -6,6 +6,7 @@
 
 - Bug fixes : 
   * Levée du problème sur la taille disponible en bdd pour la personalisation des widgets  
+  * Ré-activation de la commande `Détacher`
 
 
 
