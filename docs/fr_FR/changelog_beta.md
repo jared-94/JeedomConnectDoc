@@ -2,15 +2,23 @@
 
 ## Version 0.22.2 (en cours de dev)
 - Nouveautés :
+  * Ajout d'un système de logs dans l'application
+  * Nouveau widget `Image` qui permet d'afficher une image à partir d'une URL ou une commande info
+  * Nouvelles commandes action pour activer / désactiver le tracking 
+  * Mise à jour de (presque) toutes les libs de l'appli, et passage à React Native 0.65.1 (dont le moteur JS Hermes 20 à 30% plus rapide)
   * Les commandes `Lancer App`, `Afficher page` et `Pop-Up` ne prennent plus en compte qu'un seul champ dans les scénarios (anciennement `message`). Si jamais vous utilisiez le champs `Titre` il convient de modifier légèrement votre scénario pour basculer les informations dans le champ `message`. (Si la modif a lieu après la maj du plugin, il convient de supprimer l'action et de la re-créer dans le scénario).
-
+  * Ajout d'un délai possible entre deux authentifications
+  
 - Bug fixes : 
   * Levée du problème sur la taille disponible en bdd pour la personalisation des widgets  
   * Ré-activation de la commande `Détacher`
+  * Notifications iOS
+  * Affichage correct des popups sur iOS
+  * Affichage des groupes en mode paysage
+  * Accès aux historiques dans la vue détail
+  * Affichage des actions dans le widget Clim
 
-
-
-## Version 0.22.1 (16/06/2021)
+## Version 0.22.1 (16/09/2021)
 - Nouveautés
   * Nouveau widget `Historique` (graphique dans la grille)
   * Historiques : paramètres de personnalisation (couleurs, type de courbe, affichage par défaut...) 
