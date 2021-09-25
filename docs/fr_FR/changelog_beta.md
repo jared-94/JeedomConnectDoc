@@ -4,7 +4,8 @@
 - Nouveautés :
   * Ajout d'un système de logs dans l'application
   * Nouveau widget `Image` qui permet d'afficher une image à partir d'une URL ou une commande info
-  * Nouvelles commandes action pour activer / désactiver le tracking 
+  * Nouvelles commandes action pour gérer les préférences de l'application depuis Jeedom (pour l'instant tracking, recharger les données)
+  * Options de personnalisations des vues résumés de widgets
   * Mise à jour de (presque) toutes les libs de l'appli, et passage à React Native 0.65.1 (dont le moteur JS Hermes 20 à 30% plus rapide)
   * Les commandes `Lancer App`, `Afficher page` et `Pop-Up` ne prennent plus en compte qu'un seul champ dans les scénarios (anciennement `message`). Si jamais vous utilisiez le champs `Titre` il convient de modifier légèrement votre scénario pour basculer les informations dans le champ `message`. (Si la modif a lieu après la maj du plugin, il convient de supprimer l'action et de la re-créer dans le scénario).
   * Ajout d'un délai possible entre deux authentifications
