@@ -6,20 +6,24 @@
   * Nouveau widget `Image` qui permet d'afficher une image à partir d'une URL ou une commande info
   * Nouvelles commandes action pour gérer les préférences de l'application depuis Jeedom (pour l'instant tracking, recharger les données)
   * Options de personnalisations des vues résumés de widgets
-  * Mise à jour de (presque) toutes les libs de l'appli, et passage à React Native 0.65.1 (dont le moteur JS Hermes 20 à 30% plus rapide)
+  * Mise en place du DeepLink (pour intéractions avec d'autres applis comme Tasker)
+  * Mise à jour de (presque) toutes les libs de l'appli, et passage à React Native 0.65.1 (dont le moteur JS Hermes 20 à 30% plus rapide sur iOS)
   * Les commandes `Lancer App`, `Afficher page` et `Pop-Up` ne prennent plus en compte qu'un seul champ dans les scénarios (anciennement `message`). Si jamais vous utilisiez le champs `Titre` il convient de modifier légèrement votre scénario pour basculer les informations dans le champ `message`. (Si la modif a lieu après la maj du plugin, il convient de supprimer l'action et de la re-créer dans le scénario).
   * Ajout d'un délai possible entre deux authentifications
   * Ajout de la commande `Modifier Préférences Appli` : permet de modifier certaines options de votre application. Faites un choix dans la liste déroulante, puis indiquez la valeur à mettre si nécessaire : `ON`, `OFF`, `MARCHE`, `ARRET`
   * Prise en compte des options indiquées dans les notifications
+  * Possibilité d'envoyer n'importe quel type de fichier dans les notifications
   
 - Bug fixes : 
   * Levée du problème sur la taille disponible en bdd pour la personalisation des widgets  
   * Ré-activation de la commande `Détacher`
-  * Notifications iOS
+  * Notifications iOS et Android
   * Affichage correct des popups sur iOS
   * Affichage des groupes en mode paysage
   * Accès aux historiques dans la vue détail
   * Affichage des actions dans le widget Clim
+  * Slider température blanc dans les groupes de lumières
+  * Grisement des icônes persos sur les scénarios
 
 ## Version 0.22.1 (16/09/2021)
 - Nouveautés
