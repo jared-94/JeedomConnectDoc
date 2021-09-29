@@ -4,6 +4,7 @@
 - Nouveautés :
   * Ajout d'un système de logs dans l'application
   * Nouveau widget `Image` qui permet d'afficher une image à partir d'une URL ou une commande info
+  * Nouvelle commande pour envoyer des SMS (Android seulement). Fonctionne quelque soit l'état de l'application
   * Nouvelles commandes action pour gérer les préférences de l'application depuis Jeedom (pour l'instant tracking, recharger les données)
   * Options de personnalisations des vues résumés de widgets
   * Mise en place du DeepLink (pour intéractions avec d'autres applis comme Tasker)
@@ -23,7 +24,7 @@
   * Accès aux historiques dans la vue détail
   * Affichage des actions dans le widget Clim
   * Slider température blanc dans les groupes de lumières
-  * Grisement des icônes persos sur les scénarios
+  * Grisement des icônes persos sur les scénarios désactivés
 
 ## Version 0.22.1 (16/09/2021)
 - Nouveautés
