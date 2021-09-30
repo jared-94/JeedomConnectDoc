@@ -1,6 +1,6 @@
 # Changelog JeedomConnect
 
-## Version 0.22.2 (en cours de dev)
+## Version 0.22.2 (30/09/2021)
 - Nouveautés :
   * Ajout d'un système de logs dans l'application
   * Nouveau widget `Image` qui permet d'afficher une image à partir d'une URL ou une commande info
@@ -14,6 +14,7 @@
   * Ajout de la commande `Modifier Préférences Appli` : permet de modifier certaines options de votre application. Faites un choix dans la liste déroulante, puis indiquez la valeur à mettre si nécessaire : `ON`, `OFF`, `MARCHE`, `ARRET`
   * Prise en compte des options indiquées dans les notifications
   * Possibilité d'envoyer n'importe quel type de fichier dans les notifications
+  * Ajout de l'option perso pour cacher le statut en mode carte
   
 - Bug fixes : 
   * Levée du problème sur la taille disponible en bdd pour la personalisation des widgets  
