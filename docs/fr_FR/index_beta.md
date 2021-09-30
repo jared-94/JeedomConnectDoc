@@ -267,6 +267,16 @@ Les actions :
 - `Notifier les appareils JC` : Permet d'envoyer un même message à plusieurs appareil. (cf la configuration plus bas !)  
 - `Pop-up` : Permet d'afficher un pop-up sur votre appareil 
 - `Modifier Préférences Appli` : Permet de modifier certaines options de votre application. Faites un choix dans la liste déroulante, puis indiquez la valeur à mettre si nécessaire : `ON`, `OFF`, `MARCHE`, `ARRET`
+Liste des actions (fonctionnent même appli tuée) :
+  - `Couleur thème` : indiquer une couleur au format hex `#10F581` ou par son nom (`pink`, `green`...)
+  - `Activer mode sombre` : `ON`, `OFF` ou tout autre chose pour le mode auto
+  - `Activer le tracking` : `MARCHE` ou `ARRET`
+  - `Recharger les données`
+- `Envoyer un SMS` (**Android uniquement**) : Permet d'envoyer un SMS. 
+Champ `Titre` : numéro du destinataire. 
+Champ `Message` : contenu du SMS.
+Cette fonction est utilisable dans n'importe quel état de l'application (premier-plan, arrière-plan, tuée)
+Pour utiliser cette fonction, vous devez d'abord vous rendre dans les autorisations de l'appli puis accepter celle correspondant à l'envoie de SMS.
 
 
 
