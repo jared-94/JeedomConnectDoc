@@ -272,7 +272,7 @@ Liste des actions (fonctionnent même appli tuée) :
   - `Activer mode sombre` : `ON`, `OFF` ou tout autre chose pour le mode auto
   - `Activer le tracking` : `MARCHE` ou `ARRET`
   - `Recharger les données`
-- `Envoyer un SMS` (**Android uniquement**) : Permet d'envoyer un SMS. 
+- `Envoyer un SMS` (**Version APK uniquement**) : Permet d'envoyer un SMS. 
 Champ `Titre` : numéro du destinataire. 
 Champ `Message` : contenu du SMS.
 Cette fonction est utilisable dans n'importe quel état de l'application (premier-plan, arrière-plan, tuée)

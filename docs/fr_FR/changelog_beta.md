@@ -1,10 +1,19 @@
 # Changelog JeedomConnect
 
+## Version 0.22.3 (01/10/2021)
+-Bug fixes :
+  * Affichage heure dans les notifications
+  * Problèmes avec les actions
+  * Page de personnalisation pour les widgets résumés ne plante plus
+  * Bouton de Déconnexion remarche
+  * iOS : menu du haut en défaut
+
+
 ## Version 0.22.2 (30/09/2021)
 - Nouveautés :
   * Ajout d'un système de logs dans l'application
   * Nouveau widget `Image` qui permet d'afficher une image à partir d'une URL ou une commande info
-  * Nouvelle commande pour envoyer des SMS (Android seulement). Fonctionne quelque soit l'état de l'application
+  * Nouvelle commande pour envoyer des SMS (Version APK seulement). Fonctionne quelque soit l'état de l'application
   * Nouvelles commandes action pour gérer les préférences de l'application depuis Jeedom (pour l'instant tracking, recharger les données)
   * Options de personnalisations des vues résumés de widgets
   * Mise en place du DeepLink (pour intéractions avec d'autres applis comme Tasker)
