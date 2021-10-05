@@ -4,45 +4,32 @@ Les items présents ici correspondent à l'ensemble des points pris en compte en
 La dernière partie liste les points qui n'ont pas été retenus.  
 
 # Plateforme
-    - créer une version pour IOS  --> date inconnue
+    - créer une version pour IOS  --> beta déjà disponible (04/08/21) // stable en cours de validation par Apple - date inconnue
 
 # Widgets à créer  
 	- multimédia
 	- porte de garage (https://community.jeedom.com/t/widgets-porte-de-garage/52963)
-	- lancer une application
 	- VMC
 	- Serrure
 	- Vanne thermostatique
 	- Velux
 
-
-# Widgets à améliorer  
-    - alarme avec plusieurs mode (https://community.jeedom.com/t/alarme-jeedom-connect/53849)
-	
-
 # Options supplémentaires
 	- remplir automatiquement les zones en fonction d'une premiere sélection lors de la création d'un widget (Statut -> ON + OFF)
-	- pouvoir gérer la température de blanc (https://community.jeedom.com/t/widget-lampe-rgbw/49901)
 	- retour d'informations de l'appareil (batterie, statut écran, connexion...) vers Jeedom
 	- envoyer des actions vers l'appareil (allumer écran, couper bluetooth...)
-	- commandes pour aller à une page donnée de l'application
 	- widgets Android sur launcher
 	- programmer une action sur un widget (ex: baisse de 2°C dans une heure)
 	- préviens moi sur un widget (ex: envoie une notification si temperature > 24°C)
-	- ajout de l’altitude, type d’activité, SSID et pcBatterie dans les info dispo du tracking Geoloc.
-  	
+	
 # Options sur APK
-	- pouvoir inverser l'icône et le texte (info) sur les vignettes
-	- choisir comment ouvrir l'historique par défaut : table ou graph (https://community.jeedom.com/t/historique-ouvrant-en-table-par-defaut/55629)
 	- définir la taille d'une vignette (https://community.jeedom.com/t/ergonomie-appli/55798)
 	- pouvoir définir carte/vignette par page et non pas au global
 	
 
 # Bugs connus
-	- les apostrophes dans les notifications sont perdues  
 	- problème de rafraichissement des conf (liste) avec le daemon !?  
 
-	
 
 <br/><br/>
 ---
@@ -59,7 +46,8 @@ Nouveaux widgets :
 
 	- liste de choix (23/03/21)
 	- générique message (23/03/21)
-	- caméra (01/04/2021)  
+	- caméra (01/04/21)  
+	- lancer une application (10/05/21)
 	
 
 Petis plus :  
@@ -79,6 +67,13 @@ Petis plus :
 	- ajouter bouton + et - aux extrémités d'un slider (https://community.jeedom.com/t/widget-thermostat-jeedom-connect/54694) (16/04/21)
 	- permettre le clic sur une vignette pour réaliser l'action (allumer/éteindre une lumière, ..)  (16/04/21)
 	- Unité sur les infos supplémentaires (16/04/21)
+	- alarme avec plusieurs mode (https://community.jeedom.com/t/alarme-jeedom-connect/53849) (05/09/21)  
+	- pouvoir gérer la température de blanc (https://community.jeedom.com/t/widget-lampe-rgbw/49901)   (05/03/21)  
+	- commandes pour aller à une page donnée de l'application (10/05/21)  
+	- ajout de l’altitude, type d’activité (pas SSID et pcBatterie) dans les info dispo du tracking Geoloc (05/09/21)  
+	- pouvoir inverser l'icône et le texte (info) sur les vignettes (18/05/21)
+	- choisir comment ouvrir l'historique par défaut : table ou graph (https://community.jeedom.com/t/historique-ouvrant-en-table-par-defaut/55629)  (16/09/21)  
+	
 
 Correction bugs : 
 	- le menu haut ne s'affiche pas en entier  (-> corrigé avec la nouvelle lib?)  (16/04/21)
