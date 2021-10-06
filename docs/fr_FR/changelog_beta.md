@@ -4,8 +4,9 @@
 - Nouveautés :
   * Amélioration de la connectivité
   * Envoie de l'utilisateur et du widget à chaque exécution de commande
-  
+
 - Bug fixes :
+  * Résolution du bug sur les menus hauts (Android)
   * Lignes multiples pour les sous-titres  
   * Fix autorisations des fichiers sur les dernières beta de Jeedom
   * Affichage de l'image dans les notifications sans titre
