@@ -1,7 +1,17 @@
 # Changelog JeedomConnect
 
+## Version 0.22.4 (en cours de dev)
+- Nouveautés :
+  * Amélioration de la connectivité
+  * Envoie de l'utilisateur et du widget à chaque exécution de commande
+  
+- Bug fixes :
+  * Lignes multiples pour les sous-titres  
+  * Fix autorisations des fichiers sur les dernières beta de Jeedom
+  * Affichage de l'image dans les notifications sans titre
+
 ## Version 0.22.3 (01/10/2021)
--Bug fixes :
+- Bug fixes :
   * Affichage heure dans les notifications
   * Problèmes avec les actions
   * Page de personnalisation pour les widgets résumés ne plante plus
