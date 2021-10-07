@@ -1,5 +1,35 @@
 # Changelog JeedomConnect  
 
+## Version 0.23.0
+- Nouveautés :
+  * Nouveau widget `Historique` (graphique dans la grille)
+  * Historiques : paramètres de personnalisation (couleurs, type de courbe, affichage par défaut...) 
+  * Nouvelle commande pour afficher un `Pop-Up` dans l'application (si JC n'est pas en cours d'utilisation [Android uniquement], alors on l'affiche à l'écran)
+  * Widget `Géolocalisation` : affichage de la carte dans le widget en mode carte
+  * Ask dans les notifications natives sur iOS
+  * Notifications : suppression manuelle ou auto de notifications
+  * Notifications : possibilité de filter par type de notifications
+  * Changements graphiques du centre de notifications
+  * Widget `générique action` : options d'affichage disponible en personnalisation
+  * Ajout de la variable `#value#` dans le widget Volet
+  * Affichage de commande(s) orpheline(s) sur les widgets (page principale du plugin, pas sur la page Jeedom !)
+  * Ajout de la commande `Notifier tous les appareils JC` qui permet d'envoyer une notification commune sur les appareils éligible (case à cocher depuis l'assistant des notifications, sur les notifications à utiliser dans ce cas)
+  * Ajout d'un système de logs dans l'application
+  * Nouveau widget `Image` qui permet d'afficher une image à partir d'une URL ou une commande info
+  * Nouvelle commande pour envoyer des SMS (Version APK seulement). Fonctionne quelque soit l'état de l'application
+  * Nouvelles commandes action pour gérer les préférences de l'application depuis Jeedom (pour l'instant tracking, recharger les données)
+  * Options de personnalisations des vues résumés de widgets
+  * Mise en place du DeepLink (pour intéractions avec d'autres applis comme Tasker)
+  * Mise à jour de (presque) toutes les libs de l'appli, et passage à React Native 0.65.1 (dont le moteur JS Hermes 20 à 30% plus rapide sur iOS)
+  * Les commandes `Lancer App`, `Afficher page` et `Pop-Up` ne prennent plus en compte qu'un seul champ dans les scénarios (anciennement `message`). Si jamais vous utilisiez le champs `Titre` il convient de modifier légèrement votre scénario pour basculer les informations dans le champ `message`. (Si la modif a lieu après la maj du plugin, il convient de supprimer l'action et de la re-créer dans le scénario).
+  * Ajout d'un délai possible entre deux authentifications
+  * Ajout de la commande `Modifier Préférences Appli` : permet de modifier certaines options de votre application. Faites un choix dans la liste déroulante, puis indiquez la valeur à mettre si nécessaire : `ON`, `OFF`, `MARCHE`, `ARRET`
+  * Prise en compte des options indiquées dans les notifications
+  * Possibilité d'envoyer n'importe quel type de fichier dans les notifications
+  * Ajout de l'option perso pour cacher le statut en mode carte
+  * Amélioration de la connectivité
+  * Envoie de l'utilisateur et du widget à chaque exécution de commande
+  * Nombreux bug fix
 ## Version 0.22.0 (07/09/2021)
 - Nouveautés
   * Page batteries / piles
