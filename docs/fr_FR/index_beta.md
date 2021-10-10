@@ -2,8 +2,9 @@
 
 <img src="../images/JeedomConnect_icon.png"  width="10%" />
 
-Téléchargez l'application :
-<a href="https://play.google.com/store/apps/details?id=com.jeedomconnect.app" target="_blank"> depuis le Play Store !</a>   
+Téléchargez l'application :  
+<a href="https://play.google.com/store/apps/details?id=com.jeedomconnect.app" target="_blank"><img src="../images/playstore.png" width='10%'/></a>  
+<a href="https://apps.apple.com/us/app/jeeconnect/id1566533727" target="_blank"><img src="../images/applestore.png" width='10%'/></a>  
 si vous êtes bêta-testeur et utilisez la version bêta du plugin, [regardez-ici](#qBeta)  
 
 
@@ -437,7 +438,6 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 # FAQ <a name="faq"></a>
 
   * [Comment télécharger l'application ?](#qOU)
-  * [J'ai un Iphone, comment utiliser l'application ?](#qIphone)
   * [Quelle est la différence entre connexion HTTP et Websocket ?](#qConnexion)  
   * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration)
   * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion)
@@ -452,14 +452,9 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 
 ## Comment télécharger l'application ? <a name="qOU"></a>   
 
-L'application est pour le moment uniquement disponible pour Android.  
-Elle est disponible sur le Play Store de Google ainsi que sur la page de Release du Github de Jeedom Connect.
-
-<br/>
-
-## J'ai un Iphone, comment utiliser l'application ? <a name="qIphone"></a>  
-
-Pour l'instant il est possible d'utiliser l'application JeedomConnect sur iOS uniquement en version Beta. Cf [ci-dessous](#qBeta)
+L'application est disponible sur vos Store : 
+<a href="https://play.google.com/store/apps/details?id=com.jeedomconnect.app" target="_blank"><img src="../images/playstore.png" width='10%'/></a>  
+<a href="https://apps.apple.com/us/app/jeeconnect/id1566533727" target="_blank"><img src="../images/applestore.png" width='10%'/></a>  
 
 <br/>
 

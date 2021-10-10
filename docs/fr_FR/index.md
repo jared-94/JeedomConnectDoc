@@ -2,8 +2,9 @@
 
 <img src="../images/JeedomConnect_icon.png"  width="10%" />
 
-
-<a href="https://play.google.com/store/apps/details?id=com.jeedomconnect.app" target="_blank">Télécharger l'application directement depuis le Store !</a>   
+Téléchargez l'application :  
+<a href="https://play.google.com/store/apps/details?id=com.jeedomconnect.app" target="_blank"><img src="../images/playstore.png" width='10%'/></a>  
+<a href="https://apps.apple.com/us/app/jeeconnect/id1566533727" target="_blank"><img src="../images/applestore.png" width='10%'/></a>  
 si vous êtes bêta-testeur et utilisez la version bêta du plugin, [regardez-ici](#qBeta)  
 
 
@@ -25,7 +26,7 @@ Pour accéder à la TODO list [c'est par là!](todo.md)
 13. [FAQ](#faq)
 
 ## Présentation du projet <a name="presentation"></a>
-Le projet **Jeedom Connect** se compose de 2 parties : un plugin pour Jeedom, et une application Android. Une version pour iOS pourra être envisagée plus tard.
+Le projet **Jeedom Connect** se compose de 2 parties : un plugin pour Jeedom, et une application Android / iOS.  
 
 L'application utilise la plupart des éléments de navigation d'une application : un drawer (menu dépliable sur la gauche), un menu bas, un menu haut, et des listes accordéon. Tous ceux-ci sont personalisables à partir du plugin.
 
@@ -167,7 +168,7 @@ La suppression est également possible. Attention toutefois, si un widget est su
 |Porte|Prise|Puissance|
 |Résumé|Résumé de pièce|Scénario|
 |Température|Thermostat|Volet|
-|Web View|||
+|Web View|Historique|Image|
 
 
 <br/><br/>  
@@ -253,13 +254,31 @@ Deux variables sont disponibles : `#value#` et `#total#` :
 <br/><br/>  
 
 ## Commandes disponibles sur un équipement <a name="eqCmd"></a>
-Par défaut les commandes suivantes sont disponibles dans chaque équipement :
+Par défaut les commandes suivantes sont disponibles dans chaque équipement.  
+Les infos :  
+- `Batterie` : Permet de connaitre le % de batterie de votre appareil 
 - `Position` : Lorsque la géolocation est activée, donne les coordonnées GPS de l'appareil sous la forme `latitude,longitude`. Il est aussi possible d'ajouter l'altitude, l'activité et la batterie en cochant la case correspondante dans les paramètres de l'équipement.
 - `Activité` : Lorsque la géolocalisation est activée, donne l'activité en cours sur l'appareil. LValeurs possibles : ``still``, ``on_foot``, ``running``, ``on_bicycle`` et ``in_vehicle``
+
+Les actions : 
 - `Notification` : Commande de notification par défaut
-- `Afficher page` : Lorsque l'application est en premier plan, permet de basculer sur une page donnée. Il s'agit d'une commande action message. Pour l'utiliser, commencer par repérer l'`id` de la page. Cell-ci est disponible en survolant votre souris sur les menus de l'assistant de configuration. Indiquez alors cet `id` dans le champs `titre` ou `message` de la commande.
-- `Lancer App` : Lorsque l'application est en premier plan, permet de lancer sur votre appareil une application. Il s'agit d'une commande action message qui accepte dans son champs `titre` ou `message` le nom du package de l'application.
+- `Afficher page` : Lorsque l'application est en premier plan, permet de basculer sur une page donnée. Il s'agit d'une commande action message. Pour l'utiliser, commencer par repérer l'`id` de la page. Cell-ci est disponible en survolant votre souris sur les menus de l'assistant de configuration. Indiquez alors cet `id` dans le champs `Id page` de la commande.
+- `Lancer App` : Lorsque l'application est en premier plan, permet de lancer sur votre appareil une application. Il s'agit d'une commande action message qui accepte dans son champs ou `Nom de l'application` le nom du package de l'application.
 - `Détacher` : Permet de détacher l'appareil de l'équipement.
+- `Notifier les appareils JC` : Permet d'envoyer un même message à plusieurs appareil. (cf la configuration plus bas !)  
+- `Pop-up` : Permet d'afficher un pop-up sur votre appareil 
+- `Modifier Préférences Appli` : Permet de modifier certaines options de votre application. Faites un choix dans la liste déroulante, puis indiquez la valeur à mettre si nécessaire : `ON`, `OFF`, `MARCHE`, `ARRET`
+Liste des actions (fonctionnent même appli tuée) :
+  - `Couleur thème` : indiquer une couleur au format hex `#10F581` ou par son nom (`pink`, `green`...)
+  - `Activer mode sombre` : `ON`, `OFF` ou tout autre chose pour le mode auto
+  - `Activer le tracking` : `MARCHE` ou `ARRET`
+  - `Recharger les données`
+- `Envoyer un SMS` (**Version APK uniquement**) : Permet d'envoyer un SMS. 
+Champ `Titre` : numéro du destinataire. 
+Champ `Message` : contenu du SMS.
+Cette fonction est utilisable dans n'importe quel état de l'application (premier-plan, arrière-plan, tuée)
+Pour utiliser cette fonction, vous devez d'abord vous rendre dans les autorisations de l'appli puis accepter celle correspondant à l'envoie de SMS.
+
 
 
 <br/><br/>
@@ -312,7 +331,8 @@ Vous pouvez également :
 - actions : permet de réaliser commandes et/ou scénario à chaque fois qu'une notification est envoyée. (<u>par exemple</u> : si envoie d'une notification urgente, je veux avoir la possibilité d'executer le scénario qui permet de déclencher l'alarme de la maison)
 
 <img src='../images/JeedomConnect_notif_edit.png' width='50%' />  
-
+<br/>
+<br/>  
 ### Comment envoyer une notification ?
 
 Une fois que vous avez paramétré vos différentes notifications, les commandes associées sont automatiquement créées sur votre équipement (après `sauvegarde`), dans l'onglet dédié comme sur tout équipement Jeedom :  
@@ -329,9 +349,46 @@ C'est une `notif Urgente` qui a été envoyée, donc puisque la notification est
 La notification est affichée en rouge dans la barre de notification Android, ainsi que lorsque je la visualise en entière dans l'application JeedomConnect, et on voit la présence d'une icône 'sirène rouge' dans le coin supérieur droit.    
 Et j'ai également la possibilité de cliquer sur le bouton `Alarme maison` pour exécuter le scénario que j'ai paramétré et qui déclenchera l'alarme de ma maison.
 
+<br/>
+<br/>   
+### Comment envoyer une notification à tous les appareils ? <a name="qNotifyAll"></a>
+
+Par défaut l'envoie d'envoyer à "tous" les appareils JC n'existe pas. En effet, il est possible de configurer plusieurs types de notification par appareil, il nous est donc impossible de deviner laquelle est à utiliser.  
+Avant d'utiliser la commande `Notifier les appareils JC`, il faut : 
+- aller sur les équipements que vous souhaitez notifier
+- entrer dans l'assistant des notifications, puis onglet `Notification`
+- choisir la notification qui devra être prise en compte par cette commande
+- cocher la case `Notifier tous les appareils JC` 
+- sauvegarder cette fenêtre `Configuration des notifications`
+- sauvegarder ensuite votre page principale de l'équipement concerné  
+
+<img src='../images/JeedomConnect_notifyAll.gif' width='50%' />  
+
+NB : la commande `Notifier les appareils JC` est disponible sur l'ensemble des vos équipements JC, y compris ceux pour lesquels vous n'auriez pas coché la case `Notifier tous les appareils JC` !   
+Vous pouvez donc utiliser cette commande depuis n'importe quel équipement.  
+<br/>
+<br/>  
+### Quelles sont les options possibles dans les notifications ?  
+
+Vous avez la possibilité de passer quelques options dans les notifications sous la forme `clé=valeur`, chaque option doit être séparé par un `|` : 
+- `title` : permet de donner un titre à la notification (c'est l'option qui est prise par défaut si jamais vous n'indiquez aucune option)
+- `gotoWidgetId` : permet d'afficher un bouton sur la notification qui vous redirige directement sur un widget
+- `gotoPageId` : permet d'afficher un bouton sur la notification qui vous redirige directement sur une page
+- `files` :  permet d'envoyer des images/fichiers (! il faut indiquer le chemin complet pour aller sur le fichier)
+
+
+par exemple : `title=y'a du courrier | gotoPageId=10 | files=/var/www/html/data/img/courrier.png`  
+permettra d'avoir une notification ayant comme titre "Y'a du courrier", une image sera présente et un bouton permettra d'aller sur la page ayant l'id = 10 de votre application.   
+<br/>
+<br/>  
+
+
 ### Utilisation avec Ask
 
 Les notifications Jeedom Connect sont compatibles avec la fonction Ask de Jeedom. Vous pouvez indiquer autant de réponses souhaitées, ou bien attendre une réponse tapée en texte libre directement dans la notification. Il est également possible de définir un timeout au delà duquel il n'est plus possible de répondre.
+
+<br/>
+<br/>  
 
 ## Envoyer des images
 
@@ -381,12 +438,12 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 # FAQ <a name="faq"></a>
 
   * [Comment télécharger l'application ?](#qOU)
-  * [J'ai un Iphone, comment utiliser l'application ?](#qIphone)
   * [Quelle est la différence entre connexion HTTP et Websocket ?](#qConnexion)  
   * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration)
   * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion)
   * [Je suis bêta-testeur, que dois-je faire ?](#qBeta)   
   * [Comment « vider le cache » ou « supprimer les données » ?](#qVideCache)
+  * [Je ne vois pas la batterie d'un de mes équipements sur JC, pourquoi ?](#qBattery)
   * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
 
 
@@ -395,16 +452,9 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 
 ## Comment télécharger l'application ? <a name="qOU"></a>   
 
-L'application est pour le moment uniquement disponible pour Android.  
-Elle est disponible sur le Play Store de Google ainsi que sur la page de Release du Github de Jeedom Connect.
-
-<br/>
-
-## J'ai un Iphone, comment utiliser l'application ? <a name="qIphone"></a>  
-
-Pour l'instant il n'est pas possible d'utiliser l'application JeedomConnect sur Iphone.  
-Le développement de l'application est bien prévu, mais non réalisé pour le moment.  
-Aucune date n'est annoncée sur la sortie de celle-ci, mais dès que ce sera possible une communication sera faite sur le forum !
+L'application est disponible sur vos Store : 
+<a href="https://play.google.com/store/apps/details?id=com.jeedomconnect.app" target="_blank"><img src="../images/playstore.png" width='10%'/></a>  
+<a href="https://apps.apple.com/us/app/jeeconnect/id1566533727" target="_blank"><img src="../images/applestore.png" width='10%'/></a>  
 
 <br/>
 
@@ -471,7 +521,17 @@ ainsi qu'en bas de la page `Préférences` (dans la menu de l'application) :
   
 Comme son nom l'indique, la version bêta n'est pas une version stable. En utilisant, vous savez et acceptez que celle-ci puisse comporter des anomalies, remonter des états incohérents, réaliser (ou pas) des actions, etc ...   
   
-Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'application correspondante. Celle-ci est également disponible sur le Store, mais pour y accéder vous devez au préalable être enregistré en tant que bêta-testeur auprès du Store. Cette inscription est à <a href="https://play.google.com/apps/testing/com.jeedomconnect.app" target="_blank">faire ici</a>.  
+Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'application correspondante. Celle-ci est également disponible sur le Store, mais pour y accéder vous devez au préalable être enregistré en tant que bêta-testeur auprès du Store.  
+Cette inscription est à <a href="https://play.google.com/apps/testing/com.jeedomconnect.app" target="_blank">faire ici pour Android</a> et <a href="https://testflight.apple.com/join/luZsKILI" target="_blank">ici pour Apple</a> (besoin d'avoir l'application <a href='https://apps.apple.com/fr/app/testflight/id899247664'>TestFlight</a> pour ce dernier!)
+
+<br/>
+
+## Je ne vois pas la batterie d'un de mes équipements sur JC, pourquoi ? <a name="qBattery"></a>  
+Seules les batteries disponibles sur la page `index.php?v=d&p=eqAnalyse` de votre jeedom sont remontées dans JeedomConnect.  
+Si votre batterie n'apparait pas sur cette page, alors elle n'apparaitra pas sur JeedomConnect !  
+
+Comment l'ajouter ? Rapprochez-vous du développeur du plugin utilisé par votre équipement afin qu'il fasse en sorte que la batterie soit visible sur la page indiquée plus haut ;)
+
 
 <br/>
 
@@ -491,4 +551,3 @@ Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'applica
 En partageant vos idées d'améliorations, vos suggestions et vos retours sur des bugs !    
 Puisque ça a été demandé plusieurs fois, si vous souhaitez soutenir "financièrement" parlant, nous vous proposons de payer un café (ou deux, ou mille ! :) ) :  
 <a href="https://www.paypal.com/pools/c/8xfIqfBFGe" target="_blank"><img src="../images/bmc.png" width='30%'/></a> 
-
