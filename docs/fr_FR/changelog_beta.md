@@ -1,5 +1,33 @@
 # Changelog JeedomConnect
 
+## Version 0.23.1 (en cours de dev)
+- Nouveautés :
+  * Ajout de la variable `#value#` dans les widgets compatibles
+  * L'historique est masqué si la commande n'est pas historisée
+  * Widget clim : 
+    - Possibilité d'ajouter autant de modes que voulu - **Obligation de re-créer les modes**
+    - Possibilité pour la ventilation d'utiliser une info `string` et une action `select`
+  * Affichage du widgetId dans l'application
+  * Nouvelle fenêtre pour confirurer les commandes `Notifier tous` sur la page principale du plugin
+
+- Bug fixes :
+  * Problèmes de connexion au démarrage
+  * Sauvegarde des notifications reçues
+  * Crash de la modale de partage des paramètres persos
+  * Son des notifications sous iOS
+  * Possible fix du problème d'appui sur widget sur iOS
+  * Envoie du niveau de batterie
+  * Animation des images au format gif
+  * Nombre d'éléments dans les widgets groupe
+  * Affichage des infos supplémentaires dans la vue détails
+  * Accès aux images et vidéos dans les notifications avec l'URL locale si sur le réseau local
+  * Page de personnalisation du widget slider générique
+  * L'ajout de variables dans l'édition de textes se fait à la position du curseur
+  * Affichage des boutons de zoom ne reste plus grisés
+  * Le zoom de l'historique n'est pas changé en cas de nouvelles données dans l'historique
+  * Affichage des badges sur les icônes dans le drawer
+
+
 ## Version 0.22.4 (07/10/2021)
 - Nouveautés :
   * Amélioration de la connectivité
