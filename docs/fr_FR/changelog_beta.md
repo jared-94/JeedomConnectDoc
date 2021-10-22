@@ -1,6 +1,6 @@
 # Changelog JeedomConnect
 
-## Version 0.23.1 (en cours de dev)
+## Version 0.23.1 (22/10/2021)
 - Nouveautés :
   * Ajout de la variable `#value#` dans les widgets compatibles
   * L'historique est masqué si la commande n'est pas historisée
@@ -8,7 +8,7 @@
     - Possibilité d'ajouter autant de modes que voulu - **Obligation de re-créer les modes**
     - Possibilité pour la ventilation d'utiliser une info `string` et une action `select`
   * Affichage du widgetId dans l'application
-  * Nouvelle fenêtre pour confirurer les commandes `Notifier tous` sur la page principale du plugin
+  * Nouvelle fenêtre pour configurer les commandes `Notifier tous` sur la page principale du plugin
 
 - Bug fixes :
   * Problèmes de connexion au démarrage
@@ -25,6 +25,7 @@
   * L'ajout de variables dans l'édition de textes se fait à la position du curseur
   * Affichage des boutons de zoom ne reste plus grisés
   * Le zoom de l'historique n'est pas changé en cas de nouvelles données dans l'historique
+  * Affichage des images dans un sous-dossier
   * Affichage des badges sur les icônes dans le drawer
 
 
