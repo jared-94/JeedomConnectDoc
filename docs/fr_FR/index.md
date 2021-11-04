@@ -35,7 +35,7 @@ La brique de base est la notion de *widget*, qui va représenter un "équipement
 Le plugin, ainsi que l'application sont complètement **gratuit** et le resteront. Je ne suis pas développeur et fais ça sur mon temps libre, relativement limité. 
 Si vous souhaitez **soutenir le projet**, vous pouvez suggérer des améliorations, signaler des bugs et contribuer au code du plugin si vous avez des notions de PHP/JS/HTML, ou de l'application si vous maîtriser le React Native.  
 Pour celles et ceux qui tienent vraiment à soutenir financièrement parlant le projet :  
-<a href="https://www.paypal.com/pools/c/8xfIqfBFGe" target="_blank"><img src="../images/bmc.png" width='10%'/></a>  
+<a href="https://www.paypal.me/JeedomConnect" target="_blank"><img src="../images/bmc.png" width='10%'/></a>  
 
 [plus d'infos](#qDon)
 
