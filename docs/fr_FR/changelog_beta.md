@@ -1,5 +1,28 @@
 # Changelog JeedomConnect
 
+## Version 0.23.2 (dev en cours)
+- Nouveautés Plugin :  
+  * Ajout d'un bouton `Infos Community` : ouvre une fenêtre qui affiche toutes les informations qui nous sont nécessaires lorsque vous créez un nouveau sujet sur le forum. Il vous suffit simplement de cliquer sur le bouton `Copier`, puis sur le forum coller ces infos. Tout est déjà préformaté ! 
+  * Création de widgets en masse : ces créations sont possibles uniquement si les commandes de vos équipements sont correctement configurées avec des types génériques (normalement à la charge des développeurs des plugins que vous utilisez).  
+  Pour vérifier/modifier vos commandes avec les bons types génériques, vous pouvez utiliser le bouton `xxx` <i>(pour les personnes qui seraient déjà en version beta/alpha sur le core de jeedom (4.2.x) vous pouvez utiliser `Outils/Types d'équipement`)</i>  
+  L'outil peut détecter des widgets déjà existants, dans ce cas ils seront mis en surbrillance et décochés.  
+  * Création de widget (unitaire) en automatique : si vous choisissez de créer un widget de façon unitaire, vous avez la possibilité de pré-charger les différentes commandes nécessaires pour le widget en cliquant sur le bouton `Création automatique` (même pré-requis que le point précédent) et en sélectionnant l'équipement qui sera utilisé pour créer le widget.  
+  * Pré-sélectionne automatiquement la pièce lors du choix des commandes en fonction de la pièce sélectionnée sur le widget
+  * Notification - Ajout d'un option pour surpasser les paramètres de son et le mode `Ne pas déranger`
+  
+- Nouveautés Application :
+  * Mode grille avancée (à activer dans `menu/préférences`) : permet de choisir la taille des widgets et les placer à l'endroit désiré sur l'écran. Vous n'êtes plus limité dans une grille standard de 3 ou 4 widgets par lignes avec tous les mêmes tailles, mais vous pouvez organiser chaque page comme bon vous semble, avec des espaces, des widgets grands, petits, longs, hauts, ...  (nb : les menus/regroupements `groupe` n'existe plus avec cet affichage !)
+  * Personnalisation possible de l'affichage forcée avec le nouveau mode `Grand widget`
+
+- Bug fixes :
+  * Renfort sécurité pour la 4.2 : gestion des autorisations de téléchargements 
+  * Clic long sur widget pour iOs
+  * Correction du contenu des sous-groupes lorsqu'il y a plusieurs colones (??)
+  * Amélioration de la connexion
+  * Image du `groupe de PIR` qui reste "rouge" meme si le nb alert est à 0
+  * Widget mode : retrait de l'icone en doublone (était également affiché sur la valeur active)
+  
+
 ## Version 0.23.1 (22/10/2021)
 - Nouveautés :
   * Ajout de la variable `#value#` dans les widgets compatibles
