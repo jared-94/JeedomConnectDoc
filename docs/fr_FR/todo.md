@@ -4,7 +4,6 @@ Les items présents ici correspondent à l'ensemble des points pris en compte en
 La dernière partie liste les points qui n'ont pas été retenus.  
 
 # Plateforme
-    - créer une version pour IOS  --> beta déjà disponible (04/08/21) // stable en cours de validation par Apple - date inconnue
 
 # Widgets à créer  
 	- multimédia
@@ -15,7 +14,6 @@ La dernière partie liste les points qui n'ont pas été retenus.
 	- Velux
 
 # Options supplémentaires
-	- remplir automatiquement les zones en fonction d'une premiere sélection lors de la création d'un widget (Statut -> ON + OFF)
 	- retour d'informations de l'appareil (batterie, statut écran, connexion...) vers Jeedom
 	- envoyer des actions vers l'appareil (allumer écran, couper bluetooth...)
 	- widgets Android sur launcher
@@ -23,13 +21,8 @@ La dernière partie liste les points qui n'ont pas été retenus.
 	- préviens moi sur un widget (ex: envoie une notification si temperature > 24°C)
 	
 # Options sur APK
-	- définir la taille d'une vignette (https://community.jeedom.com/t/ergonomie-appli/55798)
 	- pouvoir définir carte/vignette par page et non pas au global
 	
-
-# Bugs connus
-	- problème de rafraichissement des conf (liste) avec le daemon !?  
-
 
 <br/><br/>
 ---
@@ -41,6 +34,8 @@ La dernière partie liste les points qui n'ont pas été retenus.
 Plateforme :  
 
 	- mettre les apk disponible sur le Play Store (17/03/21)
+    - créer une version pour IOS  --> beta 	 : 04/08/21
+								  --> stable : 08/10/21
 
 Nouveaux widgets :  
 
@@ -73,7 +68,8 @@ Petis plus :
 	- ajout de l’altitude, type d’activité (pas SSID et pcBatterie) dans les info dispo du tracking Geoloc (05/09/21)  
 	- pouvoir inverser l'icône et le texte (info) sur les vignettes (18/05/21)
 	- choisir comment ouvrir l'historique par défaut : table ou graph (https://community.jeedom.com/t/historique-ouvrant-en-table-par-defaut/55629)  (16/09/21)  
-	
+	- remplir automatiquement les zones en fonction d'une premiere sélection lors de la création d'un widget (Statut -> ON + OFF) => gestion des types générique => beta 0.23.2 du 19/11/2021
+	- définir la taille d'une vignette (https://community.jeedom.com/t/ergonomie-appli/55798) => beta 0.23.2 du 19/11/2021
 
 Correction bugs : 
 	- le menu haut ne s'affiche pas en entier  (-> corrigé avec la nouvelle lib?)  (16/04/21)
