@@ -13,14 +13,20 @@
 - Nouveautés Application :
   * Mode grille avancée (à activer dans `menu/préférences`) : permet de choisir la taille des widgets et les placer à l'endroit désiré sur l'écran. Vous n'êtes plus limité dans une grille standard de 3 ou 4 widgets par lignes avec tous les mêmes tailles, mais vous pouvez organiser chaque page comme bon vous semble, avec des espaces, des widgets grands, petits, longs, hauts, ...  (nb : les menus/regroupements `groupe` n'existe plus avec cet affichage !)
   * Personnalisation possible de l'affichage forcée avec le nouveau mode `Grand widget`
+  * iOS : Option pour qu'une notification arrive en `alerte critique` et possibilité de régler le volume du son (sonnera même si le son est couper ou en mode `Ne pas déranger`)
+  * Personalisation du status pour la vue `Vignette`
+  * Personalisation des valeurs min/max sur les historiques
+  * L'accès à la page de notifications ne requière plus d'être connecté
 
 - Bug fixes :
   * Renfort sécurité pour la 4.2 : gestion des autorisations de téléchargements 
-  * Clic long sur widget pour iOs
-  * Correction du contenu des sous-groupes lorsqu'il y a plusieurs colones (??)
+  * Clic long sur widget pour iOS
+  * Correction du contenu des sous-groupes lorsqu'il y a plusieurs colones
   * Amélioration de la connexion
   * Image du `groupe de PIR` qui reste "rouge" meme si le nb alert est à 0
   * Widget mode : retrait de l'icone en doublone (était également affiché sur la valeur active)
+  * Sauvegarde de l'image de notification dès sa réception
+  * Fix animation décentré des icônes FA
   
 
 ## Version 0.23.1 (22/10/2021)
