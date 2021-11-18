@@ -1,20 +1,19 @@
 # Changelog JeedomConnect
 
-## Version 0.23.2 (dev en cours)
+## Version 0.23.2 (19/11/2021)
 - Nouveautés Plugin :  
   * Ajout d'un bouton `Infos Community` : ouvre une fenêtre qui affiche toutes les informations qui nous sont nécessaires lorsque vous créez un nouveau sujet sur le forum. Il vous suffit simplement de cliquer sur le bouton `Copier`, puis sur le forum coller ces infos. Tout est déjà préformaté ! 
   * Création de widgets en masse : ces créations sont possibles uniquement si les commandes de vos équipements sont correctement configurées avec des types génériques (normalement à la charge des développeurs des plugins que vous utilisez).  
-  Pour vérifier/modifier vos commandes avec les bons types génériques, vous pouvez utiliser le bouton `xxx` <i>(pour les personnes qui seraient déjà en version beta/alpha sur le core de jeedom (4.2.x) vous pouvez utiliser `Outils/Types d'équipement`)</i>  
+  Pour vérifier/modifier vos commandes avec les bons types génériques, vous pouvez utiliser le bouton `Config types génériques` <i>(pour les personnes qui seraient déjà en version beta/alpha sur le core de jeedom (4.2.x) vous pouvez utiliser `Outils/Types d'équipement`)</i>  
   L'outil peut détecter des widgets déjà existants, dans ce cas ils seront mis en surbrillance et décochés.  
   * Création de widget (unitaire) en automatique : si vous choisissez de créer un widget de façon unitaire, vous avez la possibilité de pré-charger les différentes commandes nécessaires pour le widget en cliquant sur le bouton `Création automatique` (même pré-requis que le point précédent) et en sélectionnant l'équipement qui sera utilisé pour créer le widget.  
   * Pré-sélectionne automatiquement la pièce lors du choix des commandes en fonction de la pièce sélectionnée sur le widget
-  * Notification - Ajout d'un option pour surpasser les paramètres de son et le mode `Ne pas déranger`
+  * Notification iOs - Option pour qu'une notification arrive en `alerte critique` et possibilité de régler le volume du son (sonnera même si le son est coupé ou en mode `Ne pas déranger`)
   
 - Nouveautés Application :
-  * Mode grille avancée (à activer dans `menu/préférences`) : permet de choisir la taille des widgets et les placer à l'endroit désiré sur l'écran. Vous n'êtes plus limité dans une grille standard de 3 ou 4 widgets par lignes avec tous les mêmes tailles, mais vous pouvez organiser chaque page comme bon vous semble, avec des espaces, des widgets grands, petits, longs, hauts, ...  (nb : les menus/regroupements `groupe` n'existe plus avec cet affichage !)
+  * Mode grille avancée (à activer dans `menu/préférences`) : permet de choisir la taille des widgets et les placer à l'endroit désiré sur l'écran. Vous n'êtes plus limité dans une grille standard de 3 ou 4 widgets par lignes avec tous les mêmes tailles, mais vous pouvez organiser chaque page comme bon vous semble, avec des espaces, des widgets grands, petits, longs, hauts, ...  (nb : les menus/regroupements `groupe` n'existent plus avec cet affichage !)
   * Personnalisation possible de l'affichage forcée avec le nouveau mode `Grand widget`
-  * iOS : Option pour qu'une notification arrive en `alerte critique` et possibilité de régler le volume du son (sonnera même si le son est couper ou en mode `Ne pas déranger`)
-  * Personalisation du status pour la vue `Vignette`
+  * Personalisation du statut pour la vue `Vignette`
   * Personalisation des valeurs min/max sur les historiques
   * L'accès à la page de notifications ne requière plus d'être connecté
 
@@ -23,10 +22,10 @@
   * Clic long sur widget pour iOS
   * Correction du contenu des sous-groupes lorsqu'il y a plusieurs colones
   * Amélioration de la connexion
-  * Image du `groupe de PIR` qui reste "rouge" meme si le nb alert est à 0
-  * Widget mode : retrait de l'icone en doublone (était également affiché sur la valeur active)
+  * Image du `groupe de PIR` qui reste "rouge" meme si le nombre d'alertes est à 0
+  * Widget mode : retrait de l'icone en doublon (était également affiché sur la valeur active)
   * Sauvegarde de l'image de notification dès sa réception
-  * Fix animation décentré des icônes FA
+  * Fix animation décentrée des icônes FA
   
 
 ## Version 0.23.1 (22/10/2021)
