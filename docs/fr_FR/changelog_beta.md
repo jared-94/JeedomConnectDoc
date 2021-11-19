@@ -15,6 +15,7 @@
   * Personnalisation possible de l'affichage forcée avec le nouveau mode `Grand widget`
   * Personalisation du statut pour la vue `Vignette`
   * Personalisation des valeurs min/max sur les historiques
+  * Possibilité de dupliquer un widget
   * L'accès à la page de notifications ne requière plus d'être connecté
 
 - Bug fixes :
