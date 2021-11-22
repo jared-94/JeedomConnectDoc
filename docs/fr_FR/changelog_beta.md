@@ -13,8 +13,8 @@
 - Nouveautés Application :
   * Mode grille avancée (à activer dans `menu/préférences`) : permet de choisir la taille des widgets et les placer à l'endroit désiré sur l'écran. Vous n'êtes plus limité dans une grille standard de 3 ou 4 widgets par lignes avec tous les mêmes tailles, mais vous pouvez organiser chaque page comme bon vous semble, avec des espaces, des widgets grands, petits, longs, hauts, ...  (nb : les menus/regroupements `groupe` n'existent plus avec cet affichage !)
   * Personnalisation possible de l'affichage forcée avec le nouveau mode `Grand widget`
-  * Personalisation du statut pour la vue `Vignette`
-  * Personalisation des valeurs min/max sur les historiques
+  * Personnalisation du statut pour la vue `Vignette`
+  * Personnalisation des valeurs min/max sur les historiques
   * Possibilité de dupliquer un widget
   * L'accès à la page de notifications ne requière plus d'être connecté
 
@@ -96,7 +96,7 @@
   * Ajout de l'option perso pour cacher le statut en mode carte
   
 - Bug fixes : 
-  * Levée du problème sur la taille disponible en bdd pour la personalisation des widgets  
+  * Levée du problème sur la taille disponible en bdd pour la personnalisationisation des widgets  
   * Ré-activation de la commande `Détacher`
   * Notifications iOS et Android
   * Affichage correct des popups sur iOS
@@ -192,7 +192,7 @@
 ## Version 0.21.3 (22/07/2021)
 - Nouveautés :
   * Edition des widgets depuis l'application (appui long sur un widget)
-  * Paramètres personalisés pour les widgets pour chaque appareil
+  * Paramètres personnalisés pour les widgets pour chaque appareil
   * Edition des menus depuis l'application (appui long)
   * Sauvegarde / restauration des paramètres de l'appli
   * Icônes / images : filtres et animations
@@ -517,7 +517,7 @@ Pensez également à mettre le plugin JeedomConnect en `DEBUG` !
 - Possibilité de choisir image ou icône sur les widgets
 - Possibilité d'ajouter des commandes infos à tous les widgets
 - Images sous conditions dans tous les widgets
-- Possibilité de personaliser les champs Nom et Sous-titre à l'aide de commandes infos
+- Possibilité de personnaliser les champs Nom et Sous-titre à l'aide de commandes infos
 - Améliorations diverses et corrections de bugs dans l'appli
 
 ## Version 0.16.0 (22/02/2021)

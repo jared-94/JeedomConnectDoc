@@ -39,7 +39,7 @@
   * Paramètres avancés pour la géolocalisation : 
   * Sélection de l'affichage ou non du niveau de batterie de son équipement JC sur la page `Equipement` de votre Jeedom (et donc la page JC correspondante)
   * Edition des widgets depuis l'application (appui long sur un widget)
-  * Paramètres personalisés pour les widgets pour chaque appareil
+  * Paramètres personnalisés pour les widgets pour chaque appareil
   * Edition des menus depuis l'application (appui long)
   * Sauvegarde / restauration des paramètres de l'appli
   * Icônes / images : filtres et animations
@@ -257,7 +257,7 @@ Pensez également à mettre le plugin JeedomConnect en `DEBUG` !
 - Possibilité de choisir image ou icône sur les widgets
 - Possibilité d'ajouter des commandes infos à tous les widgets
 - Images sous conditions dans tous les widgets
-- Possibilité de personaliser les champs Nom et Sous-titre à l'aide de commandes infos
+- Possibilité de personnaliser les champs Nom et Sous-titre à l'aide de commandes infos
 - Améliorations diverses et corrections de bugs dans l'appli
 
 ## Version 0.16.0 (22/02/2021)
