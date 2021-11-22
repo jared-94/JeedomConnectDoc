@@ -442,8 +442,9 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
   * [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration)
   * [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion)
   * [Je suis bêta-testeur, que dois-je faire ?](#qBeta)   
-  * [Comment « vider le cache » ou « supprimer les données » ?](#qVideCache)
   * [Je ne vois pas la batterie d'un de mes équipements sur JC, pourquoi ?](#qBattery)
+  * [Comment « vider le cache » ou « supprimer les données » ?](#qVideCache)
+  * [Quelles différences entre l'édition et la personnalisation d'un widget ?](qEditCustom)
   * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
 
 
@@ -543,6 +544,29 @@ Comment l'ajouter ? Rapprochez-vous du développeur du plugin utilisé par votre
 2. Clic sur le petit `i`
 3. Sélection 'Stockage'
 4. Au choix (en fonction de ce que vous avez à faire!) : 'Vider le cache' et/ou 'Supprimer les données'
+
+<br/>
+
+## Quelles différences entre l'édition et la personnalisation d'un widget ? <a name="qEditCustom"></a>  
+
+- Editer un widget :
+  * permet de modifier la configuration d’un widget.
+  * ces modifications impactent l’ENSEMBLE des équipements.
+  * ces modifications sont directement visibles depuis la page principale côté plugin
+
+>  
+> exemple : je modifie la commande « ON » de ma lumière, tous mes équipements (mes téléphones) sont mis à jour avec cette nouvelle commande  
+>  
+
+- Personnaliser un widget :
+  * permet de personnaliser la configuration d’un widget sur UN équipement
+  * ces changements ne sont pas visibles côté plugin
+  * ces changements n’impactent pas tous les équipements, mais seulement celui sur lequel on fait le changement
+  * ces changements surchargent et sont prioritaires par rapport à la définition standard du widget
+
+>  
+> exemple : par défaut mon widget fenetre est configuré pour avoir une fenêtre fermée bleu. ma femme prefère le jaune (ca lui rappelle le soleil des vacances), sur son équipement je vais donc personnaliser le widget fenêtre pour modifier l’icone de fenetre fermée avec la couleur jaune. Cette fenêtre jaune sera uniquement appliquée sur son équipement à elle.  
+>  
 
 <br/>
 
