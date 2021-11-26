@@ -1,5 +1,25 @@
 # Changelog JeedomConnect
 
+## Version 0.23.3 (dev)
+- Nouveautés :
+  * Les groupes sont disponibles en mode grille avancée (mais pas rétractables)
+  * Possibilité définir la mise en page des widgets dans un groupe (mode grille avancée)
+  * Création automatique des widgets via types génériques directement depuis l'appli
+  * Possibilité de configurer le nombre de positions stockées par la géolocalisation (0 pourdésactiver la base : la position est alors envoyée immédiatement ou perdue à jamais)
+  * Personnalisation des sous-titres en mode Grand widget (taille et couleur)
+  Possibilité de masquer l'aperçu dans la personnalisation
+  * Ajout d'un lien `Changelog` dans la fenêtre `A propos`
+
+- Bug fixes :
+  * Bouton lock/unlock dans le grand widget thermostat
+  * Problème d'affichage des widgets dans un groupe
+  * Les groupes désactivés sont masqués
+  * Empêche la connexion au websocket si connexion en cours
+  * Plus de polling si option activée mais en websocket
+  * Création de widget depuis l'appli était cassée
+  * Raffraichissement des images dans le widget `Images`
+
+
 ## Version 0.23.2 (19/11/2021)
 - Nouveautés Plugin :  
   * Ajout d'un bouton `Infos Community` : ouvre une fenêtre qui affiche toutes les informations qui nous sont nécessaires lorsque vous créez un nouveau sujet sur le forum. Il vous suffit simplement de cliquer sur le bouton `Copier`, puis sur le forum coller ces infos. Tout est déjà préformaté ! 
