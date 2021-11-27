@@ -1,6 +1,6 @@
 # Changelog JeedomConnect
 
-## Version 0.23.3 (dev)
+## Version 0.23.3 (27/11/2021)
 - Nouveautés :
   * Les groupes sont disponibles en mode grille avancée (mais pas rétractables)
   * Possibilité définir la mise en page des widgets dans un groupe (mode grille avancée)
