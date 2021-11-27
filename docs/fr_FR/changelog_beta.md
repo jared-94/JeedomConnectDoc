@@ -2,22 +2,23 @@
 
 ## Version 0.23.3 (27/11/2021)
 - Nouveautés :
-  * Les groupes sont disponibles en mode grille avancée (mais pas rétractables)
+  * Création automatique des widgets directement depuis l'appli (via types génériques)
+  * Les groupes sont à nouveau disponibles en mode grille avancée (mais pas rétractables pour le moment)
   * Possibilité définir la mise en page des widgets dans un groupe (mode grille avancée)
-  * Création automatique des widgets via types génériques directement depuis l'appli
-  * Possibilité de configurer le nombre de positions stockées par la géolocalisation (0 pourdésactiver la base : la position est alors envoyée immédiatement ou perdue à jamais)
+  * Possibilité de configurer le nombre de positions stockées par la géolocalisation (0 pour désactiver la base : la position est alors envoyée immédiatement ou perdue à jamais)
   * Personnalisation des sous-titres en mode Grand widget (taille et couleur)
-  Possibilité de masquer l'aperçu dans la personnalisation
+  * Possibilité de masquer l'aperçu dans la personnalisation
   * Ajout d'un lien `Changelog` dans la fenêtre `A propos`
+  * Ajout des types génériques `Climatiseur` et `Géolocalisaton` (/!\ ces types sont propres à JC pour le moment)
 
 - Bug fixes :
   * Bouton lock/unlock dans le grand widget thermostat
   * Problème d'affichage des widgets dans un groupe
   * Les groupes désactivés sont masqués
   * Empêche la connexion au websocket si connexion en cours
-  * Plus de polling si option activée mais en websocket
-  * Création de widget depuis l'appli était cassée
-  * Raffraichissement des images dans le widget `Images`
+  * Pas de polling si option activée mais en websocket
+  * Création de widget depuis l'appli était cassée (pas d'id affecté)
+  * Rafraichissement des images dans le widget `Images`
 
 
 ## Version 0.23.2 (19/11/2021)
