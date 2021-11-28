@@ -1,6 +1,6 @@
 # Changelog JeedomConnect  
 
-## Version 0.23.0
+## Version 0.23.0 (07/10/2021)
 - Nouveautés :
   * Nouveau widget `Historique` (graphique dans la grille)
   * Historiques : paramètres de personnalisation (couleurs, type de courbe, affichage par défaut...) 
@@ -30,6 +30,8 @@
   * Amélioration de la connectivité
   * Envoie de l'utilisateur et du widget à chaque exécution de commande
   * Nombreux bug fix
+
+
 ## Version 0.22.0 (07/09/2021)
 - Nouveautés
   * Page batteries / piles

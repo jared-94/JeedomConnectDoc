@@ -1,5 +1,8 @@
 # Changelog JeedomConnect
 
+## Version 0.23.3+1 (28/11/2021)
+- Bug fix plugin uniquement (pas de mise à jour de l'application)
+
 ## Version 0.23.3 (27/11/2021)
 - Nouveautés :
   * Création automatique des widgets directement depuis l'appli (via types génériques)
