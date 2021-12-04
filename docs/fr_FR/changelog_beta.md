@@ -1,5 +1,18 @@
 # Changelog JeedomConnect
 
+## Version 0.23.4 (en dev)
+- Nouveautés :
+ * Accès aux logs des scénarios et plugins depuis l'appli
+ * Widget géolocalisation : option pour définir le zoom par défaut, mode animation de la carte auto en option, et ajout d'un marqueur sur la dernière position sur un tracé
+ * Widget Modes : option pour mettre les modes dans la contenu de la carte (plutôt qu'une modale)
+
+ - Bug fixes :
+  * Crash dans la grille principale si vide
+  * Fix ordre des infos supplémentaires
+  * Masquer prévisualisation de la carte en personalisation
+  * Pleins d'autres petits bug corrigés, amélioration...
+
+
 ## Version 0.23.3+1 (28/11/2021)
 - Bug fix plugin uniquement (pas de mise à jour de l'application)
 
