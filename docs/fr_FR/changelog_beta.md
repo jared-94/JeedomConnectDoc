@@ -6,6 +6,7 @@
   * Widget `géolocalisation` : option pour définir le zoom par défaut, mode animation de la carte auto en option, et ajout d'un marqueur sur la dernière position sur un tracé
   * Widget `Modes` : option pour mettre les modes dans la contenu de la carte (plutôt qu'une modale)
   * Modification du menu `Mise à jour plugins` par `Plugins` : visualisation de l'ensemble des plugins dispo, documentation, et logs (uniquement logs principales pour le moment)
+  * Possibilité de supprimer une image dans le dossier "images personnelles"
 
 - Bug fixes :
   * Crash dans la grille principale si vide
