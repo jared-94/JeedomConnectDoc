@@ -7,7 +7,7 @@
   * Widget `Modes` : option pour mettre les modes dans la contenu de la carte (plutôt qu'une modale)
   * Modification du menu `Mise à jour plugins` par `Plugins` : visualisation de l'ensemble des plugins dispo, documentation, et logs (uniquement logs principales pour le moment)
   * Possibilité de supprimer une image dans le dossier "images personnelles"
-  * Désactivation d'un équipement : si un équipement JC est désactivé, alors la connexion n'est plus possible
+  * Si un équipement JC est désactivé, alors la connexion n'est plus possible sur cet appareil.
 
 - Bug fixes :
   * Crash dans la grille principale si vide
