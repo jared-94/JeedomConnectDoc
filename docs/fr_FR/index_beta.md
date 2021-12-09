@@ -446,6 +446,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
   * [Comment « vider le cache » ou « supprimer les données » ?](#qVideCache)
   * [Quelles différences entre l'édition et la personnalisation d'un widget ?](qEditCustom)
   * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
+  * [Je ne trouve pas de réponse à mon probleme dans la doc. Que faire ?](#qForum) 
 
 
 
@@ -470,6 +471,13 @@ Le Websocket offre une connexion **plus stable et plus performante** que la conn
 <br/>
 
 ## L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration" <a name="qMigration"></a>  
+
+La migration était une étape nécessaire lors de l'utilisation de la version 0.18.0, elle n'est donc plus à utiliser.  
+Si vous voyez cette erreur, c'est que le fichier de configuration de votre équipement est corrompu (mauvais manip, mauvais import, .. ). Récupérez une ancienne sauvegarde de Jeedom et dézipper-là pour restaurer le fichier de configuration en question (disponible dans `plugins/JeedomConnect/data/configs/<apiKey de l'équipement>.json` )
+
+<details>
+<summary>Ancienne méthode</summary>
+<p>
 
 <img src='../images/JC_changement_format.jpg' width='20%' />  
 
@@ -499,19 +507,33 @@ Un message de confirmation vous indique que tout s'est bien passé !
 Vous pouvez retourner sur votre page principale du plugin JeedomConnect et vous devriez voir quelques changements : l'ensemble de vos widgets sont maintenant disponible directement sur cette page.  
 * vous pouvez maintenant ouvrir la configuration de votre appareil, faire un `export` de la configuration, puis sur chacun de vos autres équipements `importer` cette configuration, puis réactiver vos équipements.
 
+</p>
+</details>
+<br>
+
+
 <br/>
 
 ## J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin" <a name="qVersion"></a>   
 
-Pour fonctionner, il faut que le plugin installé sur Jeedom et l'application (APK) que vous avez téléchargé et utilisé soit alignés.  
-Notez vos différentes versions et rendez-vous sur le [tableau de versions](#version) pour vérifier votre installation, et connaitre l'élément à mettre à jour.  
+Pour fonctionner, il faut que le plugin installé sur Jeedom et l'application (APK) que vous avez téléchargé et utilisé soit de même type :  
+
+| Version Plugin | Version Application | Fonctionnement |
+|----------------|----------------|----------------|
+| Stable         | Stable         |     <img src='../images/ok.png' />               |
+| Stable         | Beta           | <img src='../images/ko.png' />               |
+| Beta           | Beta           | <img src='../images/ok.png' />               |
+| Beta           | Stable         | <img src='../images/ko.png' />               |
+
+
+Il se peut également que l'application ne fonctionne qu'avec une version du plugin. Dans ce cas il faut regarder les changelogs qui l'indiquent ! 
 
 La version du plugin est disponible sur la page de `configuration` du plugin :  
 <img src='../images/JC_pluginVersion.gif' width='30%' />  
 <br/>
 La version de l'application est disponible sur la page de connexion :  
 <img src='../images/JeedomConnect_VersionApk.jpeg' width='30%' />  
-ainsi qu'en bas de la page `Préférences` (dans la menu de l'application) :  
+ainsi que sur la page `A propos` (dans la menu de l'application) :  
 <img src='../images/JC_getAplVersion.gif' width='30%' />  
 
 
@@ -575,3 +597,9 @@ Comment l'ajouter ? Rapprochez-vous du développeur du plugin utilisé par votre
 En partageant vos idées d'améliorations, vos suggestions et vos retours sur des bugs !    
 Puisque ça a été demandé plusieurs fois, si vous souhaitez soutenir "financièrement" parlant, nous vous proposons de payer un café (ou deux, ou mille ! :) ) :  
 <a href="https://www.paypal.me/JeedomConnect" target="_blank"><img src="../images/bmc.png" width='30%'/></a> 
+
+<br/>
+
+## Je ne trouve pas de réponse à mon probleme dans la doc. Que faire ? <a name="qForum"></a>  
+
+Suivez les indications postées dans [ce message](https://community.jeedom.com/t/plugin-jeedomconnect-actualites/71794/2) afin de créer un nouveau sujet sur le forum.

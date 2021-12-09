@@ -1,5 +1,86 @@
 # Changelog JeedomConnect  
 
+## Version 1.0.0 (10/12/2021)
+
+- Nouveautés :
+  * Ajout d'un bouton `Infos Community` : ouvre une fenêtre qui affiche toutes les informations qui nous sont nécessaires lorsque vous créez un nouveau sujet sur le forum. Il vous suffit simplement de cliquer sur le bouton `Copier`, puis sur le forum coller ces infos. Tout est déjà préformaté ! 
+  * Création de widgets en masse (depuis le plugin et depuis l'app !) : ces créations sont possibles uniquement si les commandes de vos équipements sont correctement configurées avec des types génériques (normalement à la charge des développeurs des plugins que vous utilisez).  
+  Pour vérifier/modifier vos commandes avec les bons types génériques, vous pouvez utiliser le bouton `Config types génériques` <i>(pour les personnes qui seraient déjà en version beta/alpha sur le core de jeedom (4.2.x) vous pouvez utiliser `Outils/Types d'équipement`)</i>  
+  L'outil peut détecter des widgets déjà existants, dans ce cas ils seront mis en surbrillance et décochés.  
+  * Création de widget (unitaire) en automatique : si vous choisissez de créer un widget de façon unitaire, vous avez la possibilité de pré-charger les différentes commandes nécessaires pour le widget en cliquant sur le bouton `Création automatique` (même pré-requis que le point précédent) et en sélectionnant l'équipement qui sera utilisé pour créer le widget.  
+  * Mode grille avancée (à activer dans `menu/préférences`) : permet de choisir la taille des widgets et les placer à l'endroit désiré sur l'écran. Vous n'êtes plus limité dans une grille standard de 3 ou 4 widgets par lignes avec tous les mêmes tailles, mais vous pouvez organiser chaque page comme bon vous semble, avec des espaces, des widgets grands, petits, longs, hauts, ... 
+  * Nouvelle fenêtre pour configurer les commandes `Notifier tous` sur la page principale du plugin
+  * Widget `Climatisation` : 
+    - Possibilité d'ajouter autant de modes que voulu - **Obligation de re-créer les modes**
+    - Possibilité pour la ventilation d'utiliser une info `string` et une action `select`
+  * Ajout de la variable `#value#` dans les widgets compatibles
+  * Pré-sélectionne automatiquement la pièce lors du choix des commandes en fonction de la pièce sélectionnée sur le widget
+  * Notification iOs - Option pour qu'une notification arrive en `alerte critique` et possibilité de régler le volume du son (sonnera même si le son est coupé ou en mode `Ne pas déranger`)
+  * Personnalisation possible de l'affichage forcée avec le nouveau mode `Grand widget`
+  * L'historique est masqué si la commande n'est pas historisée
+  * Personnalisation du statut pour la vue `Vignette`
+  * Personnalisation des valeurs min/max sur les historiques
+  * Affichage du `widgetId` dans l'application
+  * Possibilité de dupliquer un widget
+  * L'accès à la page de notifications ne requière plus d'être connecté
+  * Possibilité de définir la mise en page des widgets dans un groupe (mode grille avancée)
+  * Possibilité de configurer le nombre de positions stockées par la géolocalisation (0 pour désactiver la base : la position est alors envoyée immédiatement ou perdue à jamais)
+  * Personnalisation des sous-titres en mode Grand widget (taille et couleur)
+  * Possibilité de masquer l'aperçu dans la personnalisation
+  * Ajout d'un lien `Changelog` dans la fenêtre `A propos`
+  * Ajout des types génériques `Climatiseur` et `Géolocalisaton` (/!\ ces types sont propres à JC pour le moment)
+  * Accès aux logs des scénarios et plugins depuis l'appli (uniquement pour les utilisateurs admin)
+  * Widget `géolocalisation` : option pour définir le zoom par défaut, mode animation de la carte auto en option, et ajout d'un marqueur sur la dernière position sur un tracé
+  * Widget `Modes` : option pour mettre les modes dans la contenu de la carte (plutôt qu'une modale)
+  * Modification du menu `Mise à jour plugins` par `Plugins` : visualisation de l'ensemble des plugins dispo, documentation, et logs (uniquement logs principales pour le moment)
+  * Possibilité de supprimer une image dans le dossier "images personnelles"
+
+<details>
+<summary>Nombreux Bug fixes</summary>
+<p>
+
+  * Problèmes de connexion au démarrage
+  * Sauvegarde des notifications reçues
+  * Crash de la modale de partage des paramètres persos
+  * Son des notifications sous iOS
+  * Possible fix du problème d'appui sur widget sur iOS
+  * Envoie du niveau de batterie
+  * Animation des images au format gif
+  * Nombre d'éléments (comptage) dans les widgets groupe
+  * Affichage des infos supplémentaires dans la vue détails
+  * Accès aux images et vidéos dans les notifications avec l'URL locale si sur le réseau local
+  * Page de personnalisation du widget slider générique
+  * L'ajout de variables dans l'édition de textes se fait à la position du curseur
+  * Affichage des boutons de zoom ne reste plus grisés
+  * Le zoom de l'historique n'est pas changé en cas de nouvelles données dans l'historique
+  * Affichage des images dans un sous-dossier
+  * Affichage des badges sur les icônes dans le drawer
+  * Renfort sécurité pour la 4.2 : gestion des autorisations de téléchargements 
+  * Clic long sur widget pour iOS
+  * Correction du contenu des sous-groupes lorsqu'il y a plusieurs colones
+  * Amélioration de la connexion
+  * Image du `groupe de PIR` qui reste "rouge" meme si le nombre d'alertes est à 0
+  * Widget mode : retrait de l'icone en doublon (était également affiché sur la valeur active)
+  * Sauvegarde de l'image de notification dès sa réception
+  * Fix animation décentrée des icônes FA
+  * Bouton lock/unlock dans le grand widget thermostat
+  * Problème d'affichage des widgets dans un groupe
+  * Les groupes désactivés sont masqués
+  * Empêche la connexion au websocket si connexion en cours
+  * Pas de polling si option activée mais en websocket
+  * Création de widget depuis l'appli était cassée (pas d'id affecté)
+  * Rafraichissement des images dans le widget `Images`
+  * Crash dans la grille principale si vide
+  * Fix ordre des infos supplémentaires
+  * Masquer prévisualisation de la carte en personalisation
+  * Amélioration du rafraichissement de tous les états
+  * Pleins d'autres petits bug corrigés, amélioration...
+
+</p>
+</details>
+<br>
+
+
 ## Version 0.23.0 (07/10/2021)
 - Nouveautés :
   * Nouveau widget `Historique` (graphique dans la grille)

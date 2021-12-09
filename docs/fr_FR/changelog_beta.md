@@ -1,5 +1,12 @@
 # Changelog JeedomConnect
 
+## Version 1.0.0 (10/12/2021)
+  passage en stable
+
+## Version 0.23.4+1 (09/12/2021)
+- Bug fixes :
+  * Refresh des données
+
 ## Version 0.23.4 (05/12/2021)
 - Nouveautés :
   * Accès aux logs des scénarios et plugins depuis l'appli (uniquement pour les utilisateurs admin)
