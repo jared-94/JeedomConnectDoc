@@ -445,6 +445,8 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
   * [Je ne vois pas la batterie d'un de mes équipements sur JC, pourquoi ?](#qBattery)
   * [Comment « vider le cache » ou « supprimer les données » ?](#qVideCache)
   * [Quelles différences entre l'édition et la personnalisation d'un widget ?](qEditCustom)
+  * [Lors de ma première utilisation une pop-up me demande de "Sélectionner une application de l'écran d'accueil", que dois-je faire ?](qSetLauncher)  
+  * [Mon téléphone reste "bloqué" sur JeedomConnect. Comment retirer le mode launcher ?](qLauncher)
   * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
   * [Je ne trouve pas de réponse à mon probleme dans la doc. Que faire ?](#qForum) 
 
@@ -588,6 +590,25 @@ Comment l'ajouter ? Rapprochez-vous du développeur du plugin utilisé par votre
 >  
 > exemple : par défaut mon widget fenetre est configuré pour avoir une fenêtre fermée bleu. ma femme prefère le jaune (ca lui rappelle le soleil des vacances), sur son équipement je vais donc personnaliser le widget fenêtre pour modifier l’icone de fenetre fermée avec la couleur jaune. Cette fenêtre jaune sera uniquement appliquée sur son équipement à elle.  
 >  
+
+<br/>
+
+## Lors de ma première utilisation une pop-up me demande de "Sélectionner une application de l'écran d'accueil", que dois-je faire ? <a name="qSetLauncher"></a>  
+
+Cette option est principalement utilisée pour les appareils qui ne serivront qu'à faire de la domotique (par exemple une tablette murale pour gérer votre domotique). Le launcher ou 'application de l'écran d'accueil' permet de définir JeedomConnect comme votre nouveau bureau.  
+Vous n'aurez donc plus accès à la page d'accueil de votre terminal telle que vous la connaissez avec toutes vos applications, mais votre page principale sera dorénavant JeedomConnect
+
+
+<img src='../images/set_launcher.jpg' width='30%' />  
+
+<br/>
+
+## Mon téléphone reste "bloqué" sur JeedomConnect. Comment retirer le mode launcher ? <a name="qLauncher"></a>  
+
+Si vous souhaitez retirer le mode launcher de votre téléphone, il vous suffit d'aller dans le menu "Application d'accueil"  (le chemin peut différé selon votre modèle du téléphone)  
+`Paramètres du téléphone (par la barre du haut/roue crantée) / Applications / Applications par défaut / Application d’accueil`
+
+<img src='../images/reset_launcher.png' width='20%' />  
 
 <br/>
 
