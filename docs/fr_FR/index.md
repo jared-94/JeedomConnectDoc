@@ -444,9 +444,9 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
   * [Je suis bêta-testeur, que dois-je faire ?](#qBeta)   
   * [Je ne vois pas la batterie d'un de mes équipements sur JC, pourquoi ?](#qBattery)
   * [Comment « vider le cache » ou « supprimer les données » ?](#qVideCache)
-  * [Quelles différences entre l'édition et la personnalisation d'un widget ?](qEditCustom)
-  * [Lors de ma première utilisation une pop-up me demande de "Sélectionner une application de l'écran d'accueil", que dois-je faire ?](qSetLauncher)  
-  * [Mon téléphone reste "bloqué" sur JeedomConnect. Comment retirer le mode launcher ?](qLauncher)
+  * [Quelles différences entre l'édition et la personnalisation d'un widget ?](#qEditCustom)
+  * [Lors de ma première utilisation une pop-up me demande de "Sélectionner une application de l'écran d'accueil", que dois-je faire ?](#qSetLauncher)  
+  * [Mon téléphone reste "bloqué" sur JeedomConnect. Comment retirer le mode launcher ?](#qLauncher)
   * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
   * [Je ne trouve pas de réponse à mon probleme dans la doc. Que faire ?](#qForum) 
 
