@@ -1,5 +1,24 @@
 # Changelog JeedomConnect
 
+## Version 1.0.1 (en cours)
+- Nouveautés :
+  * Mise en place du `service foreground` qui permet de .........
+  * Ajout de nouvelles actions : .......
+  * Ajout d'un nouveau Widget `JC`, qui permet de récupérer les informations de vos différents équipements JC
+  * Widget `scénario` : ajout des options de sécurité pour executer le scenario
+  * Accès direct à la configuration des widgets et des notifications sur un équipement depuis la page principale du plugin
+  * Ajout du lien vers le forum community, dans le menu `A propos`
+  * Ajout des informations nécessaires à la création d'un post sur community sur l'application
+  * Possibilité de choisir une des 3 tailles sur les boutons d'actions des widgets
+  * Séparation des commandes infos et actions sur les équipements pour un visuel plus facile
+  * Ajout de l'option `Modes dans la carte` pour les widgets `Thermostat` et `Climatisation`
+  * Possibilité de définir l'arrondi des boutons d'actions
+  
+
+- Bug fixes :
+  * Boutons d'actions prennent maintenant la couleur du thème
+  * Trie des widgets sur le bouton `Widgets supplémentaites`
+
 ## Version 1.0.0 (10/12/2021)
   passage en stable
 
