@@ -1,5 +1,9 @@
 # Changelog JeedomConnect  
 
+## Version 1.0.0+1 (17/12/2021)
+maj plugin uniquement ! 
+fix mineur liens / documentation
+
 ## Version 1.0.0 (10/12/2021)
 
 - Nouveautés :
