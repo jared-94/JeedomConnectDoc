@@ -270,28 +270,28 @@ Les infos :
 Les actions : 
 - `Notification` : Commande de notification par défaut
 - `Afficher page` : Lorsque l'application est en premier plan, permet de basculer sur une page donnée. Il s'agit d'une commande action message. Pour l'utiliser, commencer par repérer l'`id` de la page. Cell-ci est disponible en survolant votre souris sur les menus de l'assistant de configuration. Indiquez alors cet `id` dans le champs `Id page` de la commande.
-- `Lancer App` $[Android]$ : Lorsque l'application est en premier plan ou que le service est activé, permet de lancer sur votre appareil une application. Il s'agit d'une commande action message qui accepte dans son champs ou `Nom de l'application` le nom du package de l'application.
+- `Lancer App` *[Android]* : Lorsque l'application est en premier plan ou que le service est activé, permet de lancer sur votre appareil une application. Il s'agit d'une commande action message qui accepte dans son champs ou `Nom de l'application` le nom du package de l'application.
 - `Détacher` : Permet de détacher l'appareil de l'équipement.
 - `Notifier les appareils JC` : Permet d'envoyer un même message à plusieurs appareil. (cf la configuration plus bas !)  
-- `Pop-up` : Permet d'afficher un pop-up sur votre appareil. Elle sera affichée directement dans l'application si celle-ci est ouverte, et sinon en popup système (Android seulement). 
+- `Pop-up` : Permet d'afficher un pop-up sur votre appareil. Elle sera affichée directement dans l'application si celle-ci est ouverte, et sinon en popup système *[Android seulement]*. 
 - `Modifier Préférences Appli` : Permet de modifier certaines options de votre application. Faites un choix dans la liste déroulante, puis indiquez la valeur à mettre si nécessaire : `ON`, `OFF`, `MARCHE`, `ARRET`
 Liste des actions (fonctionnent même appli tuée) :
   - `Couleur thème` : indiquer une couleur au format hex `#10F581` ou par son nom (`pink`, `green`...)
   - `Activer mode sombre` : `ON`, `OFF` ou tout autre chose pour le mode auto
   - `Activer le tracking` : `MARCHE` ou `ARRET`
   - `Recharger les données`
-  - `Service JC` $[Android]$ : `ON`, `OFF`, permet d'activer / désactiver le service.
-- `Envoyer un SMS` (**Version APK uniquement**) : Permet d'envoyer un SMS. 
+  - `Service JC` *[Android]* : `ON`, `OFF`, permet d'activer / désactiver le service.
+- `Envoyer un SMS` *[Android, Version APK sur git uniquement]* : Permet d'envoyer un SMS. 
 Champ `Titre` : numéro du destinataire. 
 Champ `Message` : contenu du SMS.
 Cette fonction est utilisable dans n'importe quel état de l'application (premier-plan, arrière-plan, tuée)
 Pour utiliser cette fonction, vous devez d'abord vous rendre dans les autorisations de l'appli puis accepter celle correspondant à l'envoie de SMS.
-- `Allumer l'écran` $[Android]$
-- `Eteindre l'écran` $[Android]$ : Cette action requière que l'application Jeedom Connect soit définie en tant qu'`Appli d'administration du système` (généralement dans la section `Sécurité` des paramètres de votre appareil).
-- `Jouer un son` $[Android, Service]$ : Permet de lire un fichier audio sur l'appareil. Indiquez une URL complète, ou bien un chemin absolu sur votre installation Jeedom (par exemple `/var/www/html/data/bip-bip.mp3`)
+- `Allumer l'écran` *[Android]*
+- `Eteindre l'écran` *[Android]* : Cette action requière que l'application Jeedom Connect soit définie en tant qu'`Appli d'administration du système` (généralement dans la section `Sécurité` des paramètres de votre appareil).
+- `Jouer un son` *[Android, Service]* : Permet de lire un fichier audio sur l'appareil. Indiquez une URL complète, ou bien un chemin absolu sur votre installation Jeedom (par exemple `/var/www/html/data/bip-bip.mp3`)
 - `TTS` : Permet d'utiliser la fonction `Text to Speach` de votre appareil pour lire un texte. Sur iOS, l'application doit être ouverte
-- `Commande shell` $[Android]$, **[Root]** : Si votre appareil possède les privilèges root, permet d'exécuter n'importe quelle commande. A la première utilisation, votre gestionaire de `Super utilisateur` vous demandera l'autorisation.
-<details>
+- `Commande shell` *[Android]*, **[Root]** : Si votre appareil possède les privilèges root, permet d'exécuter n'importe quelle commande. A la première utilisation, votre gestionaire de `Super utilisateur` vous demandera l'autorisation.
+  <details>
   <summary>Exemples de commandes</summary>
   
   - Lancer une activité : `su -c am start -n com.jeedomconnect.app/.MainActivity`
@@ -421,14 +421,14 @@ Il est possible d'envoyer des images aux notifications (par exemple des shot de 
 
 # Service d'arrière plan (Android seulement) <a name="service"></a>
 
-Jeedom Connect dispose d'un service qui tourne en tâche de fond et permet une communication permanente en votre appareil et le plugin, **quelque soit l'état de l'application** (premier plan / arrière plan / tuée).
-Vous activez le service dans les préférences de l'application `Service et actions / Gestion du service`.
+Jeedom Connect dispose d'un service qui tourne en tâche de fond et permet une communication permanente entre votre appareil et le plugin, **quelque soit l'état de l'application** (premier plan / arrière plan / tuée).
+Le service s'active dans les préférences de l'application `Service et actions / Gestion du service`.
 
-Lorsque le service est activée, une **notification permanente** est affichée dans le volet des notifications (il s'agit en réalité selon la terminologie Android d'un service d'avant plan).
+Lorsque le service est activé, une **notification permanente** est affichée dans le volet des notifications (il s'agit en réalité selon la terminologie Android d'un service d'avant plan - cette notification est imposée par Android et n'est donc pas masquable).
 Vous pouvez personnaliser cette notification :
 * en modifiant le titre
 * en modifiant le message
-* en affichant, ou pas, l'icône de l'application.
+* en affichant, ou pas, l'icône de l'application (dans le contenue de celle-ci)
 
 Le service Jeedom Connect a principalement deux utilités :
 * Remonter les **informations** sur l'état de l'appareil vers Jeedom
@@ -436,24 +436,24 @@ Le service Jeedom Connect a principalement deux utilités :
 
 Ces **informations** et **actions** sont décrites dans la section [Commandes disponibles sur un équipement](#eqCmd).
 
-Pour remonter les informations, le service utilise des **déclencheurs** qui sont des événements du système. Vous devez activer les déclencheurs qui vous intéressent pour que la remontée ai lieu.
-A chaque fois qu'un événement lié à un déclencheur a lieu , l'ensemble de **toutes** les informations sont remontées vers Jeedom.
+Pour remonter les informations, le service utilise des **déclencheurs** qui sont des événements du système. Vous devez activer les déclencheurs qui vous intéressent pour que la remontée ait lieu.
+A chaque fois qu'un événement lié à un déclencheur a lieu, **toutes** les informations sont remontées vers Jeedom.
 
-:warning: Activer trop de déclencheur peut nuire à votre niveau de batterie
+:warning: Activer trop de déclencheurs peut nuire au niveau de votre batterie !
 
-$Exemple$ : Si la seule information qui vous intéresse concerne l'état du wifi (activé / adresse IP / Point d'accès), alors vous pouvez n'activer que le déclancheur `Connectivité changée`.
+*Exemple* : Si la seule information qui vous intéresse concerne l'état du wifi (activé / adresse IP / Point d'accès), alors vous pouvez uniquement activer le déclancheur `Connectivité changée`.
 
 ## Liste des déclencheurs disponibles
-- `Périodique` : se déclenche automatiquement toutes les x minutes
+- `Périodique` : se déclenche automatiquement toutes les X minutes
 - `Démarrage de l'appareil` : se déclenche à chaque fois que l'appareil démarre (**après** saisi d'éventuel moyens de sécurité)
 - `Connectivité changée` : se déclenche lorsqu'un changement dans la connection au réseau a lieu (par exemple passer du réseau mobile à un réseau Wifi)
 - `Chargeur branché`
 - `Chargeur débranché`
-- `Batterie faible` : se déclenche lorsque le niveau de batterie devient faible (généralement à 15%)
-- `Batterie OK` : se déclenche lorsque le niveau de batterie revient à un état normal (par exemple > 15%)
+- `Batterie faible` : se déclenche lorsque le niveau de batterie devient faible (généralement <= 15%)
+- `Batterie OK` : se déclenche lorsque le niveau de batterie revient à un état normal (généralement > 15%)
 - `Ecran éteint`
 - `Ecran allumé`
-- `Bluetooth connecté` : se déclenche dès que l'appareil est connecté à un périfphérique bluetooth.
+- `Bluetooth connecté` : se déclenche dès que l'appareil est connecté à un périphérique bluetooth.
 - `Bluetooth déconnecté` : se déclenche lorsque plus aucun périphérique bluetooth n'est connecté
 - `Prochaine alarme changée` : se déclenche lorsque la date ou l'heure de la prochaine alarme programmée sur l'appareil change
 
