@@ -3,7 +3,7 @@
 ## Version 1.0.2 (dev en cours)
 - Nouveautés :
   * Ajout du menu Timeline
-  * Ajout du menu Message
+  * Ajout du Centre de Messages Jeedom
 
 - Bug fixes :
   * Erreur lorsqu'un équipement JC n'a pas d'utilisateur qui lui est rattaché
