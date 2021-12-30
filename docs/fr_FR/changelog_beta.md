@@ -1,5 +1,15 @@
 # Changelog JeedomConnect
 
+## Version 1.0.2 (dev en cours)
+- Nouveautés :
+  * Ajout du menu Timeline
+  * Ajout du menu Message
+
+- Bug fixes :
+  * Erreur lorsqu'un équipement JC n'a pas d'utilisateur qui lui est rattaché
+  * Correction de la récupération de la valeur de la prochaine alarme
+
+
 ## Version 1.0.1 (17/12/2021)
 - Nouveautés [Android only]:
   * Mise en place du Service d'arrière plan qui permet une communication permanente entre JC et le plugin. Les infos sur l'appareil et les actions depuis Jeedom seront exécutées quelque soit l'état de l'application.
