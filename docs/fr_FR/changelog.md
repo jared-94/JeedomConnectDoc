@@ -37,7 +37,7 @@
   * Ajoute la possibilité de ne choisir aucune sécurisation sur un widget scénario
   * Corrige l'affichage des choix disponibles d'un widget type `liste de choix` lorsqu'ajouté comme widget supplémentaire
   * Lancement à nouveau possible depuis le menu `Scénario`
-
+  * Widget `Historique` prise en compte de l'intervalle défini dans le widget, et pas celui défini dans l'application (menu/pref/zoom)
 
 ## Version 1.0.0+1 (17/12/2021)
 maj plugin uniquement ! 

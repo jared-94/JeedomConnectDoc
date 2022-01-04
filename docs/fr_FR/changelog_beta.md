@@ -9,6 +9,16 @@
   * Erreur lorsqu'un équipement JC n'a pas d'utilisateur qui lui est rattaché
   * Correction de la récupération de la valeur de la prochaine alarme
 
+## Version 1.1.0 (04/01/2022)
+  passage en stable
+
+- Bug fixes :
+  * Erreur lorsqu'un équipement JC n'a pas d'utilisateur qui lui est rattaché
+  * Correction de la récupération de la valeur de la prochaine alarme
+  * Ajoute la possibilité de ne choisir aucune sécurisation sur un widget scénario
+  * Corrige l'affichage des choix disponibles d'un widget type `liste de choix` lorsqu'ajouté comme widget supplémentaire
+  * Lancement à nouveau possible depuis le menu `Scénario`
+  * Widget `Historique` prise en compte de l'intervalle défini dans le widget, et pas celui défini dans l'application (menu/pref/zoom)
 
 ## Version 1.0.1 (17/12/2021)
 - Nouveautés [Android only]:
