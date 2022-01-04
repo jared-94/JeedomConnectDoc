@@ -1,14 +1,12 @@
 # Changelog JeedomConnect
 
-## Version 1.0.2 (dev en cours)
+## Version 1.1.1 (dev en cours)
 - Nouveautés :
   * Ajout du menu Timeline
   * Ajout du Centre de Messages Jeedom
 
 - Bug fixes :
-  * Erreur lorsqu'un équipement JC n'a pas d'utilisateur qui lui est rattaché
-  * Correction de la récupération de la valeur de la prochaine alarme
-
+  
 ## Version 1.1.0 (04/01/2022)
   passage en stable
 
