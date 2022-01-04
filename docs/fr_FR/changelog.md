@@ -1,5 +1,42 @@
 # Changelog JeedomConnect  
 
+## Version 1.1.0 (04/01/2022)
+- Nouveautés [Android only]:
+  * Mise en place du Service d'arrière plan qui permet une communication permanente entre JC et le plugin. Les infos sur l'appareil et les actions depuis Jeedom seront exécutées quelque soit l'état de l'application.
+  * Ajout de nouvelle commandes info : `Etat écran`, `En charge`, `Etat Bluetooth`, `Etat Wifi`, `Adresse IP`, `Réseau wifi (SSID)`, `Prochaine Alarme`
+  * Ajout de nouvelles commandes actions : `Allumer l'écran`, `Eteindre l'écran`, `Jouer un son`, `Commande shell`
+
+- Nouveautés :
+  * Ajout de nouvelles commandes actions : `TTS `
+  * Widget `scénario` : ajout des options de sécurité pour executer le scenario
+  * Accès direct à la configuration des widgets et des notifications sur un équipement depuis la page principale du plugin
+  * Ajout du lien vers le forum community, dans le menu `A propos`
+  * Ajout des informations nécessaires à la création d'un post sur community sur l'application
+  * Possibilité de choisir une des 3 tailles sur les boutons d'actions des widgets
+  * Possibilité de définir l'arrondi des boutons d'actions
+  * Séparation des commandes infos et actions sur les équipements pour un visuel plus facile
+  * Ajout de l'option `Modes dans la carte` pour les widgets `Thermostat` et `Climatisation`
+  * Possibilité d'utiliser un fichier/image pour le scan du QR code
+  * Petite refonte de la page `Préférence` de l'appli
+  * Mise à jour des librairies de notification (dont compatibilité avec Android 12)  
+  * Récupère l'intégralité des logs des plugins   
+  
+- Bug fixes :
+  * Boutons d'actions prennent maintenant la couleur du thème
+  * Trie des widgets sur le bouton `Widgets supplémentaites`
+  * Titre dans la barre du haut quand pas de menu bas
+  * Positionnement des marqueurs sur les cartes
+  * Statut du widget Lumière de couleurs
+  * Position du badge sur l'icône Plugin
+  * Rayon min pour définir un geofence à 30m
+  * Fix compteur du badge de notification sur iOS
+  * Erreur lorsqu'un équipement JC n'a pas d'utilisateur qui lui est rattaché
+  * Correction de la récupération de la valeur de la prochaine alarme
+  * Ajoute la possibilité de ne choisir aucune sécurisation sur un widget scénario
+  * Corrige l'affichage des choix disponibles d'un widget type `liste de choix` lorsqu'ajouté comme widget supplémentaire
+  * Lancement à nouveau possible depuis le menu `Scénario`
+
+
 ## Version 1.0.0+1 (17/12/2021)
 maj plugin uniquement ! 
 fix mineur liens / documentation
