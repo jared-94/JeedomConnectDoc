@@ -263,8 +263,8 @@ Les infos :
 - `Etat écran` *[Android, Service]* : Binaire qui permet de connaître l'état allumé / éteint de l'écran
 - `En charge`  *[Android, Service]* : Binaire qui permet de savoir si l'appareil est en charge
 - `Etat Bluetooth` *[Android, Service]* : Binaire qui permet de savoir si un périphérique bluetooth est connecté
-- `Etat Wifi` *[Android, Service]* : Binaire qui permet de savoir si l'appareil est connecté à un réseau wifi
-- `Adresse IP` *[Android, Service]* : Lorsque l'appareil est relié au réseau wifi, indique l'adresse IP
+- `Etat Wifi` *[Android, Service, Localisation activée]* : Binaire qui permet de savoir si l'appareil est connecté à un réseau wifi
+- `Adresse IP` *[Android, Service, Localisation activée]* : Lorsque l'appareil est relié au réseau wifi, indique l'adresse IP
 - `Réseau wifi (SSID)` *[Android, Service]* : Lorsque l'appareil est relié au réseau wifi, indique le nom du point d'accès
 
 Les actions : 
@@ -287,7 +287,7 @@ Champ `Message` : contenu du SMS.
 Cette fonction est utilisable dans n'importe quel état de l'application (premier-plan, arrière-plan, tuée)
 Pour utiliser cette fonction, vous devez d'abord vous rendre dans les autorisations de l'appli puis accepter celle correspondant à l'envoie de SMS.
 - `Allumer l'écran` *[Android]*
-- `Eteindre l'écran` *[Android]* : Cette action requière que l'application Jeedom Connect soit définie en tant qu'`Appli d'administration du système` (généralement dans la section `Sécurité` des paramètres de votre appareil).
+- `Eteindre l'écran` *[Android, définir JC comme appli d'administration]* : Cette action requière que l'application Jeedom Connect soit définie en tant qu'`Appli d'administration du système` (généralement dans la section `Sécurité` des paramètres de votre appareil).
 - `Jouer un son` *[Android, Service]* : Permet de lire un fichier audio sur l'appareil. Indiquez une URL complète, ou bien un chemin absolu sur votre installation Jeedom (par exemple `/var/www/html/data/bip-bip.mp3`)
 - `TTS` : Permet d'utiliser la fonction `Text to Speach` de votre appareil pour lire un texte. Sur iOS, l'application doit être ouverte
 - `Commande shell` *[Android]*, **[Root]** : Si votre appareil possède les privilèges root, permet d'exécuter n'importe quelle commande. A la première utilisation, votre gestionaire de `Super utilisateur` vous demandera l'autorisation.
@@ -298,8 +298,7 @@ Pour utiliser cette fonction, vous devez d'abord vous rendre dans les autorisati
   - Activer / désactiver le bluetooth : `su -c service call bluetooth_manager 6` (changer 6 en 8 pour désactiver)
   - Activer / désactiver le wifi : `su -c svc wifi enable` (changer enable en disable pour désactiver)
   - Redémarrer l'appareil : `su -c reboot`
-
-</details>
+  </details>
 
 
 
