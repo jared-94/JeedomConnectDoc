@@ -294,10 +294,10 @@ Pour utiliser cette fonction, vous devez d'abord vous rendre dans les autorisati
   <details>
   <summary>Exemples de commandes</summary>
   
-  - Lancer une activité : `su -c am start -n com.jeedomconnect.app/.MainActivity`
-  - Activer / désactiver le bluetooth : `su -c service call bluetooth_manager 6` (changer 6 en 8 pour désactiver)
-  - Activer / désactiver le wifi : `su -c svc wifi enable` (changer enable en disable pour désactiver)
-  - Redémarrer l'appareil : `su -c reboot`
+  - Lancer une activité : `su -c am start -n com.jeedomconnect.app/.MainActivity`  
+  - Activer / désactiver le bluetooth : `su -c service call bluetooth_manager 6` (changer 6 en 8 pour désactiver)  
+  - Activer / désactiver le wifi : `su -c svc wifi enable` (changer enable en disable pour désactiver)  
+  - Redémarrer l'appareil : `su -c reboot`  
   </details>
 
 
