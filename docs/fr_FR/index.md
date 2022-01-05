@@ -263,9 +263,9 @@ Les infos :
 - `Etat écran` *[Android, Service]* : Binaire qui permet de connaître l'état allumé / éteint de l'écran
 - `En charge`  *[Android, Service]* : Binaire qui permet de savoir si l'appareil est en charge
 - `Etat Bluetooth` *[Android, Service]* : Binaire qui permet de savoir si un périphérique bluetooth est connecté
-- `Etat Wifi` *[Android, Service, Localisation activée]* : Binaire qui permet de savoir si l'appareil est connecté à un réseau wifi
-- `Adresse IP` *[Android, Service, Localisation activée]* : Lorsque l'appareil est relié au réseau wifi, indique l'adresse IP
-- `Réseau wifi (SSID)` *[Android, Service]* : Lorsque l'appareil est relié au réseau wifi, indique le nom du point d'accès
+- `Etat Wifi` *[Android, Service, Localisation autorisée & activée]* : Binaire qui permet de savoir si l'appareil est connecté à un réseau wifi
+- `Adresse IP` *[Android, Service]* : Lorsque l'appareil est relié au réseau wifi, indique l'adresse IP
+- `Réseau wifi (SSID)` *[Android, Service, Localisation autorisée & activée]* : Lorsque l'appareil est relié au réseau wifi, indique le nom du point d'accès
 
 Les actions : 
 - `Notification` : Commande de notification par défaut
