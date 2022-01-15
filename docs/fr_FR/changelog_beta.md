@@ -2,10 +2,25 @@
 
 ## Version 1.1.1 (dev en cours)
 - Nouveautés :
-  * Ajout du menu Timeline
-  * Ajout du Centre de Messages Jeedom
+  * Switch d'un équipement à l'autre sans se déconnecter/reconnecter possible depuis le menu `Paramètres de connexion`
+  * Réorganisation du menu `Paramètres de connexion` : Afficher les informations de connexion, Permet la déconnexion, Gère l'option de polling
+  * Personnalisation des sliders : choix des couleurs, taille, format (horizontale, verticale, circulaire), ... 
+  * Ajout du `Centre de Messages` 
+  * Permet la recopie des personnalisations sur un autre équipement JC   
+  * Ajout du choix du volume sur la commande `TTS`
+  * Permet la regénération de la clé API d'un équipement (/!\ l'application doit être arrêtée et tuée avant de faire la manip sur le plugin /!\ )
+  * Personnalisation possible du titre de la notification lors d'un `ASK` (utiliser la synthaxe : `title= Mon super Nouveau Titre | message=Ma question ?`)
+  * Ajout des infos utilisateur (id et nom) lors de l'exécution d'un scénario (via widget ou menu) pour récupérer l'info dans les logs
+  
+  
+  * Ajout de la `Timeline`
 
 - Bug fixes :
+  * correction d'affichage des heures entres 0h00 et 0h59 sur `générique slider` au format heure
+  * prise en comtpe de l'option `taille des boutons` avec l'option `contenu dans carte`
+  * fix sur les choix de commande sur les images sur conditions après un déplacement ou suppression
+  * le nom des commandes est rafraichie dans la liste des `commandes supplémentaires`
+
   
 ## Version 1.1.0 (04/01/2022)
   passage en stable
