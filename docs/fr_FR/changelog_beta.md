@@ -6,15 +6,15 @@
   * Réorganisation du menu `Paramètres de connexion` : Afficher les informations de connexion, Permet la déconnexion, Gère l'option de polling
   * Personnalisation des sliders : choix des couleurs, taille, format (horizontale, verticale, circulaire), ... 
   * Ajout du `Centre de Messages` 
+  * Ajout de la `Timeline`
   * Permet la recopie des personnalisations sur un autre équipement JC   
   * Ajout du choix du volume sur la commande `TTS`
   * Permet la regénération de la clé API d'un équipement (/!\ l'application doit être arrêtée et tuée avant de faire la manip sur le plugin /!\ )
   * Personnalisation possible du titre de la notification lors d'un `ASK` (utiliser la synthaxe : `title= Mon super Nouveau Titre | message=Ma question ?`)
   * Ajout des infos utilisateur (id et nom) lors de l'exécution d'un scénario (via widget ou menu) pour récupérer l'info dans les logs
+  * Ajout du tag `#userJC#` lors de l'execution d'un scenario
+  * Mise en place du `pull to refresh` sur les pages : santés, plugins, messages, timeline
   
-  
-  * Ajout de la `Timeline`
-
 - Bug fixes :
   * correction d'affichage des heures entres 0h00 et 0h59 sur `générique slider` au format heure
   * prise en comtpe de l'option `taille des boutons` avec l'option `contenu dans carte`
