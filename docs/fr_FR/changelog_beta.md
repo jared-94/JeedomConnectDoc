@@ -2,6 +2,7 @@
 
 ## Version 1.1.1 (dev en cours)
 - Nouveautés :
+  * Prise en compte des droits utilisateurs (pour une connexion avec un `utilisateur limité`) sur l'exécution des scénarios et des commandes
   * Switch d'un équipement à l'autre sans se déconnecter/reconnecter possible depuis le menu `Paramètres de connexion`
   * Réorganisation du menu `Paramètres de connexion` : Afficher les informations de connexion, Permet la déconnexion, Gère l'option de polling
   * Personnalisation des sliders : choix des couleurs, taille, format (horizontale, verticale, circulaire), ... 
@@ -14,12 +15,20 @@
   * Ajout des infos utilisateur (id et nom) lors de l'exécution d'un scénario (via widget ou menu) pour récupérer l'info dans les logs
   * Ajout du tag `#userJC#` lors de l'execution d'un scenario
   * Mise en place du `pull to refresh` sur les pages : santés, plugins, messages, timeline
+  * Lorsqu'une page est en mode édition (grille avancée), pour une meilleur utilisation lors des redimensionnements il n'est pas possible d'ouvrir le menu principal de JC
   
 - Bug fixes :
   * correction d'affichage des heures entres 0h00 et 0h59 sur `générique slider` au format heure
   * prise en comtpe de l'option `taille des boutons` avec l'option `contenu dans carte`
   * fix sur les choix de commande sur les images sur conditions après un déplacement ou suppression
   * le nom des commandes est rafraichie dans la liste des `commandes supplémentaires`
+  * correction de l'option "inverser" sur des commandes de type numérique (volet, ...)
+  * Widget `Générique texte` : suppression d'un espace vide avant le texte
+  * Widget `Image` : suppression de l'espace "vide" si la personnalisation enlève nom + image
+  * Widget `Groupe lumière` : prise en compte de l'image principale
+  * Execution d'un scénario depuis le menu de l'application envoie l'ensemble des infos nécessaires
+  * Création widget scénario depuis l'application avec l'ensemble des infos nécessaires
+  
 
   
 ## Version 1.1.0 (04/01/2022)
