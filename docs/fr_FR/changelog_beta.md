@@ -8,7 +8,8 @@
   * Personnalisation des sliders : choix des couleurs, taille, format (horizontale, verticale, circulaire), ... 
   * Ajout du `Centre de Messages` 
   * Ajout de la `Timeline`
-  * Permet la recopie des personnalisations sur un autre équipement JC   
+  * Permet la recopie des personnalisations sur un autre équipement JC 
+  * Le paramètre `Grille avancée` peut se configurer sur chaque page  
   * Ajout du choix du volume sur la commande `TTS`
   * Permet la regénération de la clé API d'un équipement (/!\ l'application doit être arrêtée et tuée avant de faire la manip sur le plugin /!\ )
   * Personnalisation possible du titre de la notification lors d'un `ASK` (utiliser la synthaxe : `title= Mon super Nouveau Titre | message=Ma question ?`)
