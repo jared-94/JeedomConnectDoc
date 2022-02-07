@@ -2,6 +2,7 @@
 
 ## Version 1.1.1 (dev en cours)
 - Nouveautés :
+  * Ajout des raccourcis sur l'application : vous pouvez définir jusqu'à 4 raccourcis sur l'application. Ces actions sont accessibles après un appuie long sur l'icône de l'application JC sur votre bureau. Vous pouvez choisir d'éxecuter une commande, un scénario, ou l'affichage d'une page.
   * Prise en compte des droits utilisateurs (pour une connexion avec un `utilisateur limité`) sur l'exécution des scénarios et des commandes
   * Switch d'un équipement à l'autre sans se déconnecter/reconnecter possible depuis le menu `Paramètres de connexion`
   * Réorganisation du menu `Paramètres de connexion` : Afficher les informations de connexion, Permet la déconnexion, Gère l'option de polling
@@ -17,6 +18,8 @@
   * Ajout du tag `#userJC#` lors de l'execution d'un scenario
   * Mise en place du `pull to refresh` sur les pages : santés, plugins, messages, timeline
   * Lorsqu'une page est en mode édition (grille avancée), pour une meilleur utilisation lors des redimensionnements il n'est pas possible d'ouvrir le menu principal de JC
+  * Prise en compte du code html dans le widget `texte` (=> `<br>` pour un saut de ligne)
+  * Ajout du widget `Evénement` : permet de mettre à jour une commande de type info  
   
 - Bug fixes :
   * correction d'affichage des heures entres 0h00 et 0h59 sur `générique slider` au format heure
@@ -29,8 +32,9 @@
   * Widget `Groupe lumière` : prise en compte de l'image principale
   * Execution d'un scénario depuis le menu de l'application envoie l'ensemble des infos nécessaires
   * Création widget scénario depuis l'application avec l'ensemble des infos nécessaires
-  
-
+  * rafraichissement de la page des notifications si un message arrive alors que l'application est mise en background sur la page des notifications
+  * fermeture de la fenêtre de téléchargement des données de jeedom si une erreur se produit
+    
   
 ## Version 1.1.0 (04/01/2022)
   passage en stable
