@@ -7,6 +7,7 @@
   * Switch d'un équipement à l'autre sans se déconnecter/reconnecter possible depuis le menu `Paramètres de connexion`
   * Réorganisation du menu `Paramètres de connexion` : Afficher les informations de connexion, Permet la déconnexion, Gère l'option de polling
   * Personnalisation des sliders : choix des couleurs, taille, format (horizontale, verticale, circulaire), ... 
+  * Nouveau sélecteur de couleurs dans l'appli, dispo aussi dans les widgets `Lumières de couleurs` et `Groupe de lumières`
   * Ajout du `Centre de Messages` 
   * Ajout de la `Timeline`
   * Permet la recopie des personnalisations sur un autre équipement JC 
