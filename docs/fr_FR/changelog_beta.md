@@ -1,5 +1,20 @@
 # Changelog JeedomConnect
 
+## Version 1.1.2 (12/02/2022)
+- Nouveautés :
+  * Ajout raccourci vers la page `Messages`
+  * Fond d'écran : possibilité de régler plus finement les gradients de couleurs
+  * Arrière plan des widgets : possibilité d'utiliser des cmd info pour les couleurs (par exemple mettre sur un widget lumières de couleurs le même fond que la couleur de la lumière)
+
+- Bug fixes :
+  * Icones plugin dans la barre menu du haut
+  * Débordement du nom de l'équipement sur les pages principales
+  * Seules les commandes sans verrouillage sur Jeedom (pas d'accès avec mdp) sont autorisées dans les raccourcis pour un utilisateur non-admin
+  * Mise à jour de l'aperçu du mode vignette
+  * Prise en compte des personnalisations des fonds d'écran quelque soit le type de grille choisie
+  * Fix page blanche sur android 6
+
+
 ## Version 1.1.1 (08/02/2022)
 - Nouveautés :
   * Ajout des raccourcis sur l'application : vous pouvez définir jusqu'à 4 raccourcis sur l'application. Ces actions sont accessibles après un appuie long sur l'icône de l'application JC sur votre bureau. Vous pouvez choisir d'éxecuter une commande, un scénario, ou l'affichage d'une page.
@@ -23,18 +38,18 @@
   * Ajout du widget `Evénement` : permet de mettre à jour une commande de type info  
   
 - Bug fixes :
-  * correction d'affichage des heures entres 0h00 et 0h59 sur `générique slider` au format heure
-  * prise en comtpe de l'option `taille des boutons` avec l'option `contenu dans carte`
-  * fix sur les choix de commande sur les images sur conditions après un déplacement ou suppression
-  * le nom des commandes est rafraichie dans la liste des `commandes supplémentaires`
-  * correction de l'option "inverser" sur des commandes de type numérique (volet, ...)
+  * Correction d'affichage des heures entres 0h00 et 0h59 sur `générique slider` au format heure
+  * Prise en compte de l'option `taille des boutons` avec l'option `contenu dans carte`
+  * Fix sur les choix de commande sur les images sur conditions après un déplacement ou suppression
+  * Le nom des commandes est rafraichie dans la liste des `commandes supplémentaires`
+  * Correction de l'option "inverser" sur des commandes de type numérique (volet, ...)
   * Widget `Générique texte` : suppression d'un espace vide avant le texte
   * Widget `Image` : suppression de l'espace "vide" si la personnalisation enlève nom + image
   * Widget `Groupe lumière` : prise en compte de l'image principale
-  * Execution d'un scénario depuis le menu de l'application envoie l'ensemble des infos nécessaires
+  * Exécution d'un scénario depuis le menu de l'application envoie l'ensemble des infos nécessaires
   * Création widget scénario depuis l'application avec l'ensemble des infos nécessaires
   * rafraichissement de la page des notifications si un message arrive alors que l'application est mise en background sur la page des notifications
-  * fermeture de la fenêtre de téléchargement des données de jeedom si une erreur se produit
+  * Fermeture de la fenêtre de téléchargement des données de Jeedom si une erreur se produit
     
   
 ## Version 1.1.0 (04/01/2022)
