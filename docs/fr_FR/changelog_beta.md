@@ -1,5 +1,22 @@
 # Changelog JeedomConnect
 
+## Version 1.1.3 (dev en cours)
+- Nouveautés :
+  * Nouvelle gestion des images persos dans l'appli avec une page dédiée dans les préférences.
+  * Possibilité de supprimer ou ajouter des images persos depuis l'appli.
+  * Nouvelles options pour la personalisation des sliders
+  * Widget WebView : affichage de la page en mode carte (option), possibilité d'utiliser une commande pour l'URL, et possibilité d'injecter du code JavaScript dans la page
+  * Ajout de la pièce d'un widget dans les listes de configuration d'un widget (plugin)
+  * Nombreux petits détaills cosmétiques dans l'app, ajout d'animations...
+  * Optimisations, préparation à la future architecture de React Native
+
+- Bug fixes :
+  * Actions dans les notifications
+  * Status de la batterie de l'équipement
+  * Masquage des données sensibles dans les logs
+  * Valeurs dans l'axe vertical dans l'historique
+  
+
 ## Version 1.1.2 (12/02/2022)
 - Nouveautés :
   * Ajout raccourci vers la page `Messages`
