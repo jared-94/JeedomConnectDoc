@@ -1,6 +1,6 @@
 # Changelog JeedomConnect
 
-## Version 1.1.3 (dev en cours)
+## Version 1.1.3 (28/03/2022)
 - Nouveautés :
   * Nouvelle gestion des images persos dans l'appli avec une page dédiée dans les préférences
   * Possibilité de supprimer ou ajouter des images persos depuis l'appli
