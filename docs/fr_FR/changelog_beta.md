@@ -2,19 +2,29 @@
 
 ## Version 1.1.3 (dev en cours)
 - Nouveautés :
-  * Nouvelle gestion des images persos dans l'appli avec une page dédiée dans les préférences.
-  * Possibilité de supprimer ou ajouter des images persos depuis l'appli.
+  * Nouvelle gestion des images persos dans l'appli avec une page dédiée dans les préférences
+  * Possibilité de supprimer ou ajouter des images persos depuis l'appli
   * Nouvelles options pour la personalisation des sliders
-  * Widget WebView : affichage de la page en mode carte (option), possibilité d'utiliser une commande pour l'URL, et possibilité d'injecter du code JavaScript dans la page
-  * Ajout de la pièce d'un widget dans les listes de configuration d'un widget (plugin)
+  * Widget `WebView` : affichage de la page en mode carte (option), possibilité d'utiliser une commande pour l'URL, et possibilité d'injecter du code JavaScript dans la page
+  * Ajout de l'information `pièce` d'un widget dans les listes de widget (groupe, widget supplémentaires, ...)
   * Nombreux petits détaills cosmétiques dans l'app, ajout d'animations...
   * Optimisations, préparation à la future architecture de React Native
 
 - Bug fixes :
   * Actions dans les notifications
-  * Status de la batterie de l'équipement
+  * Statut de la batterie de l'équipement
   * Masquage des données sensibles dans les logs
   * Valeurs dans l'axe vertical dans l'historique
+  * Sécurité sur les scénarios dans les raccourcis
+  * Titre des actions dans les notifications sont décodées
+  * Personnalisation de la taille des sous-titre prise en compte sur une vignette (mode grille avancée)
+  * MaJ de l'icône par défaut `résumé` sur l'application
+  * Palette de sélection des couleurs qui dépasse l'écran
+  * Bouton valider absent lorsque l'horloge est affiché
+  * `Groupes prises`  l'application  s'arrete sur choix `Annuler` d'une confirmation d'action de groupe (uniquement dans la vue détail)
+  * Impossible d'éditer/personnaliser une widget, s'il inclut lui même un widget
+  * Centre du message interprête le code html
+  * Couleur des icônes : correction gestion de la bascule entre les modes jour/nuit
   
 
 ## Version 1.1.2 (12/02/2022)
