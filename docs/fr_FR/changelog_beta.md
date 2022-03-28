@@ -5,7 +5,10 @@
   * Nouvelle gestion des images persos dans l'appli avec une page dédiée dans les préférences
   * Possibilité de supprimer ou ajouter des images persos depuis l'appli
   * Nouvelles options pour la personalisation des sliders
+  * Personnalisation de la taille de l'image d'un widget
   * Widget `WebView` : affichage de la page en mode carte (option), possibilité d'utiliser une commande pour l'URL, et possibilité d'injecter du code JavaScript dans la page
+  * Widget `Images` : La taille s'ajuste automatiquement lors du redimmensionnement du widget en grille avancée. Arrière plan automatique en option avec couleur qui dépend de l'image
+  * Ajout de l'option de couleur automatique en fonction du thème dans le sélecteur de couleurs pour les arrières plans
   * Ajout de l'information `pièce` d'un widget dans les listes de widget (groupe, widget supplémentaires, ...)
   * Nombreux petits détaills cosmétiques dans l'app, ajout d'animations...
   * Optimisations, préparation à la future architecture de React Native
