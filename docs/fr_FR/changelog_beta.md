@@ -1,7 +1,9 @@
 # Changelog JeedomConnect
 
-## Version 1.1.4 (29/03/2022)
-- Bug fixes : Affichage des modales
+## Version 1.1.4 (29/03/2022)  
+- Bug fixes : Affichage des modales  
+
+
 ## Version 1.1.3 (28/03/2022)
 - Nouveautés :
   * Nouvelle gestion des images persos dans l'appli avec une page dédiée dans les préférences
