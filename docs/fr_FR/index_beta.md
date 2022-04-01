@@ -135,6 +135,7 @@ Quelques éléments sont standard et seront demandés pour l'ensemble des widget
    `Mon ampoule est formatedValue depuis elapsedTime et consomme power W`  
    donnera :  
    `Mon ampoule est allumée depuis 1h12min et consomme 15W`  
+   Les fonctions suivantes sont également disponibles pour une commande : `time` (temps écoulé), `date` (date et heure de modification de la commande) et `collect` (date et heure de la dernière collecte). Elles s'utlisent sous la forme `time(#[Pièce][Eq][Commande]#)`
    * **Affichage forcé** : De façon standard, chaque widget (sauf exception) possède 3 types d'affichage : carte, vignette et détail. Les affichages carte et vignettes peuvent être choisis via l'icône en haut à droite dans l'application. L'affichage détail est une page entière affichée quand on click sur le widget. Vous pouvez ici forcer un widget à s'afficher d'une de ces 3 façons.  
    Attention pour le mode détail, le widget doit être seul sur sa page.
    * **Sécuriser les actions** : Toutes les commandes de type action peuvent être sécurisées à l'aide de ces trois boutons :  
