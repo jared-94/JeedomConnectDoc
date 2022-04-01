@@ -1,10 +1,15 @@
 # Changelog JeedomConnect
 
+## Version 1.1.6 (01/04/2022)
+- Bug Fixes :
+  * Crash sur annulation d'une modale
+  * Images sous conditions en vue `Grand widget`
 ## Version 1.1.5 (01/04/2022)
 - Nouveautés :
   * Possibilité de vider le cache de l'appli directement depuis le menu `Préférences`
   * Possibilité d'utiliser la date de collecte d'une commande via la fonction `collect()`
   * L'affichage d'une page web dans un widget `webview` est par défaut désactivé
+  * Choix plus élargi pour la taille des boutons des widgets
 
 - Bug fixes :
   * Affichage des images persos
