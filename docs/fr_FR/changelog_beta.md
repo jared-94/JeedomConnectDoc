@@ -4,12 +4,12 @@
 - Nouveautés :
   * Possibilité de vider le cache de l'appli directement depuis le menu `Préférences`
   * Possibilité d'utiliser la date de collecte d'une commande via la fonction `collect()`
-  * L'affichage d'une page web dans un widget ``webview` est par défaut désactivé
+  * L'affichage d'une page web dans un widget `webview` est par défaut désactivé
 
 - Bug fixes :
   * Affichage des images persos
   * Bug qui empêchait l'utilisation de l'appli si aucun menu défini
-  * Edition d'un grille en mode avancée
+  * Edition d'une grille en mode avancée
   * Problème avec les modales en mode immersif
   * Sélecteur d'image QR code sur iOS qui se fermait automatiquement
   * Appuie long sur widget si blocage de détails activé
