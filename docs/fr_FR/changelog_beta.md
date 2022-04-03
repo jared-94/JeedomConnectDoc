@@ -1,5 +1,12 @@
 # Changelog JeedomConnect
 
+## Version 1.1.7 (03/04/2022)
+- Bug fixes :
+  * Crash sur l'édition d'une grille
+  * Prévisualisation des vignettes en édition perso
+  * Verouillage de l'interface en grille avancée
+  * Centrage du contenu du slider thermostat
+
 ## Version 1.1.6 (01/04/2022)
 - Bug Fixes :
   * Crash sur annulation d'une modale
