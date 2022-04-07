@@ -1,5 +1,16 @@
 # Changelog JeedomConnect
 
+## Version 1.1.8 (07/04/2022)
+- Nouveautés :
+  * Widget `Lanceur d'application` : choix de l'appli lors de l'édition/création depuis l'appli
+  * Ajout de l'option min/max sur le widget historique
+  * Utilisation du nom perso d'une commande dans la modale de confirmation d'action
+  * Début de la traduction de l'appli en anglais
+
+- Bug fixes :
+  * Notifications Android avec image JC
+  * Affichage de la modale du sélecteur d'heure/date
+
 ## Version 1.1.7 (03/04/2022)
 - Bug fixes :
   * Crash sur l'édition d'une grille
