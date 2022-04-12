@@ -1,6 +1,6 @@
 # Changelog JeedomConnect  
 
-## Version 1.2.0 (22/04/2022)
+## Version 1.2.0 (12/04/2022)
 - Nouveautés :
 * Ajout des raccourcis sur l'application : vous pouvez définir jusqu'à 4 raccourcis sur l'application. Ces actions sont accessibles après un appuie long sur l'icône de l'application JC sur votre bureau. Vous pouvez choisir d'éxecuter une commande, un scénario, ou l'affichage d'une page.
   * Prise en compte des droits utilisateurs (pour une connexion avec un `utilisateur limité`) sur l'exécution des scénarios et des commandes
