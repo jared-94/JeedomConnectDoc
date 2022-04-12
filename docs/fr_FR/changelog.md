@@ -1,5 +1,45 @@
 # Changelog JeedomConnect  
 
+## Version 1.2.0 (22/04/2022)
+- Nouveautés :
+* Ajout des raccourcis sur l'application : vous pouvez définir jusqu'à 4 raccourcis sur l'application. Ces actions sont accessibles après un appuie long sur l'icône de l'application JC sur votre bureau. Vous pouvez choisir d'éxecuter une commande, un scénario, ou l'affichage d'une page.
+  * Prise en compte des droits utilisateurs (pour une connexion avec un `utilisateur limité`) sur l'exécution des scénarios et des commandes
+  * Switch d'un équipement à l'autre sans se déconnecter/reconnecter possible depuis le menu `Paramètres de connexion`
+  * Réorganisation du menu `Paramètres de connexion` : Afficher les informations de connexion, Permet la déconnexion, Gère l'option de polling
+  * Personnalisation des sliders : choix des couleurs, taille, format (horizontale, verticale, circulaire), ... 
+  * Nouveau sélecteur de couleurs dans l'appli, dispo aussi dans les widgets `Lumières de couleurs` et `Groupe de lumières`
+  * Ajout du `Centre de Messages` 
+  * Ajout de la `Timeline`
+  * Permet la recopie des personnalisations sur un autre équipement JC 
+  * Le paramètre `Grille avancée` peut se configurer sur chaque page  
+  * Ajout du choix du volume sur la commande `TTS`
+  * Permet la regénération de la clé API d'un équipement (/!\ l'application doit être arrêtée et tuée avant de faire la manip sur le plugin /!\ )
+  * Personnalisation possible du titre de la notification lors d'un `ASK` (utiliser la synthaxe : `title= Mon super Nouveau Titre | message=Ma question ?`)
+  * Ajout des infos utilisateur (id et nom) lors de l'exécution d'un scénario (via widget ou menu) pour récupérer l'info dans les logs
+  * Ajout du tag `#userJC#` lors de l'execution d'un scenario
+  * Mise en place du `pull to refresh` sur les pages : santés, plugins, messages, timeline
+  * Lorsqu'une page est en mode édition (grille avancée), pour une meilleur utilisation lors des redimensionnements il n'est pas possible d'ouvrir le menu principal de JC
+  * Prise en compte du code html dans le widget `texte` (=> `<br>` pour un saut de ligne)
+  * Ajout du widget `Evénement` : permet de mettre à jour une commande de type info
+  * Ajout raccourci vers la page `Messages`
+  * Fond d'écran : possibilité de régler plus finement les gradients de couleurs
+  * Arrière plan des widgets : possibilité d'utiliser des cmd info pour les couleurs (par exemple mettre sur un widget lumières de couleurs le même fond que la couleur de la lumière)
+  * Nouvelle gestion des images persos dans l'appli avec une page dédiée dans les préférences
+  * Possibilité de supprimer ou ajouter des images persos depuis l'appli
+  * Nouvelles options pour la personnalisation des sliders
+  * Personnalisation de la taille de l'image d'un widget
+  * Widget `WebView` : affichage de la page en mode carte (option), possibilité d'utiliser une commande pour l'URL, et possibilité d'injecter du code JavaScript dans la page
+  * Widget `Images` : La taille s'ajuste automatiquement lors du redimensionnement du widget en grille avancée. Arrière plan automatique en option avec couleur qui dépend de l'image
+  * Ajout de l'option de couleur automatique en fonction du thème dans le sélecteur de couleurs pour les arrières plans
+  * Ajout de l'information `pièce` d'un widget dans les listes de widget (groupe, widget supplémentaires, ...)
+  * Possibilité de vider le cache de l'appli directement depuis le menu `Préférences`
+  * Possibilité d'utiliser la date de collecte d'une commande via la fonction `collect()`
+  * L'affichage d'une page web dans un widget `webview` est par défaut désactivé
+  * Choix plus élargi pour la taille des boutons des widgets
+  * Widget `Lanceur d'application` : choix de l'appli lors de l'édition/création depuis l'appli
+  * Ajout de l'option min/max sur le widget historique
+  * Utilisation du nom perso d'une commande dans la modale de confirmation d'action
+  * Ajout du pack d'icônes `kiko`
 ## Version 1.1.0 (04/01/2022)
 - Nouveautés [Android only]:
   * Mise en place du Service d'arrière plan qui permet une communication permanente entre JC et le plugin. Les infos sur l'appareil et les actions depuis Jeedom seront exécutées quelque soit l'état de l'application.

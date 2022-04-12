@@ -1,5 +1,15 @@
 # Changelog JeedomConnect
 
+## Version 1.2.0 (12/04/2022)
+- Nouveauté :
+  * Ajout du pack d'icônes `kiko`
+
+- Bug fixes :
+ * Option d'inversion pour les commandes numériques dans le groupes de widgets
+ * Opacité pour les arrières plan des widgets de lumières
+ * Bug avec les favoris d'arrières plan
+ * Icône par défaut sur les widgets lumières quand intensité < 10%
+
 ## Version 1.1.8 (07/04/2022)
 - Nouveautés :
   * Widget `Lanceur d'application` : choix de l'appli lors de l'édition/création depuis l'appli
