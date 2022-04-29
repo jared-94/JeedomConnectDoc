@@ -1,5 +1,23 @@
 # Changelog JeedomConnect
 
+## Version 1.2.1 (dev en cours)
+- Nouveauté :
+  * Nouveau widget `Lecteur multimedia`
+  * Traduction de l'application en anglais
+  * Double authentification lors de la connexion (si configurée dans Jeedom)
+  * Option pour configurer la transparence des widgets
+  * Paramètres perso `Bloquer vue détails`
+  * Possibilité de détacher un appareil sur un équipement JC depuis l'appli (admin uniquement)
+  * Reset valeur par défaut dans les slider de personnalisation
+
+- Bug fixes :
+  * Fix icônes kikoo sur iOS
+  * Arrière plan auto pour les widgets lumières
+  * Icône lumière quand intensité < 5%
+  * Sélecteur de fichiers sur iOS
+  * Notifications iOS quand l'appli est fermée
+  * Crash au démarrage si objet vide dans la conf Jeedom
+  * Crash au démarrage sur certains appareils Android
 ## Version 1.2.0 (12/04/2022)
 - Nouveauté :
   * Ajout du pack d'icônes `kiko`
