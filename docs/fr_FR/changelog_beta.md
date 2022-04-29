@@ -9,6 +9,8 @@
   * Paramètres perso `Bloquer vue détails`
   * Possibilité de détacher un appareil sur un équipement JC depuis l'appli (admin uniquement)
   * Reset valeur par défaut dans les slider de personnalisation
+  * Choix de la couleur du titre des groupes
+  * Option pour historique en mode Barre
 
 - Bug fixes :
   * Fix icônes kikoo sur iOS
