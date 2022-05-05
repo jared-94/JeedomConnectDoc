@@ -4,7 +4,7 @@
 - Nouveauté :
   * Nouveau widget `Lecteur multimedia`
   * Traduction de l'application en anglais
-  * Double authentification lors de la connexion (si configurée dans Jeedom)
+  * Double authentification et restriction des utilisateurs en local lors de la connexion (si configurée dans Jeedom)
   * Option pour configurer la transparence des widgets
   * Paramètres perso `Bloquer vue détails`
   * Possibilité de détacher un appareil sur un équipement JC depuis l'appli (admin uniquement)
