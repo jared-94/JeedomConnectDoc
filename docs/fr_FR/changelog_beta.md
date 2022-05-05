@@ -1,6 +1,6 @@
 # Changelog JeedomConnect
 
-## Version 1.2.1 (dev en cours)
+## Version 1.2.1 (05/05/2022)
 - Nouveauté :
   * Nouveau widget `Lecteur multimedia`
   * Traduction de l'application en anglais
