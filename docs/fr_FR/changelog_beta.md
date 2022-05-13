@@ -1,5 +1,19 @@
 # Changelog JeedomConnect
 
+## Version 1.2.2 (dev en cours)
+- Nouveauté :
+  * [Android] Serveur RTSP pour streamer sur le réseau les caméras et microphone de l'appareil
+  * [Android] Détection des visages en temps réel (commande binaire créée dans chaque équipement)
+  * Traduction complète de l'appli en espagnol et en catalan
+  * Possibilité d'agrandir le menu bas
+  * Personnalisation du texte de statut dans le widget `Générique texte`
+
+- Bug fixes :
+  * Mode immerssif sur certains appareils Android
+  * Min/max de l'axe vertical du widget `Historique`
+  * Nombre de plugin à mettre à jour corrigé
+  * Encodage des caractères dans les notifications
+
 ## Version 1.2.1 (05/05/2022)
 - Nouveauté :
   * Nouveau widget `Lecteur multimedia`
