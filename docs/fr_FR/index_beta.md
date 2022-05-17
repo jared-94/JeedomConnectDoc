@@ -509,6 +509,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
   * [Quelles différences entre l'édition et la personnalisation d'un widget ?](#qEditCustom)
   * [Lors de ma première utilisation une pop-up me demande de "Sélectionner une application de l'écran d'accueil", que dois-je faire ?](#qSetLauncher)  
   * [Mon téléphone reste "bloqué" sur JeedomConnect. Comment retirer le mode launcher ?](#qLauncher)
+  * [Comment configurer le widget Caméra ?](#qCamera)
   * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
   * [Je ne trouve pas de réponse à mon probleme dans la doc. Que faire ?](#qForum) 
 
@@ -661,7 +662,7 @@ Cette option est principalement utilisée pour les appareils qui ne serivront qu
 Vous n'aurez donc plus accès à la page d'accueil de votre terminal telle que vous la connaissez avec toutes vos applications, mais votre page principale sera dorénavant JeedomConnect
 
 
-<img src='../images/set_launcher.jpg' width='30%' />  
+<img src='../images/set_launcher.jpg' width='20%' />  
 
 <br/>
 
@@ -674,11 +675,58 @@ Si vous souhaitez retirer le mode launcher de votre téléphone, il vous suffit 
 
 <br/>
 
+
+## Comment configurer le widget Caméra ? <a name="qCamera"></a>  
+
+<img src='../images/widget_camera.png' width='40%' />  
+
+en jaune :  
+ce sont des données qui sont utilisées pour remplacer des informations saisies sur les champs `url de flux` et `url de snapshot` (champs 1 et/ou champs 2)  
+
+en rouge : les informations pour récupérer un flux vidéo.  
+il faut uniquement remplir l’un des deux champs :  
+soit indiquer directement l’url à utiliser pour avoir la vidéo  
+OU  
+soit indiquer la commande qui renverra l’url à utiliser pour voir la vidéo  
+*Si vous souhaitez accèder au flux vidéo depuis l'extérieur, une possibilité est de faire des redirections de port pour rendre le flux rtsp accessible depuis l'extérieur (à vos risques et périls donc :) )*   
+
+en vert :  
+si la configuration mise pour la vidéo (en rouge!) est accessible depuis l’extérieur : à décocher  
+si la configuration n’est accessible que sur le réseau local : à cocher  
+
+en bleu : les informations pour prendre une photo.  
+il faut uniquement remplir l’un des deux champs :  
+soit indiquer directement l’url à utiliser pour prendre une photo  
+OU  
+soit indiquer la commande qui renverra l’url à utiliser pour prendre la photo  
+
+en rose :  
+permet de réduire le nombre de photos reçues ainsi que la qualité  
+
+
+<details>
+  <summary>un exemple</summary>  
+
+<img src='../images/widget_camera_exemple.png' width='40%' />  
+
+url de flux : j’ai indiqué une IP locale => la caméra n’est pas visible depuis l’extérieur de mon domicile  
+DONC je coche la case LAN  
+
+l’utilisateur et le mot de passe seront automatiquement remplacés dans les url de flux et de snapshot  
+
+quand je suis en wifi => je vois la vidéo en direct  
+quand je suis en 4G => je reçois une photo toutes les 5 sec, avec une qualité de 70%
+</details>
+
+<br/>
+
+
+
 ## Je trouve l'application géniale ! Comment vous aider ? <a name="qDon"></a>  
 
 En partageant vos idées d'améliorations, vos suggestions et vos retours sur des bugs !    
 Puisque ça a été demandé plusieurs fois, si vous souhaitez soutenir "financièrement" parlant, nous vous proposons de payer un café (ou deux, ou mille ! :) ) :  
-<a href="https://www.paypal.me/JeedomConnect" target="_blank"><img src="../images/bmc.png" width='30%'/></a> 
+<a href="https://www.paypal.me/JeedomConnect" target="_blank"><img src="../images/bmc.png" width='20%'/></a> 
 
 <br/>
 
