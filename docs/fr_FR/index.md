@@ -677,7 +677,7 @@ Si vous souhaitez retirer le mode launcher de votre téléphone, il vous suffit 
 
 ## Comment configurer le widget Caméra ? <a name="qCamera"></a>  
 
-<img src='../images/widget_camera.png' width='40%' />  
+<img src='../images/widget_camera.png' width='50%' />  
 
 en jaune :  
 ce sont des données qui sont utilisées pour remplacer des informations saisies sur les champs `url de flux` et `url de snapshot` (champs 1 et/ou champs 2)  
@@ -687,7 +687,7 @@ il faut uniquement remplir l’un des deux champs :
 soit indiquer directement l’url à utiliser pour avoir la vidéo  
 OU  
 soit indiquer la commande qui renverra l’url à utiliser pour voir la vidéo  
-*Si vous souhaitez accèder au flux vidéo depuis l'extérieur, une possibilité est de faire des redirections de port pour rendre le flux rtsp accessible depuis l'extérieur (à vos risques et périls donc :) )*   
+*Si vous souhaitez accèder au flux vidéo depuis l'extérieur, une possibilité est de faire des redirections de port pour rendre le flux rtsp accessible depuis l'extérieur (à vos risques et périls donc :) [un exemple ici](https://community.jeedom.com/t/camera-ezviz-c6n-url-snapshot/63957/2) )*   
 
 en vert :  
 si la configuration mise pour la vidéo (en rouge!) est accessible depuis l’extérieur : à décocher  
@@ -706,8 +706,8 @@ permet de réduire le nombre de photos reçues ainsi que la qualité
 <details>
   <summary>un exemple</summary>  
 
-<img src='../images/widget_camera_exemple.png' width='40%' />  
-
+<img src='../images/widget_camera_exemple.png' width='50%' />  
+ <br/>  
 url de flux : j’ai indiqué une IP locale => la caméra n’est pas visible depuis l’extérieur de mon domicile  
 DONC je coche la case LAN  
 
