@@ -7,12 +7,15 @@
   * Traduction complète de l'application en Espagnol et en Catalan (en plus de l'Anglais)
   * Possibilité d'agrandir le menu bas
   * Personnalisation du texte de statut dans le widget `Générique texte`
+  * `Widget multimedia` : possibilité de définir la jaquette à partir d'un chemin de fichier local
+  * Edition de widget dans l'appli : ajout automatique du nom de widget quand une commande est choisie. Pour la sélection des autres commandes, l'équipement est présélectionné 
 
 - Bug fixes :
   * Mode immersif sur certains appareils Android
   * Min/max de l'axe vertical du widget `Historique`
   * Nombre de plugin à mettre à jour corrigé
   * Encodage des caractères dans les notifications
+  * Bug de la lecture des vidéos depuis l'extérieur
 
 ## Version 1.2.1 (05/05/2022)
 - Nouveauté :
