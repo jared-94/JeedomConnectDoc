@@ -1,6 +1,6 @@
 # Changelog JeedomConnect
 
-## Version 1.2.2 (dev en cours)
+## Version 1.2.2 (22/05/2022)
 - Nouveauté :
   * [Android] Serveur RTSP pour streamer sur le réseau les caméras et microphone de l'appareil
   * [Android] Détection des visages en temps réel (commande binaire créée dans chaque équipement)
