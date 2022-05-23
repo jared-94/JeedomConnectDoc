@@ -9,6 +9,7 @@
   * Personnalisation du texte de statut dans le widget `Générique texte`
   * `Widget multimedia` : possibilité de définir la jaquette à partir d'un chemin de fichier local
   * Edition de widget dans l'appli : ajout automatique du nom de widget quand une commande est choisie. Pour la sélection des autres commandes, l'équipement est présélectionné 
+  * Sélecteur de widget: pull to refresh pour recharger la liste
 
 - Bug fixes :
   * Mode immersif sur certains appareils Android
