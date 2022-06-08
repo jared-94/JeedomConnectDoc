@@ -1,5 +1,22 @@
 # Changelog JeedomConnect
 
+## Version 1.2.3 (dev en cours)
+- Nouveauté :
+  * L'application peut être utilisée en mode hors connexion, lorsque l'appareil n'est pas connecté au réseau (bien entendu les actions sont impossibles, et les infos peuvent ne plus être à jour...!)
+  * Ajout activation de l'option `polling` sur chaque équipement du plugin
+  * Ajout activation de l'option `websocket` dans l'application
+  * Menu `messages`: les dates restent affichées sur le haut de l'écran
+  * Mise à jour du plugin JC n'est plus possible depuis l'app si la connexion active utilise le websocket
+  * Clic possible n'importe où sur la tuile (et plus uniquement l'icone) si un widget en mode vignette bloque l'accès à la vue détail
+  
+
+- Bug fixes :
+  * les personnalisations étaient parfois perdues après un changement/création de widget
+  * couleur du titre d'un groupe en affichage standard
+  * arrière plan automatique sur le widget lumière
+  * message vide si changement d'équipement non possible
+
+
 ## Version 1.2.2 (22/05/2022)
 - Nouveauté :
   * [Android] Serveur RTSP pour streamer sur le réseau les caméras et microphone de l'appareil
