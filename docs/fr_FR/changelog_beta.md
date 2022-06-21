@@ -8,6 +8,9 @@
   * Menu `messages`: les dates restent affichées sur le haut de l'écran
   * Mise à jour du plugin JC n'est plus possible depuis l'app si la connexion active utilise le websocket
   * Clic possible n'importe où sur la tuile (et plus uniquement l'icone) si un widget en mode vignette bloque l'accès à la vue détail
+  * Option pour retourner horizontalement la vidéo streamé (certaines caméras frontales ont un effet miroir)
+  * Option pour bloquer l'accès détails d'un résumé de widget
+  * Amélioration des performances
   
 
 - Bug fixes :
