@@ -11,6 +11,11 @@
   * Option pour retourner horizontalement la vidéo streamé (certaines caméras frontales ont un effet miroir)
   * Option pour bloquer l'accès détails d'un résumé de widget
   * Amélioration des performances
+  * La mise à jour du plugin JC n'est plus proposée par l'application, si la connexion active est en websocket
+  * Affichage d'un fenêtre d'information pour préciser qu'il faut nous partager les informations d'installation pour chaque nouveau post sur community (sera affiché 3 jours de suite, si vous quittez la fenêtre en appuyant sur le "bon bouton" :), sinon s'affichera beaucoup plus longtemps ...)
+  * Widget : ajout des noms des équipements sur lesquels le widget est paramétré
+  * Sauvegarde quotidienne des fichiers de configuration
+  * Ajout des options `averageValue`, `minValue`, `maxValue` (récupérées sur les commandes historisées uniquement)
   
 
 - Bug fixes :
@@ -18,6 +23,10 @@
   * couleur du titre d'un groupe en affichage standard
   * arrière plan automatique sur le widget lumière
   * message vide si changement d'équipement non possible
+  * édition d'un scénario sans nom
+  * masquer le bouton mise à jour, lorsque seule la version de jeedom est à mettre à jour
+  * flaguer les widgets sans nom (visible avec le bouton "erreur")
+
 
 
 ## Version 1.2.2 (22/05/2022)
