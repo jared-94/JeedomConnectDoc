@@ -1,7 +1,7 @@
 # Changelog JeedomConnect
 
 ## Version 1.2.3 (24/06/2022)
-- Nouveauté :
+- Nouveautés :
   * L'application peut être utilisée en mode hors connexion, lorsque l'appareil n'est pas connecté au réseau (bien entendu les actions sont impossibles, et les infos peuvent ne plus être à jour...!)
   * Ajout activation de l'option `polling` sur chaque équipement du plugin
   * Ajout activation de l'option `websocket` dans l'application
@@ -11,14 +11,13 @@
   * Option pour retourner horizontalement la vidéo streamé (certaines caméras frontales ont un effet miroir)
   * Option pour bloquer l'accès détails d'un résumé de widget
   * Amélioration des performances et de l'ergonomie de l'appli
-  * La mise à jour du plugin JC n'est plus proposée par l'application, si la connexion active est en websocket
   * Affichage d'un fenêtre d'information pour préciser qu'il faut nous partager les informations d'installation pour chaque nouveau post sur community (sera affiché 3 jours de suite, si vous quittez la fenêtre en appuyant sur le "bon bouton" :), sinon s'affichera beaucoup plus longtemps ...)
   * Widget : ajout des noms des équipements sur lesquels le widget est paramétré
   * Sauvegarde quotidienne des fichiers de configuration
   * Ajout des options `averageValue`, `minValue`, `maxValue` (récupérées sur les commandes historisées uniquement). (utilisation: `average(#cmd#)` ou `min(#cmd#)` ou `max(#cmd#)`)
   
 
-- Bug fixes :
+- Bugs fixes :
   * les personnalisations étaient parfois perdues après un changement/création de widget
   * couleur du titre d'un groupe en affichage standard
   * arrière plan automatique sur le widget lumière

@@ -510,6 +510,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
   * [Lors de ma première utilisation une pop-up me demande de "Sélectionner une application de l'écran d'accueil", que dois-je faire ?](#qSetLauncher)  
   * [Mon téléphone reste "bloqué" sur JeedomConnect. Comment retirer le mode launcher ?](#qLauncher)
   * [Comment configurer le widget Caméra ?](#qCamera)
+  * [J'ai un message "A lire" qui n'arrête pas de s'afficher. Comment le masquer définitivement ?](#qWarning)
   * [Je trouve l'application géniale ! Comment vous aider ?](#qDon) 
   * [Je ne trouve pas de réponse à mon probleme dans la doc. Que faire ?](#qForum) 
 
@@ -675,8 +676,8 @@ Si vous souhaitez retirer le mode launcher de votre téléphone, il vous suffit 
 
 <br/>
 
-
 ## Comment configurer le widget Caméra ? <a name="qCamera"></a>  
+
 
 <img src='../images/widget_camera.png' width='50%' />  
 
@@ -717,6 +718,31 @@ l’utilisateur et le mot de passe seront automatiquement remplacés dans les ur
 quand je suis en wifi => je vois la vidéo en direct  <br/>
 quand je suis en 4G => je reçois une photo toutes les 5 sec, avec une qualité de 70%<br/>
 </details>
+
+<br/>
+
+
+## J'ai un message "A lire" qui n'arrête pas de s'afficher. Comment le masquer définitivement ? <a name="qWarning"></a>  
+
+<br/>
+<img src='../images/warningMessage.png' width='30%' />  
+
+rassurez-vous, il n’y a AUCUN bug sur cette fenêtre, si elle réapparait systématiquement c'est que vous faites mal quelque chose :)  
+
+Devant le nombre de fois où nous sommes obligés de (re)demander d’avoir les infos sur votre installation, j’ai mis en place une petite fenêtre d’information « A lire » qui s’affichera lorsque vous irez sur la page principale sur plugin :  
+
+Pour infos :  
+* les 4 boutons sur le bas ne sont initialement pas présents, et s’afficheront 10 sec après que la fenêtre ait été affichée (pile poil le temps de vous laisser lire !)
+* si vous cliquez en dehors de la fenêtre pour la fermer ou cliquez sur un « mauvais » bouton => le message se réaffichera dans la journée, à l’infini...  
+* si vous lisez correctement & entièrement l’info et que vous appuyez sur le bon bouton, la fenêtre n’apparaitra plus dans la journée. Par contre ... 2 nouveaux « rappels » suivront sur les 2 jours suivant, juste pour être sûr que c’était pas un coup de chance et que vous avez bien lu :) :) 
+
+--> du coup le 1er qui me dit qu’il n’avait pas vu l’info, devra ma payer un cocktail ! :D
+
+le process peut-être un peu chiant, j’en suis désolé, mais pas plus enquiquinant que moi qui suit sans cesse obligé de demander les infos 1 sujet sur 2 !
+après tout… il n’y a pas de raison qu’il n’y ait que moi qui ait la partie chiante :D :D :D  
+
+bonne lecture, et attention à vos clics !  
+
 
 <br/>
 
