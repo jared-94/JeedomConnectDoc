@@ -709,12 +709,12 @@ permet de réduire le nombre de photos reçues ainsi que la qualité
 <img src='../images/widget_camera_exemple.png' width='50%' />  
  <br/>  
 url de flux : j’ai indiqué une IP locale => la caméra n’est pas visible depuis l’extérieur de mon domicile  
-DONC je coche la case LAN  
+DONC je coche la case LAN  <br/><br/>
 
-l’utilisateur et le mot de passe seront automatiquement remplacés dans les url de flux et de snapshot  
+l’utilisateur et le mot de passe seront automatiquement remplacés dans les url de flux et de snapshot  <br/><br/>
 
-quand je serai en wifi => je verrai la vidéo  
-quand je serai en 4G => je recevrai une photo toutes les 5 sec, avec une qualité de 70%
+quand je serai en wifi => je verrai la vidéo  <br/>
+quand je serai en 4G => je recevrai une photo toutes les 5 sec, avec une qualité de 70%<br/>
 </details>
 
 <br/>

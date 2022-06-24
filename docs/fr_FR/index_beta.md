@@ -710,12 +710,12 @@ permet de réduire le nombre de photos reçues ainsi que la qualité
 <img src='../images/widget_camera_exemple.png' width='50%' />  
 <br/>  
 url de flux : j’ai indiqué une IP locale => la caméra n’est pas visible depuis l’extérieur de mon domicile  
-DONC je coche la case LAN  
+DONC je coche la case LAN  <br/><br/>
 
-l’utilisateur et le mot de passe seront automatiquement remplacés dans les url de flux et de snapshot  
+l’utilisateur et le mot de passe seront automatiquement remplacés dans les url de flux et de snapshot  <br/><br/>
 
-quand je suis en wifi => je vois la vidéo en direct  
-quand je suis en 4G => je reçois une photo toutes les 5 sec, avec une qualité de 70%
+quand je suis en wifi => je vois la vidéo en direct  <br/>
+quand je suis en 4G => je reçois une photo toutes les 5 sec, avec une qualité de 70%<br/>
 </details>
 
 <br/>
