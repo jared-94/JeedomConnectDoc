@@ -1,5 +1,15 @@
 # Changelog JeedomConnect
 
+## Version 1.2.4 (dev en cours)
+- Nouveautés :
+  * La mise à jour du plugin JC n'est plus proposée par l'application, si la connexion active est en websocket
+
+- Bugs fixes :
+  * Crash sur certaines configurations sans menus bas
+  * Affichage de la barre du haut sur iOS
+  * Authentification au démarrage par FaceId
+  * Titre dans la modale du widget actions génériques
+
 ## Version 1.2.3 (24/06/2022)
 - Nouveautés :
   * L'application peut être utilisée en mode hors connexion, lorsque l'appareil n'est pas connecté au réseau (bien entendu les actions sont impossibles, et les infos peuvent ne plus être à jour...!)
