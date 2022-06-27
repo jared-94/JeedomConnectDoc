@@ -3,6 +3,8 @@
 ## Version 1.2.4 (dev en cours)
 - Nouveautés :
   * La mise à jour du plugin JC n'est plus proposée par l'application, si la connexion active est en websocket
+  * Check et affichage d'un message d'info si jamais le démon est en marche (et automatique) alors qu'aucun équipement n'utilise le websocket
+  * Ajout de la version de l'os/api sur chaque équipement dans le résumé d'infos
 
 - Bugs fixes :
   * Crash sur certaines configurations sans menus bas
