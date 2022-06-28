@@ -1,6 +1,6 @@
 # Changelog JeedomConnect
 
-## Version 1.2.4 (dev en cours)
+## Version 1.2.4 (28/06/2022)
 - Nouveautés :
   * La mise à jour du plugin JC n'est plus proposée par l'application, si la connexion active est en websocket
   * Check et affichage d'un message d'info si jamais le démon est en marche (et automatique) alors qu'aucun équipement n'utilise le websocket
