@@ -1,7 +1,7 @@
 # Changelog JeedomConnect  
 
 ## Version 1.4.0 (30/06/2022)
-- Nouveauté :
+- Nouveautés :
   * L'application peut être utilisée en mode hors connexion, lorsque l'appareil n'est pas connecté au réseau (bien entendu les actions sont impossibles, et les infos peuvent ne plus être à jour...!)
   * Amélioration des performances et de l'ergonomie de l'appli
   * Affichage d'une fenêtre d'information pour préciser qu'il faut nous partager les informations d'installation pour chaque nouveau post sur community (sera affiché 3 jours de suite, si vous quittez la fenêtre en appuyant sur le "bon bouton" :), sinon s'affichera beaucoup plus longtemps ...)
@@ -35,7 +35,7 @@
   * Flaguer les widgets sans nom (visible avec le bouton "erreur")
   
 
-- Bug fixes :
+- Bugs fixes :
   * Arrière plan auto pour les widgets lumières
   * Icône lumière quand intensité < 5%
   * Sélecteur de fichiers sur iOS
