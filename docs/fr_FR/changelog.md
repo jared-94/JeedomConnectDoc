@@ -1,6 +1,6 @@
 # Changelog JeedomConnect  
 
-## Version 1.4.0 (30/06/2022)
+## Version 1.3.0 (30/06/2022)
 - Nouveautés :
   * L'application peut être utilisée en mode hors connexion, lorsque l'appareil n'est pas connecté au réseau (bien entendu les actions sont impossibles, et les infos peuvent ne plus être à jour...!)
   * Amélioration des performances et de l'ergonomie de l'appli
