@@ -1,5 +1,67 @@
 # Changelog JeedomConnect  
 
+## Version 1.4.0 (30/06/2022)
+- Nouveauté :
+  * Nouveau widget `Lecteur multimedia`
+  * Traduction de l'application en anglais
+  * Double authentification et restriction des utilisateurs en local lors de la connexion (si configurée dans Jeedom)
+  * Option pour configurer la transparence des widgets
+  * Paramètres perso `Bloquer vue détails`
+  * Possibilité de détacher un appareil sur un équipement JC depuis l'appli (admin uniquement)
+  * Reset valeur par défaut dans les slider de personnalisation
+  * Choix de la couleur du titre des groupes
+  * Option pour historique en mode Barre
+  * [Android] Serveur RTSP pour streamer sur le réseau les caméras et microphone de l'appareil
+  * [Android] Détection des visages en temps réel (commande binaire créée dans chaque équipement)
+  * Traduction complète de l'application en Espagnol et en Catalan (en plus de l'Anglais)
+  * Possibilité d'agrandir le menu bas
+  * Personnalisation du texte de statut dans le widget `Générique texte`
+  * `Widget multimedia` : possibilité de définir la jaquette à partir d'un chemin de fichier local
+  * Edition de widget dans l'appli : ajout automatique du nom de widget quand une commande est choisie. Pour la sélection des autres commandes, l'équipement est présélectionné 
+  * Sélecteur de widget: pull to refresh pour recharger la liste
+  * L'application peut être utilisée en mode hors connexion, lorsque l'appareil n'est pas connecté au réseau (bien entendu les actions sont impossibles, et les infos peuvent ne plus être à jour...!)
+  * Ajout activation de l'option `polling` sur chaque équipement du plugin
+  * Ajout activation de l'option `websocket` dans l'application
+  * Menu `messages`: les dates restent affichées sur le haut de l'écran
+  * Mise à jour du plugin JC n'est plus possible depuis l'app si la connexion active utilise le websocket
+  * Clic possible n'importe où sur la tuile (et plus uniquement l'icone) si un widget en mode vignette bloque l'accès à la vue détail
+  * Option pour retourner horizontalement la vidéo streamé (certaines caméras frontales ont un effet miroir)
+  * Option pour bloquer l'accès détails d'un résumé de widget
+  * Amélioration des performances et de l'ergonomie de l'appli
+  * Affichage d'un fenêtre d'information pour préciser qu'il faut nous partager les informations d'installation pour chaque nouveau post sur community (sera affiché 3 jours de suite, si vous quittez la fenêtre en appuyant sur le "bon bouton" :), sinon s'affichera beaucoup plus longtemps ...)
+  * Widget : ajout des noms des équipements sur lesquels le widget est paramétré
+  * Sauvegarde quotidienne des fichiers de configuration
+  * Ajout des options `averageValue`, `minValue`, `maxValue` (récupérées sur les commandes historisées uniquement). (utilisation: `average(#cmd#)` ou `min(#cmd#)` ou `max(#cmd#)`)
+  * La mise à jour du plugin JC n'est plus proposée par l'application, si la connexion active est en websocket
+  * Check et affichage d'un message d'info si jamais le démon est en marche (et automatique) alors qu'aucun équipement n'utilise le websocket
+  * Ajout de la version de l'os/api sur chaque équipement dans le résumé d'infos
+  * Flaguer les widgets sans nom (visible avec le bouton "erreur")
+  
+
+- Bug fixes :
+  * Arrière plan auto pour les widgets lumières
+  * Icône lumière quand intensité < 5%
+  * Sélecteur de fichiers sur iOS
+  * Notifications iOS quand l'appli est fermée
+  * Crash au démarrage si objet vide dans la conf Jeedom
+  * Crash au démarrage sur certains appareils Android
+  * Mode immersif sur certains appareils Android
+  * Min/max de l'axe vertical du widget `Historique`
+  * Nombre de plugin à mettre à jour corrigé
+  * Encodage des caractères dans les notifications
+  * Bug de la lecture des vidéos depuis l'extérieur
+  * Les personnalisations étaient parfois perdues après un changement/création de widget
+  * Couleur du titre d'un groupe en affichage standard
+  * Arrière plan automatique sur le widget lumière
+  * Message vide si changement d'équipement non possible
+  * Edition d'un scénario sans nom
+  * Masquer le bouton mise à jour, lorsque seule la version de jeedom est à mettre à jour
+  * Crash sur certaines configurations sans menus bas
+  * Affichage de la barre du haut sur iOS
+  * Authentification au démarrage par FaceId
+  * Titre dans la modale du widget actions génériques
+
+
 ## Version 1.3.0 (30/06/2022)
 - Nouveautés :
   * Nouveau widget `Lecteur multimedia`
@@ -35,7 +97,8 @@
   * La mise à jour du plugin JC n'est plus proposée par l'application, si la connexion active est en websocket
   * Check et affichage d'un message d'info si jamais le démon est en marche (et automatique) alors qu'aucun équipement n'utilise le websocket
   * Ajout de la version de l'os/api sur chaque équipement dans le résumé d'infos
-  * Gestion de l'IPv6 pour la connexion Websocket
+  * Gestion de l'IPv6 pour la connexion Websocket  
+
 ## Version 1.2.0 (12/04/2022)
 - Nouveautés :
   * Ajout des raccourcis sur l'application : vous pouvez définir jusqu'à 4 raccourcis sur l'application. Ces actions sont accessibles après un appuie long sur l'icône de l'application JC sur votre bureau. Vous pouvez choisir d'éxecuter une commande, un scénario, ou l'affichage d'une page.
@@ -75,7 +138,8 @@
   * Widget `Lanceur d'application` : choix de l'appli lors de l'édition/création depuis l'appli
   * Ajout de l'option min/max sur le widget historique
   * Utilisation du nom perso d'une commande dans la modale de confirmation d'action
-  * Ajout du pack d'icônes `kiko`
+  * Ajout du pack d'icônes `kiko`  
+
 ## Version 1.1.0 (04/01/2022)
 - Nouveautés [Android only]:
   * Mise en place du Service d'arrière plan qui permet une communication permanente entre JC et le plugin. Les infos sur l'appareil et les actions depuis Jeedom seront exécutées quelque soit l'état de l'application.

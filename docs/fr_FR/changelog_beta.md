@@ -78,6 +78,8 @@
   * Notifications iOS quand l'appli est fermée
   * Crash au démarrage si objet vide dans la conf Jeedom
   * Crash au démarrage sur certains appareils Android
+
+  
 ## Version 1.2.0 (12/04/2022)
 - Nouveauté :
   * Ajout du pack d'icônes `kiko`
