@@ -1,7 +1,12 @@
 # Changelog JeedomConnect  
 
+## Version 1.3.1 (03/07/2022)
+
+* ajout d’une option sur la page configuration pour définir si le plugin doit gérer les connexions IPV6 ou non → ‹ non › étant le défaut  
+
 ## Version 1.3.0 (30/06/2022)
-- Nouveautés :
+
+* Nouveautés :
   * L'application peut être utilisée en mode hors connexion, lorsque l'appareil n'est pas connecté au réseau (bien entendu les actions sont impossibles, et les infos peuvent ne plus être à jour...!)
   * Amélioration des performances et de l'ergonomie de l'appli
   * Affichage d'une fenêtre d'information pour préciser qu'il faut nous partager les informations d'installation pour chaque nouveau post sur community (sera affiché 3 jours de suite, si vous quittez la fenêtre en appuyant sur le "bon bouton" :), sinon s'affichera beaucoup plus longtemps ...)
@@ -17,9 +22,9 @@
   * [Android] Serveur RTSP pour streamer sur le réseau les caméras et microphone de l'appareil
   * [Android] Détection des visages en temps réel (commande binaire créée dans chaque équipement)
   * Possibilité d'agrandir le menu bas
-  * `Générique texte` : personnalisation du texte de statut dans le widget 
+  * `Générique texte` : personnalisation du texte de statut dans le widget
   * `Widget multimedia` : possibilité de définir la jaquette à partir d'un chemin de fichier local
-  * Edition de widget dans l'appli : ajout automatique du nom de widget quand une commande est choisie. Pour la sélection des autres commandes, l'équipement est présélectionné 
+  * Edition de widget dans l'appli : ajout automatique du nom de widget quand une commande est choisie. Pour la sélection des autres commandes, l'équipement est présélectionné
   * Sélecteur de widget : pull to refresh pour recharger la liste
   * Ajout activation de l'option `polling` sur chaque équipement du plugin
   * Ajout activation de l'option `websocket` dans l'application
@@ -35,42 +40,42 @@
   * Flaguer les widgets sans nom (visible avec le bouton "erreur")
   * Gestion de l'IPv6 pour la connexion Websocket  
   
-
 <details>
   <summary>un exemple</summary>  
 - Bugs fixes :
-  * Arrière plan auto pour les widgets lumières
+  *Arrière plan auto pour les widgets lumières
   * Icône lumière quand intensité < 5%
-  * Sélecteur de fichiers sur iOS
+  *Sélecteur de fichiers sur iOS
   * Notifications iOS quand l'appli est fermée
-  * Crash au démarrage si objet vide dans la conf Jeedom
+  *Crash au démarrage si objet vide dans la conf Jeedom
   * Crash au démarrage sur certains appareils Android
-  * Mode immersif sur certains appareils Android
+  *Mode immersif sur certains appareils Android
   * Min/max de l'axe vertical du widget `Historique`
-  * Nombre de plugin à mettre à jour corrigé
+  *Nombre de plugin à mettre à jour corrigé
   * Encodage des caractères dans les notifications
-  * Bug de la lecture des vidéos depuis l'extérieur
+  *Bug de la lecture des vidéos depuis l'extérieur
   * Les personnalisations étaient parfois perdues après un changement/création de widget
-  * Message vide si changement d'équipement non possible
+  *Message vide si changement d'équipement non possible
   * Edition d'un scénario sans nom
-  * Masquer le bouton mise à jour, lorsque seule la version de jeedom est à mettre à jour
+  *Masquer le bouton mise à jour, lorsque seule la version de jeedom est à mettre à jour
   * Crash sur certaines configurations sans menus bas
-  * Affichage de la barre du haut sur iOS
+  *Affichage de la barre du haut sur iOS
   * Authentification au démarrage par FaceId
   * Titre dans la modale du widget actions génériques
 </details>
 
 ## Version 1.2.0 (12/04/2022)
-- Nouveautés :
+
+* Nouveautés :
   * Ajout des raccourcis sur l'application : vous pouvez définir jusqu'à 4 raccourcis sur l'application. Ces actions sont accessibles après un appuie long sur l'icône de l'application JC sur votre bureau. Vous pouvez choisir d'éxecuter une commande, un scénario, ou l'affichage d'une page.
   * Prise en compte des droits utilisateurs (pour une connexion avec un `utilisateur limité`) sur l'exécution des scénarios et des commandes
   * Switch d'un équipement à l'autre sans se déconnecter/reconnecter possible depuis le menu `Paramètres de connexion`
   * Réorganisation du menu `Paramètres de connexion` : Afficher les informations de connexion, Permet la déconnexion, Gère l'option de polling
-  * Personnalisation des sliders : choix des couleurs, taille, format (horizontale, verticale, circulaire), ... 
+  * Personnalisation des sliders : choix des couleurs, taille, format (horizontale, verticale, circulaire), ...
   * Nouveau sélecteur de couleurs dans l'appli, dispo aussi dans les widgets `Lumières de couleurs` et `Groupe de lumières`
-  * Ajout du `Centre de Messages` 
+  * Ajout du `Centre de Messages`
   * Ajout de la `Timeline`
-  * Permet la recopie des personnalisations sur un autre équipement JC 
+  * Permet la recopie des personnalisations sur un autre équipement JC
   * Le paramètre `Grille avancée` peut se configurer sur chaque page  
   * Ajout du choix du volume sur la commande `TTS`
   * Permet la regénération de la clé API d'un équipement (/!\ l'application doit être arrêtée et tuée avant de faire la manip sur le plugin /!\ )
@@ -102,13 +107,14 @@
   * Ajout du pack d'icônes `kiko`  
 
 ## Version 1.1.0 (04/01/2022)
-- Nouveautés [Android only]:
+
+* Nouveautés [Android only]:
   * Mise en place du Service d'arrière plan qui permet une communication permanente entre JC et le plugin. Les infos sur l'appareil et les actions depuis Jeedom seront exécutées quelque soit l'état de l'application.
   * Ajout de nouvelle commandes info : `Etat écran`, `En charge`, `Etat Bluetooth`, `Etat Wifi`, `Adresse IP`, `Réseau wifi (SSID)`, `Prochaine Alarme`
   * Ajout de nouvelles commandes actions : `Allumer l'écran`, `Eteindre l'écran`, `Jouer un son`, `Commande shell`
 
-- Nouveautés :
-  * Ajout de nouvelles commandes actions : `TTS `
+* Nouveautés :
+  * Ajout de nouvelles commandes actions : `TTS`
   * Widget `scénario` : ajout des options de sécurité pour executer le scenario
   * Accès direct à la configuration des widgets et des notifications sur un équipement depuis la page principale du plugin
   * Ajout du lien vers le forum community, dans le menu `A propos`
@@ -120,9 +126,9 @@
   * Possibilité d'utiliser un fichier/image pour le scan du QR code
   * Petite refonte de la page `Préférence` de l'appli
   * Mise à jour des librairies de notification (dont compatibilité avec Android 12)  
-  * Récupère l'intégralité des logs des plugins   
+  * Récupère l'intégralité des logs des plugins
   
-- Bug fixes :
+* Bug fixes :
   * Boutons d'actions prennent maintenant la couleur du thème
   * Trie des widgets sur le bouton `Widgets supplémentaites`
   * Titre dans la barre du haut quand pas de menu bas
@@ -141,22 +147,23 @@
   * Widget `Historique` prise en compte de l'intervalle défini dans le widget, et pas celui défini dans l'application (menu/pref/zoom)
 
 ## Version 1.0.0+1 (17/12/2021)
-maj plugin uniquement ! 
+
+maj plugin uniquement !
 fix mineur liens / documentation
 
 ## Version 1.0.0 (10/12/2021)
 
-- Nouveautés :
-  * Ajout d'un bouton `Infos Community` : ouvre une fenêtre qui affiche toutes les informations qui nous sont nécessaires lorsque vous créez un nouveau sujet sur le forum. Il vous suffit simplement de cliquer sur le bouton `Copier`, puis sur le forum coller ces infos. Tout est déjà préformaté ! 
+* Nouveautés :
+  * Ajout d'un bouton `Infos Community` : ouvre une fenêtre qui affiche toutes les informations qui nous sont nécessaires lorsque vous créez un nouveau sujet sur le forum. Il vous suffit simplement de cliquer sur le bouton `Copier`, puis sur le forum coller ces infos. Tout est déjà préformaté !
   * Création de widgets en masse (depuis le plugin et depuis l'app !) : ces créations sont possibles uniquement si les commandes de vos équipements sont correctement configurées avec des types génériques (normalement à la charge des développeurs des plugins que vous utilisez).  
   Pour vérifier/modifier vos commandes avec les bons types génériques, vous pouvez utiliser le bouton `Config types génériques` <i>(pour les personnes qui seraient déjà en version beta/alpha sur le core de jeedom (4.2.x) vous pouvez utiliser `Outils/Types d'équipement`)</i>  
   L'outil peut détecter des widgets déjà existants, dans ce cas ils seront mis en surbrillance et décochés.  
   * Création de widget (unitaire) en automatique : si vous choisissez de créer un widget de façon unitaire, vous avez la possibilité de pré-charger les différentes commandes nécessaires pour le widget en cliquant sur le bouton `Création automatique` (même pré-requis que le point précédent) et en sélectionnant l'équipement qui sera utilisé pour créer le widget.  
-  * Mode grille avancée (à activer dans `menu/préférences`) : permet de choisir la taille des widgets et les placer à l'endroit désiré sur l'écran. Vous n'êtes plus limité dans une grille standard de 3 ou 4 widgets par lignes avec tous les mêmes tailles, mais vous pouvez organiser chaque page comme bon vous semble, avec des espaces, des widgets grands, petits, longs, hauts, ... 
+  * Mode grille avancée (à activer dans `menu/préférences`) : permet de choisir la taille des widgets et les placer à l'endroit désiré sur l'écran. Vous n'êtes plus limité dans une grille standard de 3 ou 4 widgets par lignes avec tous les mêmes tailles, mais vous pouvez organiser chaque page comme bon vous semble, avec des espaces, des widgets grands, petits, longs, hauts, ...
   * Nouvelle fenêtre pour configurer les commandes `Notifier tous` sur la page principale du plugin
-  * Widget `Climatisation` : 
-    - Possibilité d'ajouter autant de modes que voulu - **Obligation de re-créer les modes**
-    - Possibilité pour la ventilation d'utiliser une info `string` et une action `select`
+  * Widget `Climatisation` :
+    * Possibilité d'ajouter autant de modes que voulu - **Obligation de re-créer les modes**
+    * Possibilité pour la ventilation d'utiliser une info `string` et une action `select`
   * Ajout de la variable `#value#` dans les widgets compatibles
   * Pré-sélectionne automatiquement la pièce lors du choix des commandes en fonction de la pièce sélectionnée sur le widget
   * Notification iOs - Option pour qu'une notification arrive en `alerte critique` et possibilité de régler le volume du son (sonnera même si le son est coupé ou en mode `Ne pas déranger`)
@@ -183,52 +190,52 @@ fix mineur liens / documentation
 <summary>Nombreux Bug fixes</summary>
 <p>
 
-  * Problèmes de connexion au démarrage
-  * Sauvegarde des notifications reçues
-  * Crash de la modale de partage des paramètres persos
-  * Son des notifications sous iOS
-  * Possible fix du problème d'appui sur widget sur iOS
-  * Envoie du niveau de batterie
-  * Animation des images au format gif
-  * Nombre d'éléments (comptage) dans les widgets groupe
-  * Affichage des infos supplémentaires dans la vue détails
-  * Accès aux images et vidéos dans les notifications avec l'URL locale si sur le réseau local
-  * Page de personnalisation du widget slider générique
-  * L'ajout de variables dans l'édition de textes se fait à la position du curseur
-  * Affichage des boutons de zoom ne reste plus grisés
-  * Le zoom de l'historique n'est pas changé en cas de nouvelles données dans l'historique
-  * Affichage des images dans un sous-dossier
-  * Affichage des badges sur les icônes dans le drawer
-  * Renfort sécurité pour la 4.2 : gestion des autorisations de téléchargements 
-  * Clic long sur widget pour iOS
-  * Correction du contenu des sous-groupes lorsqu'il y a plusieurs colones
-  * Amélioration de la connexion
-  * Image du `groupe de PIR` qui reste "rouge" meme si le nombre d'alertes est à 0
-  * Widget mode : retrait de l'icone en doublon (était également affiché sur la valeur active)
-  * Sauvegarde de l'image de notification dès sa réception
-  * Fix animation décentrée des icônes FA
-  * Bouton lock/unlock dans le grand widget thermostat
-  * Problème d'affichage des widgets dans un groupe
-  * Les groupes désactivés sont masqués
-  * Empêche la connexion au websocket si connexion en cours
-  * Pas de polling si option activée mais en websocket
-  * Création de widget depuis l'appli était cassée (pas d'id affecté)
-  * Rafraichissement des images dans le widget `Images`
-  * Crash dans la grille principale si vide
-  * Fix ordre des infos supplémentaires
-  * Masquer prévisualisation de la carte en personalisation
-  * Amélioration du rafraichissement de tous les états
-  * Pleins d'autres petits bug corrigés, amélioration...
+* Problèmes de connexion au démarrage
+* Sauvegarde des notifications reçues
+* Crash de la modale de partage des paramètres persos
+* Son des notifications sous iOS
+* Possible fix du problème d'appui sur widget sur iOS
+* Envoie du niveau de batterie
+* Animation des images au format gif
+* Nombre d'éléments (comptage) dans les widgets groupe
+* Affichage des infos supplémentaires dans la vue détails
+* Accès aux images et vidéos dans les notifications avec l'URL locale si sur le réseau local
+* Page de personnalisation du widget slider générique
+* L'ajout de variables dans l'édition de textes se fait à la position du curseur
+* Affichage des boutons de zoom ne reste plus grisés
+* Le zoom de l'historique n'est pas changé en cas de nouvelles données dans l'historique
+* Affichage des images dans un sous-dossier
+* Affichage des badges sur les icônes dans le drawer
+* Renfort sécurité pour la 4.2 : gestion des autorisations de téléchargements
+* Clic long sur widget pour iOS
+* Correction du contenu des sous-groupes lorsqu'il y a plusieurs colones
+* Amélioration de la connexion
+* Image du `groupe de PIR` qui reste "rouge" meme si le nombre d'alertes est à 0
+* Widget mode : retrait de l'icone en doublon (était également affiché sur la valeur active)
+* Sauvegarde de l'image de notification dès sa réception
+* Fix animation décentrée des icônes FA
+* Bouton lock/unlock dans le grand widget thermostat
+* Problème d'affichage des widgets dans un groupe
+* Les groupes désactivés sont masqués
+* Empêche la connexion au websocket si connexion en cours
+* Pas de polling si option activée mais en websocket
+* Création de widget depuis l'appli était cassée (pas d'id affecté)
+* Rafraichissement des images dans le widget `Images`
+* Crash dans la grille principale si vide
+* Fix ordre des infos supplémentaires
+* Masquer prévisualisation de la carte en personalisation
+* Amélioration du rafraichissement de tous les états
+* Pleins d'autres petits bug corrigés, amélioration...
 
 </p>
 </details>
 <br>
 
-
 ## Version 0.23.0 (07/10/2021)
-- Nouveautés :
+
+* Nouveautés :
   * Nouveau widget `Historique` (graphique dans la grille)
-  * Historiques : paramètres de personnalisation (couleurs, type de courbe, affichage par défaut...) 
+  * Historiques : paramètres de personnalisation (couleurs, type de courbe, affichage par défaut...)
   * Nouvelle commande pour afficher un `Pop-Up` dans l'application (si JC n'est pas en cours d'utilisation [Android uniquement], alors on l'affiche à l'écran)
   * Widget `Géolocalisation` : affichage de la carte dans le widget en mode carte
   * Ask dans les notifications natives sur iOS
@@ -256,14 +263,14 @@ fix mineur liens / documentation
   * Envoie de l'utilisateur et du widget à chaque exécution de commande
   * Nombreux bug fix
 
-
 ## Version 0.22.0 (07/09/2021)
-- Nouveautés
+
+* Nouveautés
   * Page batteries / piles
   * Option pour activer le polling en http
   * Page Santé : permet de voir la page santé de votre jeedom, et gérer les démons de vos plugins : statut/start/stop (start/stop uniquement possible si l'utilisateur rattaché à l'équipement connecté appartient au groupe admin)
   * Page Mise à jour des plugins : permet de voir le nombre de mise à jour disponible sur vos plugins et réaliser tout ou partie de ces maj (maj uniquement possible si l'utilisateur rattaché à l'équipement connecté appartient au groupe admin)
-  * Paramètres avancés pour la géolocalisation : 
+  * Paramètres avancés pour la géolocalisation :
   * Sélection de l'affichage ou non du niveau de batterie de son équipement JC sur la page `Equipement` de votre Jeedom (et donc la page JC correspondante)
   * Edition des widgets depuis l'application (appui long sur un widget)
   * Paramètres personnalisés pour les widgets pour chaque appareil
@@ -286,7 +293,7 @@ fix mineur liens / documentation
   * Titres et sous-titres sous conditions : possibilité de mettre du code JavaScript (ex: `#[Réseau][PC bureau][Online]# == 1 ? "En ligne" : "Hors ligne"`)
   * Personnalisation du fond d'écran en vue Détails (screenId=10), pour l'instant commun à toutes les vues Détails
   * Widget générique slider : mode Heure (format Jeedom, ex: 145 -> 01H45, 1805 -> 18H05)
-  * Widget générique slider : accès boîte de dialogue avec slider en vue vignette 
+  * Widget générique slider : accès boîte de dialogue avec slider en vue vignette
   * Widget générique actions : 2 nouvelles options pour personnaliser l'affichage
   * Widget Alarme : option pour les modes
   * Nouvelle option de personnalisation : masquer contenu de la carte
@@ -297,7 +304,8 @@ fix mineur liens / documentation
   * Nombreuses corrections de bugs
 
 ## Version 0.21.0 (31/05/2021)
-- Nouveautés appli :
+
+* Nouveautés appli :
   * Mode immersif (permet de masquer les barres de statut et de navigation d'Android)
   * Fond d'écran : possibilité de le définir avec des conditions sur la page courante ou de commandes.
   * Barre du haut : possibilité d'ajouter et trier des boutons de racourcis
@@ -317,29 +325,29 @@ fix mineur liens / documentation
   * Authentification pour le flux caméra  
   * Mode launcher : Jeedom Connect peut se substituer à votre launcher Android
   * Page lanceur d'applications à ajouter dans les boutons de la barre du haut. Créez aussi des liens vers vos apps favorites (appuie long sur l'application, puis `ajouter/supprimer en favoris`)
-  * Notifications : 
+  * Notifications :
     * Prise en charge dans l'application du code HTML des messages
-    * Ouverture des liens dans le navigateur. 
+    * Ouverture des liens dans le navigateur.
     * Boutons d'actions alignés verticalement
   * Widgets en mode vignettes : choix d'utiliser l'ancien ou le nouveau design  
   * Configuration : définir le trie des widgets par défaut (appliqué sur la page principale du plugin, et dans la liste déroulante de sélection des widgets sur l'assistant)
-  * Niveau de batterie   
+  * Niveau de batterie
   * Option pour n'afficher qu'une seule vignette par ligne
 
-- Nouveautés plugin :
+* Nouveautés plugin :
   * Vue d'ensemble qui permet de faire de l'édition de masse sur les widgets (uniquement sur les données communes)
   * Conditions des images plus flexible : possibilité d'enchaîner les conditions
   * Option pour ajouter l'altitude à la commande position
-  * Conserve les filtres et ordres défini sur la page principale du plugin 
+  * Conserve les filtres et ordres défini sur la page principale du plugin
   * Sur l'assistant widget : ajout d'un icone sur les widgets désactivés
   * Bouton export (format csv) sur la "vue d'ensemble" des widgets
-  * Ajout d'une commande info pour le snapshot caméra 
+  * Ajout d'une commande info pour le snapshot caméra
   * Assistant widget : ajout de filtres (pièces, présents) pour l'ajout de widgets
   * Nouvelle commande pour détacher l'appareil lié à un équipement
   * Bouton `Copier vers` qui permet de copier la conf d'un équipement vers un autre
   * Ajout de nouvelles fonctionnalités pour traitement en masse, cf [post dédié](https://community.jeedom.com/t/jeedom-connect-bloc-code-pour-realiser-diverses-operations/61818)
 
-- Bug fixes :
+* Bug fixes :
   * Correction du timestamp pour les données de géolocalisation
   * Bug des sous-widget de la vue détail corrigé
   * Bug des widgets supprimés alors qu'ils existent dans un "widget parent"
@@ -358,7 +366,8 @@ fix mineur liens / documentation
   * Rotation écran après affichage d'une webview
 
 ## Version 0.20.0 (20/04/2021)
-- Nouveautés :
+
+* Nouveautés :
   * Ajout du widget caméra !
   * Personnalisation des icones sur les résumés : nouveau menu "Résumé" à configurer dans l'assistant widget
   * Prise en compte des résumés "non-standard" (ie: ajoutés par l'utilisateur)
@@ -386,7 +395,7 @@ fix mineur liens / documentation
   * Nouvelle commande info `Activité` (valeurs possibles : still, on_foot, running, on_bicycle and in_vehicle)
   * Possibilité de définir le type de connexion pour chaque équipement (http ou websocket). Pensez à re-générer vos QR-code
 
-- Bug fixes :
+* Bug fixes :
   * Titres coupés dans menu haut sur One Plus
   * Effacement des notifications android lorsque l'on supprime les notifs dans l'application
   * Ordre des résumés de pièces
@@ -394,7 +403,8 @@ fix mineur liens / documentation
   * liste des widgets triées par ordre alphabétique
 
 ## Version 0.19.0 (01/04/2021)
-- Nouveautés :  
+
+* Nouveautés :  
   * SplashScreen qui pique pas les yeux  
   * Possibilité de sécuriser les action avec un code alphanumérique  
   * Possibilité de personnaliser le chemin des images persos (par défaut `plugins/JeedomConnect/data/img/user_files/`)  
@@ -406,17 +416,16 @@ fix mineur liens / documentation
   * Ajout d'une option pour masquer les historiques
   * Ajout d'une option pour définir le zoom par défaut sur les historiques
 
-
-- Améliorations :  
+* Améliorations :  
   * Widget WebView :
-    + accélération matérielle activée.
-    + Login automatique sur les pages de Jeedom  
+    * accélération matérielle activée.
+    * Login automatique sur les pages de Jeedom  
   * Meilleures performances sur l'Historique  
   * Lors de la suppression d'un widget, affichage du nom des équipements auxquels il est attaché
   * Widget fenêtre : Statut accepte les valeurs numériques maitenant (en + de binaire)
   * Toutes les actions d'un `générique action` sont affichées en mode carte
 
-- Bug Fix :  
+* Bug Fix :  
   * Correction des heures mal affichées ou avec retard d'une heure  
   * Correction des informations 'NaN' sur les titres/sous-titres
   * Alignement dans les widgets Favoris, Résumé, et dans les vignettes sans statut  
@@ -428,155 +437,196 @@ fix mineur liens / documentation
   * Fix crash sur retour du webview
 
 ## Version 0.18.2 Beta ET Stable (18/03/2021)  
+
 Dorénavant l'application (apk) sera disponible au téléchargement directement et uniquement sur le Store, aussi bien pour la version stable que pour la version bêta (dans ce dernier cas, un enregistrement est nécessaire -- [lire la doc](index.md#qBeta))  
-- Changement du logo et du splash-screen
-- Possibilité de passer en mode Vignette/Cartes sur la page des Pièces
-- Accès aux notifications depuis l'icône 'Sonnerie' en haut à droite de l'écran
-- Bug Fix :  
+
+* Changement du logo et du splash-screen
+* Possibilité de passer en mode Vignette/Cartes sur la page des Pièces
+* Accès aux notifications depuis l'icône 'Sonnerie' en haut à droite de l'écran
+* Bug Fix :  
   * prise en compte de l'inversion des états pour les volets roulant
 
 Côté plugin :
-- Possibilité d'exporter & d'importer l'ensemble des widgets (sur page configuration du plugin)
-- Ajout du lien d'inscription au programme bêta-testeur
-- Bug Fix :  
+
+* Possibilité d'exporter & d'importer l'ensemble des widgets (sur page configuration du plugin)
+* Ajout du lien d'inscription au programme bêta-testeur
+* Bug Fix :  
   * importer plusieurs fois des fichiers à la suite
 
 ## Version 0.18.1 Beta (17/03/2021)  
-- Bug Fix :
+
+* Bug Fix :
   * lors d'une modification d'un widget, l'application est mise à jour automatiquement
   * erreur sur le déplacement des widgets sans parent
 
-
 ## Version 0.18.0 Beta (15/03/2021)  
+
 :information_source: Pré-requis (facultatif mais préférable !) : <b>AVANT</b> de mettre à jour le plugin, ouvrez l'assistant sur chacun de vos équipements, allez sur l'onglet `Pièces` et assurez vous que chacune des pièces créée est bien attachée à un objet Jeedom !  
 Pensez également à mettre le plugin JeedomConnect en `DEBUG` !
 
 :warning: Une fois la mise à jour effectuée, une migration manuelle est nécessaire pour faire fonctionner cette nouvelle version. <b>Merci de lire la [documentation](index.md#qMigration)</b> pour voir comment faire ! :warning:
 
-- Refonte complète de la gestion des widgets :
+* Refonte complète de la gestion des widgets :
   * création des widgets depuis la page principale du plugin
   * l'assistant disponible sur chaque équipement permet dorénavant de rattacher un widget existant à l'équipement
   * fonction de migration permettant de créer automatiquement tous les widgets d'une version précédente dans la version courante (sur la page de configuration)
   * ajout fonction de recherche sur les widgets : fonctionne sur le nom et sur l'id du widget (visible en info-bulles)
 
-- Ajout du widget `Géolocalisation`
+* Ajout du widget `Géolocalisation`
 
-- Bug fix :
+* Bug fix :
   * les commandes de chaque équipements sont déplaçables
   * amélioration de la performance sur la recherche des icônes (merci olivvv59)
 
-- côté APK :
+* côté APK :
   * affichage d'un message plus précis sur la différence entre la version de plugin et celle de l'application
   * mise en place d'un pop-up pour télécharger la bonne dernière version de l'application directement
 
-
 ## Version 0.17.1 Beta (05/03/2021)  -- Version Stable (15/03/2021)
-- Possibilité d'envoyer plusieurs images dans les notifications
-- Images dans les notifications accessibles en cliquant dessus (plein écran, zoom et scroll)
-- Widget clim : fanSpeed non limité
-- Nouveau slider pour la température de blanc dans les widgets de lumière
-- Nouveau widget Web View qui permet d'afficher un design, le dashboard ou n'importe quelle page web
-- Bug fix
+
+* Possibilité d'envoyer plusieurs images dans les notifications
+
+* Images dans les notifications accessibles en cliquant dessus (plein écran, zoom et scroll)
+* Widget clim : fanSpeed non limité
+
+* Nouveau slider pour la température de blanc dans les widgets de lumière
+* Nouveau widget Web View qui permet d'afficher un design, le dashboard ou n'importe quelle page web
+
+* Bug fix
 
 ## Version 0.17.0 Beta (04/03/2021)
-- Ajout d'un bouton Dupliquer pour les widgets
-- Ré-écriture du sélectionneur d'icônes / images
-- Possibilité de choisir image ou icône sur les widgets
-- Possibilité d'ajouter des commandes infos à tous les widgets
-- Images sous conditions dans tous les widgets
-- Possibilité de personnaliser les champs Nom et Sous-titre à l'aide de commandes infos
-- Améliorations diverses et corrections de bugs dans l'appli
+
+* Ajout d'un bouton Dupliquer pour les widgets
+
+* Ré-écriture du sélectionneur d'icônes / images
+* Possibilité de choisir image ou icône sur les widgets
+* Possibilité d'ajouter des commandes infos à tous les widgets
+* Images sous conditions dans tous les widgets
+* Possibilité de personnaliser les champs Nom et Sous-titre à l'aide de commandes infos
+* Améliorations diverses et corrections de bugs dans l'appli
 
 ## Version 0.16.0 (22/02/2021)
-- Notifications : Possibilité d'envoyer des images
-- Geolocalisation : mode Tracking pour le suivi constant de l'appareil (nouvelle commande `Position` dans les équipements)
-- Fix widgets non supprimés
+
+* Notifications : Possibilité d'envoyer des images
+
+* Geolocalisation : mode Tracking pour le suivi constant de l'appareil (nouvelle commande `Position` dans les équipements)
+* Fix widgets non supprimés
 
 ## Version 0.15.4 (11/02/2021)
-- Notification : comptibilité avec l'architecture X32
-- Option pour afficher la barre du haut
+
+* Notification : comptibilité avec l'architecture X32
+
+* Option pour afficher la barre du haut
 
 ## Version 0.15.3 Beta (10/02/2021)
-- Fix bug taille icônes Jeedom
-- Fix connection http
+
+* Fix bug taille icônes Jeedom
+
+* Fix connection http
 
 ## Version 0.15.2 Beta (09/02/2021)
-- Ajout des icônes Jeedom
-- Correction du bug des widgets en double
+
+* Ajout des icônes Jeedom
+
+* Correction du bug des widgets en double
 
 ## Version 0.15.1 Beta (06/02/2021)
-- Widget groupe de prises
-- Lumières : température de blancs
+
+* Widget groupe de prises
+
+* Lumières : température de blancs
 
 ## Version 0.15.0 Beta (04/02/2021)
+
 ***Attention, l'application n'est plus en debug mais en release, veuillez désinstaller la version précédente***
-- Pièces : possibilité de lié un objet Jeedom aux pièces
-- Pièces : ajout du widget Pièce qui donne le résumé de l'objet
-- Pièces : ajout dans l'app d'un bouton Pièces (menu gauche) qui donne accès à tous les résumés
-- Authentification automatique à l'interface Web
-- Menu du bas : possibilité d'exécuter des actions lors d'un swipe vers le haut ou le bas
-- Historique : Axe horizontal en bas (même avec valeurs négatives)
-- Historique : Option pour ne pas afficher dans la vue détails
-- Historique : Option pour choisir le zoom par défaut
-- Thermostat : slider désactivé lorsque vérouillé
-- Optimisation de la connexion http
-- Résolution de divers bugs et améliorations mineures
+
+* Pièces : possibilité de lié un objet Jeedom aux pièces
+* Pièces : ajout du widget Pièce qui donne le résumé de l'objet
+* Pièces : ajout dans l'app d'un bouton Pièces (menu gauche) qui donne accès à tous les résumés
+* Authentification automatique à l'interface Web
+* Menu du bas : possibilité d'exécuter des actions lors d'un swipe vers le haut ou le bas
+* Historique : Axe horizontal en bas (même avec valeurs négatives)
+* Historique : Option pour ne pas afficher dans la vue détails
+* Historique : Option pour choisir le zoom par défaut
+* Thermostat : slider désactivé lorsque vérouillé
+* Optimisation de la connexion http
+* Résolution de divers bugs et améliorations mineures
 
 ## Version 0.14.3 (27/01/2021)
+
 =======
+
 ## Version 0.14.3 (28/01/2021)
 
-- Correction bug status lumières
-- Ajout icônes groupe
-- Option pour inverser un binaire
-- Assistant widget: remplissage auto de certains champs info
-- Appli : option pour retour haptique sur action
-- Bugs corrigés sur l'assistant de config
-- Bug échelle historique
+* Correction bug status lumières
+* Ajout icônes groupe
+* Option pour inverser un binaire
+* Assistant widget: remplissage auto de certains champs info
+* Appli : option pour retour haptique sur action
+* Bugs corrigés sur l'assistant de config
+* Bug échelle historique
 
 ## Version 0.14.0 Beta (19/01/2021)
-- Widget Portail : status en option
-- Widget Lumière On/Off : le status peut être numérique
-- Fix : titre des fenêtres dans l'assistant
-- Nouveaux widgets : Groupe PIR - Groupe génériques binaires - Générique slider
-- Ajout des icônes Font Awesome
-- Appli fix : images des notifications
-- Appli : Option pour définir les arrondis des éléments
-- Un groupe vide fera passer à la ligne en mode vignettes
+
+* Widget Portail : status en option
+
+* Widget Lumière On/Off : le status peut être numérique
+* Fix : titre des fenêtres dans l'assistant
+
+* Nouveaux widgets : Groupe PIR - Groupe génériques binaires - Générique slider
+
+* Ajout des icônes Font Awesome
+
+* Appli fix : images des notifications
+* Appli : Option pour définir les arrondis des éléments
+* Un groupe vide fera passer à la ligne en mode vignettes
 
 ## Version 0.13.3 (18/01/2021)
-- Ajout de la connexion en http
-- Possibilité de donner 2 adresses (locale et externe). Le switch se fait automatiquement pas l'appli
-- Nouveau widget Prise
-- Fix : image perso sur le générique switch
-- Fix : Arrondi sur valeur intensité lumière
-- Volets : status et action stop en option
-- Maj de la doc
+
+* Ajout de la connexion en http
+
+* Possibilité de donner 2 adresses (locale et externe). Le switch se fait automatiquement pas l'appli
+
+* Nouveau widget Prise
+
+* Fix : image perso sur le générique switch
+
+* Fix : Arrondi sur valeur intensité lumière
+* Volets : status et action stop en option
+* Maj de la doc
 
 ## Version 0.12.0
-- Historique : correction du bug des boutons de zoom
-- Historique : accès à l'historique de toutes les commandes info via la page détails
-- Notification : ajout de la compatibilité avec les machines ARM 64 bits
-- Assistant : ajout des pièces dans la liste des widgets
-- Scénarios : option pour l'accès à la page des scénarios. correction d'un bug sur cette page
-- Page de login : meilleur rendu en mode paysage
+
+* Historique : correction du bug des boutons de zoom
+
+* Historique : accès à l'historique de toutes les commandes info via la page détails
+* Notification : ajout de la compatibilité avec les machines ARM 64 bits
+* Assistant : ajout des pièces dans la liste des widgets
+* Scénarios : option pour l'accès à la page des scénarios. correction d'un bug sur cette page
+* Page de login : meilleur rendu en mode paysage
 
 ## Version 0.11.0
-- Notifications : possibilité de mettre à jour le contenu d'une notification existante
-- Possibilité d'ajouter des conditions sur status pour le choix de l'image sur les widgets (gérérique numérique - Température - Humidité - Puissance)
-- Scénarios : Ajout d'une page dédiée récupérant tous les scénarios. Un appui sur l'icône lance le scénario (si actif). Icône grisée si désactivé
-- Les lumières d'un groupe sont affichées dans la vue détails
-- Changement de l'icône de notification
-- Amélioration de la géolocalisation. La localisation est récupérée même si l'appareil a été éteind ou en mode avion.
-- Widget volets : Possibilité de mettre un binaire pour l'état. Stop et slider facultatifs
-- Corrections de bugs
+
+* Notifications : possibilité de mettre à jour le contenu d'une notification existante
+
+* Possibilité d'ajouter des conditions sur status pour le choix de l'image sur les widgets (gérérique numérique - Température - Humidité - Puissance)
+* Scénarios : Ajout d'une page dédiée récupérant tous les scénarios. Un appui sur l'icône lance le scénario (si actif). Icône grisée si désactivé
+* Les lumières d'un groupe sont affichées dans la vue détails
+* Changement de l'icône de notification
+* Amélioration de la géolocalisation. La localisation est récupérée même si l'appareil a été éteind ou en mode avion.
+* Widget volets : Possibilité de mettre un binaire pour l'état. Stop et slider facultatifs
+* Corrections de bugs
 
 ## Version 0.10.0
-- Ajout de la géolocalisation
+
+* Ajout de la géolocalisation
 
 ## Version 0.5.0
-- Ajout d'un widget Mode
-- Ajout d'un widget Action Générique (other)
+
+* Ajout d'un widget Mode
+
+* Ajout d'un widget Action Générique (other)
 
 ## Version 0.1.0
+
 Version initiale
