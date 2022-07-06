@@ -23,8 +23,9 @@ Pour accéder à la TODO list [c'est par là!](todo.md)
 10. [Géolocalisation](#geoloc)
 11. [Notification](#notification)
 12. [Service d'arrière plan](#service)
-13. [Matching entre les versions Application (APK) <=> Plugin](#version)
-14. [FAQ](#faq)
+13. [Reconaissance vocale](#voice)
+14. [Matching entre les versions Application (APK) <=> Plugin](#version)
+15. [FAQ](#faq)
 
 ## Présentation du projet <a name="presentation"></a>
 Le projet **Jeedom Connect** se compose de 2 parties : un plugin pour Jeedom, et une application Android / iOS.  
@@ -458,6 +459,38 @@ A chaque fois qu'un événement lié à un déclencheur a lieu, **toutes** les i
 - `Prochaine alarme changée` : se déclenche lorsque la date ou l'heure de la prochaine alarme programmée sur l'appareil change
 
 <br/><br/>  
+
+# Reconaissance vocale <a name="voice"></a>
+
+L'application utilise le moteur principal configuré sur votre appareil pour la reconnaissance vocale. Si aucun moteur n'est installé sur votre appareil Android, vous pouvez [installer celui de Google](https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox&hl=en).
+Il existe deux méthodes pour activer la reconnaissance :
+- A l'aide du bouton de la barre du haut (Accessible depuis le menu Préférences/Reconaissance vocale)
+- A l'aide d'un mot clé (hotword) à prononcer
+
+Pour activer la détection de mots clés, un assistant vous guide dans l'application.
+
+<img src='../images/voice4.png' width='200px' /><img src='../images/voice2.png' width='200px' /><img src='../images/voice3.png' width='200px' /><img src='../images/voice1.png' width='200px' />
+
+Il est nécessaire de créer un compte gratuit chez [Picovoice](https://picovoice.ai/). Un compte permet :
+* de créer 3 hotwords par mois (toute plateforme confondues)
+* d'utiliser la détection sur 3 appareils différents
+
+Il est possible de créer autant de compte gratuit que vous le souhaitez.
+Une fois le compte créé, vous vous rendrez sur la [console](https://console.picovoice.ai/) pour :
+* Récupérer la `clé d'accès` et l'enregistrer dans l'application
+* Créer vos hotwords personalisés
+
+Chaque mot clé est 'entraîné' par l'IA de Picovoice et est spcécifique à une langue et une plateforme (Android ou iOS).
+Une fois créés, vous les téléchargez directement su votre appareil et indiquez à l'appli le fichier `.zip`.
+
+Pour le bon fonctionnement, tous les hotwords doivent avoir la même langue (et la même plateforme de destination).
+
+Chaque hotword peut avoir sa propre configuration, réglage de la sensibilité, destination vers Jeedom (Interaction, Commande message ou Scénario) et traitement de la réponse.
+
+La détection fonctionne dans les cas suivants :
+- Application ouverte et en premier plan
+- Android et service d'arrière plan activé
+
 # Matching version Application (APK) <=> version Plugin sur Jeedom <a name="version"></a>
 
 :warning: Ces informations sont obsolètes depuis la version 0.18.2.  
