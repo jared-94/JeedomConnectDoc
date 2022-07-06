@@ -4,10 +4,15 @@
 
 * Nouveautés :
   * Ajout de la reconnaissance vocale dans l'application. Possibilité d'envoyer vers les interactions Jeedom, une commande message ou un scénario
-  * [Android] Détection de mots clés vocaux personalisés pour activer la reconnaissance vocale. Chaque mot clé peut avoir un comportement différent (interaction, commande, scénario). La détection fonctionne en permanance lorsque le service d'arrière plan est activé.
+  * Détection de mots clés vocaux personalisés (ie : `hotword`) pour activer la reconnaissance vocale. Chaque mot clé peut avoir un comportement différent (interaction, commande, scénario) => `"hey mon super assistant, ouvre les volets"`, `hey darkvador, éteins les lumières`)
+  * [Android] La détection du `hotword` fonctionne en permanance lorsque le service d'arrière plan est activé.
   * [Android] Option pour ne pas inclure le son du microphone dans le stream RTSP (à activer pour la reconaissance vocale)
-  * Ajout de l'information `tendance` pour les commandes historisées (utilisation: `tendance(#cmd#)`)
-  * Les informations historisées (moyenne, min, max, tendance) sont accessibles pour les images sous conditions
+  * Ajout de l'information `tendance` pour les commandes historisées (utilisation: `tendance(#cmd#)`) : retourne 'up', 'down', 'stable' ou 'null' (si non dispo)
+  * Les informations historisées (moyenne, min, max, tendance) sont utilisables dans les conditions des images sous conditions  
+  * Ajout d'une fenêtre de synthèse sur les équipements JC : configurez un certain nombre d'éléments en un clic l'ensemble de vos équipements JC
+
+* Bugs fixes :
+  * Export des sauvegardes ne fonctionnent pas tout le temps depuis la page configuration
 
 ## Version 1.3.1 (03/07/2022)
 
