@@ -1,5 +1,14 @@
 # Changelog JeedomConnect
 
+## Version 1.3.2 (06/07/2022)
+
+* Nouveautés :
+  * Ajout de la reconnaissance vocale dans l'application. Possibilité d'envoyer vers les interactions Jeedom, une commande message ou un scénario
+  * [Android] Détection de mots clés vocaux personalisés pour activer la reconnaissance vocale. Chaque mot clé peut avoir un comportement différent (interaction, commande, scénario). La détection fonctionne en permanance lorsque le service d'arrière plan est activé.
+  * [Android] Option pour ne pas inclure le son du microphone dans le stream RTSP (à activer pour la reconaissance vocale)
+  * Ajout de l'information `tendance` pour les commandes historisées (utilisation: `tendance(#cmd#)`)
+  * Les informations historisées (moyenne, min, max, tendance) sont accessibles pour les images sous conditions
+
 ## Version 1.3.1 (03/07/2022)
 
 * ajout d’une option sur la page configuration pour définir si le plugin doit gérer les connexions IPV6 ou non → ‹ non › étant le défaut  
