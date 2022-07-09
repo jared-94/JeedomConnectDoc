@@ -555,7 +555,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 # FAQ <a name="faq"></a>
 
 - [Comment télécharger l'application ?](#qOU)
-- [Quelle est la différence entre connexion HTTP et Websocket ?](#qConnexion)  
+- [Quelle est la différence entre connexion HTTP, Websocket et Polling ?](#qConnexion)  
 - [L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration"](#qMigration)
 - [J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin"](#qVersion)
 - [Je suis bêta-testeur, que dois-je faire ?](#qBeta)
@@ -579,13 +579,14 @@ L'application est disponible sur vos Store :
 
 <br/>
 
-## Quelle est la différence entre connexion HTTP et Websocket ? <a name="qConnexion"></a>  
+## Quelle est la différence entre connexion HTTP, Websocket et Polling ? <a name="qConnexion"></a>  
 
 Avec Jeedom Connect, il est possible d'établir la connexion entre votre appareil et le plugin de deux façon différentes :
 
 - **Http** : Au lancement de l'application, une connexion Http de type Source Event Server est établie avec le plugin. Cette connexion est persistente mais uni-directionnele : de Jeedom **vers** votre appareil. Les actions de votre appareils vers Jeedom sont des requêtes Http uniques utilisant le protocole JSON RPC.
-Ce mode de connexion ne nessécite aucune configuration particulière et est compatible avec les DNS Jeedom.
-- **Websocket** : La connexion websocket est quant à elle bi-directionnelle. Elle nécessite néanmoins une configuration de votre réseau pour être utilisée en dehors de votre réseau local. Il est possible de faire une redirection de port sur votre routeur (méthode simple) ou bien de configurer votre serveur proxy ou le serveur Apache de votre Jeedom (utilisateurs avancés).
+Ce mode de connexion ne necéssite aucune configuration particulière.
+- **Polling** : Lorsque les états ont du mal à être rafraichi, vous pouvez utiliser cette option. Ici c'est l'application qui lance une connexion vers le plugin pour forcer la récupération des informations de façon régulière. Cette option est plus que conseillée lorsque vous utilisez les DNS Jeedom (incompatible avec `websocket`).
+- **Websocket** : La connexion websocket est quant à elle bi-directionnelle. Elle nécessite néanmoins une configuration de votre réseau pour être utilisée en dehors de votre réseau local. Il est possible de faire une redirection de port sur votre routeur (méthode simple) ou bien de configurer votre serveur proxy ou le serveur Apache de votre Jeedom (utilisateurs avancés, incompatible avec `polling`).
 
 Le Websocket offre une connexion **plus stable et plus performante** que la connexion Http.
 
