@@ -286,7 +286,7 @@ Les actions :
 
 - `Notification` : Commande de notification par défaut
 - `Afficher page` : Lorsque l'application est en premier plan, permet de basculer sur une page donnée. Il s'agit d'une commande action message. Pour l'utiliser, commencer par repérer l'`id` de la page. Cell-ci est disponible en survolant votre souris sur les menus de l'assistant de configuration. Indiquez alors cet `id` dans le champs `Id page` de la commande.
-- `Lancer App` *[Android]* : Lorsque l'application est en premier plan ou que le service est activé, permet de lancer sur votre appareil une application. Il s'agit d'une commande action message qui accepte dans son champs ou `Nom de l'application` le nom du package de l'application.
+- `Lancer App` *[Android]* : Lorsque l'application est en premier plan ou que le service est activé, permet de lancer sur votre appareil une application. Il s'agit d'une commande action message qui accepte dans son champs ou `Nom de l'application` le nom du package de l'application. L'autorisation système `Superposition sur d'autres applis` doit être activée (Android >= 10)
 - `Détacher` : Permet de détacher l'appareil de l'équipement.
 - `Notifier les appareils JC` : Permet d'envoyer un même message à plusieurs appareil. (cf la configuration plus bas !)  
 - `Pop-up` : Permet d'afficher un pop-up sur votre appareil. Elle sera affichée directement dans l'application si celle-ci est ouverte, et sinon en popup système *[Android seulement]*.
