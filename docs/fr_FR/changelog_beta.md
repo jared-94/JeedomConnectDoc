@@ -1,4 +1,39 @@
 # Changelog JeedomConnect
+  
+## Version 1.3.3 (dev en cours)
+
+* Nouveautés :
+  * Visualiser la localisation de l'ensemble de vos équipements JC sur une carte. Les positions sont mises à jour dynamiquement à chaque déplacement d'un appareil. (Pensez à autoriser l'affichage sur la carte globale sur la page configuration de chaque équipement sur le plugin)
+  * Possibilité d'ajouter un widget (jeedom, pas JC) pour afficher la carte des localisations JC sur le Dashboard de votre Jeedom
+  * Définition des positions de geofencing depuis le plugin
+  * Possibilité de créer et partager des positions de geofencing depuis le plugin
+  * Modification du widget `Géolocalisation` : vous pouvez personnaliser le pin (et la couleur) du repère
+  * `Géolocalisation` : ajout d'un bouton sur la carte pour passer en plein écran,
+  * Refonte de toute la partie configuration des Notifications sur le plugin
+  * Lors de la définition d'un nouvel équipement JC : choix de `polling` par défaut si connexion par DNS Jeedom détectée
+  * Ajout d'un filtre possible sur les types de widget pour les modales de sélection de widgets
+  * Exécution d'un scénario : ajout du tag `eqId` qui permet de récupérer l'id de l'équipement qui lance l'exécution du scénario
+  * Ajout des tooltips pour avoir le nom des commandes sur les champs des commandes parfois tronqués (comme "Informations supplémentaires" & co...)
+  * Ajout du login de l'utilisateur qui lance une interaction
+
+* Bugs fixes :
+  * `Mode hors connexion` qui apparait au démarrage alors que l'app est bien connectée
+  * Correction du message d'erreur lorsqu'on exécute une commande multiple ("probleme de droits" VS "erreur d'exécution")
+  * Historique d'un générique texte affiche uniquement la 1ère valeur
+  * `Webview` : la barre du haut disparait après l'affichage d'un widget webview en plein écran
+  * Perte de personnalisation : sur un widget seule la dernière perso est prise en compte, les précédentes sont perdues
+  * Sous-titre "temps écoulé" pour un widget "groupe de volets" ne se formate pas correctement
+  * Crash de l'app si un Widget température reçoit une commande qui n'est pas encore valorisée (retourne vide)
+  * Le changement de chemin pour les images perso n'est pas pris en compte par l'appli
+  * L'ajout d'image perso depuis l'application ne fonctionne pas
+  * La recherche d'image depuis l'application est case sensitive
+  * Personnalisation du sous-titre à "aucun" n'est pas pris en compte
+  * Réponse à un ask via la barre de notification KO si l'application n'est pas lancée
+  * Reconnaissance vocale :
+    * Plantage de l'app sur l'écoute permanente sur l'autorisation n'est pas donnée
+    * Le passage de `configuration personnalisée` à `configuration par défaut` n'est pas pris en compte sur un hotword
+    * La clé pico (reco vocale) n'est pas sauvegarde, on doit systématiquement la resaisir
+    * Impossible de sélectionner un autre scénario une fois qu'une 1ère conf est réalisée
 
 ## Version 1.3.2 (06/07/2022)
 
