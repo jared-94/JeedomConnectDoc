@@ -15,6 +15,7 @@
   * Exécution d'un scénario : ajout du tag `eqId` qui permet de récupérer l'id de l'équipement qui lance l'exécution du scénario
   * Ajout des tooltips pour avoir le nom des commandes sur les champs des commandes parfois tronqués (comme "Informations supplémentaires" & co...)
   * Ajout du login de l'utilisateur qui lance une interaction
+  * Ajout de la gestion des swipes up/down et action sur les menus bas directement depuis l'application
 
 * Bugs fixes :
   * `Mode hors connexion` qui apparait au démarrage alors que l'app est bien connectée
