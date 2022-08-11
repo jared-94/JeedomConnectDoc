@@ -7,8 +7,10 @@
   * Possibilité d'ajouter un widget (jeedom, pas JC) pour afficher la carte des localisations JC sur le Dashboard de votre Jeedom
   * Définition des positions de geofencing depuis le plugin
   * Possibilité de créer et partager des positions de geofencing depuis le plugin
-  * Modification du widget `Géolocalisation` : vous pouvez personnaliser le pin (et la couleur) du repère
-  * `Géolocalisation` : ajout d'un bouton sur la carte pour passer en plein écran,
+  * Widget `Géolocalisation` : vous pouvez personnaliser le pin (et la couleur) du repère
+  * `Géolocalisation` (app):
+    * ajout d'un bouton sur la carte pour passer en plein écran,
+    * corrections de bugs, et ajout d'une option pour améliorer le geofencing
   * Refonte de toute la partie configuration des Notifications sur le plugin
   * Lors de la définition d'un nouvel équipement JC : choix de `polling` par défaut si connexion par DNS Jeedom détectée
   * Ajout d'un filtre possible sur les types de widget pour les modales de sélection de widgets
@@ -16,7 +18,6 @@
   * Ajout des tooltips pour avoir le nom des commandes sur les champs des commandes parfois tronqués (comme "Informations supplémentaires" & co...)
   * Ajout du login de l'utilisateur qui lance une interaction
   * Ajout de la gestion des swipes up/down et action sur les menus bas directement depuis l'application
-  * Géolocalisation : corrections de bugs, et ajout d'une option pour améliorer le geofencing
 
 * Bugs fixes :
   * `Mode hors connexion` qui apparait au démarrage alors que l'app est bien connectée
