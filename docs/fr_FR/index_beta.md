@@ -19,11 +19,12 @@ Pour accéder à la TODO list [c'est par là!](todo.md)
 8. [Configuration d'un équipement](#configureEq)
 9. [Commandes disponibles sur un équipement](#eqCmd)
 10. [Géolocalisation](#geoloc)
-11. [Notification](#notification)
-12. [Service d'arrière plan](#service)
-13. [Reconnaissance vocale](#voice)
-14. [Matching entre les versions Application (APK) <=> Plugin](#version)
-15. [FAQ](#faq)
+11. [Localisation](#localisation)
+12. [Notification](#notification)
+13. [Service d'arrière plan](#service)
+14. [Reconnaissance vocale](#voice)
+15. [Matching entre les versions Application (APK) <=> Plugin](#version)
+16. [FAQ](#faq)
 
 ## Présentation du projet <a name="presentation"></a>
 
@@ -334,7 +335,59 @@ Vous pouvez ensuite aller sur `Gestion des lieux`.
 - Pour **définir une zone**, faites un appuie long sur la carte puis donner un nom et un rayon (en mètres). Le binaire est immédiatement créé côté Jeedom.
 - Pour **supprimer ou éditer une zone**, appuyez sur le marqueur puis sur le nom qui apparait.
 - Pour **déplacer une zone**, faites un appuie long sur le marqueur puis glisser.
-Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connaitre à tout moment la position de votre appareil. Les coordonnées GPS (latitude,longitude) sont accessibles dans la commande `Position` de votre équipement.
+Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connaitre à tout moment la position de votre appareil. Les coordonnées GPS (latitude,longitude) sont accessibles dans la commande `Position` de votre équipement.  
+
+<br/>
+<span id="configGeofence"></span>
+Ces actions peuvent également être réalisées depuis le plugin, en utilisant la petite `cible` sous votre équipement, ou via le bouton `Personnaliser les Geofencing` sur la page de configuration de votre équipement JC :  
+
+<img src='../images/JeedomConnect_geofencing_icon.png' width='200px' />
+<br/><br/>  
+
+Vous arrivez sur une nouvelle fenêtre qui vous donne accès à 2 infos :  
+
+- la 1ère partie concerne les zones utilisées pour faire du geofencing déjà disponible sur votre équipement. Ces zones sont représentées en verte sur la carte.  
+- La 2nd partie, permet de voir toutes les zones qui ont été créées sur le plugin et qui peuvent être partagées entre différents équipements (ce qui évite d'avoir à recréer une zone "Maison" sur tous les appareils !). Ces zones sont représentées en rouge sur la carte.  
+
+<img src='../images/JeedomConnect_geofencing.png' width='600px' />
+
+### Comment ajouter une zone ?
+
+Cliquez sur la carte à l'endroit où vous désirez créer une zone puis sur le bouton `Créer une zone ici`. Celle-ci sera automatiquement ajoutée dans la partie `Tous les points disponibles`. Pour l'ajouter à votre équipement, il vous suffit de cliquer sur le petit `+` en bout de ligne, ce qui aura pour action de déplacer cette ligne sur votre équipement et de créer la commande correspondante dans votre équipement.
+
+### Comment supprimer une zone de mon équipement ?
+
+Cliquez sur l'icône `-` en bout de ligne, la zone est supprimée :
+
+- de votre équipement, si c'est un point de la partie 'Mon équipement'
+- de la configuration, si c'est un point de la partie 'Tous les points disponibles'. Dans ce dernier cas, cette zone ne sera plus proposée pour configurer un autre équipement.
+
+### Comment centrer ma carte sur une zone ?
+
+Cliquez simplement sur le dernier icone en forme de `pin`, la carte se centre automatiquement sur ce point
+
+### Comment déplacer une zone ?
+
+Les petits pin bleus utilisés pour caractériser la zone peuvent être déplacés. Cliquez sur le point à déplacer, allez au nouvel endroit désiré, relachez la souris, voilà le point est déplacé !  
+Si vous connaissez les coordonnées GPS du nouveau point, vous pouvez également directement les saisir dans le tableau de droit, et la zone se mettra également à jour.
+
+<br/><br/>  
+
+## Localisation <a name="localisation"></a>
+
+Il est possible de suivre la localisation de vos équipement JC.  
+Pour cela :
+
+- l'option de tracking doit être activé sur votre application JC, de façon à ce que votre position soit remontée au plugin
+- sur chaque équipement (sur le plugin), vous devez cocher la case `Afficher la position sur la carte globale` (et vous avez la possibilité de personnaliser le repère utilisé sur la carte pour identifier cette équipement)
+
+Ensuite il suffit de cliquer sur le bouton `Localisation` disponible sur la page principale du plugin pour accèder à la carte.
+
+<img src='../images/JeedomConnect_localisation.png' width='600px' />
+
+Cette même carte peut être affiché sous forme de widget (au sens Jeedom du terme). Pour se faire, vous devez cocher la case `Visible` sur cette fenêtre, et sélectionner sous quel objet le widget devra être affiché.  
+
+En cliquant sur les icônes présents vous aurez accès à plus de détails sur la position : le nom, la dernière mise à jour, les coordonnées, la distance entre ce point et votre jeedom (cf la page de configuration du plugin) et un lien pour rejoindre directement cette position.
 
 <br/><br/>  
 
@@ -566,6 +619,9 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 - [Mon téléphone reste "bloqué" sur JeedomConnect. Comment retirer le mode launcher ?](#qLauncher)
 - [Comment configurer le widget Caméra ?](#qCamera)
 - [J'ai un message "A lire" qui n'arrête pas de s'afficher. Comment le masquer définitivement ?](#qWarning)
+- [Comment paramétrer les zones de Geofencing ?](#configGeofence)
+- [Comment voir les positions de mes appareils JC ?](#localisation)
+- [Les cartes de geofence et de localisation sont centrées sur Paris par défaut, comment changer ?](#qCarteParis)
 - [Je trouve l'application géniale ! Comment vous aider ?](#qDon)
 - [Je ne trouve pas de réponse à mon probleme dans la doc. Que faire ?](#qForum)
 
@@ -793,6 +849,13 @@ le process peut-être un peu chiant, j’en suis désolé, mais pas plus enquiqu
 après tout… il n’y a pas de raison qu’il n’y ait que moi qui ait la partie chiante :D :D :D  
 
 bonne lecture, et attention à vos clics !  
+
+<br/>
+
+## Les cartes de geofence et de localisation sont centrées sur Paris par défaut, comment changer ? <a name="qCarteParis"></a>  
+
+Les différentes cartes se centrent sur la position définie sur la page configuration du plugin JC.  
+Si ces informations ne sont pas renseignées, nous prenons alors les coordonnées de votre Jeedom (`Réglages / Systèmes / Configuration / Coordonnées`). Dans le cas où ces dernières ne sont pas indiquées, alors par défaut nous centrons sur Paris.
 
 <br/>
 
