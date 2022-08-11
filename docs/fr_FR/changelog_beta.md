@@ -16,6 +16,7 @@
   * Ajout des tooltips pour avoir le nom des commandes sur les champs des commandes parfois tronqués (comme "Informations supplémentaires" & co...)
   * Ajout du login de l'utilisateur qui lance une interaction
   * Ajout de la gestion des swipes up/down et action sur les menus bas directement depuis l'application
+  * Géolocalisation : corrections de bugs, et ajout d'une option pour améliorer le geofencing
 
 * Bugs fixes :
   * `Mode hors connexion` qui apparait au démarrage alors que l'app est bien connectée
@@ -30,6 +31,7 @@
   * La recherche d'image depuis l'application est case sensitive
   * Personnalisation du sous-titre à "aucun" n'est pas pris en compte
   * Réponse à un ask via la barre de notification KO si l'application n'est pas lancée
+  * Lancement d'applications lorsque JC n'est pas au premier plan
   * Reconnaissance vocale :
     * Plantage de l'app sur l'écoute permanente sur l'autorisation n'est pas donnée
     * Le passage de `configuration personnalisée` à `configuration par défaut` n'est pas pris en compte sur un hotword
