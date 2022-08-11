@@ -1,6 +1,6 @@
 # Changelog JeedomConnect
   
-## Version 1.3.3 (dev en cours)
+## Version 1.3.3 (11/08/2022)
 
 * Nouveautés :
   * Visualiser la localisation de l'ensemble de vos équipements JC sur une carte. Les positions sont mises à jour dynamiquement à chaque déplacement d'un appareil. (Pensez à autoriser l'affichage sur la carte globale sur la page configuration de chaque équipement sur le plugin)
