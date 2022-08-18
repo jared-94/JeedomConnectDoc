@@ -1,20 +1,21 @@
 # Changelog JeedomConnect
 
-## Version 1.3.4 (en cours de dev)
+## Version 1.3.4 (18/08/2022)
 
 * Nouveautés :
-  * Sur l'écran de configuration de geoloc (plugin) : ajout d'une barre de recherche pour localiser précisement une adresse postale et créer la zone correspondante
-  * Possibilité que le QR-Code de chaque équipement soit visible directement sur la page principale du plugin, à chaque survole d'un équipement par la souris (choix à faire au niveau de la page `configuration` du plugin)
+  * Sur l'écran de configuration de la geoloc (côté plugin) :
+    * ajout d'une barre de recherche pour localiser précisement une adresse postale et créer la zone correspondante
+    * possibilité de partager une zone de géofencing créé sur un équipement à tout le reste de la famille (bouton `+` sur une zone dans la partie `mon équipement`)
+  * Possibilité que le QR-Code de chaque équipement soit visible directement sur la page principale du plugin, à chaque survole d'un équipement par la souris (choix à faire au niveau de la page `configuration` du plugin, après un rafraichissement)
   * Le QR-Code de l'équipement est masqué dès lors qu'une modification essentielle est en cours sur l'équipement. Celui-ci est automatiquement regénéré à la sauvegarde de l'équipement
   * Les QR-Codes de l'ensemble des équipements JC sont automatiquement regénérés si les urls de connexions sont modifiées sur la page de configuration du plugin. (Si les modifications interviennent au niveau de la configuration `Réseaux` de Jeedom, alors la génération devra être réalisée à la main)
-  * Widget Géolocalisation : Nouveaux paramètres pour configurer le type de carte (Standard, Satellite ou Relief), le thème sombre/clair, et afficher les geofences
+  * Widget `Géolocalisation` : nouveaux paramètres pour configurer le type de carte (Standard, Satellite ou Relief), le thème sombre/clair, et afficher les geofences (seulement si l'option `gefencing` est activée sur l'équipement)
 
 * Bugs fixes :
   * Message d'erreur sur les historiques en vue détail
   * Masquage des données sensibles dans les logs lors de la génération d'un nouveau QR-Code
-  * Problème de connexion et avec le mode hors-ligne
-  * Affichage des réponses aux ask quand l'appli en kill
-
+  * Problème de connexion avec le mode hors-ligne
+  * Affichage des réponses aux ask quand l'appli est kill
 
 ## Version 1.3.3 (11/08/2022)
 
