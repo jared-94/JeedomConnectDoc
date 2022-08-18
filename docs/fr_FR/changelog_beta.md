@@ -16,8 +16,8 @@
   * Message d'erreur sur les historiques en vue détail
   * Masquage des données sensibles dans les logs lors de la génération d'un nouveau QR-Code
   * Problème de connexion avec le mode hors-ligne
-  * Affichage des réponses aux ask quand l'appli est kill
-  * Problème des QR-Code non rafraichi à cause d'un style appliqué à la page
+  * Affichage des réponses aux ask quand l'appli est killée
+  * Problème des QR-Code non rafraichis à cause d'un style appliqué à la page
 
 ## Version 1.3.3 (11/08/2022)
 
