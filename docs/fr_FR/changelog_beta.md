@@ -12,10 +12,12 @@
   * Widget `Géolocalisation` : nouveaux paramètres pour configurer le type de carte (Standard, Satellite ou Relief), le thème sombre/clair, et afficher les geofences (seulement si l'option `gefencing` est activée sur l'équipement)
 
 * Bugs fixes :
+  * Les widgets des équipements JC ont disparus du dashboard Jeedom
   * Message d'erreur sur les historiques en vue détail
   * Masquage des données sensibles dans les logs lors de la génération d'un nouveau QR-Code
   * Problème de connexion avec le mode hors-ligne
   * Affichage des réponses aux ask quand l'appli est kill
+  * Problème des QR-Code non rafraichi à cause d'un style appliqué à la page
 
 ## Version 1.3.3 (11/08/2022)
 
