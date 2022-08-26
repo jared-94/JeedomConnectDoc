@@ -1,5 +1,39 @@
 # Changelog JeedomConnect  
 
+## Version 1.4.0 (26/08/22)
+
+* Nouveautés :
+  * Ajout de la reconnaissance vocale dans l'application. Possibilité d'envoyer vers les interactions Jeedom, une commande message ou un scénario
+  * Détection de mots clés vocaux personalisés (ie : `hotword`) pour activer la reconnaissance vocale. Chaque mot clé peut avoir un comportement différent (interaction, commande, scénario) => `"hey mon super assistant, ouvre les volets"`, `hey darkvador, éteins les lumières`)
+  * [Android] La détection du `hotword` fonctionne en permanance lorsque le service d'arrière plan est activé.
+  * [Android] Option pour ne pas inclure le son du microphone dans le stream RTSP (à activer pour la reconaissance vocale)
+  * Ajout de l'information `tendance` pour les commandes historisées (utilisation: `tendance(#cmd#)`) : retourne 'up', 'down', 'stable' ou 'null' (si non dispo)
+  * Les informations historisées (moyenne, min, max, tendance) sont utilisables dans les conditions des images sous conditions  
+  * Ajout d'une fenêtre de synthèse sur les équipements JC : configurez un certain nombre d'éléments en un clic l'ensemble de vos équipements JC
+  * Visualiser la localisation de l'ensemble de vos équipements JC sur une carte. Les positions sont mises à jour dynamiquement à chaque déplacement d'un appareil. (Pensez à autoriser l'affichage sur la carte globale sur la page configuration de chaque équipement sur le plugin)
+  * Possibilité d'ajouter un widget (jeedom, pas JC) pour afficher la carte des localisations JC sur le Dashboard de votre Jeedom
+  * Définition des positions de geofencing depuis le plugin
+  * Possibilité de créer et partager des positions de geofencing depuis le plugin
+  * Widget `Géolocalisation` : vous pouvez personnaliser le pin (et la couleur) du repère
+  * `Géolocalisation` (app):
+    * ajout d'un bouton sur la carte pour passer en plein écran,
+    * corrections de bugs, et ajout d'une option pour améliorer le geofencing
+  * Refonte de toute la partie configuration des Notifications sur le plugin
+  * Lors de la définition d'un nouvel équipement JC : choix de `polling` par défaut si connexion par DNS Jeedom détectée
+  * Ajout d'un filtre possible sur les types de widget pour les modales de sélection de widgets
+  * Exécution d'un scénario : ajout du tag `eqId` qui permet de récupérer l'id de l'équipement qui lance l'exécution du scénario
+  * Ajout des tooltips pour avoir le nom des commandes sur les champs des commandes parfois tronqués (comme "Informations supplémentaires" & co...)
+  * Ajout du login de l'utilisateur qui lance une interaction
+  * Ajout de la gestion des swipes up/down et action sur les menus bas directement depuis l'application
+  * ajout d’une option sur la page configuration pour définir si le plugin doit gérer les connexions IPV6 ou non → ‹ non › étant le défaut  
+  * Sur l'écran de configuration de la geoloc (côté plugin) :
+    * ajout d'une barre de recherche pour localiser précisement une adresse postale et créer la zone correspondante
+    * possibilité de partager une zone de géofencing créé sur un équipement à tout le reste de la famille (bouton `+` sur une zone dans la partie `mon équipement`)
+  * Possibilité que le QR-Code de chaque équipement soit visible directement sur la page principale du plugin, à chaque survole d'un équipement par la souris (choix à faire au niveau de la page `configuration` du plugin, après un rafraichissement)
+  * Le QR-Code de l'équipement est masqué dès lors qu'une modification essentielle est en cours sur l'équipement. Celui-ci est automatiquement regénéré à la sauvegarde de l'équipement
+  * Les QR-Codes de l'ensemble des équipements JC sont automatiquement regénérés si les urls de connexions sont modifiées sur la page de configuration du plugin. (Si les modifications interviennent au niveau de la configuration `Réseaux` de Jeedom, alors la génération devra être réalisée à la main)
+  * Widget `Géolocalisation` : nouveaux paramètres pour configurer le type de carte (Standard, Satellite ou Relief), le thème sombre/clair, et afficher les geofences (seulement si l'option `gefencing` est activée sur l'équipement)
+
 ## Version 1.3.1 (03/07/2022)
 
 * ajout d’une option sur la page configuration pour définir si le plugin doit gérer les connexions IPV6 ou non → ‹ non › étant le défaut  
