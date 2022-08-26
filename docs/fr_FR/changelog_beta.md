@@ -5,8 +5,8 @@
 * Nouveautés :
   * Sur l'écran de configuration de la geoloc (côté plugin) :
     * ajout d'une barre de recherche pour localiser précisement une adresse postale et créer la zone correspondante
-    * possibilité de partager une zone de géofencing créé sur un équipement à tout le reste de la famille (bouton `+` sur une zone dans la partie `mon équipement`)
-  * Possibilité que le QR-Code de chaque équipement soit visible directement sur la page principale du plugin, à chaque survole d'un équipement par la souris (choix à faire au niveau de la page `configuration` du plugin, après un rafraichissement)
+    * possibilité de partager une zone de geofencing créée sur un équipement à tout le reste de la famille (bouton `+` sur une zone dans la partie `mon équipement`)
+  * Affichage du QR-Code de chaque équipement visible directement sur la page principale du plugin, à chaque survole d'un équipement par la souris (choix à faire au niveau de la page `configuration` du plugin, après un rafraichissement)
   * Le QR-Code de l'équipement est masqué dès lors qu'une modification essentielle est en cours sur l'équipement. Celui-ci est automatiquement regénéré à la sauvegarde de l'équipement
   * Les QR-Codes de l'ensemble des équipements JC sont automatiquement regénérés si les urls de connexions sont modifiées sur la page de configuration du plugin. (Si les modifications interviennent au niveau de la configuration `Réseaux` de Jeedom, alors la génération devra être réalisée à la main)
   * Widget `Géolocalisation` : nouveaux paramètres pour configurer le type de carte (Standard, Satellite ou Relief), le thème sombre/clair, et afficher les geofences (seulement si l'option `gefencing` est activée sur l'équipement)
