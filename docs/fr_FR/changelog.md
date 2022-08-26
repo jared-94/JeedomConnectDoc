@@ -4,9 +4,9 @@
 
 * Nouveautés :
   * Ajout de la reconnaissance vocale dans l'application. Possibilité d'envoyer vers les interactions Jeedom, une commande message ou un scénario
-  * Détection de mots clés vocaux personalisés (ie : `hotword`) pour activer la reconnaissance vocale. Chaque mot clé peut avoir un comportement différent (interaction, commande, scénario) => `"hey mon super assistant, ouvre les volets"`, `hey darkvador, éteins les lumières`)
-  * [Android] La détection du `hotword` fonctionne en permanance lorsque le service d'arrière plan est activé.
-  * [Android] Option pour ne pas inclure le son du microphone dans le stream RTSP (à activer pour la reconaissance vocale)
+  * Détection de mots clés vocaux personnalisés (ie : `hotword`) pour activer la reconnaissance vocale. Chaque mot clé peut avoir un comportement différent (interaction, commande, scénario) => `"hey mon super assistant, ouvre les volets"`, `hey darkvador, éteins les lumières`)
+  * [Android] La détection du `hotword` fonctionne en permanence lorsque le service d'arrière plan est activé.
+  * [Android] Option pour ne pas inclure le son du microphone dans le stream RTSP (à activer pour la reconnaissance vocale)
   * Ajout de l'information `tendance` pour les commandes historisées (utilisation: `tendance(#cmd#)`) : retourne 'up', 'down', 'stable' ou 'null' (si non dispo)
   * Les informations historisées (moyenne, min, max, tendance) sont utilisables dans les conditions des images sous conditions  
   * Ajout d'une fenêtre de synthèse sur les équipements JC : configurez un certain nombre d'éléments en un clic l'ensemble de vos équipements JC
@@ -26,7 +26,7 @@
   * Ajout du login de l'utilisateur qui lance une interaction
   * Ajout de la gestion des swipes up/down et action sur les menus bas directement depuis l'application
   * Sur l'écran de configuration de la geoloc (côté plugin) :
-    * ajout d'une barre de recherche pour localiser précisement une adresse postale et créer la zone correspondante
+    * ajout d'une barre de recherche pour localiser précisément une adresse postale et créer la zone correspondante
     * possibilité de partager une zone de geofencing créée sur un équipement à tout le reste de la famille (bouton `+` sur une zone dans la partie `mon équipement`)
   * Affichage du QR-Code de chaque équipement visible directement sur la page principale du plugin, à chaque survole d'un équipement par la souris (choix à faire au niveau de la page `configuration` du plugin, après un rafraichissement)
   * Le QR-Code de l'équipement est masqué dès lors qu'une modification essentielle est en cours sur l'équipement. Celui-ci est automatiquement regénéré à la sauvegarde de l'équipement
