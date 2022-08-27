@@ -1,6 +1,6 @@
 # Changelog JeedomConnect  
 
-## Version 1.4.0 (26/08/22)
+## Version 1.4.0 (27/08/22)
 
 * Nouveautés :
   * Reconnaissance Vocale et interaction :
