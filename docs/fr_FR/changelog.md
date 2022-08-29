@@ -1,5 +1,12 @@
 # Changelog JeedomConnect  
 
+## Version 1.4.1 (29/08/22)
+
+* Bugs fixes sur la partie Geofencing/Localisation du plugin :
+  * Affichage d'un message si aucun équipement n'est sélectionné pour être affiché sur la carte `Localisation`
+  * Fix erreur si aucun élément n'est affiché
+  * En modifiant une zone geofence de l'équipement, on perd le lien avec le modèle
+
 ## Version 1.4.0 (27/08/22)
 
 * Nouveautés :
