@@ -19,10 +19,12 @@ Pour accéder à la TODO list [c'est par là!](todo.md)
 8. [Configuration d'un équipement](#configureEq)
 9. [Commandes disponibles sur un équipement](#eqCmd)
 10. [Géolocalisation](#geoloc)
-11. [Notification](#notification)
-12. [Service d'arrière plan](#service)
-13. [Matching entre les versions Application (APK) <=> Plugin](#version)
-14. [FAQ](#faq)
+11. [Localisation](#localisation)
+12. [Notification](#notification)
+13. [Service d'arrière plan](#service)
+14. [Reconnaissance vocale](#voice)
+15. [Matching entre les versions Application (APK) <=> Plugin](#version)
+16. [FAQ](#faq)
 
 ## Présentation du projet <a name="presentation"></a>
 
@@ -140,6 +142,7 @@ Quelques éléments sont standard et seront demandés pour l'ensemble des widget
    `Mon ampoule est formatedValue depuis elapsedTime et consomme power W`  
    donnera :  
    `Mon ampoule est allumée depuis 1h12min et consomme 15W`  
+   Les fonctions suivantes sont également disponibles pour une commande : `time` (temps écoulé), `date` (date et heure de modification de la commande) et `collect` (date et heure de la dernière collecte). Elles s'utlisent sous la forme `time(#[Pièce][Eq][Commande]#)`
 - **Affichage forcé** : De façon standard, chaque widget (sauf exception) possède 3 types d'affichage : carte, vignette et détail. Les affichages carte et vignettes peuvent être choisis via l'icône en haut à droite dans l'application. L'affichage détail est une page entière affichée quand on click sur le widget. Vous pouvez ici forcer un widget à s'afficher d'une de ces 3 façons.  
    Attention pour le mode détail, le widget doit être seul sur sa page.
 - **Sécuriser les actions** : Toutes les commandes de type action peuvent être sécurisées à l'aide de ces trois boutons :  
@@ -284,7 +287,7 @@ Les actions :
 
 - `Notification` : Commande de notification par défaut
 - `Afficher page` : Lorsque l'application est en premier plan, permet de basculer sur une page donnée. Il s'agit d'une commande action message. Pour l'utiliser, commencer par repérer l'`id` de la page. Cell-ci est disponible en survolant votre souris sur les menus de l'assistant de configuration. Indiquez alors cet `id` dans le champs `Id page` de la commande.
-- `Lancer App` *[Android]* : Lorsque l'application est en premier plan ou que le service est activé, permet de lancer sur votre appareil une application. Il s'agit d'une commande action message qui accepte dans son champs ou `Nom de l'application` le nom du package de l'application.
+- `Lancer App` *[Android]* : Lorsque l'application est en premier plan ou que le service est activé, permet de lancer sur votre appareil une application. Il s'agit d'une commande action message qui accepte dans son champs ou `Nom de l'application` le nom du package de l'application. L'autorisation système `Superposition sur d'autres applis` doit être activée (Android >= 10)
 - `Détacher` : Permet de détacher l'appareil de l'équipement.
 - `Notifier les appareils JC` : Permet d'envoyer un même message à plusieurs appareil. (cf la configuration plus bas !)  
 - `Pop-up` : Permet d'afficher un pop-up sur votre appareil. Elle sera affichée directement dans l'application si celle-ci est ouverte, et sinon en popup système *[Android seulement]*.
@@ -332,7 +335,59 @@ Vous pouvez ensuite aller sur `Gestion des lieux`.
 - Pour **définir une zone**, faites un appuie long sur la carte puis donner un nom et un rayon (en mètres). Le binaire est immédiatement créé côté Jeedom.
 - Pour **supprimer ou éditer une zone**, appuyez sur le marqueur puis sur le nom qui apparait.
 - Pour **déplacer une zone**, faites un appuie long sur le marqueur puis glisser.
-Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connaitre à tout moment la position de votre appareil. Les coordonnées GPS (latitude,longitude) sont accessibles dans la commande `Position` de votre équipement.
+Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connaitre à tout moment la position de votre appareil. Les coordonnées GPS (latitude,longitude) sont accessibles dans la commande `Position` de votre équipement.  
+
+<br/>
+<span id="configGeofence"></span>
+Ces actions peuvent également être réalisées depuis le plugin, en utilisant la petite `cible` sous votre équipement, ou via le bouton `Personnaliser les Geofencing` sur la page de configuration de votre équipement JC :  
+
+<img src='../images/JeedomConnect_geofencing_icon.png' width='200px' />
+<br/><br/>  
+
+Vous arrivez sur une nouvelle fenêtre qui vous donne accès à 2 infos :  
+
+- la 1ère partie concerne les zones utilisées pour faire du geofencing déjà disponible sur votre équipement. Ces zones sont représentées en verte sur la carte.  
+- La 2nd partie, permet de voir toutes les zones qui ont été créées sur le plugin et qui peuvent être partagées entre différents équipements (ce qui évite d'avoir à recréer une zone "Maison" sur tous les appareils !). Ces zones sont représentées en rouge sur la carte.  
+
+<img src='../images/JeedomConnect_geofencing.png' width='600px' />
+
+### Comment ajouter une zone ?
+
+Cliquez sur la carte à l'endroit où vous désirez créer une zone puis sur le bouton `Créer une zone ici`. Celle-ci sera automatiquement ajoutée dans la partie `Tous les points disponibles`. Pour l'ajouter à votre équipement, il vous suffit de cliquer sur le petit `+` en bout de ligne, ce qui aura pour action de déplacer cette ligne sur votre équipement et de créer la commande correspondante dans votre équipement.
+
+### Comment supprimer une zone de mon équipement ?
+
+Cliquez sur l'icône `-` en bout de ligne, la zone est supprimée :
+
+- de votre équipement, si c'est un point de la partie 'Mon équipement'
+- de la configuration, si c'est un point de la partie 'Tous les points disponibles'. Dans ce dernier cas, cette zone ne sera plus proposée pour configurer un autre équipement.
+
+### Comment centrer ma carte sur une zone ?
+
+Cliquez simplement sur le dernier icone en forme de `pin`, la carte se centre automatiquement sur ce point
+
+### Comment déplacer une zone ?
+
+Les petits pin bleus utilisés pour caractériser la zone peuvent être déplacés. Cliquez sur le point à déplacer, allez au nouvel endroit désiré, relachez la souris, voilà le point est déplacé !  
+Si vous connaissez les coordonnées GPS du nouveau point, vous pouvez également directement les saisir dans le tableau de droit, et la zone se mettra également à jour.
+
+<br/><br/>  
+
+## Localisation <a name="localisation"></a>
+
+Il est possible de suivre la localisation de vos équipement JC.  
+Pour cela :
+
+- l'option de tracking doit être activé sur votre application JC, de façon à ce que votre position soit remontée au plugin
+- sur chaque équipement (sur le plugin), vous devez cocher la case `Afficher la position sur la carte globale` (et vous avez la possibilité de personnaliser le repère utilisé sur la carte pour identifier cette équipement)
+
+Ensuite il suffit de cliquer sur le bouton `Localisation` disponible sur la page principale du plugin pour accèder à la carte.
+
+<img src='../images/JeedomConnect_localisation.png' width='600px' />
+
+Cette même carte peut être affiché sous forme de widget (au sens Jeedom du terme). Pour se faire, vous devez cocher la case `Visible` sur cette fenêtre, et sélectionner sous quel objet le widget devra être affiché.  
+
+En cliquant sur les icônes présents vous aurez accès à plus de détails sur la position : le nom, la dernière mise à jour, les coordonnées, la distance entre ce point et votre jeedom (cf la page de configuration du plugin) et un lien pour rejoindre directement cette position.
 
 <br/><br/>  
 
@@ -477,6 +532,41 @@ A chaque fois qu'un événement lié à un déclencheur a lieu, **toutes** les i
 
 <br/><br/>  
 
+# Reconnaissance vocale <a name="voice"></a>
+
+L'application utilise le moteur principal configuré sur votre appareil pour la reconnaissance vocale. Si aucun moteur n'est installé sur votre appareil Android, vous pouvez [installer celui de Google](https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox&hl=en).
+Il existe deux méthodes pour activer la reconnaissance :
+
+- A l'aide du bouton de la barre du haut (Accessible depuis le menu Préférences/Reconaissance vocale)
+- A l'aide d'un mot clé (hotword) à prononcer
+
+Pour activer la détection de mots clés, un assistant vous guide dans l'application.
+
+<img src='../images/voice4.png' width='200px' /><img src='../images/voice2.png' width='200px' /><img src='../images/voice3.png' width='200px' /><img src='../images/voice1.png' width='200px' />
+
+Il est nécessaire de créer un compte gratuit chez [Picovoice](https://picovoice.ai/). Un compte permet :
+
+- de créer 3 hotwords par mois (toute plateforme confondues)
+- d'utiliser la détection sur 3 appareils différents
+
+Il est possible de créer autant de compte gratuit que vous le souhaitez.
+Une fois le compte créé, vous vous rendrez sur la [console](https://console.picovoice.ai/) pour :
+
+- Récupérer la `clé d'accès` et l'enregistrer dans l'application
+- Créer vos hotwords personalisés
+
+Chaque mot clé est 'entraîné' par l'IA de Picovoice et est spécifique à une langue et une plateforme (Android ou iOS).
+Une fois créé, vous les téléchargez directement sur votre appareil et indiquez à l'appli le fichier `.zip`.
+
+Pour le bon fonctionnement, tous les hotwords doivent avoir la même langue (et la même plateforme de destination).
+
+Chaque hotword peut avoir sa propre configuration, réglage de la sensibilité, destination vers Jeedom (Interaction, Commande message ou Scénario) et traitement de la réponse.
+
+La détection fonctionne dans les cas suivants :
+
+- Application ouverte et en premier plan
+- Android et service d'arrière plan activé
+
 # Matching version Application (APK) <=> version Plugin sur Jeedom <a name="version"></a>
 
 :warning: Ces informations sont obsolètes depuis la version 0.18.2.  
@@ -528,6 +618,10 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 - [Lors de ma première utilisation une pop-up me demande de "Sélectionner une application de l'écran d'accueil", que dois-je faire ?](#qSetLauncher)  
 - [Mon téléphone reste "bloqué" sur JeedomConnect. Comment retirer le mode launcher ?](#qLauncher)
 - [Comment configurer le widget Caméra ?](#qCamera)
+- [J'ai un message "A lire" qui n'arrête pas de s'afficher. Comment le masquer définitivement ?](#qWarning)
+- [Comment paramétrer les zones de Geofencing ?](#configGeofence)
+- [Comment voir les positions de mes appareils JC ?](#localisation)
+- [Les cartes de geofence et de localisation sont centrées sur Paris par défaut, comment changer ?](#qCarteParis)
 - [Je trouve l'application géniale ! Comment vous aider ?](#qDon)
 - [Je ne trouve pas de réponse à mon probleme dans la doc. Que faire ?](#qForum)
 
@@ -678,7 +772,7 @@ Comment l'ajouter ? Rapprochez-vous du développeur du plugin utilisé par votre
 Cette option est principalement utilisée pour les appareils qui ne serivront qu'à faire de la domotique (par exemple une tablette murale pour gérer votre domotique). Le launcher ou 'application de l'écran d'accueil' permet de définir JeedomConnect comme votre nouveau bureau.  
 Vous n'aurez donc plus accès à la page d'accueil de votre terminal telle que vous la connaissez avec toutes vos applications, mais votre page principale sera dorénavant JeedomConnect
 
-<img src='../images/set_launcher.jpg' width='30%' />  
+<img src='../images/set_launcher.jpg' width='20%' />  
 
 <br/>
 
@@ -722,15 +816,46 @@ permet de réduire le nombre de photos reçues ainsi que la qualité
   <summary>un exemple</summary>  
 
 <img src='../images/widget_camera_exemple.png' width='50%' />  
- <br/>  
+<br/>  
 url de flux : j’ai indiqué une IP locale => la caméra n’est pas visible depuis l’extérieur de mon domicile  
 DONC je coche la case LAN  <br/><br/>
 
 l’utilisateur et le mot de passe seront automatiquement remplacés dans les url de flux et de snapshot  <br/><br/>
 
-quand je serai en wifi => je verrai la vidéo  <br/>
-quand je serai en 4G => je recevrai une photo toutes les 5 sec, avec une qualité de 70%<br/>
+quand je suis en wifi => je vois la vidéo en direct  <br/>
+quand je suis en 4G => je reçois une photo toutes les 5 sec, avec une qualité de 70%<br/>
 </details>
+
+<br/>
+
+## J'ai un message "A lire" qui n'arrête pas de s'afficher. Comment le masquer définitivement ? <a name="qWarning"></a>  
+
+<br/>
+<img src='../images/warningMessage.png' width='30%' />  
+
+rassurez-vous, il n’y a AUCUN bug sur cette fenêtre, si elle réapparait systématiquement c'est que vous faites mal quelque chose :)  
+
+Devant le nombre de fois où nous sommes obligés de (re)demander d’avoir les infos sur votre installation, j’ai mis en place une petite fenêtre d’information « A lire » qui s’affichera lorsque vous irez sur la page principale sur plugin :  
+
+Pour infos :  
+
+- les 4 boutons sur le bas ne sont initialement pas présents, et s’afficheront 10 sec après que la fenêtre ait été affichée (pile poil le temps de vous laisser lire !)
+- si vous cliquez en dehors de la fenêtre pour la fermer ou cliquez sur un « mauvais » bouton => le message se réaffichera dans la journée, à l’infini...  
+- si vous lisez correctement & entièrement l’info et que vous appuyez sur le bon bouton, la fenêtre n’apparaitra plus dans la journée. Par contre ... 2 nouveaux « rappels » suivront sur les 2 jours suivant, juste pour être sûr que c’était pas un coup de chance et que vous avez bien lu :) :)
+
+--> du coup le 1er qui me dit qu’il n’avait pas vu l’info, devra ma payer un cocktail ! :D
+
+le process peut-être un peu chiant, j’en suis désolé, mais pas plus enquiquinant que moi qui suit sans cesse obligé de demander les infos 1 sujet sur 2 !
+après tout… il n’y a pas de raison qu’il n’y ait que moi qui ait la partie chiante :D :D :D  
+
+bonne lecture, et attention à vos clics !  
+
+<br/>
+
+## Les cartes de geofence et de localisation sont centrées sur Paris par défaut, comment changer ? <a name="qCarteParis"></a>  
+
+Les différentes cartes se centrent sur la position définie sur la page configuration du plugin JC.  
+Si ces informations ne sont pas renseignées, nous prenons alors les coordonnées de votre Jeedom (`Réglages / Systèmes / Configuration / Coordonnées`). Dans le cas où ces dernières ne sont pas indiquées, alors par défaut nous centrons sur Paris.
 
 <br/>
 
@@ -738,7 +863,7 @@ quand je serai en 4G => je recevrai une photo toutes les 5 sec, avec une qualit�
 
 En partageant vos idées d'améliorations, vos suggestions et vos retours sur des bugs !
 Puisque ça a été demandé plusieurs fois, si vous souhaitez soutenir "financièrement" parlant, nous vous proposons de payer un café (ou deux, ou mille ! :) ) :  
-<a href="https://www.paypal.me/JeedomConnect" target="_blank"><img src="../images/bmc.png" width='30%'/></a>
+<a href="https://www.paypal.me/JeedomConnect" target="_blank"><img src="../images/bmc.png" width='20%'/></a>
 
 <br/>
 
