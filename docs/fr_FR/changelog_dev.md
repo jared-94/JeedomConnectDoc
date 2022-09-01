@@ -24,11 +24,14 @@
     * Revamping de la page `configuration` du plugin
     * `Générique action` : pour les commandes de sous-type message option supplémentaire pour `Afficher/masquer le titre` ou `garder le dernier message` (comme sur le `générique message`)
     * Contrôle de cohérence version plugin/application : beta/beta ou stable/stable, pas de mix
+    * Permet l'accès au widget localisation à un utilisateur non admin
+    * Lors de la sauvegardes des préférences de l'application, si le fichier de backup est identique au précédent, alors le plus vieux est supprimé
+    * Purge automatique des fichiers de sauvegarde des préférences de l'application. Vous pouvez définir le nombre à conserver sur la page de configuration (`Tous` par défaut)
 
   * Général - Côté app :
     * Ajout d'un contrôle pour vérifier que les versions de l'application et du plugin sont bien alignées : beta/beta ou stable/stable
-    * Ajout d'une option pour sauvegarder automatiquement la configuration de l'application (est réalisée lors du démarrage de l'appli)
-    * Ajout d'une option pour recharger automatiquement la configuration Jeedom (est réalisée lors du démarrage de l'appli)
+    * Ajout d'une option pour sauvegarder automatiquement la configuration de l'application (est réalisée lors du démarrage de l'appli) de façon régulière (par défaut : `jamais`)
+    * Ajout d'une option pour recharger automatiquement la configuration Jeedom (est réalisée lors du démarrage de l'appli) de façon régulière (par défaut : `tous les jours`)
     * Inversion possible des sliders dans les paramètres personnalisés :
       * horizontal : droite <-> gauche
       * vertical : haut <-> bas
