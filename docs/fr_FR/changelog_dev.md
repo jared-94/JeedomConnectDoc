@@ -23,6 +23,7 @@
   * Général - Côté plugin :
     * Revamping de la page `configuration` du plugin
     * `Générique action` : pour les commandes de sous-type message option supplémentaire pour `Afficher/masquer le titre` ou `garder le dernier message` (comme sur le `générique message`)
+    * Contrôle de cohérence version plugin/application : beta/beta ou stable/stable, pas de mix
 
   * Général - Côté app :
     * Ajout d'un contrôle pour vérifier que les versions de l'application et du plugin sont bien alignées : beta/beta ou stable/stable
