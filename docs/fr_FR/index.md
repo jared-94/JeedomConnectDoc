@@ -30,7 +30,7 @@ Pour accéder à la TODO list [c'est par là!](todo.md)
 
 Le projet **Jeedom Connect** se compose de 2 parties : un plugin pour Jeedom, et une application Android / iOS.  
 
-L'application utilise la plupart des éléments de navigation d'une application : un drawer (menu dépliable sur la gauche), un menu bas, un menu haut, et des listes accordéon. Tous ceux-ci sont personalisables à partir du plugin.
+L'application utilise la plupart des éléments de navigation d'une application : un drawer (menu dépliable sur la gauche), un menu bas, un menu haut, et des listes accordéon. Tous ceux-ci sont personnalisables à partir du plugin.
 
 La brique de base est la notion de *widget*, qui va représenter un "équipement domotique" (une alarme, une lumière, une info température...). Contrairement à l'application mobile officielle, Jeedom Connect n'ira pas chercher vos équipements / commandes pour vous les afficher directement. C'est à vous de définir un à un vos widgets. Ceci permet une flexibilité au niveau du rendu final.
 
@@ -95,7 +95,7 @@ Par défaut, les images personnalisées du plugin sont stockées sous `plugins/J
 Vous pouvez choisir d'utiliser un autre emplacement en renseignant le champ `Chemin pour les images perso` le chemin d'accès au répertoire qui contient vos images et icônes personnels.  
 :warning: Le chemin ne dois PAS contenir la racine
 
-> par exemple, si vous souhaitez utiliser le répertoire `/var/www/html/data/img/` alors indiquez : `data/img/` dans le champ  (attention au derni `/`!)
+> par exemple, si vous souhaitez utiliser le répertoire `/var/www/html/data/img/` alors indiquez : `data/img/` dans le champ  (attention au dernier `/`!)
 
 <br/>
 
@@ -107,7 +107,7 @@ Les actions disponibles dans cette partie sont à utiliser avec précaution. Vou
 - **Supprimer** : remet à 0 l'intégralité du plugin. Vous perdrez TOUTES vos configurations et l'ensemble de vos widgets seront supprimés. (comme si vous installiez le plugin pour la première fois)  
 - **Lister** : permet d'obtenir la liste des widgets (id) :
   - non-utilisés : existant mais rattaché à aucun équipement
-  - non-existants : présent dans le fichie de configuration d'un équipement, mais non créé sur le plugin (mauvaise migration par exemple)
+  - non-existants : présent dans le fichier de configuration d'un équipement, mais non créé sur le plugin (mauvaise migration par exemple)
   - tous : liste le nombre de fois où un wigdet est utilisé (format => "widget ID" : "nombre d'utilisation")  
 - **Exporter**/**Importer** : permet d'extraire l'ensemble de la configuration des widgets, et les réimporter sur une autre instance jeedom  
 - **Migrer** : transforme les fichiers de configuration dans le nouveau format attendu du plugin  
@@ -150,8 +150,8 @@ Quelques éléments sont standard et seront demandés pour l'ensemble des widget
    Le premier permet de faire une simple demande de confirmation de l'action.  
    Le second demande une donnée biométrique (empreinte digitale, reconaissance faciale) pour exécuter l'action (sur appareils disposant d'un capteur).  
    Le dernier demandera le mot de passe configuré dans les paramètres de l'équipement JC.  
-- **Images** : Les images de l'application sont stockée dans le dossier `plugins/JeedomConnect/data/img/`. Si vous souhaitez ajoutez des images persos, utilisez l'assistant, ou bien copiez vos images dans `plugins/JeedomConnect/data/img/user_files/`. Il est conseillé d'utiliser des images PNG en 128x128. Vous pouvez aussi mettre des GIF animés.
-- **Images sous conditions** : Vous pouvez dans certains widgets définir une image en fonction des valeurs d'une commande. L'ordre des ces condition sera prise en compte par l'appli (les plus hautes sont prioritaires).  
+- **Images** : Les images de l'application sont stockées dans le dossier `plugins/JeedomConnect/data/img/`. Si vous souhaitez ajouter des images persos, utilisez l'assistant, ou bien copiez vos images dans `plugins/JeedomConnect/data/img/user_files/`. Il est conseillé d'utiliser des images PNG en 128x128. Vous pouvez aussi mettre des GIF animés.
+- **Images sous conditions** : Vous pouvez dans certains widgets définir une image en fonction des valeurs d'une commande. L'ordre des ces conditions sera prise en compte par l'appli (les plus hautes sont prioritaires).  
 - **Ajouter des infos** : vous permet d'ajouter des commandes de type `info` de votre Jeedom et de vous en servir pour les autres champs du formulaire 'Images sous conditions', 'Nom', 'Sous-titre'.
 
 La duplication d'un widget est réalisable dès que celui-ci a été sauvegardé une première fois. Cliquez simplement sur le bouton "Dupliquer", réaliser vos modifications (ou pas), et enregistrer (impérativement) en validant avec le bouton "Sauvegarder".  
@@ -191,7 +191,7 @@ A la création d'un équipement, une clé API, ainsi qu'un QR Code est automatiq
 
 La configuration d'un équipement consiste en un fichier JSON configurable avec l'assistant, et que vous pouvez exporter / importer. Si vous voulez par exemple cloner un équipement, ajoutez en un nouveau et utiliser l'exportation / importation.  
 
-Le dernier bouton permet lui de transmettre votre fichier de configuration complet, en cas de problème, au développeur. Ce fichier ne DOIT PAS être importer sur un autre équipement JeedomConnect.  
+Le dernier bouton permet lui de transmettre votre fichier de configuration complet, en cas de problème, au développeur. Ce fichier ne DOIT PAS être importé sur un autre équipement JeedomConnect.  
 
 <br/><br/>  
 
@@ -200,7 +200,7 @@ Le dernier bouton permet lui de transmettre votre fichier de configuration compl
 La configuration du contenu de l'application se passe dans l'assistant.
 
 Le changement de configuration a lieu à chaque click sur le bouton *Sauvegarder*. Si l'application est démarrée, elle est automatiquement transférée (websocket uniquement). Vous pouvez recharger la configuration dans l'appli en appuyant sur le logo du 'menu hamburger'.  
-Si vous pensez avoir une erreur avant d'avoir sauvegarder (par exemple supprimé un élément par erreur), actualisez simplement la page. Le bouton *Réinitialiser* (suivi de *Sauvegarder*) remet toute la configuration à zéro, attention donc !
+Si vous pensez avoir une erreur avant d'avoir sauvegardé (par exemple supprimé un élément par erreur), actualisez simplement la page. Le bouton *Réinitialiser* (suivi de *Sauvegarder*) remet toute la configuration à zéro, attention donc !
 
 <br/>  
 
@@ -242,7 +242,7 @@ Il vous est ensuite possible de cliquer sur chaque résumé pour personnaliser l
 
 Deux variables sont disponibles : `#value#` et `#total#` :  
 
-- `#value#` correspond à la donnée du résumé remontée par Jeedom (nombre de volets ouvertes par exemple)
+- `#value#` correspond à la donnée du résumé remontée par Jeedom (nombre de volets ouverts par exemple)
 - `#total#` correspond au nombre total de commandes rattachées à ce résumé (nombre de volets total sur le résumé par exemple)
 
 <br/><br/>  
@@ -289,7 +289,7 @@ Les actions :
 - `Afficher page` : Lorsque l'application est en premier plan, permet de basculer sur une page donnée. Il s'agit d'une commande action message. Pour l'utiliser, commencer par repérer l'`id` de la page. Cell-ci est disponible en survolant votre souris sur les menus de l'assistant de configuration. Indiquez alors cet `id` dans le champs `Id page` de la commande.
 - `Lancer App` *[Android]* : Lorsque l'application est en premier plan ou que le service est activé, permet de lancer sur votre appareil une application. Il s'agit d'une commande action message qui accepte dans son champs ou `Nom de l'application` le nom du package de l'application. L'autorisation système `Superposition sur d'autres applis` doit être activée (Android >= 10)
 - `Détacher` : Permet de détacher l'appareil de l'équipement.
-- `Notifier les appareils JC` : Permet d'envoyer un même message à plusieurs appareil. (cf la configuration plus bas !)  
+- `Notifier les appareils JC` : Permet d'envoyer un même message à plusieurs appareils. (cf la configuration plus bas !)  
 - `Pop-up` : Permet d'afficher un pop-up sur votre appareil. Elle sera affichée directement dans l'application si celle-ci est ouverte, et sinon en popup système *[Android seulement]*.
 - `Modifier Préférences Appli` : Permet de modifier certaines options de votre application. Faites un choix dans la liste déroulante, puis indiquez la valeur à mettre si nécessaire : `ON`, `OFF`, `MARCHE`, `ARRET`
 Liste des actions (fonctionnent même appli tuée) :
@@ -304,10 +304,10 @@ Champ `Message` : contenu du SMS.
 Cette fonction est utilisable dans n'importe quel état de l'application (premier-plan, arrière-plan, tuée)
 Pour utiliser cette fonction, vous devez d'abord vous rendre dans les autorisations de l'appli puis accepter celle correspondant à l'envoie de SMS.
 - `Allumer l'écran` *[Android]*
-- `Eteindre l'écran` *[Android, définir JC comme appli d'administration]* : Cette action requière que l'application Jeedom Connect soit définie en tant qu'`Appli d'administration du système` (généralement dans la section `Sécurité` des paramètres de votre appareil).
+- `Eteindre l'écran` *[Android, définir JC comme appli d'administration]* : Cette action requiert que l'application Jeedom Connect soit définie en tant qu'`Appli d'administration du système` (généralement dans la section `Sécurité` des paramètres de votre appareil).
 - `Jouer un son` *[Android, Service]* : Permet de lire un fichier audio sur l'appareil. Indiquez une URL complète, ou bien un chemin absolu sur votre installation Jeedom (par exemple `/var/www/html/data/bip-bip.mp3`)
 - `TTS` : Permet d'utiliser la fonction `Text to Speach` de votre appareil pour lire un texte. Sur iOS, l'application doit être ouverte
-- `Commande shell` *[Android]*, **[Root]** : Si votre appareil possède les privilèges root, permet d'exécuter n'importe quelle commande. A la première utilisation, votre gestionaire de `Super utilisateur` vous demandera l'autorisation.
+- `Commande shell` *[Android]*, **[Root]** : Si votre appareil possède les privilèges root, permet d'exécuter n'importe quelle commande. A la première utilisation, votre gestionnaire de `Super utilisateur` vous demandera l'autorisation.
   <details>
   <summary>Exemples de commandes</summary>
   
@@ -334,7 +334,7 @@ Vous pouvez ensuite aller sur `Gestion des lieux`.
 
 - Pour **définir une zone**, faites un appuie long sur la carte puis donner un nom et un rayon (en mètres). Le binaire est immédiatement créé côté Jeedom.
 - Pour **supprimer ou éditer une zone**, appuyez sur le marqueur puis sur le nom qui apparait.
-- Pour **déplacer une zone**, faites un appuie long sur le marqueur puis glisser.
+- Pour **déplacer une zone**, faites un appui long sur le marqueur puis glisser.
 Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connaitre à tout moment la position de votre appareil. Les coordonnées GPS (latitude,longitude) sont accessibles dans la commande `Position` de votre équipement.  
 
 <br/>
