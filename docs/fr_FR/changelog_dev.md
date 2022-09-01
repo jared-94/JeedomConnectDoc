@@ -18,7 +18,7 @@
     * Création d'un nouveau widget `Groupe de Géolocalisation` : permet d'afficher plusieurs points de géolocalisation sur un seul widget
     * Affichage d'un message d'info si aucun équipement n'est paramétré pour être affiché sur la carte/widget `Localisation`
     * Possibilité d'afficher le traffic routier sur la carte
-    * Possibilité d'afficher l'historique des positions (limitée aux 1000 derniers points)
+    * Possibilité d'afficher l'historique des positions
 
   * Général - Côté plugin :
     * Revamping de la page `configuration` du plugin
@@ -32,7 +32,13 @@
     * Ajout d'un contrôle pour vérifier que les versions de l'application et du plugin sont bien alignées : beta/beta ou stable/stable
     * Ajout d'une option pour sauvegarder automatiquement la configuration de l'application (est réalisée lors du démarrage de l'appli) de façon régulière (par défaut : `jamais`)
     * Ajout d'une option pour recharger automatiquement la configuration Jeedom (est réalisée lors du démarrage de l'appli) de façon régulière (par défaut : `tous les jours`)
+    * Ajouts des fonctions `modifiedDate` et `collectDate`, ainsi que la librairie `momentjs` pour les textes dynamiques
     * Inversion possible des sliders dans les paramètres personnalisés :
       * horizontal : droite <-> gauche
       * vertical : haut <-> bas
       * circulaire : horaire <-> antihoraire
+
+* Bug fixes :
+  * Connecxions multiples quand le démarrage de l'app est sécurisé
+  * Corrections sur le Geofencing
+  * Remontée de la prochaine alarme à `-1` si aucune alarme programmée
