@@ -137,12 +137,7 @@ Quelques éléments sont standard et seront demandés pour l'ensemble des widget
 - **Actif** : Le widget sera (ou pas) affiché dans l'application. Pratique si vous voulez par exemple gérer un groupe de lumières, mais ne pas afficher certaines d'entre elles.
 - **Pièce** : Sélection de la pièce associée (identique aux objets gérés dans Jeedom)
 - **Nom** : Nom du widget
-- **Sous-titre** Information complémentaire affichée dans l'application. Le mode personalisé permet de mettre une phrase quelconque, avec certains "mots-clé", généralement `room`, `value`, `formatedValue`, `elapsedTime`, `power`.
-   Par exemple :  
-   `Mon ampoule est formatedValue depuis elapsedTime et consomme power W`  
-   donnera :  
-   `Mon ampoule est allumée depuis 1h12min et consomme 15W`  
-   Les fonctions suivantes sont également disponibles pour une commande : `time` (temps écoulé), `date` (date et heure de modification de la commande) et `collect` (date et heure de la dernière collecte). Elles s'utlisent sous la forme `time(#[Pièce][Eq][Commande]#)`
+- **Sous-titre** Information complémentaire affichée dans l'application. Le mode personalisé permet de mettre une phrase quelconque, ou un texte dynamique
 - **Affichage forcé** : De façon standard, chaque widget (sauf exception) possède 3 types d'affichage : carte, vignette et détail. Les affichages carte et vignettes peuvent être choisis via l'icône en haut à droite dans l'application. L'affichage détail est une page entière affichée quand on click sur le widget. Vous pouvez ici forcer un widget à s'afficher d'une de ces 3 façons.  
    Attention pour le mode détail, le widget doit être seul sur sa page.
 - **Sécuriser les actions** : Toutes les commandes de type action peuvent être sécurisées à l'aide de ces trois boutons :  
@@ -154,6 +149,28 @@ Quelques éléments sont standard et seront demandés pour l'ensemble des widget
 - **Images sous conditions** : Vous pouvez dans certains widgets définir une image en fonction des valeurs d'une commande. L'ordre des ces conditions sera prise en compte par l'appli (les plus hautes sont prioritaires).  
 - **Ajouter des infos** : vous permet d'ajouter des commandes de type `info` de votre Jeedom et de vous en servir pour les autres champs du formulaire 'Images sous conditions', 'Nom', 'Sous-titre'.
 
+**Textes dynamiques** : Les champs `Nom` et `Sous-titre`, ainsi que les conditions d'affichage d'images peuvent être personnalisés. Ils sont évalués dans l'application en JavaScript. Les raccourcis suivants sont aussi disponibles (liste non exhaustive mais disponible dans la configuration de chaque widget côté plugin) :
+
+- `#room#` : Nom de la pièce associée au widget
+- `#status#` ou `#value#` (selon les widgets) : donne la valeur courante de la commande info principale du widget
+- `#formatedValue#` (selon les widgets) : valeur formatée en mot de la commande info princpale (par exemple `Allumé`, `Eteint`)
+- `#elapsedTime#` : durée depuis laquelle la commande info principale du widget a été modifiée
+  Exemple :
+  `La lumière de #room# est formatedValue depuis elapsedTime et consomme power W`  
+   pourra donner :  
+   `La lumière de jardin est allumée depuis 1h12min et consomme 15W`  
+
+<span id="momentjs"></span>
+
+Les fonctions suivantes sont également dispobibles, pour une commande info notée ici #cmd# :
+
+- `time(#cmd#)` : durée depuis laquelle la commande info principale du widget a été modifiée
+- `date(#cmd#)` : date et heure de dernière modification de la valeur,, au format "DD MMM - HH:mm"
+- `collect(#cmd#)` : date et heure de dernière collecte de la valeur,, au format "DD MMM - HH:mm"
+- `average(#cmd#)` : moyenne des valeurs de la commande (#cmd# doit être historisée)
+- `min(#cmd#)` : minimum des valeurs de la commande (#cmd# doit être historisée)
+- `max(#cmd#)` : maximum des valeurs de la commande (#cmd# doit être historisée)
+- `tendance(#cmd#)` : renvoie `up`, `down` ou `stable` selon la tendance des valeurs (#cmd# doit être historisée)
 La duplication d'un widget est réalisable dès que celui-ci a été sauvegardé une première fois. Cliquez simplement sur le bouton "Dupliquer", réaliser vos modifications (ou pas), et enregistrer (impérativement) en validant avec le bouton "Sauvegarder".  
 
 La suppression est également possible. Attention toutefois, si un widget est supprimé, alors il disparaitra de l'ensemble des équipements auxquels il avait été ajouté !  
@@ -622,6 +639,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 - [Comment paramétrer les zones de Geofencing ?](#configGeofence)
 - [Comment voir les positions de mes appareils JC ?](#localisation)
 - [Les cartes de geofence et de localisation sont centrées sur Paris par défaut, comment changer ?](#qCarteParis)
+- [J'ai un message "Address already in use" au démarrage du démon, comment faire ?](#qAddressUsed)  
 - [Je trouve l'application géniale ! Comment vous aider ?](#qDon)
 - [Je ne trouve pas de réponse à mon problème dans la doc. Que faire ?](#qForum)
 
@@ -856,6 +874,24 @@ bonne lecture, et attention à vos clics !
 
 Les différentes cartes se centrent sur la position définie sur la page configuration du plugin JC.  
 Si ces informations ne sont pas renseignées, nous prenons alors les coordonnées de votre Jeedom (`Réglages / Systèmes / Configuration / Coordonnées`). Dans le cas où ces dernières ne sont pas indiquées, alors par défaut nous centrons sur Paris.
+
+<br/>
+## J'ai un message "Address already in use" au démarrage du démon, comment faire ? <a name="qAddressUsed"></a>  
+
+Il y a deux options :
+
+1. La plus simple : redémarrez votre Jeedom
+2. La plus risquée : killez le processus qui utilise déjà ce port (il y a de forte chance que ce soit la précédent démon de JC qui ait mal été stoppé, mais il se peut que ce soit autre chose ... )  
+Allez dans `Réglages > Système > Configuration > OS/DB > Administration Système`  
+sur la nouvelle page qui s'affiche :
+  a. tapez la commande suivante `sudo netstat -tulpn | grep LISTEN | grep 8090` (si vous avez gardé le port `8090` par défaut, sinon changez le)  
+  b. validez avec `OK`  
+  c. trouvez la ligne qui correspond au port que vous recherchez  
+  d. notez le numéro de processus qui tourne --> ici le `7476`  
+Ensuite dans la barre (a) changer la commande et tappez `sudo kill -9 7476` (évidemment remplacez `7476` par le nombre que vous avez trouvé en (d))  
+Vous pouvez retourner sur la page configuration de JC pour redémarrer le démon
+
+<img src='../images/JC_demon_address.png' width='50%' />  
 
 <br/>
 
