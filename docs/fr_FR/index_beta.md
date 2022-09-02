@@ -899,7 +899,7 @@ Direction quelques exemples donnés [ici](#momentjs)
 Il y a deux options :
 
 1. La plus simple : redémarrez votre Jeedom
-2. La plus risquée : killez le processus qui utilise déjà ce port (il y a de forte chance que ce soit la précédent démon de JC qui ait mal été stoppé, mais il se peut que ce soit autre chose ... )
+2. La plus risquée : killez le processus qui utilise déjà ce port (il y a de forte chance que ce soit la précédent démon de JC qui ait mal été stoppé, mais il se peut que ce soit autre chose ... )  
 Allez dans `Réglages > Système > Configuration > OS/DB > Administration Système`  
 sur la nouvelle page qui s'affiche :
   a. tapez la commande suivante `sudo netstat -tulpn | grep LISTEN | grep 8090` (si vous avez gardé le port `8090` par défaut, sinon changez le)  
