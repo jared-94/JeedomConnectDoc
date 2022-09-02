@@ -238,7 +238,7 @@ La configuration de cette partie est optionnelle, et n'est à réaliser que si v
 <img src="../images/JC_assistant_summary.png" width="50%" />  
 
 Il vous est ensuite possible de cliquer sur chaque résumé pour personnaliser les icônes et leurs conditions d'affichage.  
-<img src="../images/JC_summary_conditions.png" width="50%" />  
+<img src="../images/JC_summary_conditions.PNG" width="50%" />  
 
 Deux variables sont disponibles : `#value#` et `#total#` :  
 
