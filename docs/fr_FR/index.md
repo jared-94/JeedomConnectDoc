@@ -332,7 +332,7 @@ Pour le bon fonctionnement du service, il est impératif d'accepter toutes les a
 
 Vous pouvez ensuite aller sur `Gestion des lieux`.
 
-- Pour **définir une zone**, faites un appui long sur la carte puis donnez un nom et un rayon (en mètres). Le binaire est immédiatement créé côté Jeedom.
+- Pour **définir une zone**, faites un appui long sur la carte puis donner un nom et un rayon (en mètres). Le binaire est immédiatement créé côté Jeedom.
 - Pour **supprimer ou éditer une zone**, appuyez sur le marqueur puis sur le nom qui apparait.
 - Pour **déplacer une zone**, faites un appui long sur le marqueur puis glisser.
 Jeedom Connect possède aussi une fonction de Tracking qui vous permet de connaitre à tout moment la position de votre appareil. Les coordonnées GPS (latitude,longitude) sont accessibles dans la commande `Position` de votre équipement.  
