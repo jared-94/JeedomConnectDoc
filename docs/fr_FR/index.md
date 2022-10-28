@@ -461,21 +461,20 @@ Et j'ai également la possibilité de cliquer sur le bouton `Alarme maison` pour
 <br/>
 <br/>
 ### Comment envoyer une notification à tous les appareils ? <a name="qNotifyAll"></a>
+<br/>
 
-Par défaut le fait d'envoyer à "tous" les appareils JC n'existe pas. En effet, il est possible de configurer plusieurs types de notifications par appareil, il nous est donc impossible de deviner lesquelles sont à utiliser.  
-Avant d'utiliser la commande `Notifier les appareils JC`, il faut :
+Par défaut le fait d'envoyer à "tous" les appareils JC n'existe pas.  
+En effet, il est possible de configurer plusieurs types de notifications par appareil, il nous est donc impossible de deviner lesquelles sont à utiliser.  
+Vous pouvez créer plusieurs notification de type `Notifier tous`, il faut :
 
-- aller sur les équipements que vous souhaitez notifier
-- entrer dans l'assistant des notifications, puis onglet `Notification`
-- choisir la notification qui devra être prise en compte par cette commande
-- cocher la case `Notifier tous les appareils JC`
-- sauvegarder cette fenêtre `Configuration des notifications`
-- sauvegarder ensuite votre page principale de l'équipement concerné  
+- aller sur la page principale du plugin et sélectionner sur `Notification multiples`
+- cliquer sur `ajouter` pour créer un nouveau type de notification (on peut par exemple imaginer avoir un `Notifier les parents`, `Notifier les enfants`, `Notifier toute la famille`)
+- selectionner l'ensemble des notifications qui devront être utilisées lorsque l'action sera réalisée
+- sauvegarder les modifications pour ne pas les perdre
+- Lors de la sauvegarde, une nouvelle commande est automatiquement créée sur chaque équipement qui ont été coché
 
-<img src='../images/JeedomConnect_notifyAll.gif' width='50%' />  
+<img src='../images/JeedomConnect_notifyAll.png' width='70%' />
 
-NB : la commande `Notifier les appareils JC` est disponible sur l'ensemble des vos équipements JC, y compris ceux pour lesquels vous n'auriez pas coché la case `Notifier tous les appareils JC` !
-Vous pouvez donc utiliser cette commande depuis n'importe quel équipement.  
 <br/>
 <br/>  
 
