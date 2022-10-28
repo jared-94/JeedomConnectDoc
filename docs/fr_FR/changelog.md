@@ -44,6 +44,7 @@
   * Connections multiples quand le démarrage de l'app est sécurisé
   * Corrections sur le Geofencing
   * Remontée de la prochaine alarme à `-1` si aucune alarme programmée
+
 ## Version 1.4.1 (29/08/22)
 
 * Bugs fixes sur la partie Geofencing/Localisation du plugin :
