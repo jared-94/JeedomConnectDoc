@@ -1,7 +1,14 @@
 ## Version 1.5.2 (28/10/2022)
 
 * Nouveautés :
-  * Refonte graphique de l'appli. Ajout de thèmes de couleurs et diverses options pour configurer l'apparence de l'interface
+  * Refonte graphique de l'appli. 
+    * Ajout de thèmes de couleurs : Plus de 40 thème de couleurs au choix avec pour chacun, une couleur primaire/secondaire, + un thème personnalisable
+    * Ces couleurs de thème sont accessibles depuis les différents éléments de personnalisation de l'appli
+    * Options de mixage des couleurs des surfaces et éléments de surface
+    * Changement de la police des textes, qui n'utilise plus celle du système
+    * Paramètre de couleur pour la barre du haut, de transparence pour le menu bas
+    * Choix des couleurs et transparence par défaut des différents éléments d'un widget (titre, sous-titre, statut)
+    * Réorganisation du menu `Préférences`
   * `Prochaine Alarme` : ajout d'un filtre pour ne récupérer la prochaine alarme du téléphone uniquement si elle fait partie d'une liste de programme que vous souhaitez récupérer.  
     Android ne permet toujours que de récupérer la PROCHAINE alarme prévue dans la system. Deux cas de figure donc :  
     * vous ne mettez pas de filtre => vous obtenez des maj de la cmde à chaque fois que la prochaine alarme est modifiée (sans vraiment savoir de qui elle vient)
