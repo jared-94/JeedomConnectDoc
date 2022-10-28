@@ -320,7 +320,14 @@ Les actions :
 - `Pop-up` : Permet d'afficher un pop-up sur votre appareil. Elle sera affichée directement dans l'application si celle-ci est ouverte, et sinon en popup système *[Android seulement]*.
 - `Modifier Préférences Appli` : Permet de modifier certaines options de votre application. Faites un choix dans la liste déroulante, puis indiquez la valeur à mettre si nécessaire : `ON`, `OFF`, `MARCHE`, `ARRET`
 Liste des actions (fonctionnent même appli tuée) :
-  - `Couleur thème` : indiquer une couleur au format hex `#10F581` ou par son nom (`pink`, `green`...)
+  - `Schéma thème` : entrer l'id du schéma à appliquer
+    <details>
+    <summary>Liste des schémas</summary>
+      jeedomConnect,    material,    materialHc,    blue,    indigo,  hippieBlue,
+    aquaBlue,    brandBlue,    deepBlue,    sakura,    mandyRed,    red,   redWine,    purpleBrown,    green,    money,    jungle,    greyLaw,    wasabi,    gold,    mango,    amber,    vesuviusBurn,    deepPurple,ebonyClay,    barossa,    shark,    bigStone,    damask,    bahamaBlue,
+    mallardGreen,    espresso,    outerSpace,    blueWhale,    sanJuanBlue,
+    rosewood,    blumineBlue,    reactDash,    materialBaseline,    verdunHemlock,    dellGenoa,    customColors
+    </details>
   - `Activer mode sombre` : `ON`, `OFF` ou tout autre chose pour le mode auto
   - `Activer le tracking` : `MARCHE` ou `ARRET`
   - `Recharger les données`
