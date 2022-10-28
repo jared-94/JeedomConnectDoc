@@ -10,14 +10,14 @@
       * si la prochaine alarme provient d'un autre package --> vous n'aurez pas la maj
     * Ajout d'une nouvelle commande `Package Prochaine Alarme` qui permet de savoir quel est le plugin qui déclenchera la prochaine alarme sur votre téléphone
 
-  * `Notification multiple` : vous avez dorénavant la possibilité de créer plusieurs commande de type `Notifier tous` :  
+  * `Notifications multiples` : vous avez dorénavant la possibilité de créer plusieurs commande de type `Notifier tous` :  
     Vous pouvez par exemple définir un 'Notifier Tous - Enfants', 'Notifier Tous - Parents' et un 'Notifier Tous - Famille' --> en fonction du cas nécessaire vous appelerez l'une de ces commandes dans vos scénarios !
 
   * Création de la commande `Visibilité Menu` : qui permet de masquer/afficher un menu d'un équipement
   * Création de la commande `Visibilité Widget` : qui permet de masquer/afficher un widget sur <u>tous les équipements</u>
 
   * Regénération automatiquement du QR Code si nécessaire après la modification de l'équipement
-  * Séparation par onglet des différents type des commandes pour y voir plus clair
+  * Séparation par onglets des différents type des commandes pour y voir plus clair
   * Ajout d'un affichage de type `Jauge` sur les widgets `Générique numérique`, `Puissance` et `Prise`
   * Lorsqu'un widget est toujours présents sur la configuration de votre équipement mais n'est plus disponible sur votre installation Jeedom, alors il est automatiquement effacé
   * Déplacement de l'affichage du QR Code sur la page principale du plugin
@@ -26,11 +26,12 @@
   * Mise sous condition d'affichage d'un widget ou d'un menu : vous pouvez définir si un élément peut être affiché en fonction d'une condition.
   * Dans le widget `Groupe géolocalisation`, un appui sur le nom d'un marqueur va vers sa carte dédiée
   * Ajout du paramètre `"Facteur de zoom` sur le widget `Groupe géolocalisation`
+  * Récupération des labels `titre` et `message` si définies sur les commandes de sous-type `message`, alors ceux-ci sont affichés sur l'application
 
 * Bug fixes :
   * Import de la configuration du plugin
   * Masquage de l'api key de JC dans les logs du démarrage du démon
   * Erreur lorsqu'un menu haut n'est pas rattaché à un menu bas
   * Récupération des applis de l'appareil dans certains cas
-  * Envoi des actions (type `TTS`) lorsque l'appli est en background 
+  * Envoi des actions (type `TTS`) lorsque l'appli est en background
   
