@@ -1,3 +1,3 @@
-## Version 1.5.3 (dev en cours)
+## Version 1.5.4 (dev en cours)
 
 * Nouveautés :

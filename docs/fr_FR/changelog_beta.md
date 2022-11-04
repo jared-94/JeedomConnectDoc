@@ -1,5 +1,11 @@
 # Changelog JeedomConnect
 
+## Version 1.5.3 (04/11/2022)
+
+* Bug fixes :
+  * Correction sur la création de notification qui plante
+  * Suppression automatique à tord de commande "notifier tous"
+  
 ## Version 1.5.2 (28/10/2022)
 
 * Nouveautés :
