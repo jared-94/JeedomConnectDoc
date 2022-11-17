@@ -339,8 +339,10 @@ Cette fonction est utilisable dans n'importe quel état de l'application (premie
 Pour utiliser cette fonction, vous devez d'abord vous rendre dans les autorisations de l'appli puis accepter celle correspondant à l'envoie de SMS.
 - `Allumer l'écran` *[Android]*
 - `Eteindre l'écran` *[Android, définir JC comme appli d'administration]* : Cette action requiert que l'application Jeedom Connect soit définie en tant qu'`Appli d'administration du système` (généralement dans la section `Sécurité` des paramètres de votre appareil).
-- `Jouer un son` *[Android, Service]* : Permet de lire un fichier audio sur l'appareil. Indiquez une URL complète, ou bien un chemin absolu sur votre installation Jeedom (par exemple `/var/www/html/data/bip-bip.mp3`)
+- `Jouer un son` *[Android, Service]* : Permet de lire un fichier audio sur l'appareil. Indiquez une URL complète, ou bien un chemin absolu sur votre installation Jeedom (par exemple `/var/www/html/data/bip-bip.mp3`), ou bien le chemin d'un fichier local sur votre appareil (par exemple `file:///storage/emulated/0/Music/file.ogg`)
 - `TTS` : Permet d'utiliser la fonction `Text to Speach` de votre appareil pour lire un texte. Sur iOS, l'application doit être ouverte
+- `Mode sonnerie` *[Android]* : Permet d'activer un mode de sonnerie `Silencieux`, `Normal` ou `Vibreur`. Dans le champs `Message` de la commande, indiquer l'un des mots clé `silence`, `normal`, `vibreur`. Pour Android N et supérieur, l'application a besoin de l'autorisation `Accès au mode "Ne pas déranger"`.
+- `Volume` : Permet de régler le volume de l'appareil (en %). Pour Android, vous pouvez spécifier en plus dans champs `Titre` de la commande le canal audio à modifier, parmi `music`, `call`, `system`, `ring`, `alarm`, `notification`.  
 - `Commande shell` *[Android]*, **[Root]** : Si votre appareil possède les privilèges root, permet d'exécuter n'importe quelle commande. A la première utilisation, votre gestionnaire de `Super utilisateur` vous demandera l'autorisation.
   <details>
   <summary>Exemples de commandes</summary>
