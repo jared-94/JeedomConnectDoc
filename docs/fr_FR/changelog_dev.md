@@ -7,6 +7,8 @@
     - `Mode sonnerie` *[Android]* : Permet d'activer un mode de sonnerie `Silencieux`, `Normal` ou `Vibreur`. 
     - `Volume` : Permet de régler le volume de l'appareil (en %). Pour Android, vous pouvez spécifier en plus dans champs `Titre` de la commande le canal audio à modifier
   * Maintient de l'écran allumé en plein écran pour une caméra
+  * Possibilité de changer de thème depuis une commande Jeedom
+  * Possibilité de télécharger le QR code de connexion depuis l'application
 
 * Bug fixes :
   * Problème avec l'authentification au démarrage sur iOS 
