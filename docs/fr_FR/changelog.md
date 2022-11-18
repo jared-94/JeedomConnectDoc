@@ -1,5 +1,12 @@
 # Changelog JeedomConnect  
 
+## Version 1.5.1+ (18/11/2022)  -  Plugin uniquement
+
+* Bug Fixe sur les notifications :
+  * Problème lorsque le nom de la notif, la commande ou le scnéario contient un apostrophe
+  * Mauvaise enregistrement lors de la création d'une notif
+  * Suppression de la commande action créé automatiquement et nommée `{`
+  
 ## Version 1.5.0 (12/10/2022)
 
 * Nouveautés :
