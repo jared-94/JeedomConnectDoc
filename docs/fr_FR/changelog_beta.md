@@ -4,6 +4,7 @@
 
 * Bug fixes :
   * *[iOS]* Boutons de la barre du haut lorsque l'horloge est affichée
+
 ## Version 1.5.4 (19/11/2022)
 
 * Nouveautés :
