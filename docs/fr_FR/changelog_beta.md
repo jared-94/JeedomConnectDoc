@@ -7,6 +7,7 @@
   - *[Android, Service]* Commande info `Volume actuel` pour connaitre les 6 différents volumes de son appareil. La commande est valorisée par défaut avec l'ensemble des volumes disponible, selon le format suivant : `Alarme;Appel;Musique;Notification;Sonnerie;Système;`. Vous avez la possibilité de spécifier si vous ne souhaitez conserver qu'un seul type de volume et dans ce cas la commande renverra uniquement la valeur de ce type de volume. Dans le cas de `Toutes` les valeurs, ça sera à vous de vous créer un virtuel avec autant de commandes que vous souhaitez récupérer parmis les 6 types dispo.
   - Redesign page d'accueil du plugin pour afficher moins de menu
   - Ajout du nom de l'équipement sur le QR-Code
+  - Modification de l'affichage sur le dashboard Jeedom pour les commandes ayant des listes de choix possible
 
 - Bug fixes :
   - Coquille sur le démon qui ne renvoie pas les messages d'erreur mais coupe simplement la connexion
