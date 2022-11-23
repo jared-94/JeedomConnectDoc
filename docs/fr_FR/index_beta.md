@@ -343,7 +343,7 @@ Pour utiliser cette fonction, vous devez d'abord vous rendre dans les autorisati
 - `TTS` : Permet d'utiliser la fonction `Text to Speach` de votre appareil pour lire un texte. Sur iOS, l'application doit être ouverte
 - `Mode sonnerie` *[Android]* : Permet d'activer un mode de sonnerie `Silencieux`, `Normal` ou `Vibreur`. Dans le champs `Titre` de la commande, indiquez l'un des mots clé `silent`, `normal`, `vibrate`. Pour Android N et supérieur, l'application a besoin de l'autorisation `Accès au mode "Ne pas déranger"`.
 - `Modifier Volume` : Permet de régler le volume de l'appareil (en %). Pour Android, vous pouvez spécifier en plus dans champs `Titre` de la commande le canal audio à modifier, parmi `music`, `call`, `system`, `ring`, `alarm`, `notification`.  
-- `Volume actuel` pour connaitre les 6 différents volumes de son appareil (en fonction des OS et surcouche). La commande est valorisée par défaut avec l'ensemble des volumes disponible, selon le format suivant : `Alarme;Appel;Musique;Notification;Sonnerie;Système;`
+- `Volume actuel` *[Android, Service]* pour connaitre les 6 différents volumes de son appareil (en fonction des OS et surcouche). La commande est valorisée par défaut avec l'ensemble des volumes disponible, selon le format suivant : `Alarme;Appel;Musique;Notification;Sonnerie;Système;`
 - `Commande shell` *[Android]*, **[Root]** : Si votre appareil possède les privilèges root, permet d'exécuter n'importe quelle commande. A la première utilisation, votre gestionnaire de `Super utilisateur` vous demandera l'autorisation.
   <details>
   <summary>Exemples de commandes</summary>
