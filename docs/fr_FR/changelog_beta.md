@@ -1,6 +1,10 @@
 # Changelog JeedomConnect
+## Version 1.5.7 (24/11/2022)
 
-## Version 1.5.5 (23/11/2022)
+- Nouveauté :
+  - Ajout du déclencheur de changement de volume dans le service Android
+
+## Version 1.5.6 (23/11/2022)
 
 - Nouveautés :
   - Les actions `Mode sonnerie` et `Modifier Volume` ont été modifiées pour permettre le choix parmi une liste de valeur. Si vous avez réalisé des scénario avec la version 1.5.4 alors il vous faut les modifier pour prendre en compte ce changement  
