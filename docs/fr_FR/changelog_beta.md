@@ -1,4 +1,5 @@
 # Changelog JeedomConnect
+
 ## Version 1.5.7 (24/11/2022)
 
 - Nouveauté :
