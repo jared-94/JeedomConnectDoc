@@ -76,7 +76,7 @@
     - vous filtrez par exemple uniquement sur les alarmes provenant du package "réveil" :
       - si la prochaine alarme est émise par ce package --> le plugin recoit la maj
       - si la prochaine alarme provient d'un autre package --> vous n'aurez pas la maj
-    - Ajout d'une nouvelle commande `Package Prochaine Alarme` qui permet de savoir quel est le plugin qui déclenchera la prochaine alarme sur votre téléphone
+    - Ajout d'une nouvelle commande `Package Prochaine Alarme` qui permet de savoir quel est le package qui déclenchera la prochaine alarme sur votre téléphone
 
   - `Notifications multiples` : vous avez dorénavant la possibilité de créer plusieurs commande de type `Notifier tous` :  
     Vous pouvez par exemple définir un 'Notifier Tous - Enfants', 'Notifier Tous - Parents' et un 'Notifier Tous - Famille' --> en fonction du cas nécessaire vous appelerez l'une de ces commandes dans vos scénarios !

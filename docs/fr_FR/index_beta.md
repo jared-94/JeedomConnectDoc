@@ -309,6 +309,9 @@ Les infos :
 - `Etat Wifi` *[Android, Service, Localisation autorisée & activée]* : Binaire qui permet de savoir si l'appareil est connecté à un réseau wifi
 - `Adresse IP` *[Android, Service]* : Lorsque l'appareil est relié au réseau wifi, indique l'adresse IP
 - `Réseau wifi (SSID)` *[Android, Service, Localisation autorisée & activée]* : Lorsque l'appareil est relié au réseau wifi, indique le nom du point d'accès
+- `Prochaine alarme` *[Android, Service]* : permet de récupérer (au format timestamp) l'heure de la prochaine alarme
+- `Package Prochaine Alarme`*[Android, Service]* : permet de savoir quel est le package qui déclenchera la prochaine alarme sur votre téléphone
+
 
 Les actions :
 
