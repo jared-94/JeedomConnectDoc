@@ -171,6 +171,16 @@ Les fonctions suivantes sont également dispobibles, pour une commande info not�
 - `min(#cmd#)` : minimum des valeurs de la commande (#cmd# doit être historisée)
 - `max(#cmd#)` : maximum des valeurs de la commande (#cmd# doit être historisée)
 - `tendance(#cmd#)` : renvoie `up`, `down` ou `stable` selon la tendance des valeurs (#cmd# doit être historisée)
+- `modifiedDate(#cmd#)` : donne le timestamp en ms de la dernière modification
+- `collectDate(#cmd#)` : donne le timestamp en ms de la dernière collecte
+
+De plus, pour la manipulations des dates, vous avez accès à la bibliothèque `momentjs` ([documentation](https://momentjs.com/docs/#/displaying/)). Exemple :
+
+`` `La tondeuse est {#cmd# > 0 ? "en marche" : "au repos"} depuis le moment(modifiedDate(#cmd#)).format("DD MMMM à HH-mm")` ``
+pourra donner :
+`La tondeuse est au repos depuis le 30 Septembre à 13:31`
+(notez l'usage des backquote qui entourent le texte)
+
 La duplication d'un widget est réalisable dès que celui-ci a été sauvegardé une première fois. Cliquez simplement sur le bouton "Dupliquer", réaliser vos modifications (ou pas), et enregistrer (impérativement) en validant avec le bouton "Sauvegarder".  
 
 La suppression est également possible. Attention toutefois, si un widget est supprimé, alors il disparaitra de l'ensemble des équipements auxquels il avait été ajouté !  
@@ -299,8 +309,10 @@ Les infos :
 - `Etat Wifi` *[Android, Service, Localisation autorisée & activée]* : Binaire qui permet de savoir si l'appareil est connecté à un réseau wifi
 - `Adresse IP` *[Android, Service]* : Lorsque l'appareil est relié au réseau wifi, indique l'adresse IP
 - `Réseau wifi (SSID)` *[Android, Service, Localisation autorisée & activée]* : Lorsque l'appareil est relié au réseau wifi, indique le nom du point d'accès
+- `Visage présent` *[Android]* : indique si un visage est détecté devant l'écran de l'équipement
+- `Volume actuel` *[Android, Service]* pour connaitre les 6 différents volumes de son appareil (en fonction des OS et surcouche). La commande est valorisée par défaut avec l'ensemble des volumes disponible, selon le format suivant : `Alarme;Appel;Musique;Notification;Sonnerie;Système;`
 - `Prochaine alarme` *[Android, Service]* : permet de récupérer (au format timestamp) l'heure de la prochaine alarme
-- `Package Prochaine Alarme` *[Android, Service]*: permet de savoir quel est le package qui déclenchera la prochaine alarme sur votre téléphone
+- `Package Prochaine Alarme`*[Android, Service]* : permet de savoir quel est le package qui déclenchera la prochaine alarme sur votre téléphone
 
 Les actions :
 
@@ -312,7 +324,14 @@ Les actions :
 - `Pop-up` : Permet d'afficher un pop-up sur votre appareil. Elle sera affichée directement dans l'application si celle-ci est ouverte, et sinon en popup système *[Android seulement]*.
 - `Modifier Préférences Appli` : Permet de modifier certaines options de votre application. Faites un choix dans la liste déroulante, puis indiquez la valeur à mettre si nécessaire : `ON`, `OFF`, `MARCHE`, `ARRET`
 Liste des actions (fonctionnent même appli tuée) :
-  - `Couleur thème` : indiquer une couleur au format hex `#10F581` ou par son nom (`pink`, `green`...)
+  - `Schéma thème` : entrer l'id du schéma à appliquer
+    <details>
+    <summary>Liste des schémas</summary>
+      jeedomConnect,    material,    materialHc,    blue,    indigo,  hippieBlue,
+    aquaBlue,    brandBlue,    deepBlue,    sakura,    mandyRed,    red,   redWine,    purpleBrown,    green,    money,    jungle,    greyLaw,    wasabi,    gold,    mango,    amber,    vesuviusBurn,    deepPurple,ebonyClay,    barossa,    shark,    bigStone,    damask,    bahamaBlue,
+    mallardGreen,    espresso,    outerSpace,    blueWhale,    sanJuanBlue,
+    rosewood,    blumineBlue,    reactDash,    materialBaseline,    verdunHemlock,    dellGenoa,    customColors
+    </details>
   - `Activer mode sombre` : `ON`, `OFF` ou tout autre chose pour le mode auto
   - `Activer le tracking` : `MARCHE` ou `ARRET`
   - `Recharger les données`
@@ -324,8 +343,10 @@ Cette fonction est utilisable dans n'importe quel état de l'application (premie
 Pour utiliser cette fonction, vous devez d'abord vous rendre dans les autorisations de l'appli puis accepter celle correspondant à l'envoie de SMS.
 - `Allumer l'écran` *[Android]*
 - `Eteindre l'écran` *[Android, définir JC comme appli d'administration]* : Cette action requiert que l'application Jeedom Connect soit définie en tant qu'`Appli d'administration du système` (généralement dans la section `Sécurité` des paramètres de votre appareil).
-- `Jouer un son` *[Android, Service]* : Permet de lire un fichier audio sur l'appareil. Indiquez une URL complète, ou bien un chemin absolu sur votre installation Jeedom (par exemple `/var/www/html/data/bip-bip.mp3`)
+- `Jouer un son` *[Android, Service]* : Permet de lire un fichier audio sur l'appareil. Indiquez une URL complète, ou bien un chemin absolu sur votre installation Jeedom (par exemple `/var/www/html/data/bip-bip.mp3`), ou bien le chemin d'un fichier local sur votre appareil (par exemple `file:///storage/emulated/0/Music/file.ogg`)
 - `TTS` : Permet d'utiliser la fonction `Text to Speach` de votre appareil pour lire un texte. Sur iOS, l'application doit être ouverte
+- `Mode sonnerie` *[Android]* : Permet d'activer un mode de sonnerie `Silencieux`, `Normal` ou `Vibreur`. Dans le champs `Titre` de la commande, indiquez l'un des mots clé `silent`, `normal`, `vibrate`. Pour Android N et supérieur, l'application a besoin de l'autorisation `Accès au mode "Ne pas déranger"`.
+- `Modifier Volume` : Permet de régler le volume de l'appareil (en %). Pour Android, vous pouvez spécifier en plus dans champs `Titre` de la commande le canal audio à modifier, parmi `music`, `call`, `system`, `ring`, `alarm`, `notification`.  
 - `Commande shell` *[Android]*, **[Root]** : Si votre appareil possède les privilèges root, permet d'exécuter n'importe quelle commande. A la première utilisation, votre gestionnaire de `Super utilisateur` vous demandera l'autorisation.
   <details>
   <summary>Exemples de commandes</summary>
@@ -475,7 +496,7 @@ Vous pouvez créer plusieurs notification de type `Notifier tous`, il faut :
 - sauvegarder les modifications pour ne pas les perdre
 - Lors de la sauvegarde, une nouvelle commande est automatiquement créée sur chaque équipement qui ont été coché
 
-<img src='../images/JeedomConnect_notifyAll.png' width='70%' />
+<img src='../images/JeedomConnect_notifyAll.png' width='70%' />  
 
 <br/>
 <br/>  
@@ -640,6 +661,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 - [Comment paramétrer les zones de Geofencing ?](#configGeofence)
 - [Comment voir les positions de mes appareils JC ?](#localisation)
 - [Les cartes de geofence et de localisation sont centrées sur Paris par défaut, comment changer ?](#qCarteParis)
+- [Comment formater une date/heure dans les widgets ?](#qDatetime)  
 - [J'ai un message "Address already in use" au démarrage du démon, comment faire ?](#qAddressUsed)  
 - [Je trouve l'application géniale ! Comment vous aider ?](#qDon)
 - [Je ne trouve pas de réponse à mon problème dans la doc. Que faire ?](#qForum)
@@ -877,6 +899,13 @@ Les différentes cartes se centrent sur la position définie sur la page configu
 Si ces informations ne sont pas renseignées, nous prenons alors les coordonnées de votre Jeedom (`Réglages / Systèmes / Configuration / Coordonnées`). Dans le cas où ces dernières ne sont pas indiquées, alors par défaut nous centrons sur Paris.
 
 <br/>
+
+## Comment formater une date/heure dans les widgets ? <a name="qDatetime"></a>  
+
+Direction quelques exemples donnés [ici](#momentjs)
+
+<br/>
+
 ## J'ai un message "Address already in use" au démarrage du démon, comment faire ? <a name="qAddressUsed"></a>  
 
 Il y a deux options :
