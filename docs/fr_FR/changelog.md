@@ -1,5 +1,10 @@
 # Changelog JeedomConnect  
 
+## Version 1.6.0+ (06/12/2022) - PLUGIN UNIQUEMENT
+
+- Bug fix :
+  - non création du répertoire où sont stockées les images perso
+
 ## Version 1.6.0 (30/11/2022)
 
 - Nouveautés :
