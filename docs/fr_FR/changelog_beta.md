@@ -1,5 +1,55 @@
 # Changelog JeedomConnect
 
+## Version 1.6.1 (23/12/2022)
+
+La grosse nouveauté de cette version est l'arrivée des "Composants", un cousin germain du "Widget".
+Il s'agit d'élément "brut" unitaire très simple permettant (ou non) de réaliser une action, sans intelligence ni artifice (pas d'images sous conditions, de vue détaillée, d'habillage, ...).  
+Aujourd'hui 6 types de composants existent : Séparateur, Bouton, Switch, Slider, Jauge et Image.  
+Ils peuvent être ajoutés dans chaque page, en plus des widgets et des groupes, ainsi qu'à l'intérieur d'un groupe.  
+
+Il devient par exemple très facile de créer une télécommande, ou de mettre une image (d'un module par exemple) sur laquelle on peut placer n'importe quelle(s) information(s) à différents endroits, ...
+Les possibilités de personalisation deviennent immense ! Vous pouvez dorénavant faire exactement ce que vous désirez, comme vous le désirez sans qu'on vous impose un style, une mise en page, un emplacement, une marge trop grande/petite, ...  
+  
+- Autres Nouveautés :
+  - Intégration des composants sur la page principale du plugin
+  - Ajout la possibilité de verrouiller la position d'un widget : cliquez sur le cadenas ! en approchant un autre élément à côté d'un élément verrouillé, alors celui-ci viendra se placer au plus prêt sans bouger tous ceux verrouillés autour !
+  - Possibilité de superposer différents éléments lorsque ceux-ci ne sont pas verrouillés :
+    - composant sur composant ✅
+    - widget sur composant ✅
+    - composant sur widget ✅
+    - widget sur widget 🚫
+  
+  - Notifications (Android) : Possibilité de rendre une notification permanente (envoyez un message `cancel` pour la supprimer)
+  - Edition des grilles avancées : affichage des coordonnées et tailles des éléments, diminution du pas de la grille et possibilité de verrouiller les éléments (une réinitialisation des grilles peut être nécessaire)
+  - Suppression des groupes sans nom (--> utiliser un séparateur pour créer un espace)
+  - Edition du champ `visibilité sous conditions` depuis l'application
+  - Option d'opacité pour l'arrière plan d'un groupe
+  - Nouveau champs `Nom d'affichage` qui défini un nom "lisible" utilisé à l'affichage sur la page principale du plugin et de l'application. Permettant ainsi d'avoir un champ `nom` avec des variables ou autres, initialement un peu moins lisible
+  
+  - Nouvelle commande `Obtenir infos` pour rafraîchir les données provenant de l'appareil
+  - Action `geofence` pour activer/désactiver le geofencing depuis la commande `Modifier Préférences Appli`
+  
+  - Changement d'icônes pour widgets génériques binaire, numérique et texte (depuis le plugin besoin d'ouvrir et sauvegarder chaque widget pour que la maj soit faite)
+  - Fond d'écran : possibilité d'utiliser une `commande` dans les conditions
+  - Affichage d'un icone `!` orange sur les widgets qui ont des commandes dont l'équipement est désactivé / n'existe plus
+  - Restaure automatiquement la précédente sauvegarde de configuration lorsque le fichier courant est corrompu
+  
+- Bug fixes :
+  - Affichage des applications de l'appareil (Android)
+  - Accès aux historique de commandes depuis la vue Détails
+  - Problème dans la sélection de modes
+  - Erreur dans la page d'édition de widget
+  - Edition des couleurs des icônes de menu bas
+  - Changement de mise en page pour les widgets de résumés
+  - Changement de nom du fichier QR code téléchargé
+  - Bouton Envoyer pour un widget générique message en vue détail
+  - `Images sous conditions` pour les widgets de lumières
+  - Menu `Raccourcis` sur iOS
+  - Recherche insensible à la casse dans l'application
+  - Crash de la reconnaissance vocale
+  - `Ask` sur une commande `notifier tous` ne renvoyez plus l'info d'une réponse déjà obtenue (android)
+  - Oblige la sélection d'un widget sur les éléments "plus de widgets"
+  
 ## Version 1.5.6+ (06/12/2022) - PLUGIN UNIQUEMENT
 
 - Bug fix :
