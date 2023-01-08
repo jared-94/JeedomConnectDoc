@@ -1,5 +1,11 @@
 # Changelog JeedomConnect  
 
+## Version 1.7.0+ (08/01/2023)
+PLUGIN UNIQUEMENT
+
+- Bug Fix : 
+  - édition d’un widget image ouvre et sauvegarde un composant image à la place
+
 ## Version 1.7.0 (06/01/2023)
 
 La grosse nouveauté de cette version est l'arrivée des "Composants", un cousin germain du "Widget".
