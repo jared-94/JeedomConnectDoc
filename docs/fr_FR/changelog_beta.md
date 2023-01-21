@@ -1,5 +1,15 @@
 # Changelog JeedomConnect
 
+## Version 1.7.1.2 (21/01/2023)
+
+- Bug fixes :
+  - correction anomalie snapshot 0%
+
+## Version 1.7.1.1 (19/01/2023)
+
+- Bug fixes :
+  - migration automatique
+
 ## Version 1.7.1 (18/01/2023)
 
 - Nouveautés :
