@@ -1,5 +1,16 @@
 # Changelog JeedomConnect
 
+## Version 1.7.3 (23/02/23)
+
+- Nouveautés :
+  - [Version APK] : Réception des SMS. Deux nouvelles commandes donnent le dernier SMS reçu et le numéro de l'expéditeur
+  - Prise en compte des conditions de visibilité sur les widgets dans la vue `Détails`
+  
+- Bug fixes :
+  - Crash dans les pages `Batteries` et `Pièces` 
+  - Prise en compte du fuseau horaire (si l'appareil est sur un autre fuseau que Jeedom)
+  - [iOS] : Fix boutons du widget `Historique`
+  - Divers bugs sur le service Android et les raccourcis rapides
 ## Version 1.7.2 (14/02/2023)
 
 - Nouveautés :
