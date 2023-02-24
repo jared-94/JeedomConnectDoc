@@ -1,9 +1,9 @@
 # Changelog JeedomConnect
 
-## Version 1.7.4 (28/03/23)
+## Version 1.7.4 (29/03/23)
 
 - Nouveautés :
-  - [Android 11+] Mise en place du contrôle d'appareils par le système
+  - [Android 11+] Mise en place du contrôle d'appareils par le système. Seuls les widgets dispo sur l'équipement de votre appareil seront proposés. Pour le moment sont supportés : Alarme, Luminosité, Himidité, Caméra, Porte, Portail, Générique Action, Générique Binaire, Générique Numérique, Générique Texte, Générique Slider, Générique Switch, Puissance, PIR, Prise, Scénario, Volet, Lumière(s), Température, Climatiseur, Thermostat, Fenêtre
 
 - Bug fixes :
   - Crash du service Android dans certaines conditions
@@ -12,17 +12,18 @@
   - Boutons de la barre du haut sur iOS
   - Authentification au démarrage sur iOS
 
-## Version 1.7.3 (23/02/23)
+## Version 1.7.3 (24/02/23)
 
 - Nouveautés :
   - [Version APK] : Réception des SMS. Deux nouvelles commandes donnent le dernier SMS reçu et le numéro de l'expéditeur
   - Prise en compte des conditions de visibilité sur les widgets dans la vue `Détails`
   
 - Bug fixes :
-  - Crash dans les pages `Batteries` et `Pièces` 
+  - Crash dans les pages `Batteries` et `Pièces`
   - Prise en compte du fuseau horaire (si l'appareil est sur un autre fuseau que Jeedom)
   - [iOS] : Fix boutons du widget `Historique`
   - Divers bugs sur le service Android et les raccourcis rapides
+
 ## Version 1.7.2 (14/02/2023)
 
 - Nouveautés :
