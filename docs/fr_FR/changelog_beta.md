@@ -3,7 +3,7 @@
 ## Version 1.7.4 (29/03/23)
 
 - Nouveautés :
-  - [Android 11+] Mise en place du contrôle d'appareils par le système. Seuls les widgets dispo sur l'équipement de votre appareil seront proposés. Pour le moment sont supportés : Alarme, Luminosité, Himidité, Caméra, Porte, Portail, Générique Action, Générique Binaire, Générique Numérique, Générique Texte, Générique Slider, Générique Switch, Puissance, PIR, Prise, Scénario, Volet, Lumière(s), Température, Climatiseur, Thermostat, Fenêtre
+  - [Android 11+] Mise en place du contrôle d’appareils par le système. Seuls les widgets dispo sur l’équipement de votre appareil seront proposés. Pour le moment sont supportés : Alarme, Luminosité, Humidité, Caméra, Porte, Portail, les Générique (Action, Binaire, Numérique, Texte, Slider, Switch), Puissance, PIR, Prise, Scénario, Volet, Lumière(s), Température, Climatiseur, Thermostat, Fenêtre
 
 - Bug fixes :
   - Crash du service Android dans certaines conditions
