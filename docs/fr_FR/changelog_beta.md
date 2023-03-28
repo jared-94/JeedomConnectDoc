@@ -1,5 +1,17 @@
 # Changelog JeedomConnect
 
+## Version 1.7.4 (28/03/23)
+
+- Nouveautés :
+  - [Android 11+] Mise en place du contrôle d'appareils par le système
+
+- Bug fixes :
+  - Crash du service Android dans certaines conditions
+  - Crash de l'appli avec la webview
+  - Crash lors de l'édition de la grille d'un groupe
+  - Boutons de la barre du haut sur iOS
+  - Authentification au démarrage sur iOS
+
 ## Version 1.7.3 (23/02/23)
 
 - Nouveautés :
