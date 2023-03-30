@@ -2,8 +2,14 @@
 
 ## Version 1.7.4 (29/03/23)
 
+Relancez l app au moins une fois avant d’utiliser la nouveauté (ie : kill l’application JC, puis relancer la).
+
 - Nouveautés :
-  - [Android 11+] Mise en place du contrôle d’appareils par le système. Seuls les widgets dispo sur l’équipement de votre appareil seront proposés. Pour le moment sont supportés : Alarme, Luminosité, Humidité, Caméra, Porte, Portail, les Générique (Action, Binaire, Numérique, Texte, Slider, Switch), Puissance, PIR, Prise, Scénario, Volet, Lumière(s), Température, Climatiseur, Thermostat, Fenêtre
+  - [Android 11+] Mise en place du contrôle d’appareils par le système. Seuls les widgets dispo sur l’équipement de votre appareil seront proposés. Pour le moment sont supportés : Alarme, Luminosité, Humidité, Caméra, Porte, Portail, les Générique (Actions**, Binaire, Numérique, Texte, Slider, Switch), Puissance, PIR, Prise, Scénario, Volet, Lumière(s), Température, Climatiseur, Thermostat, Fenêtre
+    - Les widgets visibles dans le paramétrage de cette option peuvent être réduit en cochant l’option Masquer l'appareil sur le widget.
+    - De même, il est possible d’interdire l’exécution de la commande depuis un écran verrouillé en cochant l’option Contrôle depuis l'écran de verrouillage sur le widget également  
+
+    ** Petite précision : sur les widget Générique Actions → seule la 1ère action du widget est exécutée lorsque ce widget est ajouté comme contrôleur ! :warning:
 
 - Bug fixes :
   - Crash du service Android dans certaines conditions
