@@ -1,5 +1,16 @@
 # Changelog JeedomConnect
 
+## Version 1.7.5 (04/04/23)
+
+- Nouveautés :
+  - [Android 11+] Ajout des contrôleurs de type `Composant`
+
+- Bug fixes :
+  - Fix fonction de sauvegarde
+  - Fix sécurité des contrôleurs
+  - Sélection du thème sur iOS
+  - Téléchargement du QR Code depuis l'appli sur iOS
+
 ## Version 1.7.4 (29/03/23)
 
 Relancez l app au moins une fois avant d’utiliser la nouveauté (ie : kill l’application JC, puis relancer la).
