@@ -3,11 +3,13 @@
 ## Version 1.7.5 (04/04/23)
 
 - Nouveautés :
-  - [Android 11+] Ajout des contrôleurs de type `Composant`
+  - [Android 11+] Ajout des contrôleurs de type `Composant` : Switch, Slider et Texte
+  - Ajout de boutons "cocher tout/décocher tout" sur la page `Synthèse des widgets`
 
 - Bug fixes :
-  - Fix fonction de sauvegarde
+  - Fix fonction de sauvegarde depuis l'application
   - Fix sécurité des contrôleurs
+  - Fix contrôleur `binaire` et `clim`
   - Sélection du thème sur iOS
   - Téléchargement du QR Code depuis l'appli sur iOS
 
