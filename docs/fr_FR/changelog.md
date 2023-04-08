@@ -1,9 +1,78 @@
 # Changelog JeedomConnect  
 
+## Version 1.8.0 (08/04/2023)
+
+Relancez l app au moins une fois avant d’utiliser la nouveauté (ie : kill l’application JC, puis relancer la).
+
+- Nouveautés :
+  - [Android 11+] Mise en place du contrôle d’appareils par le système. Seuls les widgets dispo sur l’équipement de votre appareil seront proposés. Pour le moment sont supportés : Alarme, Luminosité, Humidité, Caméra, Porte, Portail, les Générique (Actions**, Binaire, Numérique, Texte, Slider, Switch), Puissance, PIR, Prise, Scénario, Volet, Lumière(s), Température, Climatiseur, Thermostat, Fenêtre
+    - Les widgets visibles dans le paramétrage de cette option peuvent être réduit en cochant l’option Masquer l'appareil sur le widget.
+    - De même, il est possible d’interdire l’exécution de la commande depuis un écran verrouillé en cochant l’option Contrôle depuis l'écran de verrouillage sur le widget également  
+
+    ** Petite précision : sur les widget Générique Actions → seule la 1ère action du widget est exécutée lorsque ce widget est ajouté comme contrôleur ! :warning:
+
+  - [Android 11+] Ajout des contrôleurs de type `Composant` : Switch, Slider et Texte
+  - [Android] Nouvelle commande action `Effacer les données`, utile en cas de perte ou vol de l'appareil. Pour confirmer l'action il faudra saisir le mot `erase` sur le champs correspondant.
+  - [Android 7+] : Possibilité d'ajouter des raccourcis rapides dans le panneau des raccourcis de paramètres du volet de notifications
+  - [Android] : Nouvelle commande `Ne pas déranger`
+  
+  - Changement de la structure de données des éléments (et nettoyage du code). Attention si vous avez des blocs code et faites des changements vous même il se peut que certaines choses ne fonctionnent plus...
+  
+  - Ajout de boutons "cocher tout/décocher tout" sur la page `Synthèse des widgets`
+  - Grille avancée : Lors de l'édition, possibilité de figer les éléments pour configurer le verrouillage et la profondeur des éléments
+  - Refonte des historique pour plus performances, et nouvelles options, affichage des statistiques
+  - Nouveau widget `Groupe d'historiques` : affichage de plusieurs historiques dans un seul graphe
+  - `Widget Caméra` : possibilité de faire du pinch-to-zoom ou double-tap
+  - Composants : ajout du champs `Pièce`
+  - Ajout du paramétre `Visibilité sous condition` dans les personnalisations des widgets
+  - Passage en mode `Hors connexion` dès que l'équipement est désactivé sur Jeedom
+  - Affichage de graphe d'historique en arrière-plan de widgets
+  - Créer du relief : élévation des tuiles et widgets dans l'application
+  - Configuration pour le redimensionnement des images en arrière-plan
+  - Choisir la taille des menus haut
+  - Définir une sécurité sur les commandes des widgets `Groupes`
+  - Permet qu'un toaster soit affiché sur l'app lorsqu'un scénario est utilisé avec l'instruction `Retourner un texte/une donnée` (mot clé `scenario_return`)
+  - Mise en place d'une seule barre de recherche sur le plugin
+  - Prise en compte des conditions de visibilité sur les widgets dans la vue `Détails`
+  
+  - [Version APK] : Réception des SMS. Deux nouvelles commandes donnent le dernier SMS reçu et le numéro de l'expéditeur
+  
+- Bug fixes :
+  - Amélioration du temps d'ouverture sur l'édition d'un élément
+  - Correction de l'action d'activation du geofence  
+  - Crash sur la jauge lorsque la valeur est supérieur au max défini
+  - Rendu de la jauge et slider circulaire qui disparait
+  - Crash dans le slider lumières de couleurs
+  - Augmentation du timeout sur les requêtes http
+  - Composant `Séparateur` prend toute la largeur sur écran large
+  - Marges des widgets dans un groupe
+  - Migration automatique
+  - Fix anomalie snapshot 0%
+  - Fix fonction de sauvegarde depuis l'application
+  - Affichage des images en arrière-plan
+  - Affichage de tous les widgets en mode édition de grille avancée (y compris ceux pour lesquels la `condition de visibilité` est évaluée à fausse)
+  - Prise en compte du pas lors de l'arrondi de valeurs numériques sur les widgets
+  - Crash dans les pages `Batteries` et `Pièces`
+  - Prise en compte du fuseau horaire (si l'appareil est sur un autre fuseau que Jeedom)
+  - Divers bugs sur le service Android et les raccourcis rapides
+  - Crash du service Android dans certaines conditions
+  - Crash de l'appli avec la webview
+  - Crash lors de l'édition de la grille d'un groupe
+  - [iOS] :
+    - couleur de l'aiguille de la jauge
+    - Fix icône de l'app
+    - Action directe sur l'image d'un widget
+    - Fix boutons du widget `Historique`
+    - Fix boutons de la barre du haut
+    - Authentification au démarrage
+    - Sélection du thème sur iOS
+    - Téléchargement du QR Code depuis l'appli
+
 ## Version 1.7.0+ (08/01/2023)
+
 PLUGIN UNIQUEMENT
 
-- Bug Fix : 
+- Bug Fix :
   - édition d’un widget image ouvre et sauvegarde un composant image à la place
 
 ## Version 1.7.0 (06/01/2023)
