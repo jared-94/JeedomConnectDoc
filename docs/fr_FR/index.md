@@ -1,6 +1,6 @@
 # Documentation du plugin Jeedom Connect
 
-<img src="../images/JeedomConnect_icon.png"  width="10%" />
+<img src="../images/JC_icon.png"  width="10%" />
 
 Téléchargez l'application :  
 <a href="https://play.google.com/store/apps/details?id=com.jeedomconnect.app" target="_blank"><img src="../images/playstore.png" width='10%'/></a>  
