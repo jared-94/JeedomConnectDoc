@@ -1,5 +1,8 @@
 # Changelog JeedomConnect  
 
+# Chaque mise a jour est a faire sur l app ET le plugin en meme temps !!!
+
+
 ## Version 1.8.0 (08/04/2023)
 
 Relancez l'app au moins une fois avant d’utiliser les nouveautés (ie : kill l’application JC, puis la relancer).
