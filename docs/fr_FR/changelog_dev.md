@@ -1,6 +1,8 @@
-## Version 1.4.3 (dev en cours)
+## Version 1.7.4 (dev en cours)
 
-* Nouveautés :
+- Nouveautés
+  -
   
-* Bug fixes :
-  
+- Bug fixes
+
+  -

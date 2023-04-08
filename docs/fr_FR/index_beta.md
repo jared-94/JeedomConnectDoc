@@ -309,6 +309,10 @@ Les infos :
 - `Etat Wifi` *[Android, Service, Localisation autorisée & activée]* : Binaire qui permet de savoir si l'appareil est connecté à un réseau wifi
 - `Adresse IP` *[Android, Service]* : Lorsque l'appareil est relié au réseau wifi, indique l'adresse IP
 - `Réseau wifi (SSID)` *[Android, Service, Localisation autorisée & activée]* : Lorsque l'appareil est relié au réseau wifi, indique le nom du point d'accès
+- `Visage présent` *[Android]* : indique si un visage est détecté devant l'écran de l'équipement
+- `Volume actuel` *[Android, Service]* pour connaitre les 6 différents volumes de son appareil (en fonction des OS et surcouche). La commande est valorisée par défaut avec l'ensemble des volumes disponible, selon le format suivant : `Alarme;Appel;Musique;Notification;Sonnerie;Système;`
+- `Prochaine alarme` *[Android, Service]* : permet de récupérer (au format timestamp) l'heure de la prochaine alarme
+- `Package Prochaine Alarme`*[Android, Service]* : permet de savoir quel est le package qui déclenchera la prochaine alarme sur votre téléphone
 
 Les actions :
 
@@ -320,7 +324,14 @@ Les actions :
 - `Pop-up` : Permet d'afficher un pop-up sur votre appareil. Elle sera affichée directement dans l'application si celle-ci est ouverte, et sinon en popup système *[Android seulement]*.
 - `Modifier Préférences Appli` : Permet de modifier certaines options de votre application. Faites un choix dans la liste déroulante, puis indiquez la valeur à mettre si nécessaire : `ON`, `OFF`, `MARCHE`, `ARRET`
 Liste des actions (fonctionnent même appli tuée) :
-  - `Couleur thème` : indiquer une couleur au format hex `#10F581` ou par son nom (`pink`, `green`...)
+  - `Schéma thème` : entrer l'id du schéma à appliquer
+    <details>
+    <summary>Liste des schémas</summary>
+      jeedomConnect,    material,    materialHc,    blue,    indigo,  hippieBlue,
+    aquaBlue,    brandBlue,    deepBlue,    sakura,    mandyRed,    red,   redWine,    purpleBrown,    green,    money,    jungle,    greyLaw,    wasabi,    gold,    mango,    amber,    vesuviusBurn,    deepPurple,ebonyClay,    barossa,    shark,    bigStone,    damask,    bahamaBlue,
+    mallardGreen,    espresso,    outerSpace,    blueWhale,    sanJuanBlue,
+    rosewood,    blumineBlue,    reactDash,    materialBaseline,    verdunHemlock,    dellGenoa,    customColors
+    </details>
   - `Activer mode sombre` : `ON`, `OFF` ou tout autre chose pour le mode auto
   - `Activer le tracking` : `MARCHE` ou `ARRET`
   - `Recharger les données`
@@ -332,8 +343,10 @@ Cette fonction est utilisable dans n'importe quel état de l'application (premie
 Pour utiliser cette fonction, vous devez d'abord vous rendre dans les autorisations de l'appli puis accepter celle correspondant à l'envoie de SMS.
 - `Allumer l'écran` *[Android]*
 - `Eteindre l'écran` *[Android, définir JC comme appli d'administration]* : Cette action requiert que l'application Jeedom Connect soit définie en tant qu'`Appli d'administration du système` (généralement dans la section `Sécurité` des paramètres de votre appareil).
-- `Jouer un son` *[Android, Service]* : Permet de lire un fichier audio sur l'appareil. Indiquez une URL complète, ou bien un chemin absolu sur votre installation Jeedom (par exemple `/var/www/html/data/bip-bip.mp3`)
+- `Jouer un son` *[Android, Service]* : Permet de lire un fichier audio sur l'appareil. Indiquez une URL complète, ou bien un chemin absolu sur votre installation Jeedom (par exemple `/var/www/html/data/bip-bip.mp3`), ou bien le chemin d'un fichier local sur votre appareil (par exemple `file:///storage/emulated/0/Music/file.ogg`)
 - `TTS` : Permet d'utiliser la fonction `Text to Speach` de votre appareil pour lire un texte. Sur iOS, l'application doit être ouverte
+- `Mode sonnerie` *[Android]* : Permet d'activer un mode de sonnerie `Silencieux`, `Normal` ou `Vibreur`. Dans le champs `Titre` de la commande, indiquez l'un des mots clé `silent`, `normal`, `vibrate`. Pour Android N et supérieur, l'application a besoin de l'autorisation `Accès au mode "Ne pas déranger"`.
+- `Modifier Volume` : Permet de régler le volume de l'appareil (en %). Pour Android, vous pouvez spécifier en plus dans champs `Titre` de la commande le canal audio à modifier, parmi `music`, `call`, `system`, `ring`, `alarm`, `notification`.  
 - `Commande shell` *[Android]*, **[Root]** : Si votre appareil possède les privilèges root, permet d'exécuter n'importe quelle commande. A la première utilisation, votre gestionnaire de `Super utilisateur` vous demandera l'autorisation.
   <details>
   <summary>Exemples de commandes</summary>
@@ -373,7 +386,7 @@ Ces actions peuvent également être réalisées depuis le plugin, en utilisant 
 
 Vous arrivez sur une nouvelle fenêtre qui vous donne accès à 2 infos :  
 
-- la 1ère partie concerne les zones utilisées pour faire du geofencing déjà disponible sur votre équipement. Ces zones sont représentées en verte sur la carte.  
+- la 1ère partie concerne les zones utilisées pour faire du geofencing déjà disponible sur votre équipement. Ces zones sont représentées en vert sur la carte.  
 - La 2nd partie, permet de voir toutes les zones qui ont été créées sur le plugin et qui peuvent être partagées entre différents équipements (ce qui évite d'avoir à recréer une zone "Maison" sur tous les appareils !). Ces zones sont représentées en rouge sur la carte.  
 
 <img src='../images/JeedomConnect_geofencing.png' width='600px' />
@@ -396,23 +409,23 @@ Cliquez simplement sur le dernier icone en forme de `pin`, la carte se centre au
 ### Comment déplacer une zone ?
 
 Les petits pin bleus utilisés pour caractériser la zone peuvent être déplacés. Cliquez sur le point à déplacer, allez au nouvel endroit désiré, relachez la souris, voilà le point est déplacé !  
-Si vous connaissez les coordonnées GPS du nouveau point, vous pouvez également directement les saisir dans le tableau de droit, et la zone se mettra également à jour.
+Si vous connaissez les coordonnées GPS du nouveau point, vous pouvez également directement les saisir dans le tableau de droite, et la zone se mettra également à jour.
 
 <br/><br/>  
 
 ## Localisation <a name="localisation"></a>
 
-Il est possible de suivre la localisation de vos équipement JC.  
+Il est possible de suivre la localisation de vos équipements JC.  
 Pour cela :
 
-- l'option de tracking doit être activé sur votre application JC, de façon à ce que votre position soit remontée au plugin
-- sur chaque équipement (sur le plugin), vous devez cocher la case `Afficher la position sur la carte globale` (et vous avez la possibilité de personnaliser le repère utilisé sur la carte pour identifier cette équipement)
+- l'option de tracking doit être activée sur votre application JC, de façon à ce que votre position soit remontée au plugin
+- sur chaque équipement (sur le plugin), vous devez cocher la case `Afficher la position sur la carte globale` (et vous avez la possibilité de personnaliser le repère utilisé sur la carte pour identifier cet équipement)
 
 Ensuite il suffit de cliquer sur le bouton `Localisation` disponible sur la page principale du plugin pour accèder à la carte.
 
 <img src='../images/JeedomConnect_localisation.png' width='600px' />
 
-Cette même carte peut être affiché sous forme de widget (au sens Jeedom du terme). Pour se faire, vous devez cocher la case `Visible` sur cette fenêtre, et sélectionner sous quel objet le widget devra être affiché.  
+Cette même carte peut être affichée sous forme de widget (au sens Jeedom du terme). Pour se faire, vous devez cocher la case `Visible` sur cette fenêtre, et sélectionner sous quel objet le widget devra être affiché.  
 
 En cliquant sur les icônes présents vous aurez accès à plus de détails sur la position : le nom, la dernière mise à jour, les coordonnées, la distance entre ce point et votre jeedom (cf la page de configuration du plugin) et un lien pour rejoindre directement cette position.
 
@@ -420,8 +433,8 @@ En cliquant sur les icônes présents vous aurez accès à plus de détails sur 
 
 # Notification <a name="notification"></a>
 
-Vous avez la possibilité de gérer différents types de notifications sur l'application Jeedom Connect. Ces notifications peuvent être utilisées comme vous le feriez déjà avec l'envoie par Jeedom d'un SMS, Telegram, et autres sortes de messagerie.  
-Vous pouvez donc vous envoyer des notifications (via des scénarios par exemple) : lorsque votre porte d'entrée s'ouvre alors que vous êtes absents, pour vous prévenir de sortir la poubelle, indiquer que le facteur est passé, ... vers votre application JeedomConnect.
+Vous avez la possibilité de gérer différents types de notifications sur l'application Jeedom Connect. Ces notifications peuvent être utilisées comme vous le feriez déjà avec l'envoi par Jeedom d'un SMS, Telegram, et autres sortes de messagerie.  
+Vous pouvez donc vous envoyer des notifications (via des scénarios par exemple) : lorsque votre porte d'entrée s'ouvre alors que vous êtes absent, pour vous prévenir de sortir la poubelle, indiquer que le facteur est passé, ... vers votre application JeedomConnect.
 
 ## Les Canaux  
 
@@ -447,7 +460,7 @@ Vous pouvez également :
 - mettre à jour l'existante : si cochée, alors vous ne verrez qu'une seule notification du même type dans votre barre de notification sur votre smartphone. (si décochée, chaque notification sera affichée)
 - couleur : définit la couleur du titre de la notification sur votre smarphone, ainsi que celle de la notification
 - image : permet d'ajouter une image sur le coin en haut à droite de la notification
-- actions : permet de réaliser commandes et/ou scénario à chaque fois qu'une notification est envoyée. (<u>par exemple</u> : si envoie d'une notification urgente, je veux avoir la possibilité d'executer le scénario qui permet de déclencher l'alarme de la maison)
+- actions : permet de réaliser commandes et/ou scénario à chaque fois qu'une notification est envoyée. (<u>par exemple</u> : si envoi d'une notification urgente, je veux avoir la possibilité d'exécuter le scénario qui permet de déclencher l'alarme de la maison)
 
 <img src='../images/JeedomConnect_notif_edit.png' width='50%' />  
 <br/>
@@ -457,35 +470,34 @@ Vous pouvez également :
 Une fois que vous avez paramétré vos différentes notifications, les commandes associées sont automatiquement créées sur votre équipement (après `sauvegarde`), dans l'onglet dédié comme sur tout équipement Jeedom :  
 <img src='../images/JeedomConnect_notif_cmd.png' width='40%' />  
 
-vous pouvez donc vous en servir dans un scénario ou n'importe quelle autre type (interraction, bloc code, ...) :
+vous pouvez donc vous en servir dans un scénario ou n'importe quel autre type (interraction, bloc code, ...) :
 <img src='../images/JeedomConnect_notif_sc.png' width='60%' />  
 
-Voici par exemple la réception d'une notification : (avec les configurations présentées précédemment, ça reste donc toujours qu'un exemple possibe ! )
+Voici par exemple la réception d'une notification : (avec les configurations présentées précédemment, ça reste donc toujours qu'un exemple possible ! )
 
 <img src='../images/JeedomConnect_notif_example.gif' width='20%' />  
 
-C'est une `notif Urgente` qui a été envoyée, donc puisque la notification est paramétré sur le canal `Urgent`, mon téléphone sonne donc avec un fort volume même si je suis en mode 'ne pas déranger'.  
-La notification est affichée en rouge dans la barre de notification Android, ainsi que lorsque je la visualise en entière dans l'application JeedomConnect, et on voit la présence d'une icône 'sirène rouge' dans le coin supérieur droit.
+C'est une `notif Urgente` qui a été envoyée, donc puisque la notification est paramétrée sur le canal `Urgent`, mon téléphone sonne donc avec un fort volume même si je suis en mode 'ne pas déranger'.  
+La notification est affichée en rouge dans la barre de notification Android, ainsi que lorsque je la visualise en entière dans l'application JeedomConnect, et on voit la présence d'un icône 'sirène rouge' dans le coin supérieur droit.
 Et j'ai également la possibilité de cliquer sur le bouton `Alarme maison` pour exécuter le scénario que j'ai paramétré et qui déclenchera l'alarme de ma maison.
 
 <br/>
 <br/>
 ### Comment envoyer une notification à tous les appareils ? <a name="qNotifyAll"></a>
+<br/>
 
-Par défaut l'envoie d'envoyer à "tous" les appareils JC n'existe pas. En effet, il est possible de configurer plusieurs types de notification par appareil, il nous est donc impossible de deviner laquelle est à utiliser.  
-Avant d'utiliser la commande `Notifier les appareils JC`, il faut :
+Par défaut le fait d'envoyer à "tous" les appareils JC n'existe pas.  
+En effet, il est possible de configurer plusieurs types de notifications par appareil, il nous est donc impossible de deviner lesquelles sont à utiliser.  
+Vous pouvez créer plusieurs notification de type `Notifier tous`, il faut :
 
-- aller sur les équipements que vous souhaitez notifier
-- entrer dans l'assistant des notifications, puis onglet `Notification`
-- choisir la notification qui devra être prise en compte par cette commande
-- cocher la case `Notifier tous les appareils JC`
-- sauvegarder cette fenêtre `Configuration des notifications`
-- sauvegarder ensuite votre page principale de l'équipement concerné  
+- aller sur la page principale du plugin et sélectionner sur `Notification multiples`
+- cliquer sur `ajouter` pour créer un nouveau type de notification (on peut par exemple imaginer avoir un `Notifier les parents`, `Notifier les enfants`, `Notifier toute la famille`)
+- selectionner l'ensemble des notifications qui devront être utilisées lorsque l'action sera réalisée
+- sauvegarder les modifications pour ne pas les perdre
+- Lors de la sauvegarde, une nouvelle commande est automatiquement créée sur chaque équipement qui ont été coché
 
-<img src='../images/JeedomConnect_notifyAll.gif' width='50%' />  
+<img src='../images/JeedomConnect_notifyAll.png' width='70%' />  
 
-NB : la commande `Notifier les appareils JC` est disponible sur l'ensemble des vos équipements JC, y compris ceux pour lesquels vous n'auriez pas coché la case `Notifier tous les appareils JC` !
-Vous pouvez donc utiliser cette commande depuis n'importe quel équipement.  
 <br/>
 <br/>  
 
@@ -512,7 +524,7 @@ Les notifications Jeedom Connect sont compatibles avec la fonction Ask de Jeedom
 
 ## Envoyer des images
 
-Il est possible d'envoyer des images aux notifications (par exemple des shot de caméras). La première images sera visible dans la notification Android directement. Pour accéder aux autres il faut se rendre dans la page de notification de l'application.
+Il est possible d'envoyer des images aux notifications (par exemple des shot de caméras). La première image sera visible dans la notification Android directement. Pour accéder aux autres il faut se rendre dans la page de notification de l'application.
 
 <br/><br/>  
 
@@ -526,7 +538,7 @@ Vous pouvez personnaliser cette notification :
 
 - en modifiant le titre
 - en modifiant le message
-- en affichant, ou pas, l'icône de l'application (dans le contenue de celle-ci)
+- en affichant, ou pas, l'icône de l'application (dans le contenu de celle-ci)
 
 Le service Jeedom Connect a principalement deux utilités :
 
@@ -540,12 +552,12 @@ A chaque fois qu'un événement lié à un déclencheur a lieu, **toutes** les i
 
 :warning: Activer trop de déclencheurs peut nuire au niveau de votre batterie !
 
-*Exemple* : Si la seule information qui vous intéresse concerne l'état du wifi (activé / adresse IP / Point d'accès), alors vous pouvez uniquement activer le déclancheur `Connectivité changée`.
+*Exemple* : Si la seule information qui vous intéresse concerne l'état du wifi (activé / adresse IP / point d'accès), alors vous pouvez uniquement activer le déclencheur `Connectivité changée`.
 
 ## Liste des déclencheurs disponibles
 
 - `Périodique` : se déclenche automatiquement toutes les X minutes
-- `Démarrage de l'appareil` : se déclenche à chaque fois que l'appareil démarre (**après** saisi d'éventuel moyens de sécurité)
+- `Démarrage de l'appareil` : se déclenche à chaque fois que l'appareil démarre (**après** avoir saisi d'éventuels moyens de sécurité)
 - `Connectivité changée` : se déclenche lorsqu'un changement dans la connection au réseau a lieu (par exemple passer du réseau mobile à un réseau Wifi)
 - `Chargeur branché`
 - `Chargeur débranché`
@@ -554,7 +566,7 @@ A chaque fois qu'un événement lié à un déclencheur a lieu, **toutes** les i
 - `Ecran éteint`
 - `Ecran allumé`
 - `Bluetooth connecté` : se déclenche dès que l'appareil est connecté à un périphérique bluetooth.
-- `Bluetooth déconnecté` : se déclenche lorsque plus aucun périphérique bluetooth n'est connecté
+- `Bluetooth déconnecté` : se déclenche lorsqu'il n'y a plus aucun périphérique bluetooth connecté.
 - `Prochaine alarme changée` : se déclenche lorsque la date ou l'heure de la prochaine alarme programmée sur l'appareil change
 
 <br/><br/>  
@@ -564,7 +576,7 @@ A chaque fois qu'un événement lié à un déclencheur a lieu, **toutes** les i
 L'application utilise le moteur principal configuré sur votre appareil pour la reconnaissance vocale. Si aucun moteur n'est installé sur votre appareil Android, vous pouvez [installer celui de Google](https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox&hl=en).
 Il existe deux méthodes pour activer la reconnaissance :
 
-- A l'aide du bouton de la barre du haut (Accessible depuis le menu Préférences/Reconaissance vocale)
+- A l'aide du bouton de la barre du haut (Accessible depuis le menu Préférences/Reconnaissance vocale)
 - A l'aide d'un mot clé (hotword) à prononcer
 
 Pour activer la détection de mots clés, un assistant vous guide dans l'application.
@@ -573,14 +585,14 @@ Pour activer la détection de mots clés, un assistant vous guide dans l'applica
 
 Il est nécessaire de créer un compte gratuit chez [Picovoice](https://picovoice.ai/). Un compte permet :
 
-- de créer 3 hotwords par mois (toute plateforme confondues)
+- de créer 3 hotwords par mois (toutes plateformes confondues)
 - d'utiliser la détection sur 3 appareils différents
 
 Il est possible de créer autant de compte gratuit que vous le souhaitez.
 Une fois le compte créé, vous vous rendrez sur la [console](https://console.picovoice.ai/) pour :
 
 - Récupérer la `clé d'accès` et l'enregistrer dans l'application
-- Créer vos hotwords personalisés
+- Créer vos hotwords personnalisés
 
 Chaque mot clé est 'entraîné' par l'IA de Picovoice et est spécifique à une langue et une plateforme (Android ou iOS).
 Une fois créé, vous les téléchargez directement sur votre appareil et indiquez à l'appli le fichier `.zip`.
@@ -652,7 +664,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 - [Comment formater une date/heure dans les widgets ?](#qDatetime)  
 - [J'ai un message "Address already in use" au démarrage du démon, comment faire ?](#qAddressUsed)  
 - [Je trouve l'application géniale ! Comment vous aider ?](#qDon)
-- [Je ne trouve pas de réponse à mon probleme dans la doc. Que faire ?](#qForum)
+- [Je ne trouve pas de réponse à mon problème dans la doc. Que faire ?](#qForum)
 
 ---
 
@@ -666,9 +678,9 @@ L'application est disponible sur vos Store :
 
 ## Quelle est la différence entre connexion HTTP, Websocket et Polling ? <a name="qConnexion"></a>  
 
-Avec Jeedom Connect, il est possible d'établir la connexion entre votre appareil et le plugin de deux façon différentes :
+Avec Jeedom Connect, il est possible d'établir la connexion entre votre appareil et le plugin de deux façons différentes :
 
-- **Http** : Au lancement de l'application, une connexion Http de type Source Event Server est établie avec le plugin. Cette connexion est persistente mais uni-directionnele : de Jeedom **vers** votre appareil. Les actions de votre appareils vers Jeedom sont des requêtes Http uniques utilisant le protocole JSON RPC.
+- **Http** : Au lancement de l'application, une connexion Http de type Source Event Server est établie avec le plugin. Cette connexion est persistente mais uni-directionnelle : de Jeedom **vers** votre appareil. Les actions de votre appareil vers Jeedom sont des requêtes Http uniques utilisant le protocole JSON RPC.
 Ce mode de connexion ne necéssite aucune configuration particulière.
 - **Polling** : Lorsque les états ont du mal à être rafraichi, vous pouvez utiliser cette option. Ici c'est l'application qui lance une connexion vers le plugin pour forcer la récupération des informations de façon régulière. Cette option est plus que conseillée lorsque vous utilisez les DNS Jeedom (incompatible avec `websocket`).
 - **Websocket** : La connexion websocket est quant à elle bi-directionnelle. Elle nécessite néanmoins une configuration de votre réseau pour être utilisée en dehors de votre réseau local. Il est possible de faire une redirection de port sur votre routeur (méthode simple) ou bien de configurer votre serveur proxy ou le serveur Apache de votre Jeedom (utilisateurs avancés, incompatible avec `polling`).
@@ -680,7 +692,7 @@ Le Websocket offre une connexion **plus stable et plus performante** que la conn
 ## L'application m'indique "Cet équipement utilise un ancien format de configuration. Veuillez effectuer la migration" <a name="qMigration"></a>  
 
 La migration était une étape nécessaire lors de l'utilisation de la version 0.18.0, elle n'est donc plus à utiliser.  
-Si vous voyez cette erreur, c'est que le fichier de configuration de votre équipement est corrompu (mauvais manip, mauvais import, .. ). Récupérez une ancienne sauvegarde de Jeedom et dézipper-là pour restaurer le fichier de configuration en question (disponible dans `plugins/JeedomConnect/data/configs/<apiKey de l'équipement>.json` )
+Si vous voyez cette erreur, c'est que le fichier de configuration de votre équipement est corrompu (mauvaise manip, mauvais import, .. ). Récupérez une ancienne sauvegarde de Jeedom et dézipper-là pour restaurer le fichier de configuration en question (disponible dans `plugins/JeedomConnect/data/configs/<apiKey de l'équipement>.json` )
 
 <details>
 <summary>Ancienne méthode</summary>
@@ -690,20 +702,20 @@ Si vous voyez cette erreur, c'est que le fichier de configuration de votre équi
 
 La mise à jour que vous venez de réaliser nécessite une mise à jour au niveau du fichier de configuration utilisé pour définir vos widgets.  
 Que va faire cette opération ? Elle va lire votre(vos) fichier(s) de configuration et créér automatiquement tous les widgets correspondant.  
-:warning: si vous avez plusieurs équipements (téléphone/tablette/...) de configurer, il y a de forte chance que l'opération créé des widgets en doublon (ou plus).  
+:warning: si vous avez plusieurs équipements (téléphone/tablette/...) de configurés, il y a de forte chance que l'opération créé des widgets en doublon (ou plus).  
 Deux choix s'offrent à vous :  
 
-  1. migrer UN seul de vos équipement (appareil), exporter sa configuration puis l'importer sur tous vos autres équipements :  
-      - le + : pas de widgets créés en doublons, pas de longue suppression manuelle à réaliser
+  1. migrer UN seul de vos équipements (appareils), exporter sa configuration puis l'importer sur tous vos autres équipements :  
+      - le + : pas de widgets créés en doublon, pas de longue suppression manuelle à réaliser
       - le - : si certains de vos appareils ont des widgets bien à eux, il faudra alors les recréer manuellement  
   2. migrer l'ensemble de vos équipements :  
-      - le + : tous les widget seront créés automatiquement
+      - le + : tous les widgets seront créés automatiquement
       - le - : chaque équipement étant migré comme s'il était seul, certains widgets seront créés en doublon. Vous aurez donc besoin de faire un peu de ménage en modifiant les configurations de certains équipements puis en supprimant les widgets inutiles en doublon.
 
 Nous préconisons la solution #1 ! Voici comment nous vous proposons de faire :
 
 - commencer par mettre le niveau de log en `DEBUG` sur l'application (page `configuration` du plugin, pensez à sauvegarder !)
-- désactiver l'ensemble de vos équipement sous le plugin JeedomConnect, et n'en laisser qu'<b>UN SEUL actif</b> (le plus utilisé, ou celui qui contient le plus de widgets)
+- désactiver l'ensemble de vos équipements sous le plugin JeedomConnect, et n'en laisser qu'<b>UN SEUL actif</b> (le plus utilisé, ou celui qui contient le plus de widgets)
 <img src='../images/JC_disableEq.gif' width='50%' />  
 
 - rendez-vous sur la page `configuration` de votre plugin (Menu `Plugins/Gestion des plugins/Jeedom Connect`)  
@@ -714,7 +726,7 @@ L'option `Migration des configurations` va vous aider à réaliser cette mise à
 - sélectionnez le choix `uniquement les équipements actifs`  
 - cliquez sur le bouton `Migrer`  
 Un message de confirmation vous indique que tout s'est bien passé !  
-Vous pouvez retourner sur votre page principale du plugin JeedomConnect et vous devriez voir quelques changements : l'ensemble de vos widgets sont maintenant disponible directement sur cette page.  
+Vous pouvez retourner sur votre page principale du plugin JeedomConnect et vous devriez voir quelques changements : l'ensemble de vos widgets sont maintenant disponibles directement sur cette page.  
 - vous pouvez maintenant ouvrir la configuration de votre appareil, faire un `export` de la configuration, puis sur chacun de vos autres équipements `importer` cette configuration, puis réactiver vos équipements.
 
 </p>
@@ -725,7 +737,7 @@ Vous pouvez retourner sur votre page principale du plugin JeedomConnect et vous 
 
 ## J'ai l'erreur suivante "Cette application requiert une version plus récente du plugin" <a name="qVersion"></a>
 
-Pour fonctionner, il faut que le plugin installé sur Jeedom et l'application (APK) que vous avez téléchargé et utilisé soit alignés.  
+Pour fonctionner, il faut que le plugin installé sur Jeedom et l'application (APK) que vous avez téléchargés et utilisés soient alignés.  
 
 | Version Plugin | Version Application | Fonctionnement |
 |----------------|----------------|----------------|
@@ -746,7 +758,7 @@ ainsi qu'en bas de la page `Préférences` (dans la menu de l'application) :
 
 ## Je suis bêta-testeur, que dois-je faire ?<a name="qBeta"></a>
   
-Comme son nom l'indique, la version bêta n'est pas une version stable. En utilisant, vous savez et acceptez que celle-ci puisse comporter des anomalies, remonter des états incohérents, réaliser (ou pas) des actions, etc ...
+Comme son nom l'indique, la version bêta n'est pas une version stable. En l'utilisant, vous savez et acceptez que celle-ci puisse comporter des anomalies, remonter des états incohérents, réaliser (ou pas) des actions, etc ...
   
 Afin d'utiliser le plugin en version bêta, il est nécessaire d'avoir l'application correspondante. Celle-ci est également disponible sur le Store, mais pour y accéder vous devez au préalable être enregistré en tant que bêta-testeur auprès du Store.  
 Cette inscription est à <a href="https://play.google.com/apps/testing/com.jeedomconnect.app" target="_blank">faire ici pour Android</a> et <a href="https://testflight.apple.com/join/luZsKILI" target="_blank">ici pour Apple</a> (besoin d'avoir l'application <a href='https://apps.apple.com/fr/app/testflight/id899247664'>TestFlight</a> pour ce dernier!)
@@ -766,7 +778,7 @@ Comment l'ajouter ? Rapprochez-vous du développeur du plugin utilisé par votre
 
 <img src='../images/JC_videt_cache.gif' width='20%' />  
 
-1. Appuie long sur l’icone 'JeedomConnect' (sur votre bureau ou dans la liste de toutes vos applications disponible)
+1. Appui long sur l’icone 'JeedomConnect' (sur votre bureau ou dans la liste de toutes vos applications disponibles)
 2. Clic sur le petit `i`
 3. Sélection 'Stockage'
 4. Au choix (en fonction de ce que vous avez à faire!) : 'Vider le cache' et/ou 'Supprimer les données'
@@ -798,8 +810,8 @@ Comment l'ajouter ? Rapprochez-vous du développeur du plugin utilisé par votre
 
 ## Lors de ma première utilisation une pop-up me demande de "Sélectionner une application de l'écran d'accueil", que dois-je faire ? <a name="qSetLauncher"></a>  
 
-Cette option est principalement utilisée pour les appareils qui ne serivront qu'à faire de la domotique (par exemple une tablette murale pour gérer votre domotique). Le launcher ou 'application de l'écran d'accueil' permet de définir JeedomConnect comme votre nouveau bureau.  
-Vous n'aurez donc plus accès à la page d'accueil de votre terminal telle que vous la connaissez avec toutes vos applications, mais votre page principale sera dorénavant JeedomConnect
+Cette option est principalement utilisée pour les appareils qui ne serviront qu'à faire de la domotique (par exemple une tablette murale pour gérer votre domotique). Le launcher ou 'application de l'écran d'accueil' permet de définir JeedomConnect comme votre nouveau bureau.  
+Vous n'aurez donc plus accès à la page d'accueil de votre terminal tel que vous la connaissez avec toutes vos applications, mais votre page principale sera dorénavant JeedomConnect
 
 <img src='../images/set_launcher.jpg' width='20%' />  
 
@@ -807,7 +819,7 @@ Vous n'aurez donc plus accès à la page d'accueil de votre terminal telle que v
 
 ## Mon téléphone reste "bloqué" sur JeedomConnect. Comment retirer le mode launcher ? <a name="qLauncher"></a>  
 
-Si vous souhaitez retirer le mode launcher de votre téléphone, il vous suffit d'aller dans le menu "Application d'accueil"  (le chemin peut différé selon votre modèle du téléphone)  
+Si vous souhaitez retirer le mode launcher de votre téléphone, il vous suffit d'aller dans le menu "Application d'accueil"  (le chemin peut différer selon votre modèle du téléphone)  
 `Paramètres du téléphone (par la barre du haut/roue crantée) / Applications / Applications par défaut / Application d’accueil`
 
 <img src='../images/reset_launcher.png' width='20%' />  
@@ -864,13 +876,13 @@ quand je suis en 4G => je reçois une photo toutes les 5 sec, avec une qualité 
 
 rassurez-vous, il n’y a AUCUN bug sur cette fenêtre, si elle réapparait systématiquement c'est que vous faites mal quelque chose :)  
 
-Devant le nombre de fois où nous sommes obligés de (re)demander d’avoir les infos sur votre installation, j’ai mis en place une petite fenêtre d’information « A lire » qui s’affichera lorsque vous irez sur la page principale sur plugin :  
+Devant le nombre de fois où nous sommes obligés de (re)demander d’avoir les infos sur votre installation, j’ai mis en place une petite fenêtre d’information « A lire » qui s’affichera lorsque vous irez sur la page principale du plugin :  
 
 Pour infos :  
 
 - les 4 boutons sur le bas ne sont initialement pas présents, et s’afficheront 10 sec après que la fenêtre ait été affichée (pile poil le temps de vous laisser lire !)
 - si vous cliquez en dehors de la fenêtre pour la fermer ou cliquez sur un « mauvais » bouton => le message se réaffichera dans la journée, à l’infini...  
-- si vous lisez correctement & entièrement l’info et que vous appuyez sur le bon bouton, la fenêtre n’apparaitra plus dans la journée. Par contre ... 2 nouveaux « rappels » suivront sur les 2 jours suivant, juste pour être sûr que c’était pas un coup de chance et que vous avez bien lu :) :)
+- si vous lisez correctement & entièrement l’info et que vous appuyez sur le bon bouton, la fenêtre n’apparaitra plus dans la journée. Par contre ... 2 nouveaux « rappels » suivront sur les 2 jours suivants, juste pour être sûr que c’était pas un coup de chance et que vous avez bien lu :) :)
 
 --> du coup le 1er qui me dit qu’il n’avait pas vu l’info, devra ma payer un cocktail ! :D
 
