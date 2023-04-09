@@ -1,6 +1,6 @@
 # Documentation du plugin Jeedom Connect
 
-<img src="../images/JeedomConnect_icon.png"  width="10%" />
+<img src="../images/JC_icon.png"  width="10%" />
 
 Téléchargez l'application :  
 <a href="https://play.google.com/store/apps/details?id=com.jeedomconnect.app" target="_blank"><img src="../images/playstore.png" width='10%'/></a>  
@@ -265,7 +265,7 @@ La configuration de cette partie est optionnelle, et n'est à réaliser que si v
 <img src="../images/JC_assistant_summary.png" width="50%" />  
 
 Il vous est ensuite possible de cliquer sur chaque résumé pour personnaliser les icônes et leurs conditions d'affichage.  
-<img src="../images/JC_summary_conditions.png" width="50%" />  
+<img src="../images/JC_summary_conditions.PNG" width="50%" />  
 
 Deux variables sont disponibles : `#value#` et `#total#` :  
 
