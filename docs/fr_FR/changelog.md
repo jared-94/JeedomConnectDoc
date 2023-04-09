@@ -1,13 +1,13 @@
 # Changelog JeedomConnect  
 
-# Chaque mise a jour est a faire sur l app ET le plugin en meme temps !!!
-
+# Chaque mise a jour est a faire sur l app ET le plugin en meme temps
 
 ## Version 1.8.0 (08/04/2023)
 
 Relancez l app au moins une fois avant d’utiliser la nouveauté (ie : kill l’application JC, puis relancer la).
 
 - Nouveautés :
+  - Version core minimum > 4.2
   - [Android 11+] Mise en place du contrôle d’appareils par le système. Seuls les widgets dispo sur l’équipement de votre appareil seront proposés. Pour le moment sont supportés : Alarme, Luminosité, Humidité, Caméra, Porte, Portail, les Générique (Actions**, Binaire, Numérique, Texte, Slider, Switch), Puissance, PIR, Prise, Scénario, Volet, Lumière(s), Température, Climatiseur, Thermostat, Fenêtre
     - Les widgets visibles dans le paramétrage de cette option peuvent être réduit en cochant l’option Masquer l'appareil sur le widget.
     - De même, il est possible d’interdire l’exécution de la commande depuis un écran verrouillé en cochant l’option Contrôle depuis l'écran de verrouillage sur le widget également  
@@ -37,7 +37,10 @@ Relancez l app au moins une fois avant d’utiliser la nouveauté (ie : kill l�
   - Permet qu'un toaster soit affiché sur l'app lorsqu'un scénario est utilisé avec l'instruction `Retourner un texte/une donnée` (mot clé `scenario_return`)
   - Mise en place d'une seule barre de recherche sur le plugin
   - Prise en compte des conditions de visibilité sur les widgets dans la vue `Détails`
-  
+  - Prise en compte du `pas` sur différentes commandes :
+    - de type `action` : par exemple 0.1 si tu veux régler une température à 0.1 degré près
+    - de type `info` : arrondi des valeurs affichées, par exemple 1 si tu veux afficher à l’unité, 0,001 si on veut 3 décimales
+
   - [Version APK] : Réception des SMS. Deux nouvelles commandes donnent le dernier SMS reçu et le numéro de l'expéditeur
   
 - Bug fixes :
