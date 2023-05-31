@@ -2,6 +2,14 @@
 
 # Chaque mise a jour est a faire sur l app ET le plugin en meme temps
 
+## Version 1.8.0.1 (31/05/23)
+
+- Bug fixes :
+  - Ajout de la traduction de `#room#` dans les  `contrôleurs`
+  - Utilisation du `nom d'affichage` des widgets également dans l'assistant configuration
+  - Prise en compte de l'inversion des commandes (type statut) dans les `contrôleurs`
+  - Update du démon pour éviter les crash "broken pipe"
+
 ## Version 1.8.0 (08/04/2023)
 
 Relancez l'app au moins une fois avant d’utiliser les nouveautés (ie : kill l’application JC, puis la relancer).

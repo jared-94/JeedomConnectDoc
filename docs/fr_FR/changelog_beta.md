@@ -1,5 +1,13 @@
 # Changelog JeedomConnect
 
+## Version 1.8.0.1 (31/05/23)
+
+- Bug fixes :
+  - Ajout de la traduction de `#room#` dans les  `contrôleurs`
+  - Utilisation du `nom d'affichage` des widgets également dans l'assistant configuration
+  - Prise en compte de l'inversion des commandes (type statut) dans les `contrôleurs`
+  - Update du démon pour éviter les crash "broken pipe"
+
 ## Version 1.7.5 (04/04/23)
 
 - Nouveautés :
