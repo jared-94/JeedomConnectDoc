@@ -1,6 +1,6 @@
 # Documentation du plugin Jeedom Connect
 
-<img src="../images/JeedomConnect_icon.png"  width="10%" />
+<img src="../images/JC_icon.png"  width="10%" />
 
 Téléchargez l'application :  
 <a href="https://play.google.com/store/apps/details?id=com.jeedomconnect.app" target="_blank"><img src="../images/playstore.png" width='10%'/></a>  
@@ -15,6 +15,7 @@ Pour accéder à la TODO list [c'est par là!](todo.md)
 4. [Installation du plugin](#install)
 5. [Configuration du plugin](#configurePlugin)
 6. [Gestion des Widgets](#gestionWidget)
+6. [Gestion des Composants](#gestionComponent)
 7. [Ajouter des équipements](#addEq)
 8. [Configuration d'un équipement](#configureEq)
 9. [Commandes disponibles sur un équipement](#eqCmd)
@@ -206,6 +207,25 @@ La suppression est également possible. Attention toutefois, si un widget est su
 
 <br/><br/>  
 
+## Gestion des composants <a name="gestionComponent"></a>
+
+Les « Composants » sont les cousins germain du « Widget ».
+
+Il s’agit d’élément « brut » unitaire très simple permettant (ou non) de réaliser une action, sans intelligence ni artifice (pas d’images sous conditions, de vue détaillée, d’habillage, …).
+
+Aujourd’hui 7 types de composants existent : Séparateur, Texte, Bouton, Switch, Slider, Jauge et Image.
+Ils peuvent être ajoutés dans chaque page, en plus des widgets et des groupes, ainsi qu’à l’intérieur d’un groupe.
+
+![](../images/JC_component.png)
+
+Le « composant bouton » vous permet d’exécuter un ensemble de commande et/ou de scénario à la chaine en cliquant simplement sur le bouton !
+
+Il devient par exemple très facile de créer une télécommande, ou de mettre une image (d’un module par exemple) sur laquelle on peut placer n’importe quelle(s) information(s) à différents endroits, …
+
+Les possibilités de personnalisation deviennent immense ! Vous pouvez dorénavant faire exactement ce que vous désirez, comme vous le désirez sans qu’on vous impose un style, une mise en page, un emplacement, une marge trop grande/petite, …
+
+<br/><br/>  
+
 ## Ajouter des équipements <a name="addEq"></a>
 
 Vous pouvez ajouter des équipements dans le plugin de façon standard.
@@ -265,7 +285,7 @@ La configuration de cette partie est optionnelle, et n'est à réaliser que si v
 <img src="../images/JC_assistant_summary.png" width="50%" />  
 
 Il vous est ensuite possible de cliquer sur chaque résumé pour personnaliser les icônes et leurs conditions d'affichage.  
-<img src="../images/JC_summary_conditions.png" width="50%" />  
+<img src="../images/JC_summary_conditions.PNG" width="50%" />  
 
 Deux variables sont disponibles : `#value#` et `#total#` :  
 
