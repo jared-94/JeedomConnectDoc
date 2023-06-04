@@ -216,7 +216,7 @@ Il s’agit d’élément « brut » unitaire très simple permettant (ou non) d
 Aujourd’hui 7 types de composants existent : Séparateur, Texte, Bouton, Switch, Slider, Jauge et Image.
 Ils peuvent être ajoutés dans chaque page, en plus des widgets et des groupes, ainsi qu’à l’intérieur d’un groupe.
 
-![](../images/JC_component.png)
+<img src='../images/JC_component.png' width='30%' />  
 
 Le « composant bouton » vous permet d’exécuter un ensemble de commande et/ou de scénario à la chaine en cliquant simplement sur le bouton !
 
