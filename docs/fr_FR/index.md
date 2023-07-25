@@ -955,17 +955,17 @@ Puisque ça a été demandé plusieurs fois, si vous souhaitez soutenir "financi
 <br/>
 
 ## Comment faire la sauvegarde des appareils ? <a name="qBackup"></a>
-Il faut aller dans Préférences > Sauvegarde et restauration > Sauvegarder. Seules les options proposées et cochées créées un fichier de sauvegarde qu’on peut réimporter par la suite si jamais on efface les données de son appareil :
+Il faut aller dans Préférences > Sauvegarde et restauration > Sauvegarder. Seules les options proposées et cochées crééent un fichier de sauvegarde qu’on peut réimporter par la suite si jamais on efface les données de son appareil :
 
 - la position des différents widgets (si on est en grille avancée),
 - les pref de l’application (theme sombre, widget au milieu, horloge dans la barre du haut, …),
 - les notifications existantes
 - les infos de géoloc
 
-  Si des modifications de type personnalisation sont réaliés depuis l'appareil, l’info est automatiquement et directement envoyé au plugin, qui sauvegarde la perso.
+  Si des modifications de type personnalisation sont réaliées depuis l'appareil, l’info est automatiquement et directement envoyée au plugin, qui sauvegarde la perso.
 Donc quand on se reconnecte (même après avoir effacé toutes les données) le plugin renvoie les conf standard des widgets + toutes les perso
 
-Plus de détails avec des explications au cas où vous désiriez faire une copie d'une configuration vers un écran de même taille [ici]([https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox&hl=en](https://community.jeedom.com/t/recopie-des-emplacements-et-tailles-des-widgets/105207)https://community.jeedom.com/t/recopie-des-emplacements-et-tailles-des-widgets/105207)
+Plus de détails avec des explications au cas où vous désiriez faire une copie d'une configuration vers un écran de même taille [ici](https://community.jeedom.com/t/recopie-des-emplacements-et-tailles-des-widgets/105207)https://community.jeedom.com/t/recopie-des-emplacements-et-tailles-des-widgets/105207)
 
 <br/>
 
