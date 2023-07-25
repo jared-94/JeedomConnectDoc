@@ -685,7 +685,7 @@ Dorénavant, les applications sont disponibles au téléchargement directement e
 - [J'ai un message "Address already in use" au démarrage du démon, comment faire ?](#qAddressUsed)  
 - [Je trouve l'application géniale ! Comment vous aider ?](#qDon)
 - [Je ne trouve pas de réponse à mon problème dans la doc. Que faire ?](#qForum)
-
+- [Comment faire la sauvegarde de mes appareils](#qBackup)
 ---
 
 ## Comment télécharger l'application ? <a name="qOU"></a>
@@ -956,3 +956,13 @@ Puisque ça a été demandé plusieurs fois, si vous souhaitez soutenir "financi
 ## Je ne trouve pas de réponse à mon probleme dans la doc. Que faire ? <a name="qForum"></a>  
 
 Suivez les indications postées dans [ce message](https://community.jeedom.com/t/plugin-jeedomconnect-actualites/71794/2) afin de créer un nouveau sujet sur le forum.
+
+## Comment faire la sauvegarde des appareils ? <a name="qBackup"></a>
+Il faut aller dans Préférences > Sauvegarde et restauration > Sauvegarder. Seules les options proposées et cochées créées un fichier de sauvegarde qu’on peut réimporter par la suite si jamais on efface les données de son appareil :
+
+- la position des différents widgets (si on est en grille avancée),
+- les pref de l’application (theme sombre, widget au milieu, horloge dans la barre du haut, …),
+- les notifications existantes
+- les infos de géoloc
+
+Plus de détails avec des explications si vous désirez faire une copie d'une configuration vers un écran de même taille [ici]([https://play.google.com/store/apps/details?id=com.google.android.googlequicksearchbox&hl=en](https://community.jeedom.com/t/recopie-des-emplacements-et-tailles-des-widgets/105207)https://community.jeedom.com/t/recopie-des-emplacements-et-tailles-des-widgets/105207)
