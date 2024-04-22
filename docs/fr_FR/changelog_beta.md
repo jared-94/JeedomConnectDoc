@@ -1,5 +1,16 @@
 # Changelog JeedomConnect
 
+## Version 1.8.1 (22/04/24)
+
+- Nouveautés : 
+  - Ajout la possibilité de ne pas fermer un widget lors de sa configuration (depuis le plugin)
+  - Affichage des équipements personnalisés sur la config d'un widget
+
+- Bug fixes :
+  - Suppression des warnings à la création / suppression d'un équipement
+  - Bordures arrondis
+  - Affichage des widgets sur la page complete (4.4)
+
 ## Version 1.8.0.1 (31/05/23)
 
 - Bug fixes :
