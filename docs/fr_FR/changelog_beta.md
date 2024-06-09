@@ -1,5 +1,12 @@
 # Changelog JeedomConnect
 
+## Version 1.8.2 (09/06/24)
+
+- Fix :
+  - Ajout version OS et PHP dans les infos de community
+  - Bouton de création de post automatique
+  - Fix mineur pour php8
+
 ## Version 1.8.1 (22/04/24)
 
 - Nouveautés : 
