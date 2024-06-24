@@ -2,6 +2,21 @@
 
 # Chaque mise a jour est a faire sur l app ET le plugin en meme temps
 
+## Version 1.10.0 (24/06/24)
+
+- Nouveautés :
+  - création d’une commande Supprimer la personnalisation qui prend en argument le widgetId (propre à chaque équipement JC !)
+
+- Bug Fix :
+  - correction d’une erreur fatale sur php8 pour certain historique
+
+## Version 1.9.0 (14/06/23)
+
+- Fix :
+  - Ajout version OS et PHP dans les infos de community
+  - Bouton de création de post automatique
+  - Fix mineur pour php8
+
 ## Version 1.8.0.1 (31/05/23)
 
 - Bug fixes :

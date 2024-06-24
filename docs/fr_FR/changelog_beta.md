@@ -1,5 +1,13 @@
 # Changelog JeedomConnect
 
+## Version 1.9.1 (24/06/24)
+
+- Nouveautés :
+  - création d’une commande Supprimer la personnalisation qui prend en argument le widgetId (propre à chaque équipement JC !)
+
+- Bug Fix :
+  - correction d’une erreur fatale sur php8 pour certain historique
+
 ## Version 1.8.2 (09/06/24)
 
 - Fix :
