@@ -1,6 +1,15 @@
-# Changelog JeedomConnect  
+# Changelog JeedomConnect  - STABLE  
 
-# Chaque mise a jour est a faire sur l app ET le plugin en meme temps
+# Chaque mise a jour est a faire sur l app ET le plugin en meme temps (sauf mentions contraire)  
+
+## Version 1.10.1 (05/09/24)
+
+PLUGIN UNIQUEMENT
+
+Fix pour les notifications :
+
+- 100% de réussite pour android
+- uniquement si l'app est lancée pour ios (pour l'instant)
 
 ## Version 1.10.0 (24/06/24)
 
@@ -34,7 +43,6 @@ Relancez l'app au moins une fois avant d’utiliser les nouveautés (ie : kill l
   - [Android 11+] Mise en place du contrôle d’appareils par le système. Seuls les widgets dispo sur l’équipement de votre appareil seront proposés. Pour le moment sont supportés : Alarme, Luminosité, Humidité, Caméra, Porte, Portail, les Générique (Actions**, Binaire, Numérique, Texte, Slider, Switch), Puissance, PIR, Prise, Scénario, Volet, Lumière(s), Température, Climatiseur, Thermostat, Fenêtre
     - Les widgets visibles dans le paramétrage de cette option peuvent être réduits en cochant l’option "Masquer l'appareil sur le widget".
     - De même, il est possible d’interdire l’exécution de la commande depuis un écran verrouillé en cochant l’option "Contrôle depuis l'écran de verrouillage" sur le widget également
-   
 
     [Petite précision] :  sur les widgets Générique Actions → seule la 1ère action du widget est exécutée lorsque ce widget est ajouté comme contrôleur ! :warning:
 

@@ -1,4 +1,15 @@
-# Changelog JeedomConnect
+# Changelog JeedomConnect - BETA  
+
+# Chaque mise a jour est a faire sur l app ET le plugin en meme temps (sauf mentions contraire)  
+
+## Version 1.10.1 (05/09/24)
+
+PLUGIN UNIQUEMENT
+
+Fix pour les notifications :
+
+- 100% de réussite pour android
+- uniquement si l'app est lancée pour ios (pour l'instant)
 
 ## Version 1.9.1 (24/06/24)
 
@@ -17,7 +28,7 @@
 
 ## Version 1.8.1 (22/04/24)
 
-- Nouveautés : 
+- Nouveautés :
   - Ajout la possibilité de ne pas fermer un widget lors de sa configuration (depuis le plugin)
   - Affichage des équipements personnalisés sur la config d'un widget
 
